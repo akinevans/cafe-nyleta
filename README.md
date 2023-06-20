@@ -1,4 +1,12 @@
-# Todo
+# Cafe Nyleta
+
+## UI Designer: [Kevin Nguyen Do](http://www.kevinnguyendo.com/)
+
+## Web Developer: [Akin Evans](http://www.akinevans.com/)
+
+---
+
+# Todo List
 
 ## Setup:
 
