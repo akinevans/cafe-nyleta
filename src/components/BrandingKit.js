@@ -1,5 +1,6 @@
 import React from "react";
 import "./BrandingKit.css";
+import Button from "./Button";
 
 export default function Branding_kit() {
   return (
@@ -9,7 +10,7 @@ export default function Branding_kit() {
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
       <p className='body '>Body</p>
-      <p className='cta'>CTA</p>
+      <p className='cta'>CTA (HN-Medium)</p>
       <p className='label'>Label/Navigation</p>
       <p className='windsor'>Windsor</p>
       <div className='box-wrapper'>
@@ -20,6 +21,12 @@ export default function Branding_kit() {
         <div className='box b5'></div>
         <div className='box b6'></div>
       </div>
+      <Button className='btn white' title='Back to shop'></Button>
+      <p></p>
+      <Button className='btn grey' title='Check Out'></Button>
+      <p></p>
+      <Button className='btn grey' title='Contact Us'></Button>
+      <p></p>
     </div>
   );
 }

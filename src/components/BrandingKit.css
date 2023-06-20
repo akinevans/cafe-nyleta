@@ -34,7 +34,6 @@ h3 {
 }
 .cta {
   font-family: var(--HN-Medium);
-
   font-size: var(--CTA);
   font-size: 18px;
 }
@@ -53,6 +52,7 @@ h3 {
 .box-wrapper {
   display: flex;
   flex-direction: row;
+  margin: 2rem 0;
 }
 
 .box {

@@ -1,12 +1,14 @@
 # Cafe Nyleta
 
-## UI Designer: [Kevin Nguyen Do](http://www.kevinnguyendo.com/)
+### UI Designer: [Kevin Nguyen Do](http://www.kevinnguyendo.com/)
 
-## Web Developer: [Akin Evans](http://www.akinevans.com/)
+### Web Developer: [Akin Evans](http://www.akinevans.com/)
+
+![Cafe Nyleta Homepage](./src/assets/images/homepage.png)
 
 ---
 
-# Todo List
+# Todo
 
 ## Setup:
 
@@ -40,6 +42,7 @@
 ## Other:
 
 - [] Accessability
+- [] Button Hover & Click states
 - [] Strapi CMS
 - [] Framer Motion
 - [] Redux
