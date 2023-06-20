@@ -1,4 +1,42 @@
-# Getting Started with Create React App
+# Todo
+
+## Setup:
+
+- [x] Import fonts
+- [x] Replace Favicon
+- [] Setup Router
+- [x] Remove initial react code
+- [x] Declare all CSS variables
+
+## Homepage:
+
+- [x] Import assets
+- [] Build UI for Desktop
+- [] Build UI for Tablet
+- [] Build UI for Mobile
+
+## About Page:
+
+- [x] Import assets
+- [] Build UI for Desktop
+- [] Build UI for Tablet
+- [] Build UI for Mobile
+
+## Shop Page:
+
+- [] Import assets
+- [] Build UI for Desktop
+- [] Build UI for Tablet
+- [] Build UI for Mobile
+
+## Other:
+
+- [] Accessability
+- [] Strapi CMS
+- [] Framer Motion
+- [] Redux
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

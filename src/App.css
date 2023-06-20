@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+@import-normalize;
+
+/* CSS Variable Declarations */
+:root {
+  /** Screen Sizes */
+  --Desktop: 1440px;
+  --Tablet: 834px;
+  --Mobile: 390px;
+
+  /** Colors */
+  --White: #ffffff;
+  --Background: #f0f1f5;
+  --Grey-100: #313131;
+  --Grey-50: #848484;
+  --Grey-20: #cccccc;
+  --Accent: #ffa338;
+
+  /** Fonts */
+  --HN-Light: "Helvetica Neue Light";
+  --HN-Medium: "Helvetica Neue Medium";
+  --Windsor: "Windsor Regular";
+
+  /** Font Sizes */
+  --Heading-1: 34px;
+  --Heading-2: 24px;
+  --Heading-3: 20px;
+  --Body: 18px;
+  --CTA: 18px;
+  --Navigation: 15px;
+  --Label: 13px;
+
+  /** Font Weights */
+  --Light-Weight: 100;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: local("Helvetica-Neue-Light"),
+    url("./assets/fonts/Helvetica-Neue-Light.ttf") format("truetype");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "Helvetica Neue Medium";
+  src: local("Helvetica-Neue-Medium"),
+    url("./assets/fonts/Helvetica-Neue-Medium.ttf") format("truetype");
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "Windsor Regular";
+  src: local("Windsor-Regular"),
+    url("./assets/fonts/Windsor-Regular.ttf") format("truetype");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .App {
+} */
