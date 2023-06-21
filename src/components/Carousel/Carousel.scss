@@ -1,7 +1,8 @@
 @import "../styleFunctions/functions";
 
 .carousel-outer-wrapper,
-.carousel-inner-wrapper {
+.carousel-inner-wrapper,
+.carousel-img-wrapper {
   @include flex(row);
   @include flexPosition(center, center);
   background-color: var(--Background);
@@ -10,24 +11,48 @@
 .carousel-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
   margin-bottom: 131px;
-  @include temporaryOutline(red);
+  //   @include temporaryOutline(red);
+}
+
+.carousel-inner-wrapper,
+.carousel-img-wrapper {
+  //& Build infinite scroll behavior
+  @include widthHeight(100%, 100%);
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Remove scrollbar Firefox inner wrapper */
+
+  //^ Hide scrollbar  (Chrome, Safari and Opera)
+  -webkit-scrollbar {
+    scrollbar-width: none;
+  }
+
+  //^ Hide scrollbar  (IE, Edge, Firefox)
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Remove scrollbar Firefox image-wrapper  */
 }
 
 .carousel-inner-wrapper {
-  @include widthHeight(var(--Desktop), 100%);
-  @include temporaryOutline(blue);
   //! add white shadow
-  //! hide scroll bar
-  overflow-x: scroll;
-  scroll-behavior: smooth;
+  //& Build infinite scroll behavior
+  //   @include temporaryOutline(blue);
 
-  img {
-    max-width: 480px;
-    max-height: 600px;
-    margin: 0 20px 0 0;
-    padding: 0;
-    transform: translateX(1160px);
-    // @include temporaryOutline(red);
-    object-fit: cover;
-  }
-}
+  .carousel-img-wrapper {
+    @include flexPosition(flex-start, center);
+    // should scroll with both X and Y mouse scroll wheels
+    @include temporaryOutline(green);
+
+    //* this img tag will be replaced by utility classes
+    img {
+      max-width: 40%;
+      max-height: 600px;
+      margin: 0 20px 0 0;
+      padding: 0;
+
+      // offset the carousel so the first image is positioned correctly
+      //   transform: translateX(1160px);
+      // @include temporaryOutline(red);
+      //   object-fit: cover;
+    } // End img
+  } // End image wrapper
+} // End inner wrapper
