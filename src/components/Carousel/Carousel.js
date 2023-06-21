@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Carousel.css";
-import c1 from "../../assets/images/home/carousel-1/carousel_101.webp";
-import c2 from "../../assets/images/home/carousel-1/carousel_102.webp";
+import c1 from "../../assets/images/home/carousel-1/carousel_101.jpg";
+import c2 from "../../assets/images/home/carousel-1/carousel_102.jpg";
 import c3 from "../../assets/images/home/carousel-1/carousel_103.jpg";
 import c4 from "../../assets/images/home/carousel-1/carousel_104.jpg";
 import c5 from "../../assets/images/home/carousel-1/carousel_105.jpg";
@@ -41,16 +41,15 @@ export default function Carousel(props) {
         {/* add utility classes for each carousel size */}
         {/* write a function to get image data instead of hard coding it */}
         {/* {getImages(landingData1)} */}
-        <div className='carousel-img-wrapper'>
-          <img className={props.className} src={landingData1[0]} alt='' />
-          <img className={props.className} src={landingData1[1]} alt='' />
-          <img className={props.className} src={landingData1[2]} alt='' />
-          <img className={props.className} src={landingData1[3]} alt='' />
-          <img className={props.className} src={landingData1[4]} alt='' />
-          <img className={props.className} src={landingData1[5]} alt='' />
-          <img className={props.className} src={landingData1[6]} alt='' />
-          <img className={props.className} src={landingData1[7]} alt='' />
-        </div>
+
+        <img className={props.className} src={landingData1[0]} alt='' />
+        <img className={props.className} src={landingData1[1]} alt='' />
+        <img className='test' src={landingData1[2]} alt='' />
+        <img className={props.className} src={landingData1[3]} alt='' />
+        <img className={props.className} src={landingData1[4]} alt='' />
+        <img className={props.className} src={landingData1[5]} alt='' />
+        <img className={props.className} src={landingData1[6]} alt='' />
+        <img className={props.className} src={landingData1[7]} alt='' />
       </div>
     </div>
   );

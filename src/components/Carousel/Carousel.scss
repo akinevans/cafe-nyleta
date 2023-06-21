@@ -1,8 +1,7 @@
 @import "../styleFunctions/functions";
 
 .carousel-outer-wrapper,
-.carousel-inner-wrapper,
-.carousel-img-wrapper {
+.carousel-inner-wrapper {
   @include flex(row);
   @include flexPosition(center, center);
   background-color: var(--Background);
@@ -14,10 +13,14 @@
   //   @include temporaryOutline(red);
 }
 
-.carousel-inner-wrapper,
-.carousel-img-wrapper {
+.carousel-inner-wrapper {
   //& Build infinite scroll behavior
-  @include widthHeight(100%, 100%);
+  // should scroll with both X and Y mouse scroll wheels
+
+  @include flexPosition(flex-start, flex-start);
+  @include widthHeight(100%, fit-content);
+  @include temporaryOutline(green);
+
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Remove scrollbar Firefox inner wrapper */
@@ -30,29 +33,16 @@
   //^ Hide scrollbar  (IE, Edge, Firefox)
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Remove scrollbar Firefox image-wrapper  */
-}
 
-.carousel-inner-wrapper {
   //! add white shadow
   //& Build infinite scroll behavior
   //   @include temporaryOutline(blue);
 
-  .carousel-img-wrapper {
-    @include flexPosition(flex-start, center);
-    // should scroll with both X and Y mouse scroll wheels
-    @include temporaryOutline(green);
-
-    //* this img tag will be replaced by utility classes
-    img {
-      max-width: 40%;
-      max-height: 600px;
-      margin: 0 20px 0 0;
-      padding: 0;
-
-      // offset the carousel so the first image is positioned correctly
-      //   transform: translateX(1160px);
-      // @include temporaryOutline(red);
-      //   object-fit: cover;
-    } // End img
-  } // End image wrapper
+  //* this img tag will be replaced by utility classes
+  img {
+    max-width: 40%;
+    max-height: 600px;
+    margin: 0 20px 0 0;
+    @include temporaryOutline(red);
+  } // End img
 } // End inner wrapper

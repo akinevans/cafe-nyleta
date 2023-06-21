@@ -1,6 +1,5 @@
 .carousel-outer-wrapper,
-.carousel-inner-wrapper,
-.carousel-img-wrapper {
+.carousel-inner-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -15,29 +14,25 @@
   margin-bottom: 131px;
 }
 
-.carousel-inner-wrapper,
-.carousel-img-wrapper {
+.carousel-inner-wrapper {
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  outline: 2px solid green;
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Remove scrollbar Firefox inner wrapper */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Remove scrollbar Firefox image-wrapper  */
 }
-.carousel-inner-wrapper -webkit-scrollbar,
-.carousel-img-wrapper -webkit-scrollbar {
+.carousel-inner-wrapper -webkit-scrollbar {
   scrollbar-width: none;
 }
-
-.carousel-inner-wrapper .carousel-img-wrapper {
-  justify-content: flex-start;
-  align-items: center;
-  outline: 2px solid green;
-}
-.carousel-inner-wrapper .carousel-img-wrapper img {
+.carousel-inner-wrapper img {
   max-width: 40%;
   max-height: 600px;
   margin: 0 20px 0 0;
-  padding: 0;
+  outline: 2px solid red;
 }/*# sourceMappingURL=Carousel.css.map */
