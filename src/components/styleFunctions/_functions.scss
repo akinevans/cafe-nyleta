@@ -1,4 +1,4 @@
-@mixin pageSize($width, $height) {
+@mixin widthHeight($width, $height) {
   width: $width;
   height: $height;
 }
