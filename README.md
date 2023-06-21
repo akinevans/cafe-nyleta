@@ -18,12 +18,49 @@
 - [x] Remove initial react code
 - [x] Declare all CSS variables
 
+---
+
 ## Homepage:
 
 - [x] Import assets
-- [] Build UI for Desktop
-- [] Build UI for Tablet
-- [] Build UI for Mobile
+
+### - [] Build UI for Desktop
+
+- [] Nav
+- [] Hero
+- [] Clients
+- [] Carousel
+- [] Services
+- [] Quote w/ props
+- [] Carousel 2
+- [] WorldMap
+- [] Footer
+
+### - [] Media Queries for Tablet
+
+- [] Nav
+- [] Hero
+- [] Clients
+- [] Carousel
+- [] Services
+- [] Quote w/ props
+- [] Carousel 2
+- [] WorldMap
+- [] Footer
+
+### - [] Media Queries for Mobile
+
+- [] Nav
+- [] Hero
+- [] Clients
+- [] Carousel
+- [] Services
+- [] Quote w/ props
+- [] Carousel 2
+- [] WorldMap
+- [] Footer
+
+---
 
 ## About Page:
 
@@ -32,6 +69,8 @@
 - [] Build UI for Tablet
 - [] Build UI for Mobile
 
+---
+
 ## Shop Page:
 
 - [] Import assets
@@ -39,9 +78,21 @@
 - [] Build UI for Tablet
 - [] Build UI for Mobile
 
+---
+
+## Contact Page:
+
+- [] Import assets
+- [] Build UI for Desktop
+- [] Build UI for Tablet
+- [] Build UI for Mobile
+
+---
+
 ## Other:
 
-- [] Accessability
+- [] Run accessability checks
+- [] Write tests
 - [] Button Hover & Click states
 - [] Strapi CMS
 - [x] Setup Sass
@@ -49,6 +100,7 @@
 - [] Framer Motion
 - [] Compress images (webpack)
 - [] Redux
+- [] Spacer components if necessary
 
 ## Getting Started with Create React App
 
