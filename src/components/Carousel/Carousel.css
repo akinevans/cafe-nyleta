@@ -1,0 +1,33 @@
+.carousel-outer-wrapper,
+.carousel-inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Background);
+}
+
+.carousel-outer-wrapper {
+  width: var(--Full);
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 131px;
+  outline: 2px solid red;
+}
+
+.carousel-inner-wrapper {
+  width: var(--Desktop);
+  height: 100%;
+  outline: 2px solid blue;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.carousel-inner-wrapper img {
+  max-width: 480px;
+  max-height: 600px;
+  margin: 0 20px 0 0;
+  padding: 0;
+  transform: translateX(1160px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=Carousel.css.map */

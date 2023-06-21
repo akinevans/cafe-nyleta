@@ -1,8 +1,8 @@
 import React from "react";
 import "./Hero.css";
+import hero_img from "../../assets/images/home/feature.jpg";
 import ClientsSection from "../ClientsSection/ClientsSection";
 import Button from "../Button/Button";
-import hero_img from "../../assets/images/home/feature.jpg";
 
 export default function Hero() {
   return (

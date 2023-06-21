@@ -28,11 +28,11 @@
 
 - [x] Nav
 - [x] Hero
-- [] Clients
-- [] Carousel
+- [x] Clients
+- [] Carousel w/ props
 - [] Services
 - [] Quote w/ props
-- [] Carousel 2
+- [] Carousel 2 w/ props
 - [] WorldMap
 - [] Footer
 
