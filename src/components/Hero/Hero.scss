@@ -1,0 +1,41 @@
+@import "../styleFunctions/functions";
+
+.hero-outer-wrapper,
+.hero-inner-wrapper {
+  @include flex(column);
+  @include widthHeight(var(--Full), fit-content);
+}
+
+.hero-outer-wrapper {
+  @include flexPosition(center, center);
+  //   @include temporaryOutline(red);
+  margin-top: 120px;
+}
+
+.hero-inner-wrapper {
+  @include flexPosition(space-between, center);
+  //   @include temporaryOutline(blue);
+
+  .hero-text-wrapper {
+    @include widthHeight(860px, fit-content);
+    @include maxWidth(90%);
+    margin: 0;
+    // @include temporaryOutline(green);
+
+    p {
+      margin: 4px 0;
+      font-family: var(--HN-Light);
+      font-weight: var(--Light-Weight);
+      font-size: var(--Heading-1);
+      color: var(--Grey-100);
+      text-align: center;
+    }
+  }
+
+  .hero-img {
+    @include widthHeight(100%, fit-content);
+    @include maxWidth(var(--Desktop));
+
+    margin: 120px 0;
+  }
+}

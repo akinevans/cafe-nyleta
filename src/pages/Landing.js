@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/Hero/Hero";
 
 export default function Landing() {
   return (
     <>
-      {/* Nav */}
-      {/* Hero */}
+      <Navbar />
+      <Hero />
       {/* Clients */}
       {/* Carousel 1 */}
       {/* Services */}

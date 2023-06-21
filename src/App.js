@@ -1,11 +1,11 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
+import Landing from "./pages/Landing";
 
 //* Install Routes to pages
 function App() {
   return (
     <div className='App'>
-      <Navbar />
+      <Landing />
     </div>
   );
 }
