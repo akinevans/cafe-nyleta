@@ -3,6 +3,10 @@
   height: $height;
 }
 
+@mixin maxWidth($width) {
+  max-width: $width;
+}
+
 @mixin flex($direction) {
   display: flex;
   flex-direction: $direction;

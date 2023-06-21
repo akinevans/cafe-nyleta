@@ -1,0 +1,44 @@
+@import "../styleFunctions/functions";
+
+.nav-inner-wrapper,
+.nav-links-wrapper {
+  @include flex(row);
+  @include flexPosition(space-between, center);
+}
+
+.nav-outer-wrapper {
+  @include flex(column);
+  @include flexPosition(center, center);
+  @include widthHeight(var(--Full), 142px);
+  //   @include temporaryOutline(red);
+
+  .nav-inner-wrapper {
+    @include widthHeight(90%, 45px);
+    @include maxWidth(1180px);
+    // @include temporaryOutline(blue);
+
+    .nav-logo {
+      @include widthHeight(248px, fit-content);
+    }
+
+    .nav-links-wrapper {
+      @include widthHeight(308px, 45px);
+      //   @include temporaryOutline(green);
+
+      a {
+        //! This will have to change when you import router Link elements
+        font-family: var(--HN-Light);
+        font-weight: var(--Light-Weight);
+        font-size: var(--Heading-3);
+        color: var(--Black);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:active {
+          opacity: 85%;
+        }
+      }
+    } // End nav links wrapper desktop
+  } // End nav inner wrapper desktop
+} // End nav-outer-wrapper desktop

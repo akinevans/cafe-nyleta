@@ -2,16 +2,18 @@
 /* CSS Variable Declarations */
 :root {
   /** Screen Sizes */
+  --Full: 100vw;
   --Desktop: 1440px;
   --Tablet: 834px;
   --Mobile: 390px;
   /** Colors */
-  --White: #ffffff;
   --Background: #f0f1f5;
+  --White: #ffffff;
   --Grey-100: #313131;
   --Grey-50: #848484;
   --Grey-20: #cccccc;
   --Accent: #ffa338;
+  --Black: #000;
   /** Fonts */
   --HN-Light: "Helvetica Neue Light";
   --HN-Medium: "Helvetica Neue Medium";

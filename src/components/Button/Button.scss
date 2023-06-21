@@ -1,7 +1,7 @@
+@import "../styleFunctions/functions";
+
 .btn {
-  width: 211px;
-  height: 45px;
-  /* padding: 0 50px; */
+  @include widthHeight(211px, 45px);
   font-weight: var(--Light-Weight);
   font-size: var(--Body);
   border-radius: 0;
@@ -17,6 +17,8 @@
   }
 }
 
+// Utility classes for each button type
+
 .white {
   font-family: var(--HN-Light);
   color: var(--Grey-100);
@@ -28,4 +30,9 @@
   font-family: var(--HN-Medium);
   color: var(--White);
   background-color: var(--Grey-100);
+}
+
+.contact {
+  @include widthHeight(146px, 45px);
+  padding: 8px 16px;
 }

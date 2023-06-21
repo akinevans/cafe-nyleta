@@ -1,11 +1,11 @@
 import "./App.css";
-import BrandingKit from "./components/BrandingKit/BrandingKit";
+import Navbar from "./components/Navbar/Navbar";
 
 //* Install Routes to pages
 function App() {
   return (
     <div className='App'>
-      <BrandingKit />
+      <Navbar />
     </div>
   );
 }

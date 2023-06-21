@@ -1,7 +1,6 @@
 .btn {
   width: 211px;
   height: 45px;
-  /* padding: 0 50px; */
   font-weight: var(--Light-Weight);
   font-size: var(--Body);
   border-radius: 0;
@@ -27,4 +26,10 @@
   font-family: var(--HN-Medium);
   color: var(--White);
   background-color: var(--Grey-100);
+}
+
+.contact {
+  width: 146px;
+  height: 45px;
+  padding: 8px 16px;
 }/*# sourceMappingURL=Button.css.map */
