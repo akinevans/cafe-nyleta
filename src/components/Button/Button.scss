@@ -36,3 +36,8 @@
   @include widthHeight(146px, 45px);
   padding: 8px 16px;
 }
+
+.work {
+  @include widthHeight(279px, 45px);
+  padding: 8px 16px;
+}

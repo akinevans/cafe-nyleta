@@ -4,12 +4,13 @@
 .hero-inner-wrapper {
   @include flex(column);
   @include widthHeight(var(--Full), fit-content);
+  background-color: var(--Background);
 }
 
 .hero-outer-wrapper {
   @include flexPosition(center, center);
-  //   @include temporaryOutline(red);
-  margin-top: 120px;
+  margin: 120px 0 172px 0;
+  // @include temporaryOutline(red);
 }
 
 .hero-inner-wrapper {
@@ -38,4 +39,4 @@
 
     margin: 120px 0;
   }
-}
+} // End hero inner wrapper

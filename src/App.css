@@ -46,5 +46,6 @@
   font-family: "Windsor Regular";
   src: local("Windsor-Regular"), url("./assets/fonts/Windsor-Regular.ttf") format("truetype");
 }
-/* .App {
-} *//*# sourceMappingURL=App.css.map */
+html {
+  background-color: var(--Background);
+}/*# sourceMappingURL=App.css.map */

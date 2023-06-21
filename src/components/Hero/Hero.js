@@ -1,5 +1,7 @@
 import React from "react";
 import "./Hero.css";
+import ClientsSection from "../ClientsSection/ClientsSection";
+import Button from "../Button/Button";
 import hero_img from "../../assets/images/home/feature.jpg";
 
 export default function Hero() {
@@ -21,8 +23,9 @@ export default function Hero() {
           alt='clothing model standing in the woods'
         />
 
-        {/*  Import clients component */}
-        <h1>clients component here</h1>
+        <ClientsSection />
+        {/* Note, button is not inside the ClientsSection component, this should clear up any confusion with positioning and margins */}
+        <Button className='btn grey work' title='Work with us' />
       </div>
     </section>
   );

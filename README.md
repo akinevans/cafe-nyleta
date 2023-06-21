@@ -27,7 +27,7 @@
 ### - [] Build UI for Desktop
 
 - [x] Nav
-- [] Hero
+- [x] Hero
 - [] Clients
 - [] Carousel
 - [] Services
