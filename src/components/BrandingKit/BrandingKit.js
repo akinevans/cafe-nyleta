@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles/BrandingKit.css";
-import Button from "./Button";
+import "./BrandingKit.css";
+import Button from "../Button/Button";
 
 export default function BrandingKit() {
   return (

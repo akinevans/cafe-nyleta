@@ -45,7 +45,7 @@
 - [] Button Hover & Click states
 - [] Strapi CMS
 - [x] Setup Sass
-- [] Reorganize Components into separate folders with styles
+- [x] Reorganize Components into separate folders with styles
 - [] Framer Motion
 - [] Compress images (webpack)
 - [] Redux

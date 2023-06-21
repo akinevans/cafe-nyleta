@@ -6,9 +6,10 @@
   width: var(--Tablet);
   height: -moz-fit-content;
   height: fit-content;
-  margin: 0 auto;
+  margin: 1rem auto;
+  padding: 1.5rem;
   color: var(--Grey-100);
-  outline: 2px solid green;
+  outline: 2px solid var(--Accent);
 }
 
 h1 {
@@ -92,4 +93,4 @@ h3 {
 
 .b6 {
   background-color: var(--Accent);
-}/*# sourceMappingURL=BrandingKit.css.map */
+} /*# sourceMappingURL=BrandingKit.css.map */

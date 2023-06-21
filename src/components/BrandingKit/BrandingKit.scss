@@ -1,12 +1,13 @@
-@import "./functions";
+@import "../styleFunctions/functions";
 
 .temp-wrapper {
   @include flex(column);
   @include flexPosition(center, flex-start);
   @include pageSize(var(--Tablet), fit-content);
-  margin: 0 auto;
+  margin: 1rem auto;
+  padding: 1.5rem;
   color: var(--Grey-100);
-  @include temporaryOutline(green);
+  @include temporaryOutline(var(--Accent));
 }
 
 h1 {
