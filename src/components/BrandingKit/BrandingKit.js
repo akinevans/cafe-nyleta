@@ -5,14 +5,16 @@ import Button from "../Button/Button";
 export default function BrandingKit() {
   return (
     <div className='temp-wrapper'>
-      <h1 className='cafe'>cafe nyleta</h1>
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <p className='body '>Body</p>
-      <p className='cta'>CTA (HN-Medium)</p>
-      <p className='label'>Label/Navigation</p>
-      <p className='windsor'>Windsor</p>
+      <div className='fonts'>
+        <h1 className='cafe'>cafe nyleta</h1>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <p className='body '>Body</p>
+        <p className='cta'>CTA (HN-Medium)</p>
+        <p className='label'>Label/Navigation</p>
+        <p className='windsor'>Windsor</p>
+      </div>
       <div className='box-wrapper'>
         <div className='box b1'></div>
         <div className='box b2'></div>

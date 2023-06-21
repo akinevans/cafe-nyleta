@@ -11,86 +11,70 @@
   color: var(--Grey-100);
   outline: 2px solid var(--Accent);
 }
-
-h1 {
+.temp-wrapper .fonts .cafe {
+  font-family: var(--Windsor);
+  font-size: var(--Heading-1);
+}
+.temp-wrapper .fonts h1 {
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
   font-size: var(--Heading-1);
 }
-
-h2 {
+.temp-wrapper .fonts h2 {
   font-family: var(--HN-Light);
   font-weight: var(--HN-Light);
   font-size: var(--Heading-2);
 }
-
-h3 {
+.temp-wrapper .fonts h3 {
   font-family: var(--HN-Light);
   font-weight: var(--HN-Light);
   font-size: var(--Heading-3);
 }
-
-.cafe {
-  font-family: var(--Windsor);
-  font-size: var(--Heading-1);
-}
-
-.body {
+.temp-wrapper .fonts .body {
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
   font-size: var(--Body);
 }
-
-.cta {
+.temp-wrapper .fonts .cta {
   font-family: var(--HN-Medium);
   font-size: var(--CTA);
   font-size: 18px;
 }
-
-.label {
+.temp-wrapper .fonts .label {
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
   font-size: var(--Label);
 }
-
-.windsor {
+.temp-wrapper .fonts .windsor {
   font-family: var(--Windsor);
   font-size: var(--Heading-1);
 }
-
-.box-wrapper {
+.temp-wrapper .box-wrapper {
   display: flex;
   flex-direction: row;
   margin: 2rem 0;
 }
-
-.box {
+.temp-wrapper .box-wrapper .box {
   width: 100px;
   height: 100px;
   margin-right: 20px;
   outline: 2px solid #000;
 }
-
-.b1 {
+.temp-wrapper .box-wrapper .b1 {
   background-color: var(--Grey-100);
 }
-
-.b2 {
+.temp-wrapper .box-wrapper .b2 {
   background-color: var(--Grey-50);
 }
-
-.b3 {
+.temp-wrapper .box-wrapper .b3 {
   background-color: var(--Grey-20);
 }
-
-.b4 {
+.temp-wrapper .box-wrapper .b4 {
   background-color: var(--Background);
 }
-
-.b5 {
+.temp-wrapper .box-wrapper .b5 {
   background-color: var(--White);
 }
-
-.b6 {
+.temp-wrapper .box-wrapper .b6 {
   background-color: var(--Accent);
-} /*# sourceMappingURL=BrandingKit.css.map */
+}/*# sourceMappingURL=BrandingKit.css.map */
