@@ -1,10 +1,12 @@
 @import-normalize;
+
 /* CSS Variable Declarations */
 :root {
   /** Screen Sizes */
   --Desktop: 1440px;
   --Tablet: 834px;
   --Mobile: 390px;
+
   /** Colors */
   --White: #ffffff;
   --Background: #f0f1f5;
@@ -12,10 +14,12 @@
   --Grey-50: #848484;
   --Grey-20: #cccccc;
   --Accent: #ffa338;
+
   /** Fonts */
   --HN-Light: "Helvetica Neue Light";
   --HN-Medium: "Helvetica Neue Medium";
   --Windsor: "Windsor Regular";
+
   /** Font Sizes */
   --Heading-1: 34px;
   --Heading-2: 24px;
@@ -24,6 +28,7 @@
   --CTA: 18px;
   --Navigation: 15px;
   --Label: 13px;
+
   /** Font Weights */
   --Light-Weight: 100;
 }
@@ -34,15 +39,21 @@
 
 @font-face {
   font-family: "Helvetica Neue Light";
-  src: local("Helvetica-Neue-Light"), url("./assets/fonts/Helvetica-Neue-Light.ttf") format("truetype");
+  src: local("Helvetica-Neue-Light"),
+    url("./assets/fonts/Helvetica-Neue-Light.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Helvetica Neue Medium";
-  src: local("Helvetica-Neue-Medium"), url("./assets/fonts/Helvetica-Neue-Medium.ttf") format("truetype");
+  src: local("Helvetica-Neue-Medium"),
+    url("./assets/fonts/Helvetica-Neue-Medium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Windsor Regular";
-  src: local("Windsor-Regular"), url("./assets/fonts/Windsor-Regular.ttf") format("truetype");
+  src: local("Windsor-Regular"),
+    url("./assets/fonts/Windsor-Regular.ttf") format("truetype");
 }
+
 /* .App {
-} *//*# sourceMappingURL=App.css.map */
+} */

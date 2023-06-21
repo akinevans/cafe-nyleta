@@ -1,0 +1,18 @@
+@mixin pageSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin flexPosition($justify, $align) {
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin temporaryOutline($color) {
+  outline: 2px solid $color;
+}

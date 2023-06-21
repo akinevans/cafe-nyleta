@@ -1,0 +1,24 @@
+.btn {
+  width: 211px;
+  height: 45px;
+  /* padding: 0 50px; */
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body);
+  border-radius: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.white {
+  font-family: var(--HN-Light);
+  color: var(--Grey-100);
+  background-color: var(--White);
+  border: 1px solid var(--Grey-100);
+}
+
+.grey {
+  font-family: var(--HN-Medium);
+  color: var(--White);
+  background-color: var(--Grey-100);
+}/*# sourceMappingURL=Button.css.map */

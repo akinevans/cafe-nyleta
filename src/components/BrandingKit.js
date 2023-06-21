@@ -1,8 +1,8 @@
 import React from "react";
-import "./BrandingKit.css";
+import "./styles/BrandingKit.css";
 import Button from "./Button";
 
-export default function Branding_kit() {
+export default function BrandingKit() {
   return (
     <div className='temp-wrapper'>
       <h1 className='cafe'>cafe nyleta</h1>

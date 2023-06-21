@@ -1,7 +1,12 @@
+@import "./functions";
+
 .temp-wrapper {
-  width: 50vw;
+  @include flex(column);
+  @include flexPosition(center, flex-start);
+  @include pageSize(var(--Tablet), fit-content);
   margin: 0 auto;
   color: var(--Grey-100);
+  @include temporaryOutline(green);
 }
 
 h1 {

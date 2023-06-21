@@ -1,0 +1,95 @@
+.temp-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: var(--Tablet);
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  color: var(--Grey-100);
+  outline: 2px solid green;
+}
+
+h1 {
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Heading-1);
+}
+
+h2 {
+  font-family: var(--HN-Light);
+  font-weight: var(--HN-Light);
+  font-size: var(--Heading-2);
+}
+
+h3 {
+  font-family: var(--HN-Light);
+  font-weight: var(--HN-Light);
+  font-size: var(--Heading-3);
+}
+
+.cafe {
+  font-family: var(--Windsor);
+  font-size: var(--Heading-1);
+}
+
+.body {
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body);
+}
+
+.cta {
+  font-family: var(--HN-Medium);
+  font-size: var(--CTA);
+  font-size: 18px;
+}
+
+.label {
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Label);
+}
+
+.windsor {
+  font-family: var(--Windsor);
+  font-size: var(--Heading-1);
+}
+
+.box-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  outline: 2px solid #000;
+}
+
+.b1 {
+  background-color: var(--Grey-100);
+}
+
+.b2 {
+  background-color: var(--Grey-50);
+}
+
+.b3 {
+  background-color: var(--Grey-20);
+}
+
+.b4 {
+  background-color: var(--Background);
+}
+
+.b5 {
+  background-color: var(--White);
+}
+
+.b6 {
+  background-color: var(--Accent);
+}/*# sourceMappingURL=BrandingKit.css.map */
