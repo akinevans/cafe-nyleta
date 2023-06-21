@@ -17,6 +17,9 @@
 .hero-inner-wrapper {
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .hero-inner-wrapper .hero-text-wrapper {
   width: 860px;
@@ -37,6 +40,5 @@
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  max-width: var(--Desktop);
   margin: 120px 0;
 }/*# sourceMappingURL=Hero.css.map */

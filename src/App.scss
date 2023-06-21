@@ -40,6 +40,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: var(--Background);
+}
+
 @font-face {
   font-family: "Helvetica Neue Light";
   src: local("Helvetica-Neue-Light"),
@@ -58,9 +62,6 @@
     url("./assets/fonts/Windsor-Regular.ttf") format("truetype");
 }
 
-html {
-  background-color: var(--Background);
-}
-
 // .App {
+
 // }

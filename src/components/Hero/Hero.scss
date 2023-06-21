@@ -15,7 +15,8 @@
 
 .hero-inner-wrapper {
   @include flexPosition(space-between, center);
-  //   @include temporaryOutline(blue);
+  @include widthHeight(100%, fit-content);
+  // @include temporaryOutline(blue);
 
   .hero-text-wrapper {
     @include widthHeight(860px, fit-content);
@@ -35,7 +36,7 @@
 
   .hero-img {
     @include widthHeight(100%, fit-content);
-    @include maxWidth(var(--Desktop));
+    // @include maxWidth(var(--Desktop));
 
     margin: 120px 0;
   }
