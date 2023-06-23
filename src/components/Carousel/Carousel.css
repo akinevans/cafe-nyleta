@@ -15,12 +15,12 @@
 }
 
 .carousel-inner-wrapper {
-  position: relative;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  cursor: grab;
   overflow: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;

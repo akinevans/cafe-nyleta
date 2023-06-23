@@ -14,14 +14,14 @@
 }
 
 .carousel-inner-wrapper {
-  //& Build infinite scroll behavior
-  // should scroll with both X and Y mouse scroll wheels
-  position: relative;
+  //! Build Framer motion slideshow
   @include flexPosition(flex-start, flex-start);
   @include widthHeight(100%, fit-content);
+  cursor: grab;
   // @include temporaryOutline(green);
 
   overflow: scroll;
+
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scroll-padding: 0px;

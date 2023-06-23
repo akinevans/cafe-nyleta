@@ -140,6 +140,9 @@ export default function Carousel(props) {
       ));
     }
   }
+
+  //^ Write Function to change cursor from hand to grabbing on click and release
+
   return (
     <div className='carousel-outer-wrapper'>
       <div className={"carousel-inner-wrapper"}>
