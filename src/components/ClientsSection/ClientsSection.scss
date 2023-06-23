@@ -1,4 +1,5 @@
 @import "../styleFunctions/functions";
+//! Write utility classes for the other carousel sizes on different pages
 
 .clients-outer-wrapper,
 .clients-inner-wrapper {
@@ -10,89 +11,89 @@
 .clients-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
   //   @include temporaryOutline(red);
-}
 
-.clients-inner-wrapper {
-  @include widthHeight(780px, fit-content);
-  @include maxWidth(90%);
-  //   @include temporaryOutline(blue);
-}
-
-.clients-text-wrapper {
-  @include widthHeight(780px, fit-content);
-  @include maxWidth(90%);
-  margin-bottom: 80px;
-  //   @include temporaryOutline(green);
-
-  h1,
-  p {
+  .clients-inner-wrapper {
     @include widthHeight(780px, fit-content);
-    @include maxWidth(100%);
-    font-family: var(--HN-Light);
-    font-weight: var(--Light-Weight);
-    color: var(--Grey-100);
-    text-align: center;
+    @include maxWidth(90%);
+    //   @include temporaryOutline(blue);
   }
 
-  h1 {
-    font-size: var(--Heading-1);
-  }
+  .clients-text-wrapper {
+    @include widthHeight(780px, fit-content);
+    @include maxWidth(90%);
+    margin-bottom: 80px;
+    //   @include temporaryOutline(green);
 
-  p {
-    @include widthHeight(676px, fit-content);
-    font-size: var(--Body);
-    margin-bottom: 0;
-  }
-} // End clients text wrapper
-
-.clients-img-wrapper {
-  @include flex(column);
-  @include flexPosition(center, center);
-  @include widthHeight(580px, fit-content);
-  @include maxWidth(95%);
-  //   @include temporaryOutline(pink);
-  margin-bottom: 150px;
-
-  .img-top,
-  .img-bottom {
-    @include flex(row);
-    @include flexPosition(space-between, center);
-    @include widthHeight(100%, 72px);
-    // @include temporaryOutline(black);
-
-    img {
-      @include maxWidth(130px);
-    }
-  }
-
-  .img-top {
-    margin-bottom: 15px;
-
-    //! May have to crop images to get alignment correct
-    .stussy {
-      max-width: 120px;
+    h1,
+    p {
+      @include widthHeight(780px, fit-content);
+      @include maxWidth(100%);
+      font-family: var(--HN-Light);
+      font-weight: var(--Light-Weight);
+      color: var(--Grey-100);
+      text-align: center;
     }
 
-    .arcteryx {
-      max-width: 100px;
+    h1 {
+      font-size: var(--Heading-1);
     }
 
-    // .carhartt {
-    //   max-width: 100px;
-    // }
-
-    .nike {
-      max-width: 90px;
+    p {
+      @include widthHeight(676px, fit-content);
+      font-size: var(--Body);
+      margin-bottom: 0;
     }
-  } // End img-top class
+  } // End clients text wrapper
 
-  .img-bottom {
-    .goretex {
-      max-width: 80px;
+  .clients-img-wrapper {
+    @include flex(column);
+    @include flexPosition(center, center);
+    @include widthHeight(580px, fit-content);
+    @include maxWidth(95%);
+    //   @include temporaryOutline(pink);
+    margin-bottom: 150px;
+
+    .img-top,
+    .img-bottom {
+      @include flex(row);
+      @include flexPosition(space-between, center);
+      @include widthHeight(100%, 72px);
+      // @include temporaryOutline(black);
+
+      img {
+        @include maxWidth(130px);
+      }
     }
 
-    .adidas {
-      max-width: 115px;
-    }
-  } // End img-bottom class
-} // End clients img wrapper
+    .img-top {
+      margin-bottom: 15px;
+
+      //! May have to crop images to get alignment correct
+      .stussy {
+        max-width: 120px;
+      }
+
+      .arcteryx {
+        max-width: 100px;
+      }
+
+      // .carhartt {
+      //   max-width: 100px;
+      // }
+
+      .nike {
+        max-width: 90px;
+      }
+    } // End img-top class
+
+    .img-bottom {
+      .goretex {
+        max-width: 80px;
+      }
+
+      .adidas {
+        max-width: 115px;
+      }
+    } // End img-bottom class
+  } // End clients img wrapper
+} // End Outer Wrapper

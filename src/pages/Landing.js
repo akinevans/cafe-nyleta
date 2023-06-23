@@ -3,14 +3,16 @@ import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Carousel from "../components/Carousel/Carousel";
 
-export default function Landing() {
+export default function Landing(props) {
   return (
     <>
       <Navbar />
       <Hero />
-      <Carousel />
+      <Carousel page='landing1' />
       {/* Services */}
-      {/* Carousel 2 */}
+      <h3>carousel 2 images need to be cropped</h3>
+      <Carousel page='landing2' />
+
       {/* World Map */}
       {/* Footer */}
       {/* Router can render nav / footer conditionally on each page */}

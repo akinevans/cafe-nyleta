@@ -1,55 +1,154 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Carousel.css";
-import c1 from "../../assets/images/home/carousel-1/carousel_101.jpg";
-import c2 from "../../assets/images/home/carousel-1/carousel_102.jpg";
-import c3 from "../../assets/images/home/carousel-1/carousel_103.jpg";
-import c4 from "../../assets/images/home/carousel-1/carousel_104.jpg";
-import c5 from "../../assets/images/home/carousel-1/carousel_105.jpg";
-import c6 from "../../assets/images/home/carousel-1/carousel_106.jpg";
-import c7 from "../../assets/images/home/carousel-1/carousel_107.jpg";
-import c8 from "../../assets/images/home/carousel-1/carousel_108.jpg";
+import ImageComp from "../../components/ImageComp/ImageComp";
+// Image imports for top carousel Landing Page
+import c101 from "../../assets/images/home/carousel-1/carousel_101.jpg";
+import c102 from "../../assets/images/home/carousel-1/carousel_102.jpg";
+import c303 from "../../assets/images/home/carousel-1/carousel_103.jpg";
+import c404 from "../../assets/images/home/carousel-1/carousel_104.jpg";
+import c505 from "../../assets/images/home/carousel-1/carousel_105.jpg";
+import c606 from "../../assets/images/home/carousel-1/carousel_106.jpg";
+import c707 from "../../assets/images/home/carousel-1/carousel_107.jpg";
+import c108 from "../../assets/images/home/carousel-1/carousel_108.jpg";
 
+// Image imports for bottom carousel Landing Page
+import c201 from "../../assets/images/home/carousel-2/carousel_201.jpeg";
+import c202 from "../../assets/images/home/carousel-2/carousel_202.jpeg";
+import c203 from "../../assets/images/home/carousel-2/carousel_203.jpeg";
+import c204 from "../../assets/images/home/carousel-2/carousel_204.jpeg";
+import c205 from "../../assets/images/home/carousel-2/carousel_205.jpeg";
+import c206 from "../../assets/images/home/carousel-2/carousel_206.jpeg";
+import c207 from "../../assets/images/home/carousel-2/carousel_207.jpeg";
+import c208 from "../../assets/images/home/carousel-2/carousel_208.jpeg";
 //! Images should scroll on X axis with both scroll wheels
 
 export default function Carousel(props) {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const large = "img large";
+  const small = "img small";
+  const description = "fashion model;";
 
-  const landingData1 = [c1, c2, c3, c4, c5, c6, c7, c8];
-  //   variable for each carousels list of images
-  //   variable for each carousels list of images
-  //   variable for each carousels list of images
+  const LandingPageData1 = [
+    {
+      name: "c101",
+      className: large,
+      src: c101,
+      alt: description,
+    },
+    {
+      name: "c102",
+      className: large,
+      src: c102,
+      alt: description,
+    },
+    {
+      name: "c103",
+      className: large,
+      src: c303,
+      alt: description,
+    },
+    {
+      name: "c104",
+      className: large,
+      src: c404,
+      alt: description,
+    },
+    {
+      name: "c105",
+      className: large,
+      src: c505,
+      alt: description,
+    },
+    {
+      name: "c106",
+      className: large,
+      src: c606,
+      alt: description,
+    },
+    {
+      name: "c107",
+      className: large,
+      src: c707,
+      alt: description,
+    },
+    {
+      name: "c108",
+      className: large,
+      src: c108,
+      alt: description,
+    },
+  ];
 
-  const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? 7 : (prev) => prev - 1);
-  };
+  const LandingPageData2 = [
+    {
+      name: "c201",
+      className: small,
+      src: c201,
+      alt: description,
+    },
+    {
+      name: "c202",
+      className: small,
+      src: c202,
+      alt: description,
+    },
+    {
+      name: "c203",
+      className: small,
+      src: c203,
+      alt: description,
+    },
+    {
+      name: "c204",
+      className: small,
+      src: c204,
+      alt: description,
+    },
+    {
+      name: "c205",
+      className: small,
+      src: c205,
+      alt: description,
+    },
+    {
+      name: "c206",
+      className: small,
+      src: c206,
+      alt: description,
+    },
+    {
+      name: "c207",
+      className: small,
+      src: c207,
+      alt: description,
+    },
+    {
+      name: "c208",
+      className: small,
+      src: c208,
+      alt: description,
+    },
+  ];
 
-  const nextSlide = () => {
-    setCurrentSlide(currentSlide === 7 ? 0 : (prev) => prev - 1);
-  };
-
-  function getImages(data) {
-    for (let i = 0; i < data.length; i++) {
-      document.write(`${i}: image </br> `);
+  function displayLanding1(page) {
+    if (page === "landing1") {
+      return LandingPageData1.map((item) => (
+        <ImageComp {...item} key={item.name} />
+      ));
+    } else if (page === "landing2") {
+      return LandingPageData2.map((item) => (
+        <ImageComp {...item} key={item.name} />
+      ));
     }
   }
   return (
-    <div className={`carousel-outer-wrapper ${props.className}`}>
-      <div
-        className={`carousel-inner-wrapper ${props.className}`}
-        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
-      >
+    <div className='carousel-outer-wrapper'>
+      <div className={"carousel-inner-wrapper"}>
+        {/* props.page value is coming from Landing component */}
+        {displayLanding1(props.page)}
+
         {/* add utility classes for each carousel size */}
         {/* write a function to get image data instead of hard coding it */}
-        {/* {getImages(landingData1)} */}
-
-        <img className={props.className} src={landingData1[0]} alt='' />
-        <img className={props.className} src={landingData1[1]} alt='' />
-        <img className='test' src={landingData1[2]} alt='' />
-        <img className={props.className} src={landingData1[3]} alt='' />
-        <img className={props.className} src={landingData1[4]} alt='' />
-        <img className={props.className} src={landingData1[5]} alt='' />
-        <img className={props.className} src={landingData1[6]} alt='' />
-        <img className={props.className} src={landingData1[7]} alt='' />
+        {/* return props.page */}
       </div>
     </div>
   );

@@ -15,24 +15,20 @@
 }
 
 .carousel-inner-wrapper {
+  position: relative;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  outline: 2px solid green;
   overflow: scroll;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0px;
   scrollbar-width: none; /* Remove scrollbar Firefox inner wrapper */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Remove scrollbar Firefox image-wrapper  */
 }
 .carousel-inner-wrapper -webkit-scrollbar {
   scrollbar-width: none;
-}
-.carousel-inner-wrapper img {
-  max-width: 40%;
-  max-height: 600px;
-  margin: 0 20px 0 0;
-  outline: 2px solid red;
 }/*# sourceMappingURL=Carousel.css.map */

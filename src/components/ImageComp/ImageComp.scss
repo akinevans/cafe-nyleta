@@ -1,0 +1,25 @@
+@import "../styleFunctions/functions";
+
+//! crop last 2 images a little bigger
+
+img {
+  scroll-snap-align: start;
+  // @include temporaryOutline(red);
+}
+
+//* Utility classes
+
+.large {
+  max-width: 40%;
+  height: 100%;
+  max-height: 600px;
+  margin: 0 20px 0 0;
+}
+
+.small {
+  max-width: 20%;
+  height: 100%;
+  max-height: 350px;
+  margin: 0 20px 0 0;
+  outline: 2px solid red;
+}

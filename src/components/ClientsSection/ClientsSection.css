@@ -12,23 +12,21 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-
-.clients-inner-wrapper {
+.clients-outer-wrapper .clients-inner-wrapper {
   width: 780px;
   height: -moz-fit-content;
   height: fit-content;
   max-width: 90%;
 }
-
-.clients-text-wrapper {
+.clients-outer-wrapper .clients-text-wrapper {
   width: 780px;
   height: -moz-fit-content;
   height: fit-content;
   max-width: 90%;
   margin-bottom: 80px;
 }
-.clients-text-wrapper h1,
-.clients-text-wrapper p {
+.clients-outer-wrapper .clients-text-wrapper h1,
+.clients-outer-wrapper .clients-text-wrapper p {
   width: 780px;
   height: -moz-fit-content;
   height: fit-content;
@@ -38,18 +36,17 @@
   color: var(--Grey-100);
   text-align: center;
 }
-.clients-text-wrapper h1 {
+.clients-outer-wrapper .clients-text-wrapper h1 {
   font-size: var(--Heading-1);
 }
-.clients-text-wrapper p {
+.clients-outer-wrapper .clients-text-wrapper p {
   width: 676px;
   height: -moz-fit-content;
   height: fit-content;
   font-size: var(--Body);
   margin-bottom: 0;
 }
-
-.clients-img-wrapper {
+.clients-outer-wrapper .clients-img-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,8 +57,8 @@
   max-width: 95%;
   margin-bottom: 150px;
 }
-.clients-img-wrapper .img-top,
-.clients-img-wrapper .img-bottom {
+.clients-outer-wrapper .clients-img-wrapper .img-top,
+.clients-outer-wrapper .clients-img-wrapper .img-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -69,25 +66,25 @@
   width: 100%;
   height: 72px;
 }
-.clients-img-wrapper .img-top img,
-.clients-img-wrapper .img-bottom img {
+.clients-outer-wrapper .clients-img-wrapper .img-top img,
+.clients-outer-wrapper .clients-img-wrapper .img-bottom img {
   max-width: 130px;
 }
-.clients-img-wrapper .img-top {
+.clients-outer-wrapper .clients-img-wrapper .img-top {
   margin-bottom: 15px;
 }
-.clients-img-wrapper .img-top .stussy {
+.clients-outer-wrapper .clients-img-wrapper .img-top .stussy {
   max-width: 120px;
 }
-.clients-img-wrapper .img-top .arcteryx {
+.clients-outer-wrapper .clients-img-wrapper .img-top .arcteryx {
   max-width: 100px;
 }
-.clients-img-wrapper .img-top .nike {
+.clients-outer-wrapper .clients-img-wrapper .img-top .nike {
   max-width: 90px;
 }
-.clients-img-wrapper .img-bottom .goretex {
+.clients-outer-wrapper .clients-img-wrapper .img-bottom .goretex {
   max-width: 80px;
 }
-.clients-img-wrapper .img-bottom .adidas {
+.clients-outer-wrapper .clients-img-wrapper .img-bottom .adidas {
   max-width: 115px;
 }/*# sourceMappingURL=ClientsSection.css.map */

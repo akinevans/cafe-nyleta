@@ -10,19 +10,21 @@
 .carousel-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
   margin-bottom: 131px;
-  //   @include temporaryOutline(red);
+  // @include temporaryOutline(red);
 }
 
 .carousel-inner-wrapper {
   //& Build infinite scroll behavior
   // should scroll with both X and Y mouse scroll wheels
-
+  position: relative;
   @include flexPosition(flex-start, flex-start);
   @include widthHeight(100%, fit-content);
-  @include temporaryOutline(green);
+  // @include temporaryOutline(green);
 
   overflow: scroll;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0px;
   scrollbar-width: none; /* Remove scrollbar Firefox inner wrapper */
 
   //^ Hide scrollbar  (Chrome, Safari and Opera)
@@ -39,10 +41,4 @@
   //   @include temporaryOutline(blue);
 
   //* this img tag will be replaced by utility classes
-  img {
-    max-width: 40%;
-    max-height: 600px;
-    margin: 0 20px 0 0;
-    @include temporaryOutline(red);
-  } // End img
 } // End inner wrapper
