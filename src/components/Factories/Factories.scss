@@ -1,0 +1,97 @@
+@import "../styleFunctions/functions";
+
+.factories-outer-wrapper,
+.factories-inner-wrapper {
+  @include flex(column);
+  @include flexPosition(center, center);
+  background-color: var(--Background);
+}
+
+.factories-outer-wrapper {
+  @include widthHeight(var(--Full), fit-content);
+  // @include temporaryOutline(red);
+
+  .factories-inner-wrapper {
+    @include widthHeight(var(--Desktop), fit-content);
+    @include maxWidth(90%);
+    // @include temporaryOutline(blue);
+
+    .factories-text-wrapper {
+      @include flex(column);
+      @include flexPosition(center, center);
+      @include widthHeight(780px, fit-content);
+      @include maxWidth(90%);
+      margin-bottom: 75px;
+      //   @include temporaryOutline(green);
+
+      h1,
+      p {
+        @include widthHeight(780px, fit-content);
+        @include maxWidth(100%);
+        font-family: var(--HN-Light);
+        font-weight: var(--Light-Weight);
+        color: var(--Grey-100);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: var(--Heading-1);
+        margin-top: 0;
+      }
+
+      p {
+        @include widthHeight(676px, fit-content);
+        font-size: var(--Body);
+        margin-bottom: 0;
+      }
+    } // End factories text wrapper
+
+    .factories-img-wrapper {
+      position: relative;
+      @include widthHeight(53%, fit-content);
+      @include maxWidth(100%);
+      // @include temporaryOutline(green);
+      margin-bottom: 110px;
+
+      img {
+        @include widthHeight(100%, 100%);
+        @include maxWidth(100%);
+      }
+
+      .triangle {
+        position: absolute;
+        // @include widthHeight(0px, 0px);
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-top: 15px solid var(--Accent);
+        transition: all 0.2s ease;
+
+        &:hover {
+          transform: scaleX(10px);
+          transform: scale(1.1);
+          transition: all 0.2s ease;
+        }
+      }
+
+      .america {
+        top: 22%;
+        left: 23%;
+      }
+
+      .turkey {
+        top: 23.6%;
+        right: 40.8%;
+      }
+
+      .china {
+        top: 31.5%;
+        right: 19.5%;
+      }
+
+      .vietnam {
+        top: 39%;
+        right: 20.2%;
+      }
+    } // End img wrapper
+  } // End inner wrapper
+}

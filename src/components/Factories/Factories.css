@@ -1,0 +1,94 @@
+.factories-outer-wrapper,
+.factories-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Background);
+}
+
+.factories-outer-wrapper {
+  width: var(--Full);
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.factories-outer-wrapper .factories-inner-wrapper {
+  width: var(--Desktop);
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 90%;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 780px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 90%;
+  margin-bottom: 75px;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper h1,
+.factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper p {
+  width: 780px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 100%;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  color: var(--Grey-100);
+  text-align: center;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper h1 {
+  font-size: var(--Heading-1);
+  margin-top: 0;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper p {
+  width: 676px;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: var(--Body);
+  margin-bottom: 0;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper {
+  position: relative;
+  width: 53%;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 100%;
+  margin-bottom: 110px;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .triangle {
+  position: absolute;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 15px solid var(--Accent);
+  transition: all 0.2s ease;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .triangle:hover {
+  transform: scaleX(10px);
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .america {
+  top: 22%;
+  left: 23%;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .turkey {
+  top: 23.6%;
+  right: 40.8%;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .china {
+  top: 31.5%;
+  right: 19.5%;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .vietnam {
+  top: 39%;
+  right: 20.2%;
+}/*# sourceMappingURL=Factories.css.map */

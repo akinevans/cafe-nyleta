@@ -35,7 +35,7 @@
 - [] Services
 - [x] Quote w/ props
 - [] Carousel 2 w/ props
-- [] WorldMap
+- [x] WorldMap
 - [x] Footer
 
 ### - [] Media Queries for Tablet

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Carousel from "../components/Carousel/Carousel";
 import Quote from "../components/Quote/Quote";
+import Factories from "../components/Factories/Factories";
 import Footer from "../components/Footer/Footer";
 
 export default function Landing(props) {
@@ -18,7 +19,7 @@ export default function Landing(props) {
       />
       <Carousel page='landing2' />
 
-      {/* World Map */}
+      <Factories />
       <Footer />
       {/* Router can render nav / footer conditionally on each page */}
     </>
