@@ -31,7 +31,7 @@
 - [x] Clients
 - [] Carousel w/ props
 - [] Services
-- [] Quote w/ props
+- [x] Quote w/ props
 - [] Carousel 2 w/ props
 - [] WorldMap
 - [] Footer
