@@ -26,6 +26,11 @@
   // @include temporaryOutline(red);
 }
 
+//The last image in each carousel
+.last {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 1100px) {
   .large,
   .small {

@@ -17,6 +17,10 @@
   transition: all 0.2s ease-out;
 }
 
+.last {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 1100px) {
   .large,
   .small {

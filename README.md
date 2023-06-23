@@ -32,6 +32,7 @@
 - [x] Carousel w/ props
   - [] Drag Functionality
   - [] Scroll Functionality
+  - [] Gradient
 - [] Services
 - [x] Quote w/ props
 - [] Carousel 2 w/ props

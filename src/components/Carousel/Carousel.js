@@ -72,7 +72,7 @@ export default function Carousel(props) {
     },
     {
       name: "c108",
-      className: large,
+      className: `${large} last`,
       src: c108,
       alt: description,
     },
@@ -123,7 +123,7 @@ export default function Carousel(props) {
     },
     {
       name: "c208",
-      className: small,
+      className: `${small} last`,
       src: c208,
       alt: description,
     },
