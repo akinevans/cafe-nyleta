@@ -48,7 +48,7 @@
 - [] Quote w/ props
 - [] Carousel 2
 - [] WorldMap
-- [] Footer
+- [x] Footer
 
 ### - [] Media Queries for Mobile
 
@@ -60,7 +60,7 @@
 - [] Quote w/ props
 - [] Carousel 2
 - [] WorldMap
-- [] Footer
+- [x] Footer
 
 ---
 

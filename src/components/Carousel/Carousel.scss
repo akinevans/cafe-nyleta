@@ -15,6 +15,7 @@
 
 .carousel-inner-wrapper {
   //! Build Framer motion auto slideshow
+  //! media queries for inner height for tablet and mobile
   @include flexPosition(flex-start, flex-start);
   @include widthHeight(100%, fit-content);
   cursor: grab;
