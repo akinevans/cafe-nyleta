@@ -1,12 +1,13 @@
-img {
+.img {
   scroll-snap-align: start;
+  transition: all 0.2s ease-out;
 }
 
 .large {
-  max-width: 40%;
   height: 100%;
   max-height: 600px;
   margin: 0 20px 0 0;
+  transition: all 0.2s ease-out;
 }
 
 .small {
@@ -14,4 +15,26 @@ img {
   height: 100%;
   max-height: 350px;
   margin: 0 20px 0 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .large {
+    margin: 0 -30px 0 0;
+    transform: scale(0.9);
+    transition: all 0.2s ease-out;
+  }
+}
+@media screen and (max-width: 950px) {
+  .large {
+    margin: 0 -80px 0 0;
+    transform: scale(0.8);
+    transition: all 0.2s ease-out;
+  }
+}
+@media screen and (max-width: 850px) {
+  .large {
+    margin: 0 -130px 0 0;
+    transform: scale(0.7);
+    transition: all 0.2s ease-out;
+  }
 }/*# sourceMappingURL=ImageComp.css.map */

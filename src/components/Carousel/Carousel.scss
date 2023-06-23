@@ -14,7 +14,7 @@
 }
 
 .carousel-inner-wrapper {
-  //! Build Framer motion slideshow
+  //! Build Framer motion auto slideshow
   @include flexPosition(flex-start, flex-start);
   @include widthHeight(100%, fit-content);
   cursor: grab;

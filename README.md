@@ -29,7 +29,7 @@
 - [x] Nav
 - [x] Hero
 - [x] Clients
-- [] Carousel w/ props
+- [x] Carousel w/ props
   - [] Drag Functionality
   - [] Scroll Functionality
 - [] Services
