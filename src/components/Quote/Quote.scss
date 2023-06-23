@@ -1,0 +1,39 @@
+@import "../styleFunctions/functions";
+
+.quote-outer-wrapper,
+.quote-inner-wrapper {
+  @include flex(column);
+  @include flexPosition(center, center);
+  background-color: var(--Grey-100);
+}
+
+.quote-outer-wrapper {
+  @include widthHeight(var(--Full), fit-content);
+  //   @include temporaryOutline(red);
+  padding: 120px 100px;
+
+  .quote-inner-wrapper {
+    @include widthHeight(100%, fit-content);
+    // @include temporaryOutline(blue);
+    @include maxWidth(990px);
+
+    h1,
+    p {
+      color: var(--White);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: var(--Windsor);
+      font-size: 32px;
+      margin: 0 0 64px 0;
+    }
+
+    p {
+      font-family: var(--HN-Light-Italic);
+      font-weight: var(--Light-Weight);
+      font-size: 18px;
+      margin: 0;
+    }
+  } // End inner wrapper
+} // End outer wrapper

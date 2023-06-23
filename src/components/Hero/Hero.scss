@@ -9,7 +9,7 @@
 
 .hero-outer-wrapper {
   @include flexPosition(center, center);
-  margin: 120px 0 172px 0;
+  margin: 120px 0;
   // @include temporaryOutline(red);
 }
 

@@ -10,9 +10,8 @@ img {
 }
 
 .small {
-  max-width: 20%;
+  max-width: 45%;
   height: 100%;
   max-height: 350px;
   margin: 0 20px 0 0;
-  outline: 2px solid red;
 }/*# sourceMappingURL=ImageComp.css.map */

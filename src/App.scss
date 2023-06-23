@@ -20,6 +20,7 @@
 
   /** Fonts */
   --HN-Light: "Helvetica Neue Light";
+  --HN-Light-Italic: "Helvetica Neue Light Italic";
   --HN-Medium: "Helvetica Neue Medium";
   --Windsor: "Windsor Regular";
 
@@ -48,6 +49,13 @@ html {
   font-family: "Helvetica Neue Light";
   src: local("Helvetica-Neue-Light"),
     url("./assets/fonts/Helvetica-Neue-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Light Italic";
+  src: local("Helvetica-Neue-Light-Italic"),
+    url("../src/assets/fonts/Helvetica-Neue-Light-Italic.ttf")
+      format("truetype");
 }
 
 @font-face {

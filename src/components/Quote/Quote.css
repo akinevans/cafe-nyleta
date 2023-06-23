@@ -1,0 +1,37 @@
+.quote-outer-wrapper,
+.quote-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Grey-100);
+}
+
+.quote-outer-wrapper {
+  width: var(--Full);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 120px 100px;
+}
+.quote-outer-wrapper .quote-inner-wrapper {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 990px;
+}
+.quote-outer-wrapper .quote-inner-wrapper h1,
+.quote-outer-wrapper .quote-inner-wrapper p {
+  color: var(--White);
+  text-align: center;
+}
+.quote-outer-wrapper .quote-inner-wrapper h1 {
+  font-family: var(--Windsor);
+  font-size: 32px;
+  margin: 0 0 64px 0;
+}
+.quote-outer-wrapper .quote-inner-wrapper p {
+  font-family: var(--HN-Light-Italic);
+  font-weight: var(--Light-Weight);
+  font-size: 18px;
+  margin: 0;
+}/*# sourceMappingURL=Quote.css.map */
