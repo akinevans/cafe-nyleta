@@ -1,0 +1,42 @@
+@import "../styleFunctions/functions";
+
+.footer-outer-wrapper {
+  @include flex(row);
+  @include flexPosition(flex-start, center);
+  @include widthHeight(var(--Full), 296px);
+  background-color: var(--White);
+  //   @include temporaryOutline(red);
+}
+
+.footer-content-wrapper {
+  @include flex(column);
+  @include flexPosition(center, flex-start);
+  @include widthHeight(142px, fit-content);
+  margin: auto 0 auto 130px;
+  background-color: var(--White);
+  //   @include temporaryOutline(green);
+
+  img {
+    @include widthHeight(142px, 55px);
+    margin-left: -6px;
+    // @include temporaryOutline(red);
+  }
+
+  a {
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Navigation);
+    margin: 11px 0;
+    color: var(--Grey-100);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 85%;
+    }
+  }
+}
