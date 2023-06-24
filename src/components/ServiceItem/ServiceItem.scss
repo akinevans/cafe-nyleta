@@ -9,7 +9,7 @@
 .service-item-outer-wrapper {
   @include widthHeight(100%, fit-content);
   //   @include maxWidth(100%);
-  max-height: 259px;
+  max-height: 450px;
   border-bottom: 0.5px solid var(--Grey-100);
   //   margin-bottom: 10px;
   //   @include temporaryOutline(green);
@@ -17,9 +17,11 @@
 
 .service-item-inner-wrapper {
   //! issues when hiding message text here, inner wrapper shrinks
-  @include widthHeight(780px, fit-content);
+  position: relative;
+  @include widthHeight(780px, auto);
   max-width: 100%;
-  transition: all 0.2s ease-out;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
 
   //   @include temporaryOutline(blue);
 
@@ -38,28 +40,21 @@
       color: var(--Grey-100);
     }
 
-    img {
-      margin-right: 15px;
+    .plus,
+    .minus {
       width: 16px;
       height: 16px;
-      cursor: pointer;
+      margin-right: 15px;
     }
   } // end title wrapper
 
-  .hidden {
-    //* display none acts as if the element does not exist in the DOM
-    display: none;
-    // visibility: hidden;
-    // opacity: 0;
-    transition: all 0.2s ease-out;
-  }
-
-  //^ message-wrapper class will dynamically receive the 'hidden' className that will remove it from the DOM.
+  //^ message-wrapper class will dynamically receive the 'hidden' and 'visible' classNames that will remove it from the DOM.
   .message-wrapper {
     @include widthHeight(100%, fit-content);
     // min-width: 500px;
     margin-bottom: 64px;
-    transition: all 0.2s ease-out;
+    transition: all 0.5s ease-out;
+
     // @include temporaryOutline(orange);
 
     .service-item-message {
@@ -70,5 +65,28 @@
       color: var(--Black);
       text-align: left;
     }
+  } // end message wrapper
+
+  .visible {
+    opacity: 1;
+    visibility: visible;
+    // transform: translateY(0px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hidden {
+    //* display none acts as if the element does not exist in the DOM
+    opacity: 0;
+    margin: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
   }
 } // end inner wrapper
+
+//^ Utility class for shrinking the inner wrapper with state. Must not be nested inside inner wrapper
+.shrink {
+  height: 0px;
+  max-height: 0px;
+  margin: 0;
+  transition: all 0.6s ease-out;
+}

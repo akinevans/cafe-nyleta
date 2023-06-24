@@ -33,7 +33,7 @@
   - [] Drag Functionality
   - [] Scroll Functionality
   - [] Gradient
-- [] Services
+- [x] Services
 - [x] Quote w/ props
 - [] Carousel 2 w/ props
 - [x] WorldMap
@@ -45,7 +45,7 @@
 - [] Hero
 - [] Clients
 - [] Carousel
-- [] Services
+- [x] Services
 - [] Quote w/ props
 - [] Carousel 2
 - [] WorldMap
@@ -57,7 +57,7 @@
 - [] Hero
 - [] Clients
 - [] Carousel
-- [] Services
+- [x] Services
 - [] Quote w/ props
 - [] Carousel 2
 - [] WorldMap
