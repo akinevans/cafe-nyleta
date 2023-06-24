@@ -8,6 +8,10 @@ import Factories from "../components/Factories/Factories";
 import Footer from "../components/Footer/Footer";
 
 export default function Landing(props) {
+  const quoteData = {
+    text: "“Design is creativity, expertise, and collaboration. It involves attention to detail and a commitment to bringing ideas to life in a way that reflects the brand's vision and values”",
+    author: "Jack Mahaley, Lead Designer",
+  };
   return (
     <>
       <Navbar />
@@ -15,8 +19,9 @@ export default function Landing(props) {
       <Carousel page='landing1' />
       <ServicesComp />
       <Quote
-        quoteText="“Design is creativity, expertise, and collaboration. It involves attention to detail and a commitment to bringing ideas to life in a way that reflects the brand's vision and values”"
-        author='Jack Mahaley, Lead Designer'
+        //
+        quoteText={quoteData.text}
+        author={quoteData.author}
       />
       <Carousel page='landing2' />
 
