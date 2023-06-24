@@ -8,19 +8,26 @@
 
 .service-item-outer-wrapper {
   @include widthHeight(100%, fit-content);
+  //   @include maxWidth(100%);
   max-height: 259px;
   border-bottom: 0.5px solid var(--Grey-100);
+  //   margin-bottom: 10px;
   //   @include temporaryOutline(green);
 }
 
 .service-item-inner-wrapper {
-  @include widthHeight(780px, 100%);
+  //! issues when hiding message text here, inner wrapper shrinks
+  @include widthHeight(780px, fit-content);
+  max-width: 100%;
+  transition: all 0.2s ease-out;
+
   //   @include temporaryOutline(blue);
 
   .service-item-title-wrapper {
     @include flex(row);
     @include flexPosition(space-between, center);
     @include widthHeight(100%, fit-content);
+    margin: 10px 0;
     // @include temporaryOutline(yellow);
 
     .service-item-title {
@@ -39,8 +46,20 @@
     }
   } // end title wrapper
 
+  .hidden {
+    //* display none acts as if the element does not exist in the DOM
+    display: none;
+    // visibility: hidden;
+    // opacity: 0;
+    transition: all 0.2s ease-out;
+  }
+
+  //^ message-wrapper class will dynamically receive the 'hidden' className that will remove it from the DOM.
   .message-wrapper {
-    @include widthHeight(100%, 156px);
+    @include widthHeight(100%, fit-content);
+    // min-width: 500px;
+    margin-bottom: 64px;
+    transition: all 0.2s ease-out;
     // @include temporaryOutline(orange);
 
     .service-item-message {

@@ -16,7 +16,10 @@
 
 .service-item-inner-wrapper {
   width: 780px;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 100%;
+  transition: all 0.2s ease-out;
 }
 .service-item-inner-wrapper .service-item-title-wrapper {
   display: flex;
@@ -26,6 +29,7 @@
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  margin: 10px 0;
 }
 .service-item-inner-wrapper .service-item-title-wrapper .service-item-title {
   margin-left: 15px;
@@ -40,9 +44,16 @@
   height: 16px;
   cursor: pointer;
 }
+.service-item-inner-wrapper .hidden {
+  display: none;
+  transition: all 0.2s ease-out;
+}
 .service-item-inner-wrapper .message-wrapper {
   width: 100%;
-  height: 156px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 64px;
+  transition: all 0.2s ease-out;
 }
 .service-item-inner-wrapper .message-wrapper .service-item-message {
   margin-left: 15px;

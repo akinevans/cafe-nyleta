@@ -8,26 +8,28 @@
 
 .services-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
-  margin-bottom: 118px;
   //   @include temporaryOutline(red);
 }
 
 .services-inner-wrapper {
-  @include widthHeight(780px, 100%);
-  //   @include temporaryOutline(blue);
+  //   @include widthHeight(780px, 100%);
+  //   @include maxWidth(780px);
+  max-width: 82%;
+  margin: 0 50px 118px 50px;
+  //   @include temporaryOutline(pink);
 
-  .component-title {
-    // margin: 0;
-    font-family: var(--HN-Light);
-    font-weight: var(--Light-Weight);
-    font-size: var(--Heading-1);
-    color: var(--Grey-100);
-    text-align: center;
+  .component-title-wrapper {
+    @include widthHeight(100%, 100%);
+    border-bottom: 0.5px solid var(--Grey-100);
     // @include temporaryOutline(green);
-  }
 
-  //   .underline {
-  //     width: 100%;
-  //     border-bottom: 0.5px solid var(--Grey-100);
-  //   }
+    .component-title {
+      margin-bottom: 70px;
+      font-family: var(--HN-Light);
+      font-weight: var(--Light-Weight);
+      font-size: var(--Heading-1);
+      color: var(--Grey-100);
+      text-align: center;
+    }
+  }
 }

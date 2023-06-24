@@ -11,8 +11,8 @@ export default function ServiceItem(props) {
           <h1 className='service-item-title'>{props.title}</h1>
           <img src={plus} alt='plus sign' />
         </div>
-
-        <div className='message-wrapper'>
+        {/* apply hidden class here. i think */}
+        <div className='message-wrapper hidden'>
           <p className='service-item-message'>{props.message}</p>
         </div>
       </div>
