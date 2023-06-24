@@ -23,6 +23,7 @@ import c208 from "../../assets/images/home/carousel-2/carousel_208.jpeg";
 //! Images should scroll on X axis with both scroll wheels
 
 export default function Carousel(props) {
+  // large & small are class names provided to each ImageComp component
   const large = "img large";
   const small = "img small";
   const description = "fashion model;";
@@ -139,6 +140,7 @@ export default function Carousel(props) {
         <ImageComp {...item} key={item.name} />
       ));
     }
+    //^ add to the function when building carousels for other pages
   }
 
   //^ Write Function to change cursor from hand to grabbing on click and release

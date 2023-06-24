@@ -1,5 +1,5 @@
 @import "../styleFunctions/functions";
-
+//! Build Modal that triggers when hovering over arrow on map
 .factories-outer-wrapper,
 .factories-inner-wrapper {
   @include flex(column);

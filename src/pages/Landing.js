@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Carousel from "../components/Carousel/Carousel";
+import ServicesComp from "../components/ServicesComp/ServicesComp";
 import Quote from "../components/Quote/Quote";
 import Factories from "../components/Factories/Factories";
 import Footer from "../components/Footer/Footer";
@@ -12,7 +13,7 @@ export default function Landing(props) {
       <Navbar />
       <Hero />
       <Carousel page='landing1' />
-      {/* Services */}
+      <ServicesComp />
       <Quote
         quoteText="“Design is creativity, expertise, and collaboration. It involves attention to detail and a commitment to bringing ideas to life in a way that reflects the brand's vision and values”"
         author='Jack Mahaley, Lead Designer'

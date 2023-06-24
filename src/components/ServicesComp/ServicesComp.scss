@@ -1,0 +1,33 @@
+@import "../styleFunctions/functions";
+
+.services-outer-wrapper,
+.services-inner-wrapper {
+  @include flex(column);
+  @include flexPosition(center, center);
+}
+
+.services-outer-wrapper {
+  @include widthHeight(var(--Full), fit-content);
+  margin-bottom: 118px;
+  //   @include temporaryOutline(red);
+}
+
+.services-inner-wrapper {
+  @include widthHeight(780px, 100%);
+  //   @include temporaryOutline(blue);
+
+  .component-title {
+    // margin: 0;
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Heading-1);
+    color: var(--Grey-100);
+    text-align: center;
+    // @include temporaryOutline(green);
+  }
+
+  //   .underline {
+  //     width: 100%;
+  //     border-bottom: 0.5px solid var(--Grey-100);
+  //   }
+}

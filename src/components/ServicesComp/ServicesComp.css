@@ -1,0 +1,26 @@
+.services-outer-wrapper,
+.services-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-outer-wrapper {
+  width: var(--Full);
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 118px;
+}
+
+.services-inner-wrapper {
+  width: 780px;
+  height: 100%;
+}
+.services-inner-wrapper .component-title {
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Heading-1);
+  color: var(--Grey-100);
+  text-align: center;
+}/*# sourceMappingURL=ServicesComp.css.map */

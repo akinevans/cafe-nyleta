@@ -1,0 +1,54 @@
+.service-item-outer-wrapper,
+.service-item-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-item-outer-wrapper {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 259px;
+  border-bottom: 0.5px solid var(--Grey-100);
+}
+
+.service-item-inner-wrapper {
+  width: 780px;
+  height: 100%;
+}
+.service-item-inner-wrapper .service-item-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.service-item-inner-wrapper .service-item-title-wrapper .service-item-title {
+  margin-left: 15px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Heading-2);
+  color: var(--Grey-100);
+}
+.service-item-inner-wrapper .service-item-title-wrapper img {
+  margin-right: 15px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.service-item-inner-wrapper .message-wrapper {
+  width: 100%;
+  height: 156px;
+}
+.service-item-inner-wrapper .message-wrapper .service-item-message {
+  margin-left: 15px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body);
+  color: var(--Black);
+  text-align: left;
+}/*# sourceMappingURL=ServiceItem.css.map */

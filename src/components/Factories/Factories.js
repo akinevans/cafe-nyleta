@@ -3,6 +3,7 @@ import "./Factories.css";
 import world_map from "../../assets/images/home/worldmap.png";
 
 export default function Factories() {
+  //! Build Modal that triggers when hovering over arrow on map
   return (
     <section className='factories-outer-wrapper'>
       <div className='factories-inner-wrapper'>
