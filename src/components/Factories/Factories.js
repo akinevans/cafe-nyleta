@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Factories.css";
 import world_map from "../../assets/images/home/worldmap.png";
 import FactoryModal from "../FactoryModal/FactoryModal";
+import { motion } from "framer-motion";
 
 export default function Factories() {
   const [americaVisible, setAmericaVisible] = useState(false);
@@ -67,45 +68,84 @@ export default function Factories() {
           <img src={world_map} alt='world map' />
 
           {/* Map Triangles */}
-          {/* Add framer spring-jump animations */}
-          <div
+          <motion.div
             className='triangle america'
+            whileHover={{
+              scale: [1, 1.2],
+              translateY: [0, -5],
+              transition: {
+                type: "tween",
+                stiffness: 300,
+                ease: "easeOut",
+                duration: 0.2,
+              },
+            }}
             onMouseEnter={() => {
               setAmericaVisible(!americaVisible);
             }}
             onMouseLeave={() => {
               setAmericaVisible(!americaVisible);
             }}
-          ></div>
-          <div
+          ></motion.div>
+          <motion.div
             className='triangle turkey'
+            whileHover={{
+              scale: [1, 1.2],
+              translateY: [0, -5],
+              transition: {
+                type: "tween",
+                stiffness: 300,
+                ease: "easeOut",
+                duration: 0.2,
+              },
+            }}
             onMouseEnter={() => {
               setTurkeyVisible(!turkeyVisible);
             }}
             onMouseLeave={() => {
               setTurkeyVisible(!turkeyVisible);
             }}
-          ></div>
+          ></motion.div>
 
-          <div
+          <motion.div
             className='triangle vietnam'
+            whileHover={{
+              scale: [1, 1.2],
+              translateY: [0, -5],
+              transition: {
+                type: "tween",
+                stiffness: 300,
+                ease: "easeOut",
+                duration: 0.2,
+              },
+            }}
             onMouseEnter={() => {
               setVietnamVisible(!vietnamVisible);
             }}
             onMouseLeave={() => {
               setVietnamVisible(!vietnamVisible);
             }}
-          ></div>
+          ></motion.div>
 
-          <div
+          <motion.div
             className='triangle china'
+            whileHover={{
+              scale: [1, 1.2],
+              translateY: [0, -5],
+              transition: {
+                type: "tween",
+                stiffness: 300,
+                ease: "easeOut",
+                duration: 0.2,
+              },
+            }}
             onMouseEnter={() => {
               setChinaVisible(!chinaVisible);
             }}
             onMouseLeave={() => {
               setChinaVisible(!chinaVisible);
             }}
-          ></div>
+          ></motion.div>
 
           {/* America modal */}
           <FactoryModal
