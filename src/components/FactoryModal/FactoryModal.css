@@ -1,0 +1,42 @@
+.factory-modal-wrapper {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 12px 15px;
+  background-color: var(--White);
+  outline: 0.5px solid var(--Black);
+}
+.factory-modal-wrapper h1,
+.factory-modal-wrapper h3,
+.factory-modal-wrapper li {
+  color: var(--Black);
+}
+.factory-modal-wrapper h1,
+.factory-modal-wrapper h3 {
+  margin: 0;
+  font-size: var(--Heading-3);
+  border-bottom: 0.25px solid var(--Black);
+}
+.factory-modal-wrapper h3,
+.factory-modal-wrapper li {
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+}
+.factory-modal-wrapper h1 {
+  padding-bottom: 8px;
+  font-family: var(--HN-Medium);
+}
+.factory-modal-wrapper h3 {
+  padding: 8px 0px;
+}
+.factory-modal-wrapper ul {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+.factory-modal-wrapper ul li {
+  font-size: var(--Body);
+  margin-bottom: 7px;
+}/*# sourceMappingURL=FactoryModal.css.map */

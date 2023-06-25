@@ -13,7 +13,7 @@ export default function ServiceItem(props) {
         onClick={() => {
           setOpen(!open);
         }}
-        className={`service-item-inner-wrapper ${open ? "" : ""}`}
+        className='service-item-inner-wrapper'
       >
         <div className='service-item-title-wrapper'>
           <h1 className='service-item-title'>{props.title}</h1>

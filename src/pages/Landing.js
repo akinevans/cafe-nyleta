@@ -24,7 +24,6 @@ export default function Landing(props) {
         author={quoteData.author}
       />
       <Carousel page='landing2' />
-
       <Factories />
       <Footer />
       {/* Router can render nav / footer conditionally on each page */}

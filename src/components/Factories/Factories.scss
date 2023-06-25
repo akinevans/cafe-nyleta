@@ -22,7 +22,7 @@
       @include widthHeight(780px, fit-content);
       @include maxWidth(90%);
       margin-bottom: 75px;
-      //   @include temporaryOutline(green);
+      // @include temporaryOutline(green);
 
       h1,
       p {
@@ -48,8 +48,8 @@
 
     .factories-img-wrapper {
       position: relative;
-      @include widthHeight(53%, fit-content);
-      @include maxWidth(100%);
+      @include widthHeight(fit-content, fit-content);
+      @include maxWidth(53%);
       // @include temporaryOutline(green);
       margin-bottom: 110px;
 
@@ -64,13 +64,15 @@
         border-left: 9px solid transparent;
         border-right: 9px solid transparent;
         border-top: 15px solid var(--Accent);
-        transition: all 0.2s ease;
+        // transition: all 0.2s ease;
+      }
 
-        &:hover {
-          transform: scaleX(10px);
-          transform: scale(1.1);
-          transition: all 0.2s ease;
-        }
+      .america-modal,
+      .turkey-modal,
+      .china-modal,
+      .vietnam-modal {
+        position: absolute;
+        transition: all 0.6s ease;
       }
 
       .america {
@@ -78,9 +80,34 @@
         left: 23%;
       }
 
+      .america-modal {
+        width: fit-content;
+        top: 19.5%;
+        left: 28.5%;
+      }
+
       .turkey {
         top: 23.6%;
         right: 40.8%;
+      }
+
+      .turkey-modal {
+        top: 21%;
+        //^ using 'right' breaks layout on screen size. If using position absolute only use 'top' and 'left'
+        // right: 0.5%;
+        left: 61%;
+      }
+
+      .vietnam {
+        top: 39%;
+        right: 20.2%;
+      }
+
+      .vietnam-modal {
+        top: 37%;
+        // right: -17.5%;
+        left: 82%;
+        width: 210px;
       }
 
       .china {
@@ -88,9 +115,26 @@
         right: 19.5%;
       }
 
-      .vietnam {
-        top: 39%;
-        right: 20.2%;
+      .china-modal {
+        top: 29.2%;
+        // right: -17.2%;
+        left: 82.8%;
+        width: 200px;
+      }
+
+      //^ Utility classes for hiding and showing map modals
+      .modal-visible {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.6s ease;
+      }
+
+      .modal-hidden {
+        //& display: none removes the modal from the DOM and keeps the component from doing a semi-render glitch during development.
+        // display none also renders all transitions useless
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s ease;
       }
     } // End img wrapper
   } // End inner wrapper

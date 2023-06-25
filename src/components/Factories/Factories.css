@@ -53,10 +53,11 @@
 }
 .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper {
   position: relative;
-  width: 53%;
+  width: -moz-fit-content;
+  width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  max-width: 100%;
+  max-width: 53%;
   margin-bottom: 110px;
 }
 .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper img {
@@ -69,26 +70,57 @@
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-top: 15px solid var(--Accent);
-  transition: all 0.2s ease;
 }
-.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .triangle:hover {
-  transform: scaleX(10px);
-  transform: scale(1.1);
-  transition: all 0.2s ease;
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .america-modal,
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .turkey-modal,
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .china-modal,
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .vietnam-modal {
+  position: absolute;
+  transition: all 0.6s ease;
 }
 .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .america {
   top: 22%;
   left: 23%;
 }
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .america-modal {
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 19.5%;
+  left: 28.5%;
+}
 .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .turkey {
   top: 23.6%;
   right: 40.8%;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .turkey-modal {
+  top: 21%;
+  left: 61%;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .vietnam {
+  top: 39%;
+  right: 20.2%;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .vietnam-modal {
+  top: 37%;
+  left: 82%;
+  width: 210px;
 }
 .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .china {
   top: 31.5%;
   right: 19.5%;
 }
-.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .vietnam {
-  top: 39%;
-  right: 20.2%;
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .china-modal {
+  top: 29.2%;
+  left: 82.8%;
+  width: 200px;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .modal-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.6s ease;
+}
+.factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .modal-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s ease;
 }/*# sourceMappingURL=Factories.css.map */
