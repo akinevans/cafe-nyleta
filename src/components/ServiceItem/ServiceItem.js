@@ -24,9 +24,7 @@ export default function ServiceItem(props) {
           />
         </div>
         {/* We want the message to disappear so we conditionally render it */}
-        <div
-          className={`message-wrapper ${open ? "visible" : "hidden shrink"}`}
-        >
+        <div className={`message-wrapper ${open ? "visible" : "hidden"}`}>
           <p className='service-item-message'>{props.message}</p>
         </div>
       </div>

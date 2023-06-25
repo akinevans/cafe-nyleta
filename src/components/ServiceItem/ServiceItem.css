@@ -20,7 +20,7 @@
   height: auto;
   max-width: 100%;
   cursor: pointer;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 .service-item-inner-wrapper .service-item-title-wrapper {
   display: flex;
@@ -50,7 +50,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 64px;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 .service-item-inner-wrapper .message-wrapper .service-item-message {
   margin-left: 15px;
@@ -59,6 +59,7 @@
   font-size: var(--Body);
   color: var(--Black);
   text-align: left;
+  transition: all 0.3s ease-in-out;
 }
 .service-item-inner-wrapper .visible {
   opacity: 1;
@@ -66,15 +67,10 @@
   transition: all 0.3s ease-in-out;
 }
 .service-item-inner-wrapper .hidden {
+  height: 0px;
+  max-height: 0px;
   opacity: 0;
   margin: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
-}
-
-.shrink {
-  height: 0px;
-  max-height: 0px;
-  margin: 0;
-  transition: all 0.6s ease-out;
 }/*# sourceMappingURL=ServiceItem.css.map */

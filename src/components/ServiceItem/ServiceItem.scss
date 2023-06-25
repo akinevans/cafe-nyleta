@@ -12,7 +12,7 @@
   max-height: 450px;
   border-bottom: 0.5px solid var(--Grey-100);
   //   margin-bottom: 10px;
-  //   @include temporaryOutline(green);
+  // @include temporaryOutline(green);
 }
 
 .service-item-inner-wrapper {
@@ -21,7 +21,7 @@
   @include widthHeight(780px, auto);
   max-width: 100%;
   cursor: pointer;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 
   //   @include temporaryOutline(blue);
 
@@ -53,7 +53,7 @@
     @include widthHeight(100%, fit-content);
     // min-width: 500px;
     margin-bottom: 64px;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-in-out;
 
     // @include temporaryOutline(orange);
 
@@ -64,6 +64,7 @@
       font-size: var(--Body);
       color: var(--Black);
       text-align: left;
+      transition: all 0.3s ease-in-out;
     }
   } // end message wrapper
 
@@ -74,19 +75,14 @@
     transition: all 0.3s ease-in-out;
   }
 
+  //^ Utility class for hiding and shrinking the inner wrapper with state. Must not be nested inside inner wrapper
   .hidden {
     //* display none acts as if the element does not exist in the DOM
+    height: 0px;
+    max-height: 0px;
     opacity: 0;
     margin: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
   }
 } // end inner wrapper
-
-//^ Utility class for shrinking the inner wrapper with state. Must not be nested inside inner wrapper
-.shrink {
-  height: 0px;
-  max-height: 0px;
-  margin: 0;
-  transition: all 0.6s ease-out;
-}
