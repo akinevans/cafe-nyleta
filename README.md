@@ -32,6 +32,7 @@
 - [x] Carousel w/ props
   - [] Drag Functionality
   - [] Scroll Functionality
+  - [] Fix resizing issue
   - [] Gradient
 - [x] Services
 - [x] Quote w/ props
