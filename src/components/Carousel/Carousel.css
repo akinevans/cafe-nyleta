@@ -20,7 +20,6 @@
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  cursor: grab;
   overflow: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -31,4 +30,11 @@
 }
 .carousel-inner-wrapper -webkit-scrollbar {
   scrollbar-width: none;
+}
+
+@media screen and (max-width: 850px) {
+  .carousel-outer-wrapper {
+    margin: 0;
+    transition: all 0.2s ease;
+  }
 }/*# sourceMappingURL=Carousel.css.map */

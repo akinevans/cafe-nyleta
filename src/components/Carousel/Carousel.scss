@@ -18,11 +18,9 @@
   //! media queries for inner height for tablet and mobile
   @include flexPosition(flex-start, flex-start);
   @include widthHeight(100%, fit-content);
-  cursor: grab;
   // @include temporaryOutline(green);
 
   overflow: scroll;
-
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scroll-padding: 0px;
@@ -43,3 +41,10 @@
 
   //* this img tag will be replaced by utility classes
 } // End inner wrapper
+
+@media screen and (max-width: 850px) {
+  .carousel-outer-wrapper {
+    margin: 0;
+    transition: all 0.2s ease;
+  }
+}

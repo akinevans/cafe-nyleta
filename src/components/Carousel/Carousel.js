@@ -1,6 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Carousel.css";
 import ImageComp from "../../components/ImageComp/ImageComp";
+
 // Image imports for top carousel Landing Page
 import c101 from "../../assets/images/home/carousel-1/carousel_101.jpg";
 import c102 from "../../assets/images/home/carousel-1/carousel_102.jpg";
@@ -147,14 +149,10 @@ export default function Carousel(props) {
 
   return (
     <div className='carousel-outer-wrapper'>
-      <div className={"carousel-inner-wrapper"}>
+      <motion.div className='carousel-inner-wrapper'>
         {/* props.page value is coming from Landing component */}
         {displayLanding1(props.page)}
-
-        {/* add utility classes for each carousel size */}
-        {/* write a function to get image data instead of hard coding it */}
-        {/* return props.page */}
-      </div>
+      </motion.div>
     </div>
   );
 }
