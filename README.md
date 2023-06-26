@@ -14,7 +14,7 @@
 
 - [x] Import fonts
 - [x] Replace Favicon
-- [] Setup Router
+- [x] Setup Router
 - [x] Remove initial react code
 - [x] Declare all CSS variables
 

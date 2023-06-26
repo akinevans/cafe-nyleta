@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 import hero_img from "../../assets/images/home/feature.jpg";
 import ClientsSection from "../ClientsSection/ClientsSection";
@@ -25,7 +26,9 @@ export default function Hero() {
 
         <ClientsSection />
         {/* Note, button is not inside the ClientsSection component, this should clear up any confusion with positioning and margins */}
-        <Button className='btn grey work' title='Work with us' />
+        <Link to='./contact'>
+          <Button className='btn grey work' title='Work with us' />
+        </Link>
       </div>
     </section>
   );

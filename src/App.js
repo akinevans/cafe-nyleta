@@ -4,6 +4,9 @@ import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import Careers from "./pages/Careers";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
       <Route path='/about' element={<About />} />
       <Route path='/shop' element={<Shop />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+      <Route path='terms-and-conditions' element={<TermsAndConditions />} />
+      <Route path='/careers' element={<Careers />} />
     </Routes>
   );
 }
