@@ -1,11 +1,14 @@
 import React from "react";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 export default function Contact() {
   return (
     <>
-      {/* Nav */}
+      <Navbar />
       {/* Contact Form */}
-      {/* Footer */}
+      <h1>Contact</h1>
+      <Footer />
     </>
   );
 }
