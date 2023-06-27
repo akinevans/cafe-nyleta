@@ -1,0 +1,8 @@
+@import "../styleFunctions/functions";
+
+.hero-img {
+  @include widthHeight(100%, fit-content);
+  // @include maxWidth(var(--Desktop));
+  margin: 5px 0 120px 0;
+  // @include temporaryOutline(blue);
+}

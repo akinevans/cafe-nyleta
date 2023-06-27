@@ -11,6 +11,7 @@
   width: var(--Full);
   height: -moz-fit-content;
   height: fit-content;
+  margin-bottom: 120px;
 }
 .clients-outer-wrapper .clients-inner-wrapper {
   width: 780px;
@@ -59,7 +60,7 @@
   height: -moz-fit-content;
   height: fit-content;
   max-width: 95%;
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 .clients-outer-wrapper .clients-img-wrapper .img-top,
 .clients-outer-wrapper .clients-img-wrapper .img-bottom {

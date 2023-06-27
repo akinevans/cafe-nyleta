@@ -35,10 +35,4 @@
   font-size: var(--Heading-1);
   color: var(--Grey-100);
   text-align: center;
-}
-.hero-inner-wrapper .hero-img {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 120px 0;
 }/*# sourceMappingURL=Hero.css.map */

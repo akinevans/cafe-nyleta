@@ -34,10 +34,10 @@
     }
   }
 
-  .hero-img {
-    @include widthHeight(100%, fit-content);
-    // @include maxWidth(var(--Desktop));
+  // .hero-img {
+  //   @include widthHeight(100%, fit-content);
+  //   // @include maxWidth(var(--Desktop));
 
-    margin: 120px 0;
-  }
+  //   margin: 120px 0;
+  // }
 } // End hero inner wrapper

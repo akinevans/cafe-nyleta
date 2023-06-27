@@ -10,6 +10,7 @@
 
 .clients-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
+  margin-bottom: 120px;
   // @include temporaryOutline(red);
 
   .clients-inner-wrapper {
@@ -53,7 +54,7 @@
     @include widthHeight(580px, fit-content);
     @include maxWidth(95%);
     //   @include temporaryOutline(pink);
-    margin-bottom: 150px;
+    margin-bottom: 120px;
 
     .img-top,
     .img-bottom {

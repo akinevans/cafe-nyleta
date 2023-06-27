@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 import "./ClientsSection.css";
 import stussy from "../../assets/images/home/client-logos/01_Stussy.png";
 import arcteryx from "../../assets/images/home/client-logos/02_arcteryx.png";
@@ -36,6 +38,13 @@ export default function ClientsSection() {
             <img src={wtaps} alt='wtaps logo' className='wtaps' />
           </div>
         </div>
+        <Link to='./contact'>
+          <Button
+            //
+            className='btn grey work'
+            title='Work with us'
+          />
+        </Link>
       </div>
     </section>
   );
