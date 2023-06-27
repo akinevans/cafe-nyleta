@@ -3,4 +3,8 @@
   height: -moz-fit-content;
   height: fit-content;
   margin: 5px 0 120px 0;
+}
+
+.zeroBottomMargin {
+  margin-bottom: 0;
 }/*# sourceMappingURL=FeatureImage.css.map */

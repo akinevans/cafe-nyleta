@@ -36,9 +36,7 @@ export default function Landing(props) {
       />
       <FeatureImage image={landingPageData.image} />
       <ClientsSection />
-
       <Carousel page='landing1' />
-
       <ServicesComp />
       <Quote
         //

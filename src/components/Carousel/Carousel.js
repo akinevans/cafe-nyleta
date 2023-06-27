@@ -6,11 +6,11 @@ import ImageComp from "../../components/ImageComp/ImageComp";
 // Image imports for top carousel Landing Page
 import c101 from "../../assets/images/home/carousel-1/carousel_101.jpg";
 import c102 from "../../assets/images/home/carousel-1/carousel_102.jpg";
-import c303 from "../../assets/images/home/carousel-1/carousel_103.jpg";
-import c404 from "../../assets/images/home/carousel-1/carousel_104.jpg";
-import c505 from "../../assets/images/home/carousel-1/carousel_105.jpg";
-import c606 from "../../assets/images/home/carousel-1/carousel_106.jpg";
-import c707 from "../../assets/images/home/carousel-1/carousel_107.jpg";
+import c103 from "../../assets/images/home/carousel-1/carousel_103.jpg";
+import c104 from "../../assets/images/home/carousel-1/carousel_104.jpg";
+import c105 from "../../assets/images/home/carousel-1/carousel_105.jpg";
+import c106 from "../../assets/images/home/carousel-1/carousel_106.jpg";
+import c107 from "../../assets/images/home/carousel-1/carousel_107.jpg";
 import c108 from "../../assets/images/home/carousel-1/carousel_108.jpg";
 
 // Image imports for bottom carousel Landing Page
@@ -22,6 +22,16 @@ import c205 from "../../assets/images/home/carousel-2/carousel_205.jpeg";
 import c206 from "../../assets/images/home/carousel-2/carousel_206.jpeg";
 import c207 from "../../assets/images/home/carousel-2/carousel_207.jpeg";
 import c208 from "../../assets/images/home/carousel-2/carousel_208.jpeg";
+
+// Image imports for carousel About Page
+import c301 from "../../assets/images/about/carousel/carousel_01.jpg";
+import c302 from "../../assets/images/about/carousel/carousel_02.jpg";
+import c303 from "../../assets/images/about/carousel/carousel_03.jpg";
+import c304 from "../../assets/images/about/carousel/carousel_04.jpg";
+import c305 from "../../assets/images/about/carousel/carousel_05.jpg";
+import c306 from "../../assets/images/about/carousel/carousel_06.jpg";
+import c307 from "../../assets/images/about/carousel/carousel_07.jpg";
+import c308 from "../../assets/images/about/carousel/carousel_08.jpg";
 //! Images should scroll on X axis with both scroll wheels
 
 export default function Carousel(props) {
@@ -46,31 +56,31 @@ export default function Carousel(props) {
     {
       name: "c103",
       className: large,
-      src: c303,
+      src: c103,
       alt: description,
     },
     {
       name: "c104",
       className: large,
-      src: c404,
+      src: c104,
       alt: description,
     },
     {
       name: "c105",
       className: large,
-      src: c505,
+      src: c105,
       alt: description,
     },
     {
       name: "c106",
       className: large,
-      src: c606,
+      src: c106,
       alt: description,
     },
     {
       name: "c107",
       className: large,
-      src: c707,
+      src: c107,
       alt: description,
     },
     {
@@ -132,7 +142,58 @@ export default function Carousel(props) {
     },
   ];
 
-  function displayLanding1(page) {
+  const aboutPageData = [
+    {
+      name: "c301",
+      className: large,
+      src: c301,
+      alt: "Woman wearing white cafe nyleta shirt",
+    },
+    {
+      name: "c302",
+      className: large,
+      src: c302,
+      alt: "incense burning",
+    },
+    {
+      name: "c303",
+      className: large,
+      src: c303,
+      alt: "cafe nyleta floor mat",
+    },
+    {
+      name: "c304",
+      className: large,
+      src: c304,
+      alt: "man wearing cafe nyleta shirt",
+    },
+    {
+      name: "c305",
+      className: large,
+      src: c305,
+      alt: "coffee mug and cigarettes",
+    },
+    {
+      name: "c306",
+      className: large,
+      src: c306,
+      alt: "white and blue cafe nyleta shirt",
+    },
+    {
+      name: "c307",
+      className: large,
+      src: c307,
+      alt: "incense burning",
+    },
+    {
+      name: "c308",
+      className: `${large} last`,
+      src: c308,
+      alt: "man cross the street in a city",
+    },
+  ];
+
+  function displayImages(page) {
     if (page === "landing1") {
       return LandingPageData1.map((item) => (
         <ImageComp {...item} key={item.name} />
@@ -141,8 +202,11 @@ export default function Carousel(props) {
       return LandingPageData2.map((item) => (
         <ImageComp {...item} key={item.name} />
       ));
+    } else if (page === "about") {
+      return aboutPageData.map((item) => (
+        <ImageComp {...item} key={item.name} />
+      ));
     }
-    //^ add to the function when building carousels for other pages
   }
 
   //^ Write Function to change cursor from hand to grabbing on click and release
@@ -151,7 +215,7 @@ export default function Carousel(props) {
     <div className='carousel-outer-wrapper'>
       <motion.div className='carousel-inner-wrapper'>
         {/* props.page value is coming from Landing component */}
-        {displayLanding1(props.page)}
+        {displayImages(props.page)}
       </motion.div>
     </div>
   );

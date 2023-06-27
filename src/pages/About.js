@@ -1,16 +1,24 @@
 import React from "react";
+import FeatureImage from "../components/FeatureImage/FeatureImage";
 import Quote from "../components/Quote/Quote";
+import Carousel from "../components/Carousel/Carousel";
+import Button from "../components/Button/Button";
+
+// Image Imports
 import cafe from "../assets/images/about/01_head_banner.jpg";
+
 import cup from "../assets/images/about/02_cup.jpg";
 import joss_sticks from "../assets/images/about/03_joss_sticks.jpg";
 
 export default function About() {
   const aboutPageData = {
-    image1: cafe,
-    image2: cup,
-    image3: joss_sticks,
+    cafeImage: cafe,
+    cupImage: cup,
+    jossImage: joss_sticks,
 
-    alt1: "man sitting in a cafe",
+    cafeAlt: "man sitting in a cafe",
+    cupAlt: "coffee cup filled with coffee",
+    jossAlt: "joss incense",
 
     aboutQuoteText:
       "“Coffee and Cafes are a celebration of life's simple pleasures, a sensory experience that combines aroma, taste and ambiance to create a unique and indulgent moment.”",
@@ -19,9 +27,28 @@ export default function About() {
   };
   return (
     <>
+      <FeatureImage
+        image={aboutPageData.cafeImage}
+        alt={aboutPageData.cafeAlt}
+      />
+      {/* New text component here */}
+      <FeatureImage
+        //
+        image={aboutPageData.cupImage}
+        alt={aboutPageData.cupAlt}
+      />
       <Quote
         quoteText={aboutPageData.aboutQuoteText}
         author={aboutPageData.aboutAuthor}
+      />
+      <Carousel page='about' />
+      {/* New Collaborators component here */}
+      {/* ADD MARGIN to bottom of Collaborators component */}
+
+      <FeatureImage
+        className='zeroBottomMargin'
+        image={aboutPageData.jossImage}
+        alt={aboutPageData.jossAlt}
       />
     </>
   );
