@@ -11,11 +11,11 @@ export default function Hero(props) {
         <div className='hero-text-wrapper'>
           <p>{props.message}</p>
         </div>
-
         <img
+          //
           className='hero-img'
           src={props.image}
-          alt='clothing model standing in the woods'
+          alt={props.alt}
         />
 
         <ClientsSection />

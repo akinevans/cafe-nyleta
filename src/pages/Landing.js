@@ -9,27 +9,35 @@ import Factories from "../components/Factories/Factories";
 import landing_img from "../../src/assets/images/home/feature.jpg";
 
 export default function Landing(props) {
-  const data = [
-    {
-      landingHeroText:
-        "Cafe Nyleta is a Los Angeles-based fashion consultancy with a team of expert designers providing end-to-end support. We specialize in producing high-quality garments, sourcing premium materials, and developing product lines that capture your brands vision.",
-    },
-    {
-      landingQuoteText:
-        "“Design is creativity, expertise, and collaboration. It involves attention to detail and a commitment to bringing ideas to life in a way that reflects the brand's vision and values”",
-      landingAuthor: "Jack Mahaley, Lead Designer",
-    },
-  ];
+  const landingPageData = {
+    message:
+      "Cafe Nyleta is a Los Angeles-based fashion consultancy with a team of expert designers providing end-to-end support. We specialize in producing high-quality garments, sourcing premium materials, and developing product lines that capture your brands vision.",
+
+    image: landing_img,
+
+    alt: "Fashion model standing int he woods",
+
+    landingQuoteText:
+      "“Design is creativity, expertise, and collaboration. It involves attention to detail and a commitment to bringing ideas to life in a way that reflects the brand's vision and values”",
+
+    landingAuthor: "Jack Mahaley, Lead Designer",
+  };
+
   return (
     <>
       {/* Navbar and Footer are rendered in index.js */}
-      <Hero message={data[0].landingHeroText} image={landing_img} />
+      <Hero
+        //
+        message={landingPageData.message}
+        image={landingPageData.image}
+        alt={landingPageData.alt}
+      />
       <Carousel page='landing1' />
       <ServicesComp />
       <Quote
         //
-        quoteText={data[1].landingQuoteText}
-        author={data[1].landingAuthor}
+        quoteText={landingPageData.landingQuoteText}
+        author={landingPageData.landingAuthor}
       />
       <Carousel page='landing2' />
       <Factories />
