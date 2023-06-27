@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Carousel from "../components/Carousel/Carousel";
 import ServicesComp from "../components/ServicesComp/ServicesComp";
 import Quote from "../components/Quote/Quote";
 import Factories from "../components/Factories/Factories";
-import Footer from "../components/Footer/Footer";
 
 export default function Landing(props) {
   const quoteData = {
@@ -14,7 +12,6 @@ export default function Landing(props) {
   };
   return (
     <>
-      <Navbar />
       <Hero />
       <Carousel page='landing1' />
       <ServicesComp />
@@ -25,7 +22,6 @@ export default function Landing(props) {
       />
       <Carousel page='landing2' />
       <Factories />
-      <Footer />
       {/* Router can render nav / footer conditionally on each page */}
     </>
   );
