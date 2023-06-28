@@ -1,7 +1,7 @@
 .footer-outer-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: var(--Full);
   height: 296px;
@@ -13,16 +13,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 142px;
+  width: 90%;
   height: -moz-fit-content;
   height: fit-content;
-  margin: auto 0 auto 130px;
+  margin: auto 0;
+  padding-left: 10px;
   background-color: var(--White);
+  outline: 2px solid green;
 }
 .footer-content-wrapper img {
   width: 142px;
   height: 55px;
-  margin-left: -6px;
 }
 .footer-content-wrapper a {
   font-family: var(--HN-Light);

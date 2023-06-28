@@ -1,0 +1,30 @@
+@import "../styleFunctions/functions";
+
+.textsection-outer-wrapper {
+  display: flex;
+  @include flexPosition(center, center);
+  @include widthHeight(var(--Full), fit-content);
+  margin-top: 22px;
+  margin-bottom: 198px;
+  //   @include temporaryOutline(red);
+}
+
+.textsection-inner-wrapper {
+  @include widthHeight(var(--Desktop), fit-content);
+  @include maxWidth(782px);
+  //   @include temporaryOutline(blue);
+
+  .bold {
+    font-family: var(--HN-Medium);
+  }
+
+  p {
+    margin: 0;
+    padding: 0px;
+    line-height: 26px;
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Body);
+    color: var(--Grey-100);
+  }
+}

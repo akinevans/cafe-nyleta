@@ -1,8 +1,9 @@
 import React from "react";
 import FeatureImage from "../components/FeatureImage/FeatureImage";
+import TextSection from "../components/TextSection/TextSection";
 import Quote from "../components/Quote/Quote";
 import Carousel from "../components/Carousel/Carousel";
-import Button from "../components/Button/Button";
+import Collaborations from "../components/Collaborations/Collaborations";
 
 // Image Imports
 import cafe from "../assets/images/about/01_head_banner.jpg";
@@ -31,9 +32,10 @@ export default function About() {
         image={aboutPageData.cafeImage}
         alt={aboutPageData.cafeAlt}
       />
-      {/* New text component here */}
+      <TextSection />
       <FeatureImage
         //
+        className='negativeBottomMargin'
         image={aboutPageData.cupImage}
         alt={aboutPageData.cupAlt}
       />
@@ -44,7 +46,7 @@ export default function About() {
       <Carousel page='about' />
       {/* New Collaborators component here */}
       {/* ADD MARGIN to bottom of Collaborators component */}
-
+      <Collaborations />
       <FeatureImage
         className='zeroBottomMargin'
         image={aboutPageData.jossImage}

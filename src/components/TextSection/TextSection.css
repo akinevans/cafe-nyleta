@@ -1,0 +1,29 @@
+.textsection-outer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--Full);
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 22px;
+  margin-bottom: 198px;
+}
+
+.textsection-inner-wrapper {
+  width: var(--Desktop);
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 782px;
+}
+.textsection-inner-wrapper .bold {
+  font-family: var(--HN-Medium);
+}
+.textsection-inner-wrapper p {
+  margin: 0;
+  padding: 0px;
+  line-height: 26px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body);
+  color: var(--Grey-100);
+}/*# sourceMappingURL=TextSection.css.map */

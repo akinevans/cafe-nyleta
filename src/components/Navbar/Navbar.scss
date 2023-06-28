@@ -14,12 +14,16 @@
   //   @include temporaryOutline(red);
 
   .nav-inner-wrapper {
+    @include flex(row);
+    @include flexPosition(space-between, center);
     @include widthHeight(90%, 45px);
-    @include maxWidth(1180px);
-    // @include temporaryOutline(blue);
+    // @include maxWidth(1180px);
+    @include maxWidth(--Desktop);
+    @include temporaryOutline(blue);
 
     .nav-logo {
-      @include widthHeight(248px, fit-content);
+      @include widthHeight(238px, fit-content);
+      margin-left: 10px;
     }
 
     .nav-links-wrapper {

@@ -7,8 +7,12 @@
   // @include temporaryOutline(blue);
 }
 
-//^ Utility class
+//^ Utility classes
 
 .zeroBottomMargin {
   margin-bottom: 0;
+}
+
+.negativeBottomMargin {
+  margin-bottom: -3px;
 }

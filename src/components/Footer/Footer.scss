@@ -2,7 +2,7 @@
 
 .footer-outer-wrapper {
   @include flex(row);
-  @include flexPosition(flex-start, center);
+  @include flexPosition(center, center);
   @include widthHeight(var(--Full), 296px);
   background-color: var(--White);
   //   @include temporaryOutline(red);
@@ -11,14 +11,14 @@
 .footer-content-wrapper {
   @include flex(column);
   @include flexPosition(center, flex-start);
-  @include widthHeight(142px, fit-content);
-  margin: auto 0 auto 130px;
+  @include widthHeight(90%, fit-content);
+  margin: auto 0;
+  padding-left: 10px;
   background-color: var(--White);
-  //   @include temporaryOutline(green);
+  @include temporaryOutline(green);
 
   img {
     @include widthHeight(142px, 55px);
-    margin-left: -6px;
     // @include temporaryOutline(red);
   }
 

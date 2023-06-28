@@ -16,14 +16,20 @@
   background-color: var(--Background);
 }
 .nav-outer-wrapper .nav-inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 90%;
   height: 45px;
-  max-width: 1180px;
+  max-width: --Desktop;
+  outline: 2px solid blue;
 }
 .nav-outer-wrapper .nav-inner-wrapper .nav-logo {
-  width: 248px;
+  width: 238px;
   height: -moz-fit-content;
   height: fit-content;
+  margin-left: 10px;
 }
 .nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper {
   width: 308px;

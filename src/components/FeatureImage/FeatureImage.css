@@ -7,4 +7,8 @@
 
 .zeroBottomMargin {
   margin-bottom: 0;
+}
+
+.negativeBottomMargin {
+  margin-bottom: -3px;
 }/*# sourceMappingURL=FeatureImage.css.map */
