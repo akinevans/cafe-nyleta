@@ -19,7 +19,7 @@
     @include widthHeight(90%, 45px);
     // @include maxWidth(1180px);
     @include maxWidth(--Desktop);
-    @include temporaryOutline(blue);
+    // @include temporaryOutline(blue);
 
     .nav-logo {
       @include widthHeight(238px, fit-content);

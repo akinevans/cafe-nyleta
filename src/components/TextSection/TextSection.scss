@@ -4,7 +4,7 @@
   display: flex;
   @include flexPosition(center, center);
   @include widthHeight(var(--Full), fit-content);
-  margin-top: 22px;
+  margin-top: 80px;
   margin-bottom: 198px;
   //   @include temporaryOutline(red);
 }
@@ -12,7 +12,7 @@
 .textsection-inner-wrapper {
   @include widthHeight(var(--Desktop), fit-content);
   @include maxWidth(782px);
-  //   @include temporaryOutline(blue);
+  // @include temporaryOutline(blue);
 
   .bold {
     font-family: var(--HN-Medium);

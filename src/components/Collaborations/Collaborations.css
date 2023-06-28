@@ -10,6 +10,7 @@
   width: var(--Full);
   height: -moz-fit-content;
   height: fit-content;
+  margin-top: -56px;
 }
 
 .collab-inner-wrapper {
@@ -81,4 +82,5 @@
   margin: 0 0 64px 0;
   font-size: var(--Body);
   text-align: left;
+  line-height: 26px;
 }/*# sourceMappingURL=Collaborations.css.map */

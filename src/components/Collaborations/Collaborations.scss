@@ -8,6 +8,7 @@
 .collab-outer-wrapper {
   @include flexPosition(center, center);
   @include widthHeight(var(--Full), fit-content);
+  margin-top: -56px;
   //   @include temporaryOutline(red);
 }
 
@@ -78,6 +79,7 @@
       margin: 0 0 64px 0;
       font-size: var(--Body);
       text-align: left;
+      line-height: 26px;
     }
   }
 } // end inner wrapper

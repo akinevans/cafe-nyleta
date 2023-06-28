@@ -15,7 +15,7 @@
   margin: auto 0;
   padding-left: 10px;
   background-color: var(--White);
-  @include temporaryOutline(green);
+  // @include temporaryOutline(green);
 
   img {
     @include widthHeight(142px, 55px);
