@@ -8,13 +8,13 @@ export default function Navbar() {
   return (
     <nav className='nav-outer-wrapper'>
       <div className='nav-inner-wrapper'>
-        <Link to='/cafe-nyleta'>
+        <Link to='/home'>
           <img src={logo} alt='cafe nyleta logo' className='nav-logo' />
         </Link>
         <div className='nav-links-wrapper'>
-          <Link to='/cafe-nyleta/about'>About</Link>
-          <Link to='/cafe-nyleta/shop'>Shop</Link>
-          <Link to='/cafe-nyleta/contact'>
+          <Link to='/about'>About</Link>
+          <Link to='/shop'>Shop</Link>
+          <Link to='/contact'>
             <Button className='btn grey contact' title='Contact Us' />
           </Link>
         </div>
