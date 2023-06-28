@@ -44,6 +44,8 @@
     p {
       @include widthHeight(676px, fit-content);
       font-size: var(--Body);
+      text-align: left;
+      line-height: 26px;
       margin-bottom: 0;
     }
   } // End clients text wrapper

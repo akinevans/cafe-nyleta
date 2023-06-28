@@ -49,6 +49,8 @@
   height: -moz-fit-content;
   height: fit-content;
   font-size: var(--Body);
+  text-align: left;
+  line-height: 26px;
   margin-bottom: 0;
 }
 .clients-outer-wrapper .clients-img-wrapper {
