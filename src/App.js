@@ -12,7 +12,7 @@ function App() {
   return (
     <Routes>
       {/* HOME Path is "/" alternatively you can make it "/cafe-nyleta" */}
-      <Route path='/cafe-nyleta' element={<Landing />} />
+      <Route path='/' element={<Landing />} />
       <Route path='/about' element={<About />} />
       <Route path='/shop' element={<Shop />} />
       <Route path='contact' element={<Contact />} />

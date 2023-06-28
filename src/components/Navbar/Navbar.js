@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className='nav-outer-wrapper'>
       <div className='nav-inner-wrapper'>
-        <Link to='/cafe-nyleta'>
+        <Link to='/'>
           <img src={logo} alt='cafe nyleta logo' className='nav-logo' />
         </Link>
         <div className='nav-links-wrapper'>
