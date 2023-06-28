@@ -12,12 +12,13 @@ function App() {
   return (
     <Routes>
       {/* HOME Path is "/" alternatively you can make it "/cafe-nyleta" */}
-      <Route path='/cafe-nyleta' element={<Landing />} />
-      <Route path='/about' element={<About />} />
-      <Route path='/shop' element={<Shop />} />
-      <Route path='/contact' element={<Contact />} />
-      <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-      <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
+      <Route path='/cafe-nyleta' element={<Landing />}>
+        <Route path='/about' element={<About />} />
+        <Route path='/shop' element={<Shop />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
+      </Route>
       <Route path='/careers' element={<Careers />} />
     </Routes>
   );
