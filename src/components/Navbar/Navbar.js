@@ -12,9 +12,9 @@ export default function Navbar() {
           <img src={logo} alt='cafe nyleta logo' className='nav-logo' />
         </Link>
         <div className='nav-links-wrapper'>
-          <Link to='/about'>About</Link>
-          <Link to='/shop'>Shop</Link>
-          <Link to='/contact'>
+          <Link to='/cafe-nyleta/about'>About</Link>
+          <Link to='/cafe-nyleta/shop'>Shop</Link>
+          <Link to='/cafe-nyleta/contact'>
             <Button className='btn grey contact' title='Contact Us' />
           </Link>
         </div>

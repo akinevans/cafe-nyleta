@@ -9,10 +9,10 @@ export default function Footer() {
       <div className='footer-content-wrapper'>
         <img src={logo} alt='' />
         {/* Replace with router Link elements */}
-        <Link to='/privacy-policy'>Privacy Policy</Link>
-        <Link to='/terms-and-conditions'>Terms & Conditions</Link>
-        <Link to='/careers'>Careers</Link>
-        <Link to='/contact'>Contact us</Link>
+        <Link to='/cafe-nyleta/privacy-policy'>Privacy Policy</Link>
+        <Link to='/cafe-nyleta/terms-and-conditions'>Terms & Conditions</Link>
+        <Link to='/cafe-nyleta/careers'>Careers</Link>
+        <Link to='/cafe-nyleta/contact'>Contact us</Link>
       </div>
     </footer>
   );
