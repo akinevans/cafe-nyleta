@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cafe-nyleta/static/css/main.fc9cca24.css",
-    "main.js": "/cafe-nyleta/static/js/main.bf9fa7a9.js",
+    "main.js": "/cafe-nyleta/static/js/main.7f5191f8.js",
     "static/js/787.c83355ab.chunk.js": "/cafe-nyleta/static/js/787.c83355ab.chunk.js",
     "static/media/feature.jpg": "/cafe-nyleta/static/media/feature.c1ce6e2fbdde813a365b.jpg",
     "static/media/carousel_06.jpg": "/cafe-nyleta/static/media/carousel_06.d179de792bbe4623d25b.jpg",
@@ -48,11 +48,11 @@
     "static/media/plus-sign.svg": "/cafe-nyleta/static/media/plus-sign.337ce5299841cd01b10dcc8a385ad06d.svg",
     "static/media/minus-sign.svg": "/cafe-nyleta/static/media/minus-sign.994df67bf4ac74eced081283cd71c907.svg",
     "main.fc9cca24.css.map": "/cafe-nyleta/static/css/main.fc9cca24.css.map",
-    "main.bf9fa7a9.js.map": "/cafe-nyleta/static/js/main.bf9fa7a9.js.map",
+    "main.7f5191f8.js.map": "/cafe-nyleta/static/js/main.7f5191f8.js.map",
     "787.c83355ab.chunk.js.map": "/cafe-nyleta/static/js/787.c83355ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc9cca24.css",
-    "static/js/main.bf9fa7a9.js"
+    "static/js/main.7f5191f8.js"
   ]
 }
