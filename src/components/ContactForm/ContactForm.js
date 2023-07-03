@@ -8,6 +8,7 @@ export default function ContactForm() {
     <div className='contact-form-outer-wrapper'>
       <form
         className='contact-form'
+        //^ Setup email address
         action='https://formsubmit.co/your@email.com'
         method='POST'
       >
@@ -43,11 +44,41 @@ export default function ContactForm() {
           >
             Service
           </option>
-          <option value='Design'>Design</option>
-          <option value='Sourcing'>Sourcing</option>
-          <option value='Consulting'>Consulting</option>
-          <option value='Product Development'>Product Development</option>
-          <option value='Distribution'>Distribution</option>
+          <option
+            //
+            className='option'
+            value='Design'
+          >
+            Design
+          </option>
+          <option
+            //
+            className='option'
+            value='Sourcing'
+          >
+            Sourcing
+          </option>
+          <option
+            //
+            className='option'
+            value='Consulting'
+          >
+            Consulting
+          </option>
+          <option
+            //
+            className='option'
+            value='Product Development'
+          >
+            Product Development
+          </option>
+          <option
+            //
+            className='option'
+            value='Distribution'
+          >
+            Distribution
+          </option>
         </select>
         <textarea name='message' placeholder='Message*' required></textarea>
         <Button className='btn grey submit' type='submit' title='Submit' />

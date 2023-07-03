@@ -2,22 +2,24 @@
 .contact-form-outer-wrapper,
 .contact-form {
   @include flex(column);
-  @include flexPosition(center, center);
 }
 
 .contact-form-outer-wrapper {
+  @include flexPosition(center, center);
   @include widthHeight(var(--Full), fit-content);
+  margin-bottom: 164px;
+  //   @include temporaryOutline(red);
 }
 
 // This is the inner wrapper
 .contact-form {
+  @include flexPosition(center, flex-start);
   @include widthHeight(580px, fit-content);
-  @include temporaryOutline(green);
+  //   @include temporaryOutline(green);
 
   .form-title {
     @include widthHeight(100%, fit-content);
     margin: 0 0 24px 0;
-
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
     font-size: var(--Heading-1);
@@ -38,27 +40,58 @@
     margin: 0 0 24px 0;
     padding-left: 16px;
     border: inset 1px var(--Grey-100);
-    color: var(--Grey-50);
+    // color: var(--Grey-50);
+
+    &:focus {
+      color: var(--Grey-100);
+    }
   }
 
-  .contact-select {
+  .contact-select,
+  select {
     @include widthHeight(580px, 45px);
     margin: 0 0 24px 0;
     padding: 0 16px;
     font-size: var(--Body);
     color: var(--Grey-50);
-    background-color: var(--White);
-    background: var(--White);
+    background: rgb(60, 59, 59);
+    background-color: white;
     border: inset 1px var(--Grey-100);
+    cursor: pointer;
+    // appearance: none;
 
-    option {
+    .option {
+      margin-bottom: 24px;
+      font-family: var(--HN-Light);
+      font-weight: var(--Light-Weight);
+      //   font-size: var(--Body);
       font-size: 40px;
-      background-color: red;
-      background: red;
+      color: var(--Grey-100);
+      background: rgb(60, 59, 59);
+      //   appearance: none;
+
+      &hover {
+        font-family: var(--HN-Medium);
+      }
     }
   }
 
-  select::-ms-expand {
-    display: none;
+  //   select::-ms-expand {
+  //     display: none;
+  //   }
+
+  textarea {
+    @include widthHeight(580px, 158px);
+    @include maxWidth(580px);
+    min-width: 580px;
+    min-height: 64px;
+    margin-bottom: 24px;
+    padding: 16px 0 16px 16px;
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Body);
+    line-height: 26px;
+    color: var(--Grey-100);
+    border: inset 1px var(--Grey-100);
   }
 } // End contact-form
