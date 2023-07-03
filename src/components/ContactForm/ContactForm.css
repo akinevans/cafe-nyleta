@@ -1,0 +1,64 @@
+.contact-form-outer-wrapper,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-outer-wrapper {
+  width: var(--Full);
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.contact-form {
+  width: 580px;
+  height: -moz-fit-content;
+  height: fit-content;
+  outline: 2px solid green;
+}
+.contact-form .form-title {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 0 24px 0;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Heading-1);
+  text-align: left;
+}
+.contact-form input,
+.contact-form .contact-select {
+  width: 580px;
+  height: 45px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body);
+  background-color: var(--White);
+}
+.contact-form input {
+  margin: 0 0 24px 0;
+  padding-left: 16px;
+  border: inset 1px var(--Grey-100);
+  color: var(--Grey-50);
+}
+.contact-form .contact-select {
+  width: 580px;
+  height: 45px;
+  margin: 0 0 24px 0;
+  padding: 0 16px;
+  font-size: var(--Body);
+  color: var(--Grey-50);
+  background-color: var(--White);
+  background: var(--White);
+  border: inset 1px var(--Grey-100);
+}
+.contact-form .contact-select option {
+  font-size: 40px;
+  background-color: red;
+  background: red;
+}
+.contact-form select::-ms-expand {
+  display: none;
+}/*# sourceMappingURL=ContactForm.css.map */

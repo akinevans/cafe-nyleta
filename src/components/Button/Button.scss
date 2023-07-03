@@ -41,3 +41,8 @@
   @include widthHeight(279px, 45px);
   padding: 8px 16px;
 }
+
+.submit {
+  @include widthHeight(179px, 45px);
+  padding: 8px 16px;
+}

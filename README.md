@@ -98,6 +98,7 @@
 
 - [] Back button in browser (github pages) breaks the site. Check Router Routes
 - [] Run accessability checks
+- [] Implement page transitions
 - [] Write tests
 - [] Button Hover & Click states
 - [] Strapi CMS

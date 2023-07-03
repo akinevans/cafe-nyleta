@@ -1,0 +1,64 @@
+@import "../styleFunctions/functions";
+.contact-form-outer-wrapper,
+.contact-form {
+  @include flex(column);
+  @include flexPosition(center, center);
+}
+
+.contact-form-outer-wrapper {
+  @include widthHeight(var(--Full), fit-content);
+}
+
+// This is the inner wrapper
+.contact-form {
+  @include widthHeight(580px, fit-content);
+  @include temporaryOutline(green);
+
+  .form-title {
+    @include widthHeight(100%, fit-content);
+    margin: 0 0 24px 0;
+
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Heading-1);
+    text-align: left;
+    //   @include temporaryOutline(green);
+  }
+
+  input,
+  .contact-select {
+    @include widthHeight(580px, 45px);
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Body);
+    background-color: var(--White);
+  }
+
+  input {
+    margin: 0 0 24px 0;
+    padding-left: 16px;
+    border: inset 1px var(--Grey-100);
+    color: var(--Grey-50);
+  }
+
+  .contact-select {
+    @include widthHeight(580px, 45px);
+    margin: 0 0 24px 0;
+    padding: 0 16px;
+    font-size: var(--Body);
+    color: var(--Grey-50);
+    background-color: var(--White);
+    background: var(--White);
+    border: inset 1px var(--Grey-100);
+
+    option {
+      font-size: 40px;
+      background-color: red;
+      background: red;
+    }
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+} // End contact-form
