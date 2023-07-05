@@ -22,7 +22,9 @@
 }
 .footer-content-wrapper img {
   width: 142px;
-  height: 55px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: -12px;
 }
 .footer-content-wrapper a {
   font-family: var(--HN-Light);

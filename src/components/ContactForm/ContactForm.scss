@@ -54,7 +54,7 @@
     padding: 0 16px;
     font-size: var(--Body);
     color: var(--Grey-50);
-    background: rgb(60, 59, 59);
+    // background: rgb(60, 59, 59);
     background-color: white;
     border: inset 1px var(--Grey-100);
     cursor: pointer;
@@ -65,20 +65,28 @@
       font-family: var(--HN-Light);
       font-weight: var(--Light-Weight);
       //   font-size: var(--Body);
-      font-size: 40px;
+      // font-size: 40px;
       color: var(--Grey-100);
-      background: rgb(60, 59, 59);
+      // background: rgb(0, 0, 0);
       //   appearance: none;
 
-      &hover {
+      &:focus {
+        color: red;
+      }
+
+      &:active {
+        color: red;
+      }
+
+      &:hover {
         font-family: var(--HN-Medium);
       }
     }
   }
 
-  //   select::-ms-expand {
-  //     display: none;
-  //   }
+  // select::-ms-expand {
+  //   display: none;
+  // }
 
   textarea {
     @include widthHeight(580px, 158px);
@@ -93,5 +101,17 @@
     line-height: 26px;
     color: var(--Grey-100);
     border: inset 1px var(--Grey-100);
+
+    //^ remove drag resizable box and scroll bars
+    resize: none;
+
+    //^ Hide scrollbar  (Chrome, Safari and Opera)
+    -webkit-scrollbar {
+      scrollbar-width: none;
+    }
+
+    //^ Hide scrollbar  (IE, Edge, Firefox)
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Remove scrollbar Firefox image-wrapper  */
   }
 } // End contact-form

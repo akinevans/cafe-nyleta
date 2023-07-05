@@ -21,7 +21,7 @@
       @include flexPosition(center, center);
       @include widthHeight(780px, fit-content);
       @include maxWidth(90%);
-      margin-bottom: 75px;
+      margin-bottom: 64px;
       // @include temporaryOutline(green);
 
       h1,
@@ -40,9 +40,11 @@
       }
 
       p {
-        @include widthHeight(676px, fit-content);
         font-size: var(--Body);
         margin-bottom: 0;
+        line-height: 26px;
+        text-align: left;
+        // @include temporaryOutline(green);
       }
     } // End factories text wrapper
 

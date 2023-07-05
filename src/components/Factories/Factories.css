@@ -27,7 +27,7 @@
   height: -moz-fit-content;
   height: fit-content;
   max-width: 90%;
-  margin-bottom: 75px;
+  margin-bottom: 64px;
 }
 .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper h1,
 .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper p {
@@ -45,11 +45,10 @@
   margin-top: 0;
 }
 .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper p {
-  width: 676px;
-  height: -moz-fit-content;
-  height: fit-content;
   font-size: var(--Body);
   margin-bottom: 0;
+  line-height: 26px;
+  text-align: left;
 }
 .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper {
   position: relative;

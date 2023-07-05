@@ -18,7 +18,8 @@
   // @include temporaryOutline(green);
 
   img {
-    @include widthHeight(142px, 55px);
+    @include widthHeight(142px, fit-content);
+    margin-bottom: -12px;
     // @include temporaryOutline(red);
   }
 

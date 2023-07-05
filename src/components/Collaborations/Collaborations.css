@@ -11,6 +11,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin-top: -56px;
+  margin-bottom: 128px;
 }
 
 .collab-inner-wrapper {
@@ -56,6 +57,7 @@
   height: fit-content;
 }
 .collab-inner-wrapper .collab-list-section .collab-list ul {
+  margin: 0;
   padding: 0;
 }
 .collab-inner-wrapper .collab-list-section .collab-list ul li {
@@ -76,7 +78,6 @@
   width: 54%;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: 128px;
 }
 .collab-inner-wrapper .text-section p {
   margin: 0 0 64px 0;

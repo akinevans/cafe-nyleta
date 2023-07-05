@@ -9,6 +9,8 @@
   @include flexPosition(center, center);
   @include widthHeight(var(--Full), fit-content);
   margin-top: -56px;
+  margin-bottom: 128px;
+
   //   @include temporaryOutline(red);
 }
 
@@ -52,6 +54,7 @@
       //   @include temporaryOutline(red);
 
       ul {
+        margin: 0;
         padding: 0;
         li {
           margin-bottom: 5px;
@@ -72,7 +75,6 @@
     @include flex(column);
     @include flexPosition(space-between, center);
     @include widthHeight(54%, fit-content);
-    margin-bottom: 128px;
     // @include temporaryOutline(green);
 
     p {

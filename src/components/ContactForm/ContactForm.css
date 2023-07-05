@@ -55,7 +55,6 @@
   padding: 0 16px;
   font-size: var(--Body);
   color: var(--Grey-50);
-  background: rgb(60, 59, 59);
   background-color: white;
   border: inset 1px var(--Grey-100);
   cursor: pointer;
@@ -65,12 +64,18 @@
   margin-bottom: 24px;
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
-  font-size: 40px;
   color: var(--Grey-100);
-  background: rgb(60, 59, 59);
 }
-.contact-form .contact-select .optionhover,
-.contact-form select .optionhover {
+.contact-form .contact-select .option:focus,
+.contact-form select .option:focus {
+  color: red;
+}
+.contact-form .contact-select .option:active,
+.contact-form select .option:active {
+  color: red;
+}
+.contact-form .contact-select .option:hover,
+.contact-form select .option:hover {
   font-family: var(--HN-Medium);
 }
 .contact-form textarea {
@@ -87,4 +92,10 @@
   line-height: 26px;
   color: var(--Grey-100);
   border: inset 1px var(--Grey-100);
+  resize: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Remove scrollbar Firefox image-wrapper  */
+}
+.contact-form textarea -webkit-scrollbar {
+  scrollbar-width: none;
 }/*# sourceMappingURL=ContactForm.css.map */
