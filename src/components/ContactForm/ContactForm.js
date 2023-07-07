@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+import ContactModal from "../ContactModal/ContactModal";
 
 import "./ContactForm.css";
 
@@ -83,6 +84,7 @@ export default function ContactForm() {
         <textarea name='message' placeholder='Message*' required></textarea>
         <Button className='btn grey submit' type='submit' title='Submit' />
       </form>
+      <ContactModal />
     </div>
   );
 }

@@ -5,6 +5,7 @@
 }
 
 .contact-form-outer-wrapper {
+  position: relative;
   justify-content: center;
   align-items: center;
   width: var(--Full);
@@ -98,4 +99,8 @@
 }
 .contact-form textarea -webkit-scrollbar {
   scrollbar-width: none;
+}
+.contact-form .modal-center {
+  position: absolute;
+  background-color: red;
 }/*# sourceMappingURL=ContactForm.css.map */

@@ -62,6 +62,7 @@
 }
 .collab-inner-wrapper .collab-list-section .collab-list ul li {
   margin-bottom: 5px;
+  line-height: 26px;
   list-style: none;
   font-size: var(--Body);
 }

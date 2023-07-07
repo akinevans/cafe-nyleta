@@ -22,7 +22,7 @@ export default function Collaborations() {
           </div>
           <div className='collab-list'>
             <ul>
-              <li>Snowpeak</li>
+              <li>Snow Peak</li>
               <li>Carhartt</li>
               <li>Adsum</li>
               <li>Ace Hotel</li>

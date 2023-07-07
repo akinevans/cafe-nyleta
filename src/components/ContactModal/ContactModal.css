@@ -1,0 +1,37 @@
+.contact-modal-outer-wrapper {
+  position: absolute;
+  top: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 680px;
+  height: 238px;
+  background-color: var(--White);
+}
+.contact-modal-outer-wrapper .contact-form-text-wrapper {
+  width: 491px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 30px 0 0 30px;
+}
+.contact-modal-outer-wrapper .contact-form-text-wrapper h1,
+.contact-modal-outer-wrapper .contact-form-text-wrapper p {
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  color: var(--Grey-100);
+}
+.contact-modal-outer-wrapper .contact-form-text-wrapper h1 {
+  margin: 0;
+  font-size: var(--Heading-2);
+}
+.contact-modal-outer-wrapper .contact-form-text-wrapper p {
+  margin: 18px 0 8px 0;
+  font-size: var(--Body);
+  line-height: 26px;
+}
+.contact-modal-outer-wrapper img {
+  width: 142px;
+  height: -moz-fit-content;
+  height: fit-content;
+}/*# sourceMappingURL=ContactModal.css.map */

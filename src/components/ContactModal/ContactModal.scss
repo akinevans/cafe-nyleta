@@ -1,0 +1,40 @@
+@import "../styleFunctions/functions";
+
+.contact-modal-outer-wrapper {
+  position: absolute;
+  top: 35%;
+  @include flex(column);
+  @include flexPosition(center, flex-start);
+  @include widthHeight(680px, 238px);
+  background-color: var(--White);
+  // @include temporaryOutline(red);
+
+  .contact-form-text-wrapper {
+    @include widthHeight(491px, fit-content);
+    margin: 30px 0 0 30px;
+    // @include temporaryOutline(blue);
+
+    h1,
+    p {
+      font-family: var(--HN-Light);
+      font-weight: var(--Light-Weight);
+      color: var(--Grey-100);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: var(--Heading-2);
+    }
+
+    p {
+      margin: 18px 0 8px 0;
+      font-size: var(--Body);
+      line-height: 26px;
+    }
+  } // End text wrapper
+
+  img {
+    @include widthHeight(142px, fit-content);
+    // @include temporaryOutline(red);
+  }
+} // End outer wrapper
