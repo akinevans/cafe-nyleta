@@ -2,12 +2,14 @@
 
 .contact-modal-outer-wrapper {
   position: absolute;
-  top: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   @include flex(column);
   @include flexPosition(center, flex-start);
   @include widthHeight(680px, 238px);
   background-color: var(--White);
-  // @include temporaryOutline(red);
+  // @include temporaryOutline(green);
 
   .contact-form-text-wrapper {
     @include widthHeight(491px, fit-content);
@@ -38,3 +40,8 @@
     // @include temporaryOutline(red);
   }
 } // End outer wrapper
+
+//^ Utility classes
+.hidden {
+  display: none;
+}

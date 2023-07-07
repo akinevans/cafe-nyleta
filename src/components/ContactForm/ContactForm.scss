@@ -4,15 +4,6 @@
   @include flex(column);
 }
 
-//! Darken the contact page when modal appears, this should be moved to the Contact.js page file
-// html {
-//   filter: brightness(70%);
-
-//   .contact-modal {
-//     filter: brightness(100%);
-//   }
-// }
-
 .contact-form-outer-wrapper {
   position: relative;
   @include flexPosition(center, center);
