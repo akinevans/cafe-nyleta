@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
-import ContactModal from "../ContactModal/ContactModal";
+import SelectDropdown from "./SelectDropdown/SelectDropdown";
 
 import "./ContactForm.css";
 
@@ -35,56 +35,13 @@ export default function ContactForm() {
           placeholder='Email*'
           required
         ></input>
-        <label for='Service'></label>
-        <select className='contact-select' id='service' name='service'>
-          <option
-            //
-            value=''
-            disabled
-            selected
-          >
-            Service
-          </option>
-          <option
-            //
-            className='option'
-            value='Design'
-          >
-            Design
-          </option>
-          <option
-            //
-            className='option'
-            value='Sourcing'
-          >
-            Sourcing
-          </option>
-          <option
-            //
-            className='option'
-            value='Consulting'
-          >
-            Consulting
-          </option>
-          <option
-            //
-            className='option'
-            value='Product Development'
-          >
-            Product Development
-          </option>
-          <option
-            //
-            className='option'
-            value='Distribution'
-          >
-            Distribution
-          </option>
-        </select>
+        {/* SelectDropdown Component Here */}
+        <SelectDropdown />
         <textarea name='message' placeholder='Message*' required></textarea>
         <Button className='btn grey submit' type='submit' title='Submit' />
       </form>
-      <ContactModal />
+      {/* move to contact.js file */}
+      {/* <ContactModal className='contact-modal' /> */}
     </div>
   );
 }

@@ -1,0 +1,66 @@
+@import "../../styleFunctions/functions";
+
+.service-button {
+  @include flex(row);
+  @include flexPosition(space-between, center);
+  @include widthHeight(580px, 45px);
+  padding: 0 16px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  color: var(--Grey-50);
+  font-size: var(--Body);
+  text-align: left;
+  background-color: var(--White);
+  border: none;
+  outline: none;
+  border: 1px solid var(--Black);
+  cursor: pointer;
+
+  .arrow {
+    margin-top: 6px;
+  }
+}
+
+.dropdown-wrapper {
+  @include flex(column);
+  @include flexPosition(center, flex-start);
+  @include widthHeight(580px, fit-content);
+  padding: 0 0 0 16px;
+  background-color: var(--White);
+  border: 1px solid var(--Black);
+  border-top: none;
+
+  //   @include temporaryOutline(red);
+
+  .option {
+    display: none;
+  }
+
+  label {
+    //^ width 100% allows the mouse to select the label without hovering directly over text
+    width: 100%;
+    margin: 12.5px 0 12.5px 0;
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    color: var(--Grey-100);
+    font-size: var(--Body);
+    cursor: pointer;
+
+    &:hover {
+      font-family: var(--HN-Medium);
+    }
+
+    &:active {
+      opacity: 65%;
+    }
+  }
+}
+
+//^ hidden utility must be last in css file to ensure it does not get over written. Alternatively you can use inline styles with state
+.hidden {
+  display: none;
+}
+
+.bold {
+  color: var(--Grey-100);
+}

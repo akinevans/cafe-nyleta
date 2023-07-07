@@ -1,0 +1,62 @@
+.service-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 580px;
+  height: 45px;
+  padding: 0 16px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  color: var(--Grey-50);
+  font-size: var(--Body);
+  text-align: left;
+  background-color: var(--White);
+  border: none;
+  outline: none;
+  border: 1px solid var(--Black);
+  cursor: pointer;
+}
+.service-button .arrow {
+  margin-top: 6px;
+}
+
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 580px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 0 0 16px;
+  background-color: var(--White);
+  border: 1px solid var(--Black);
+  border-top: none;
+}
+.dropdown-wrapper .option {
+  display: none;
+}
+.dropdown-wrapper label {
+  width: 100%;
+  margin: 12.5px 0 12.5px 0;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  color: var(--Grey-100);
+  font-size: var(--Body);
+  cursor: pointer;
+}
+.dropdown-wrapper label:hover {
+  font-family: var(--HN-Medium);
+}
+.dropdown-wrapper label:active {
+  opacity: 65%;
+}
+
+.hidden {
+  display: none;
+}
+
+.bold {
+  color: var(--Grey-100);
+}/*# sourceMappingURL=SelectDropdown.css.map */

@@ -5,9 +5,13 @@
 }
 
 //! Darken the contact page when modal appears, this should be moved to the Contact.js page file
-html {
-  // filter: brightness(70%);
-}
+// html {
+//   filter: brightness(70%);
+
+//   .contact-modal {
+//     filter: brightness(100%);
+//   }
+// }
 
 .contact-form-outer-wrapper {
   position: relative;
@@ -99,7 +103,7 @@ html {
     @include maxWidth(580px);
     min-width: 580px;
     min-height: 64px;
-    margin-bottom: 24px;
+    margin: 24px 0 24px 0;
     padding: 16px 0 16px 16px;
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
