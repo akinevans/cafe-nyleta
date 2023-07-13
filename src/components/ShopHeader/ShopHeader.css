@@ -5,6 +5,9 @@
 }
 
 .shop-header-outer-wrapper {
+  position: sticky;
+  top: 0px;
+  z-index: 999;
   justify-content: center;
   align-items: center;
   width: var(--Full);
