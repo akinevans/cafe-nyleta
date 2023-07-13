@@ -1,0 +1,34 @@
+.button-filter-outer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 379px;
+  height: 45px;
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body);
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background-color: var(--White);
+  border: 0.5px solid var(--Black);
+}
+.button-filter-outer-wrapper .filter-btn {
+  margin: 0 5px;
+  font-family: var(--HN-Light);
+  font-size: var(--Label);
+  border: none;
+  outline: none;
+  background-color: var(--White);
+  cursor: pointer;
+}
+.button-filter-outer-wrapper .filter-btn:hover {
+  font-family: var(--HN-Medium);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--Black);
+  text-underline-offset: 2px;
+}
+.button-filter-outer-wrapper .filter-btn:active {
+  opacity: 80%;
+}/*# sourceMappingURL=ButtonFIlter.css.map */

@@ -44,4 +44,16 @@
   width: 179px;
   height: 45px;
   padding: 8px 16px;
+}
+
+.waitlist {
+  width: 380px;
+  height: 45px;
+  padding: 8px 16px;
+}
+
+.back-to-shop {
+  width: 204px;
+  height: 45px;
+  padding: 8px 16px;
 }/*# sourceMappingURL=Button.css.map */

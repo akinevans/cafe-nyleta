@@ -8,7 +8,14 @@ export default function ShopHeader() {
         <ul className='shop-header-list'>
           <li>
             {/* filter on click */}
-            <button className='filter-btn'>All</button>
+            <button
+              onClick={() => {
+                console.log("All filter btn pressed");
+              }}
+              className='filter-btn'
+            >
+              All
+            </button>
           </li>
           <li>
             <button className='filter-btn'>Apparel</button>

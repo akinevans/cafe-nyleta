@@ -1,0 +1,37 @@
+@import "../styleFunctions/functions";
+
+.button-filter-outer-wrapper {
+  @include flex(row);
+  @include flexPosition(center, center);
+  @include widthHeight(379px, 45px);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body);
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background-color: var(--White);
+  border: 0.5px solid var(--Black);
+  // @include temporaryOutline(red);
+
+  .filter-btn {
+    margin: 0 5px;
+    font-family: var(--HN-Light);
+    font-size: var(--Label);
+    border: none;
+    outline: none;
+    background-color: var(--White);
+    cursor: pointer;
+    // @include temporaryOutline(blue);
+
+    &:hover {
+      font-family: var(--HN-Medium);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--Black);
+      text-underline-offset: 2px;
+    }
+    &:active {
+      opacity: 80%;
+    }
+  } // end filter btn
+} // end outer wrapper

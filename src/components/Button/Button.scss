@@ -46,3 +46,13 @@
   @include widthHeight(179px, 45px);
   padding: 8px 16px;
 }
+
+.waitlist {
+  @include widthHeight(380px, 45px);
+  padding: 8px 16px;
+}
+
+.back-to-shop {
+  @include widthHeight(204px, 45px);
+  padding: 8px 16px;
+}
