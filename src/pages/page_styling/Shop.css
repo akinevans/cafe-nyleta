@@ -1,0 +1,21 @@
+.shop-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-products-wrapper {
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 140px;
+  margin-bottom: 242px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-evenly;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 1076px;
+}/*# sourceMappingURL=Shop.css.map */

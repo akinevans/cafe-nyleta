@@ -1,0 +1,22 @@
+@import "../../components/styleFunctions/functions";
+
+.shop-page-wrapper {
+  @include flex(column);
+  @include flexPosition(center, center);
+  //   @include temporaryOutline(red);
+}
+
+.shop-products-wrapper {
+  flex-wrap: wrap;
+  //^ flex gap for spacing
+  gap: 60px;
+  margin-top: 140px;
+  margin-bottom: 242px;
+  //! delete padding
+  //   padding: 5px;
+  @include flex(row);
+  @include flexPosition(space-between, space-evenly);
+  @include widthHeight(90%, fit-content);
+  @include maxWidth(1076px);
+  //   @include temporaryOutline(green);
+}

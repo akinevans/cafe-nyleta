@@ -1,0 +1,38 @@
+@import "../styleFunctions/functions";
+
+//^ Positioning for Shop Page and products wrapper located in Shop.scss
+
+.item-card-outer-wrapper {
+  @include flex(column);
+  @include flexPosition(center, center);
+  @include widthHeight(180px, 300px);
+  max-height: 300px;
+  cursor: pointer;
+  //   @include temporaryOutline(blue);
+
+  .item-card-img {
+    @include widthHeight(180px, fit-content);
+    @include maxWidth(180px);
+    max-height: 80%;
+    // @include temporaryOutline(purple);
+  } // end card image
+
+  .item-card-text-wrapper {
+    text-align: center;
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Label);
+    color: var(--Black);
+
+    p,
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+//^ Utility classes
+.out-of-stock {
+  opacity: 50%;
+}
