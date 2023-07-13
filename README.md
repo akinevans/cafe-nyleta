@@ -70,7 +70,7 @@
 ## About Page:
 
 - [x] Import assets
-- [] Build UI for Desktop
+- [x] Build UI for Desktop
 - [] Build UI for Tablet
 - [] Build UI for Mobile
 
@@ -79,6 +79,7 @@
 ## Shop Page:
 
 - [] Import assets
+- [x] Build Shop Header
 - [] Build UI for Desktop
 - [] Build UI for Tablet
 - [] Build UI for Mobile

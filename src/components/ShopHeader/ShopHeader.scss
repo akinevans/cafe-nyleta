@@ -1,0 +1,53 @@
+@import "../styleFunctions/functions";
+
+.shop-header-outer-wrapper,
+.shop-header-inner-wrapper {
+  @include flex(row);
+}
+
+.shop-header-outer-wrapper {
+  @include flexPosition(center, center);
+  @include widthHeight(var(--Full), fit-content);
+  background-color: var(--Background);
+  //   @include temporaryOutline(red);
+
+  .shop-header-inner-wrapper {
+    @include flexPosition(flex-start, center);
+    @include widthHeight(90%, fit-content);
+    @include maxWidth(--Desktop);
+    // @include temporaryOutline(blue);
+
+    .shop-header-list {
+      @include flex(row);
+      @include flexPosition(flex-start, center);
+      @include widthHeight(fit-content, 18px);
+    }
+
+    .shop-header-list {
+      list-style: none;
+      margin: 0 0 0 10px;
+      padding: 0;
+
+      .filter-btn {
+        margin: 0 26px 0 0;
+        padding: 0;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-family: var(--HN-Light);
+        font-weight: var(--Light-Weight);
+        font-size: var(--Label);
+        color: var(--Grey-100);
+        cursor: pointer;
+
+        &:hover {
+          color: var(--Black);
+          //   text-decoration: underline;
+        }
+        &:active {
+          opacity: 85%;
+        }
+      } // end filter button
+    } // End shop header list
+  } // End inner wrapper
+} // End outer wrapper
