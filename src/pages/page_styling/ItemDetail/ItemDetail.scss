@@ -1,1 +1,81 @@
 @import "../../../components/styleFunctions/functions";
+
+.item-detail-page-outer-wrapper {
+  @include flex(column);
+  @include flexPosition(flex-start, center);
+  //   @include widthHeight(var(--Full), 825px);
+  height: 897px;
+  background-color: var(--Background);
+  //   @include temporaryOutline(red);
+}
+
+.item-detail-page-inner-wrapper {
+  @include flex(row);
+  //! Temp gap
+  //   gap: 190px;
+  @include flexPosition(space-evenly, flex-start);
+  @include widthHeight(var(--Desktop), fit-content);
+  //   @include temporaryOutline(blue);
+
+  .item-detail-left-wrapper {
+    position: relative;
+    @include flex(column);
+    @include flexPosition(space-evenly, center);
+    @include widthHeight(60%, 676px);
+    margin-top: 0px;
+    // @include temporaryOutline(green);
+
+    .product {
+      @include widthHeight(550px, auto);
+      //   @include temporaryOutline(orange);
+    }
+
+    .cycle-box-wrapper {
+      position: absolute;
+      bottom: 65px;
+      @include flex(row);
+      gap: 9px;
+      @include widthHeight(71.65px, auto);
+      //   @include temporaryOutline(black);
+
+      .cycle-box {
+        @include widthHeight(18px, 7.2px);
+        background-color: var(--Grey-20);
+        // @include temporaryOutline(red);
+      } // end cycle box
+
+      //^Utility class for switching cycle box color
+      .grey {
+        background-color: var(--Grey-100);
+      } // end util class
+    } // end cycle box wrapper
+  } // end left wrapper
+
+  .item-detail-right-wrapper {
+    @include flex(column);
+    @include flexPosition(center, flex-start);
+    @include widthHeight(40%, fit-content);
+    margin-top: 0px;
+    // @include temporaryOutline(rgb(19, 230, 230));
+
+    .product-name,
+    .price,
+    .description {
+      margin: 0 0 28px 0;
+      font-family: var(--HN-Light);
+      font-weight: var(--Light-Weight);
+      font-size: var(--Heading-1);
+      color: var(--Grey-100);
+    }
+
+    .product-name {
+      margin-top: 75px;
+    }
+
+    .description {
+      margin-bottom: 115px;
+      font-size: var(--Body-Small);
+      line-height: 26px;
+    }
+  } // end right wrapper
+} // end inner wrapper

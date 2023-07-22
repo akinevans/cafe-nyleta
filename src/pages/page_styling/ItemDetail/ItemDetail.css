@@ -1,1 +1,76 @@
-/*# sourceMappingURL=ItemDetail.css.map */
+.item-detail-page-outer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 897px;
+  background-color: var(--Background);
+}
+
+.item-detail-page-inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: var(--Desktop);
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.item-detail-page-inner-wrapper .item-detail-left-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  height: 676px;
+  margin-top: 0px;
+}
+.item-detail-page-inner-wrapper .item-detail-left-wrapper .product {
+  width: 550px;
+  height: auto;
+}
+.item-detail-page-inner-wrapper .item-detail-left-wrapper .cycle-box-wrapper {
+  position: absolute;
+  bottom: 65px;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  width: 71.65px;
+  height: auto;
+}
+.item-detail-page-inner-wrapper .item-detail-left-wrapper .cycle-box-wrapper .cycle-box {
+  width: 18px;
+  height: 7.2px;
+  background-color: var(--Grey-20);
+}
+.item-detail-page-inner-wrapper .item-detail-left-wrapper .cycle-box-wrapper .grey {
+  background-color: var(--Grey-100);
+}
+.item-detail-page-inner-wrapper .item-detail-right-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 0px;
+}
+.item-detail-page-inner-wrapper .item-detail-right-wrapper .product-name,
+.item-detail-page-inner-wrapper .item-detail-right-wrapper .price,
+.item-detail-page-inner-wrapper .item-detail-right-wrapper .description {
+  margin: 0 0 28px 0;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Heading-1);
+  color: var(--Grey-100);
+}
+.item-detail-page-inner-wrapper .item-detail-right-wrapper .product-name {
+  margin-top: 75px;
+}
+.item-detail-page-inner-wrapper .item-detail-right-wrapper .description {
+  margin-bottom: 115px;
+  font-size: var(--Body-Small);
+  line-height: 26px;
+}/*# sourceMappingURL=ItemDetail.css.map */

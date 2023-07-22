@@ -5,6 +5,7 @@
   align-items: center;
   width: 379px;
   height: 45px;
+  margin-bottom: 16px;
   font-weight: var(--Light-Weight);
   font-size: var(--Body);
   border-radius: 0;

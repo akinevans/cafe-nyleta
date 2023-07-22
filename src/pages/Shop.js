@@ -2,6 +2,7 @@ import React from "react";
 import "../pages/page_styling/Shop/Shop.css";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ItemCard from "../components/ItemCard/ItemCard";
+
 import work_shirt from "../assets/images/shop/workshirt_white_02.jpg";
 import hat from "../assets/images/shop/hat_navy_01.jpg";
 import crew from "../assets/images/shop/crewneck_sand_02.jpg";
