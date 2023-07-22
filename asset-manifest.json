@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cafe-nyleta/static/css/main.3bee78be.css",
-    "main.js": "/cafe-nyleta/static/js/main.6870e608.js",
+    "main.css": "/cafe-nyleta/static/css/main.946068b3.css",
+    "main.js": "/cafe-nyleta/static/js/main.f2f56139.js",
     "static/js/787.c83355ab.chunk.js": "/cafe-nyleta/static/js/787.c83355ab.chunk.js",
     "static/media/feature.jpg": "/cafe-nyleta/static/media/feature.c1ce6e2fbdde813a365b.jpg",
     "static/media/carousel_06.jpg": "/cafe-nyleta/static/media/carousel_06.d179de792bbe4623d25b.jpg",
@@ -24,7 +24,9 @@
     "static/media/carousel_202.jpeg": "/cafe-nyleta/static/media/carousel_202.3f997b6a8f29c2ae27dd.jpeg",
     "static/media/carousel_04.jpg": "/cafe-nyleta/static/media/carousel_04.5ea63743d1f00410b9b2.jpg",
     "static/media/carousel_102.jpg": "/cafe-nyleta/static/media/carousel_102.938f9c9dd0b8b5bb0598.jpg",
+    "static/media/crewneck_sand_02.jpg": "/cafe-nyleta/static/media/crewneck_sand_02.313338553ece92c8f485.jpg",
     "static/media/carousel_105.jpg": "/cafe-nyleta/static/media/carousel_105.a0b0c22d71ac4558d9e0.jpg",
+    "static/media/workshirt_white_02.jpg": "/cafe-nyleta/static/media/workshirt_white_02.9739b00ca66074ca7465.jpg",
     "static/media/02_arcteryx.png": "/cafe-nyleta/static/media/02_arcteryx.f8f1431cae5ba54c097d.png",
     "static/media/carousel_101.jpg": "/cafe-nyleta/static/media/carousel_101.c0e5145f021fd6c24441.jpg",
     "static/media/04_acg_nike.png": "/cafe-nyleta/static/media/04_acg_nike.5e5757564382b04c8802.png",
@@ -37,6 +39,7 @@
     "static/media/carousel_108.jpg": "/cafe-nyleta/static/media/carousel_108.81fe1936b2f9b069dca1.jpg",
     "static/media/01_Stussy.png": "/cafe-nyleta/static/media/01_Stussy.a177e76720ee8d899ffa.png",
     "static/media/03_carhartt.png": "/cafe-nyleta/static/media/03_carhartt.558e54b83281170234a2.png",
+    "static/media/hat_navy_01.jpg": "/cafe-nyleta/static/media/hat_navy_01.6aa0196da0cb30f8b695.jpg",
     "static/media/Windsor-Regular.ttf": "/cafe-nyleta/static/media/Windsor-Regular.840c15634e5c3949742b.ttf",
     "static/media/worldmap.png": "/cafe-nyleta/static/media/worldmap.689f5257db0005d3aecb.png",
     "static/media/Helvetica-Neue-Light.ttf": "/cafe-nyleta/static/media/Helvetica-Neue-Light.2d7491fe233df3ce53e2.ttf",
@@ -48,12 +51,12 @@
     "static/media/down-arrow.svg": "/cafe-nyleta/static/media/down-arrow.400d6fc83d09faecef2d4adcde120b47.svg",
     "static/media/plus-sign.svg": "/cafe-nyleta/static/media/plus-sign.337ce5299841cd01b10dcc8a385ad06d.svg",
     "static/media/minus-sign.svg": "/cafe-nyleta/static/media/minus-sign.994df67bf4ac74eced081283cd71c907.svg",
-    "main.3bee78be.css.map": "/cafe-nyleta/static/css/main.3bee78be.css.map",
-    "main.6870e608.js.map": "/cafe-nyleta/static/js/main.6870e608.js.map",
+    "main.946068b3.css.map": "/cafe-nyleta/static/css/main.946068b3.css.map",
+    "main.f2f56139.js.map": "/cafe-nyleta/static/js/main.f2f56139.js.map",
     "787.c83355ab.chunk.js.map": "/cafe-nyleta/static/js/787.c83355ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bee78be.css",
-    "static/js/main.6870e608.js"
+    "static/css/main.946068b3.css",
+    "static/js/main.f2f56139.js"
   ]
 }
