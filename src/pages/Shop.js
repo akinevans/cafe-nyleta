@@ -1,5 +1,5 @@
 import React from "react";
-import "../pages/page_styling/Shop.css";
+import "../pages/page_styling/Shop/Shop.css";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ItemCard from "../components/ItemCard/ItemCard";
 import work_shirt from "../assets/images/shop/workshirt_white_02.jpg";
@@ -10,6 +10,7 @@ export default function Shop() {
   return (
     <div className='shop-page-wrapper'>
       <ShopHeader />
+
       <div className='shop-products-wrapper'>
         {/* All item components rendered here */}
         <ItemCard

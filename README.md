@@ -97,6 +97,7 @@
 
 ## Other:
 
+- [] Setup web domain name
 - [] Back button in browser (github pages) breaks the site. Check Router Routes
 - [] Run accessability checks
 - [] Implement page transitions
