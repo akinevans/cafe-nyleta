@@ -2,6 +2,7 @@ import React from "react";
 import "../pages/page_styling/Shop/Shop.css";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ItemCard from "../components/ItemCard/ItemCard";
+import { Link } from "react-router-dom";
 
 import work_shirt from "../assets/images/shop/workshirt_white_02.jpg";
 import hat from "../assets/images/shop/hat_navy_01.jpg";
@@ -14,12 +15,15 @@ export default function Shop() {
 
       <div className='shop-products-wrapper'>
         {/* All item components rendered here */}
-        <ItemCard
-          //
-          src={work_shirt}
-          description='Work Shirt - White'
-          price='375'
-        />
+        {/* Temp link tag */}
+        <Link to='/itemdetail'>
+          <ItemCard
+            //
+            src={work_shirt}
+            description='Work Shirt - White'
+            price='375'
+          />
+        </Link>
         <ItemCard
           //
           src={work_shirt}
