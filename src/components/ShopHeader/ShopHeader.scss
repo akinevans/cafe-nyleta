@@ -7,9 +7,9 @@
 
 .shop-header-outer-wrapper {
   //& keep header at the top of the page
-  position: sticky;
-  top: 0px;
-  z-index: 999;
+  // position: sticky;
+  // top: 0px;
+  // z-index: 999;
   @include flexPosition(center, center);
   @include widthHeight(var(--Full), fit-content);
   background-color: var(--Background);
