@@ -1,4 +1,5 @@
 .item-detail-page-outer-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -74,4 +75,11 @@
   margin-bottom: 115px;
   font-size: var(--Body-Small);
   line-height: 26px;
+}
+
+.waitlist-modal-position {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=ItemDetail.css.map */

@@ -1,4 +1,14 @@
+.waitlist-modal-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 1700px;
+}
+
 .waitlist-wrapper {
+  z-index: 999;
   display: flex;
   flex-direction: column;
   width: 680px;
@@ -7,7 +17,6 @@
   max-width: 680px;
   padding: 30px 40px 0;
   background-color: var(--Background);
-  outline: 2px solid red;
 }
 .waitlist-wrapper h1,
 .waitlist-wrapper h2 {
@@ -32,10 +41,11 @@
   height: 158px;
 }
 .waitlist-wrapper .waitlist-body-wrapper .waitlist-right {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-detail {
   margin-top: 20px;
@@ -44,10 +54,84 @@
   margin-bottom: 10px;
   font-size: var(--Body);
 }
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .number-dropdown-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 15px 0 0 15px;
+  padding: 0 16px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body-Small);
+  color: var(--Black);
+  background-color: var(--White);
+  border: none;
+  outline: none;
+  border: 1px solid var(--Black);
+  cursor: pointer;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .number-dropdown-button .arrow {
+  margin-top: 6px;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper {
+  position: absolute;
+  top: 58%;
+  right: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: var(--White);
+  border: 1px solid var(--Black);
+  border-top: none;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper .waitlist-option {
+  display: none;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body-Small);
+  color: var(--Black);
+  text-align: center;
+  cursor: pointer;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper label:hover {
+  font-family: var(--HN-Medium);
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper label:active {
+  opacity: 65%;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .hidden {
+  display: none;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .bold {
+  color: var(--Grey-100);
+}
 .waitlist-wrapper .waitlist-btn-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+.gray-out {
+  background-color: rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=WaitlistModal.css.map */

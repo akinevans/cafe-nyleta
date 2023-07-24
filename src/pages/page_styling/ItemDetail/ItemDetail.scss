@@ -1,6 +1,7 @@
 @import "../../../components/styleFunctions/functions";
 
 .item-detail-page-outer-wrapper {
+  position: relative;
   @include flex(column);
   @include flexPosition(flex-start, center);
   //   @include widthHeight(var(--Full), 825px);
@@ -80,3 +81,11 @@
     }
   } // end right wrapper
 } // end inner wrapper
+
+//^ Modal Position
+.waitlist-modal-position {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
