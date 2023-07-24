@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Switch } from "react-router-dom";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
@@ -13,7 +13,7 @@ function App() {
   return (
     <Routes>
       {/* HOME Path is "/" alternatively you can make it "/cafe-nyleta" */}
-      <Route path='/cafe-nyleta' element={<Landing />} />
+      <Route path='/' element={<Landing />} />
       <Route path='/about' element={<About />} />
       <Route path='/shop' element={<Shop />} />
       <Route path='/itemdetail' element={<ItemDetail />} />

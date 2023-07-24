@@ -3,18 +3,19 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* HashRouter being used instead of BrowserRouter. This allows github pages to use browser history functionality. May need to revert to BrowserRouter once  project is complete. */}
+    <HashRouter>
       <Navbar />
       <App />
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
