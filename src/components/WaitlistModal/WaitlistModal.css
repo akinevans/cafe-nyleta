@@ -1,0 +1,53 @@
+.waitlist-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 680px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 680px;
+  padding: 30px 40px 0;
+  background-color: var(--Background);
+  outline: 2px solid red;
+}
+.waitlist-wrapper h1,
+.waitlist-wrapper h2 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Heading-2);
+  color: var(--Black);
+}
+.waitlist-wrapper .waitlist-body-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 25px;
+  border-top: 1px solid var(--Black);
+  border-bottom: 1px solid var(--Black);
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-left .waitlist-img {
+  width: 142px;
+  height: 158px;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-detail {
+  margin-top: 20px;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-detail h2 {
+  margin-bottom: 10px;
+  font-size: var(--Body);
+}
+.waitlist-wrapper .waitlist-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+}/*# sourceMappingURL=WaitlistModal.css.map */

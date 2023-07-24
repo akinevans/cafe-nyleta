@@ -15,6 +15,7 @@
   width: var(--Desktop);
   height: -moz-fit-content;
   height: fit-content;
+  max-width: var(--Desktop);
 }
 .item-detail-page-inner-wrapper .item-detail-left-wrapper {
   position: relative;
@@ -22,7 +23,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 60%;
+  width: 50%;
   height: 676px;
   margin-top: 0px;
 }
@@ -52,7 +53,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 40%;
+  width: 35%;
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 0px;
