@@ -80,7 +80,8 @@
 
 - [] Import assets
 - [x] Build Shop Header
-- [] Build UI for Desktop
+- [x] Build Shop Modal
+- [x] Build UI for Desktop
 - [] Build UI for Tablet
 - [] Build UI for Mobile
 
@@ -88,8 +89,10 @@
 
 ## Contact Page:
 
-- [] Import assets
-- [] Build UI for Desktop
+- [x] Import assets
+- [x] Build contact modal
+- [x] Build contact dropdown
+- [x] Build UI for Desktop
 - [] Build UI for Tablet
 - [] Build UI for Mobile
 
@@ -98,11 +101,11 @@
 ## Other:
 
 - [] Setup web domain name
-- [] Back button in browser (github pages) breaks the site. Check Router Routes
+- [x] Back button in browser (github pages) breaks the site. Check Router Routes - Fixed by adding hash router
 - [] Run accessability checks
 - [] Implement page transitions
 - [] Write tests
-- [] Button Hover & Click states
+- [x] Button Hover & Click states
 - [] Strapi CMS
 - [x] Setup Sass
 - [x] Reorganize Components into separate folders with styles
