@@ -55,10 +55,11 @@ export default function ItemDetail(props) {
       <WaitlistModal
         //
         className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
-        name='Work Shirt- White'
+        name='Work Shirt - White'
         size='L'
         price='375'
-        onClick={() => {
+        //^onCLick event for 'VBack to shop btn'
+        btnOnClick={() => {
           setVisible(!visible);
         }}
       />

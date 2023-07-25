@@ -142,7 +142,7 @@ export default function WaitlistModal(props) {
           <Button
             className='btn grey back-to-shop'
             title='Back to shop'
-            onClick={props.onClick}
+            onClick={props.btnOnClick}
           />
         </div>
       </div>
