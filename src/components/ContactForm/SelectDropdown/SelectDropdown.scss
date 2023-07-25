@@ -1,4 +1,7 @@
 @import "../../styleFunctions/functions";
+.dropdown-outer-wrapper {
+  position: relative;
+}
 
 .service-button {
   @include flex(row);
@@ -22,6 +25,9 @@
 }
 
 .dropdown-wrapper {
+  position: absolute;
+  top: 100%;
+  right: 0%;
   @include flex(column);
   @include flexPosition(center, flex-start);
   @include widthHeight(580px, fit-content);
@@ -30,7 +36,7 @@
   border: 1px solid var(--Black);
   border-top: none;
 
-  //   @include temporaryOutline(red);
+  // @include temporaryOutline(red);
 
   .option {
     display: none;

@@ -1,3 +1,7 @@
+.dropdown-outer-wrapper {
+  position: relative;
+}
+
 .service-button {
   display: flex;
   flex-direction: row;
@@ -22,6 +26,9 @@
 }
 
 .dropdown-wrapper {
+  position: absolute;
+  top: 100%;
+  right: 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -8,7 +8,7 @@ export default function SelectDropdown(props) {
   const [label, setLabel] = useState("Service");
 
   return (
-    <>
+    <div className='dropdown-outer-wrapper'>
       <button
         // Bold the button text anytime its value is not === 'Service'
         className={`service-button ${label === "Service" ? "" : "bold"}`}
@@ -125,6 +125,6 @@ export default function SelectDropdown(props) {
           Distribution
         </label>
       </div>
-    </>
+    </div>
   );
 }
