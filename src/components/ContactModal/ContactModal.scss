@@ -1,8 +1,19 @@
 @import "../styleFunctions/functions";
 
+//modal class to gray out the page
+.contact-modal-page-wrapper {
+  position: absolute;
+  top: -26%;
+  @include flex(row);
+  @include flexPosition(center, center);
+  @include widthHeight(100vw, 1700px);
+  background-color: #00000033;
+  z-index: 999;
+}
+
 .contact-modal-outer-wrapper {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   @include flex(column);

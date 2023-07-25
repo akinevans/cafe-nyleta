@@ -10,7 +10,7 @@ export default function Contact() {
       {/* Utility classes for contact modal are located in ContactModal.scss */}
 
       {/* Build logic to show / hide. Will be tricky with form submit */}
-      <ContactModal className='contact-modal hidden ' />
+      <ContactModal className='contact-modal hidden' />
     </div>
   );
 }
