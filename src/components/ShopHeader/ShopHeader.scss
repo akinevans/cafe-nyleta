@@ -9,7 +9,7 @@
   //& keep header at the top of the page
   // position: sticky;
   // top: 0px;
-  // z-index: 999;
+  z-index: 1;
   @include flexPosition(center, center);
   @include widthHeight(var(--Full), fit-content);
   background-color: var(--Background);

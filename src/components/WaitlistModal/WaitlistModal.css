@@ -5,6 +5,7 @@
   align-items: center;
   width: 100vw;
   height: 1700px;
+  z-index: 999;
 }
 
 .waitlist-wrapper {
