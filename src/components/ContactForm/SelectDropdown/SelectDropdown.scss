@@ -1,6 +1,9 @@
 @import "../../styleFunctions/functions";
+
 .dropdown-outer-wrapper {
   position: relative;
+  //z-index fixes bug where 'Message* text appears in the dropdown menu'
+  z-index: 1;
 }
 
 .service-button {
@@ -35,6 +38,7 @@
   background-color: var(--White);
   border: 1px solid var(--Black);
   border-top: none;
+  // z-index: 1;
 
   // @include temporaryOutline(red);
 
