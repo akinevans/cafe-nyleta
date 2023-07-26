@@ -43,6 +43,25 @@ export default function WaitlistModal(props) {
             >
               <input
                 type='radio'
+                id='select-0'
+                name='0'
+                value='0'
+                className='waitlist-option'
+              ></input>
+
+              <label
+                htmlFor='0'
+                className='waitlist-select-item'
+                onClick={() => {
+                  setLabel("0");
+                  setVisible(!visible);
+                }}
+              >
+                0
+              </label>
+
+              <input
+                type='radio'
                 id='select-1'
                 name='1'
                 value='1'
