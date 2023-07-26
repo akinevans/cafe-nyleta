@@ -130,6 +130,7 @@
 .waitlist-wrapper .waitlist-btn-wrapper {
   display: flex;
   flex-direction: row;
+  gap: 8px;
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 25px;

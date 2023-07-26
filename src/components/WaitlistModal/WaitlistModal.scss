@@ -141,6 +141,7 @@
   } // end waitlist body wrapper
   .waitlist-btn-wrapper {
     @include flex(row);
+    gap: 8px;
     @include flexPosition(flex-end, center);
     margin-bottom: 25px;
     // @include temporaryOutline(green);
