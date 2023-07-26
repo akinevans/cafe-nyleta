@@ -59,7 +59,7 @@ export default function ItemDetail(props) {
         name='Work Shirt - White'
         size='L'
         price='375'
-        //^onCLick event for 'VBack to shop btn'
+        //^onCLick event for 'Back to shop btn'
         btnOnClick={() => {
           setVisible(!visible);
         }}

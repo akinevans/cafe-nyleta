@@ -2,6 +2,11 @@
 
 //^This class exists for the purpose graying out the background when the modal is visible. Think of it as an invisible overlay of the entire page. This work in conjunction with the grey-out class at the bottom of this file
 .waitlist-modal-page-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   @include flex(row);
   @include flexPosition(center, center);
   @include widthHeight(100vw, 1700px);
@@ -45,7 +50,7 @@
       position: relative;
       @include flex(row);
       @include flexPosition(center, flex-start);
-      //   @include temporaryOutline(green);
+      // @include temporaryOutline(green);
 
       .waitlist-detail {
         margin-top: 20px;
@@ -79,6 +84,7 @@
       } // end drop down btn
 
       .waitlist-dropdown-wrapper {
+        //^ Number drop down menu
         position: absolute;
         top: 58%;
         right: 0%;

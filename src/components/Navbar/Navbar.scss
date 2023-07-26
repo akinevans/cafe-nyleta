@@ -28,22 +28,30 @@
 
     .nav-links-wrapper {
       @include widthHeight(409px, 45px);
-      // @include temporaryOutline(green);
+      // @include temporaryOutline(green);v
 
-      // Router Link tags are treated as anchor tags, so using 'a' here is sufficient
-      a {
-        //! This will have to change when you import router Link elements
+      //^ Router Link tags are treated as anchor tags, so using 'a' here is sufficient
+      a,
+      .cart-btn {
         font-family: var(--HN-Light);
         font-weight: var(--Light-Weight);
         font-size: var(--Heading-3);
         color: var(--Black);
         text-decoration: none;
+        cursor: pointer;
+
         &:hover {
           text-decoration: underline;
         }
         &:active {
           opacity: 85%;
         }
+      } // end Link tags / a tags
+      .cart-btn {
+        padding: 0;
+        background-color: transparent;
+        outline: none;
+        border: none;
       }
     } // End nav links wrapper desktop
   } // End nav inner wrapper desktop

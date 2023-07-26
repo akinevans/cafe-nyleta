@@ -34,16 +34,26 @@
   width: 409px;
   height: 45px;
 }
-.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper a {
+.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper a,
+.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .cart-btn {
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
   font-size: var(--Heading-3);
   color: var(--Black);
   text-decoration: none;
+  cursor: pointer;
 }
-.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper a:hover {
+.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper a:hover,
+.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .cart-btn:hover {
   text-decoration: underline;
 }
-.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper a:active {
+.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper a:active,
+.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .cart-btn:active {
   opacity: 85%;
+}
+.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .cart-btn {
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
 }/*# sourceMappingURL=Navbar.css.map */
