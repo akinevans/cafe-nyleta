@@ -43,7 +43,7 @@ export default function ItemDetail(props) {
           <ButtonFilter />
           <Button
             className='btn grey waitlist'
-            title='Add to Waitlist'
+            title='Add to cart'
             onClick={() => {
               setVisible(!visible);
               console.log("Add to waitlist btn pressed");

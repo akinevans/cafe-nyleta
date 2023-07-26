@@ -161,12 +161,12 @@ export default function WaitlistModal(props) {
         <div className='waitlist-btn-wrapper'>
           <Button
             className='btn white back-to-shop'
-            title='Back to shop'
+            title='Close'
             onClick={props.btnOnClick}
           />
           <Button
             className='btn grey back-to-shop'
-            title='Check Out'
+            title='Add to cart'
             onClick={props.btnOnClick}
           />
         </div>

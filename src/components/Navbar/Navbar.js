@@ -38,6 +38,7 @@ export default function Navbar(props) {
         name='Work Shirt - White'
         size='L'
         price='375'
+        //^btnOnClick is a custom prop
         btnOnClick={() => {
           setVisible(!visible);
         }}
