@@ -12,7 +12,8 @@ export default function WaitlistModal(props) {
   return (
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
       <div className='waitlist-wrapper'>
-        <h1>Added to Waitlist</h1>
+        {/* if props.quantity is undefined, display nothing */}
+        <h1>{`${props.header} ${props.quantity ? props.quantity : ""}`}</h1>
         {/* Body Wrapper will get top and bottom underlines */}
         <div className='waitlist-body-wrapper'>
           <div className='waitlist-left'>

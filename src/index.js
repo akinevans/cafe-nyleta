@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     {/* HashRouter being used instead of BrowserRouter. This allows github pages to use browser history functionality. May need to revert to BrowserRouter once  project is complete. */}
     <HashRouter>
-      <Navbar />
+      <Navbar quantity='0' />
       <App />
       <Footer />
     </HashRouter>

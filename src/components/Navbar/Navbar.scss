@@ -27,9 +27,10 @@
     }
 
     .nav-links-wrapper {
-      @include widthHeight(308px, 45px);
-      //   @include temporaryOutline(green);
+      @include widthHeight(409px, 45px);
+      // @include temporaryOutline(green);
 
+      // Router Link tags are treated as anchor tags, so using 'a' here is sufficient
       a {
         //! This will have to change when you import router Link elements
         font-family: var(--HN-Light);

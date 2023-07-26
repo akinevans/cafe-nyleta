@@ -55,6 +55,7 @@ export default function ItemDetail(props) {
       <WaitlistModal
         //
         className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
+        header='Added to Waitlist'
         name='Work Shirt - White'
         size='L'
         price='375'
