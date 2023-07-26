@@ -51,11 +51,12 @@ export default function ItemDetail(props) {
           />
         </div>
       </div>
-      {/* modal position is styled in ItemDetail.scss */}
+      {/* //^ modal position is styled in ItemDetail.scss */}
       <WaitlistModal
         //
         className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
-        header='Added to Waitlist'
+        header='My Cart'
+        quantity={`(${0})`}
         name='Work Shirt - White'
         size='L'
         price='375'

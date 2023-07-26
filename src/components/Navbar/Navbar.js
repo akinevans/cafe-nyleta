@@ -11,6 +11,7 @@ export default function Navbar(props) {
 
   return (
     <nav className='nav-outer-wrapper'>
+      {/* //^ colored react comment */}
       <div className='nav-inner-wrapper'>
         <Link to='/'>
           <img src={logo} alt='cafe nyleta logo' className='nav-logo' />
