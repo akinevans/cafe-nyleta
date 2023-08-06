@@ -3,20 +3,28 @@
 .shop-page-wrapper {
   @include flex(column);
   @include flexPosition(center, center);
-  //   @include temporaryOutline(red);
+  // @include temporaryOutline(red);
 }
 
 .shop-products-wrapper {
   flex-wrap: wrap;
   //^ flex gap for spacing
-  gap: 60px;
+  // gap between rows, X axis
+  row-gap: 45px;
+  //gap between columns, Y axis
+  column-gap: 100px;
   margin-top: 140px;
-  margin-bottom: 242px;
+  margin-bottom: 212px;
   //! delete padding
-  //   padding: 5px;
+  // padding: 5px;
   @include flex(row);
-  @include flexPosition(space-between, space-evenly);
+  @include flexPosition(space-evenly, space-evenly);
   @include widthHeight(90%, fit-content);
   @include maxWidth(1076px);
-  //   @include temporaryOutline(green);
+  // @include temporaryOutline(green);
+}
+
+//^ Utility classes
+.out-of-stock {
+  opacity: 50%;
 }

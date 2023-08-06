@@ -18,13 +18,34 @@ export default function ShopHeader() {
             </button>
           </li>
           <li>
-            <button className='filter-btn'>Apparel</button>
+            <button
+              onClick={() => {
+                console.log("Apparel filter btn pressed");
+              }}
+              className='filter-btn'
+            >
+              Apparel
+            </button>
           </li>
           <li>
-            <button className='filter-btn'>Accessories</button>
+            <button
+              onClick={() => {
+                console.log("Accessories filter btn pressed");
+              }}
+              className='filter-btn'
+            >
+              Accessories
+            </button>
           </li>
           <li>
-            <button className='filter-btn'>Home Goods</button>
+            <button
+              onClick={() => {
+                console.log("Home Goods filter btn pressed");
+              }}
+              className='filter-btn'
+            >
+              Home Goods
+            </button>
           </li>
         </ul>
       </div>

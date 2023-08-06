@@ -7,15 +7,21 @@
 
 .shop-products-wrapper {
   flex-wrap: wrap;
-  gap: 60px;
+  row-gap: 45px;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
   margin-top: 140px;
-  margin-bottom: 242px;
+  margin-bottom: 212px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: space-evenly;
   width: 90%;
   height: -moz-fit-content;
   height: fit-content;
   max-width: 1076px;
+}
+
+.out-of-stock {
+  opacity: 50%;
 }/*# sourceMappingURL=Shop.css.map */

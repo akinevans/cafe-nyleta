@@ -1,101 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 import "../pages/page_styling/Shop/Shop.css";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ItemCard from "../components/ItemCard/ItemCard";
 import { Link } from "react-router-dom";
 
-import work_shirt from "../assets/images/shop/workshirt_white_02.jpg";
-import hat from "../assets/images/shop/hat_navy_01.jpg";
-import crew from "../assets/images/shop/crewneck_sand_02.jpg";
+export default function Shop({ category }) {
+  const [products, setProducts] = useState([]);
 
-export default function Shop() {
+  //& Code for fetching data from Strapi Backend with axios
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          process.env.REACT_APP_API_URL +
+            `/products?populate=*&[filters][category][$eq]=${category}`,
+          {
+            headers: {
+              Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
+            },
+          }
+        );
+        setProducts(response.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  // console.log(products);
+
   return (
     <div className='shop-page-wrapper'>
       <ShopHeader />
 
       <div className='shop-products-wrapper'>
-        {/* All item components rendered here */}
-        {/* Temp link tag */}
-        <Link to='/itemdetail'>
+        {/*//& Fetch items from Strapi API here  */}
+        {products.map((data) => (
+          // add a dynamic link tag that takes user to a new page for each store item
           <ItemCard
-            //
-            src={work_shirt}
-            description='Work Shirt - White'
-            price='375'
+            //^ must set item = item
+            item={data}
+            //^ every instance of the ItemCard component that is rendered will need its own key prop
+            key={data.id}
+            className=''
+            description={data?.attributes?.description}
+            src={data?.attributes?.image}
+            alt={data?.attributes?.description}
+            price={data?.attributes?.price}
           />
-        </Link>
-        <ItemCard
-          //
-          src={work_shirt}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          src={work_shirt}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          src={work_shirt}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          className='out-of-stock'
-          src={hat}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          className='out-of-stock'
-          src={hat}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          src={hat}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          src={hat}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          src={crew}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          src={crew}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          className='out-of-stock'
-          src={crew}
-          description='Work Shirt - White'
-          price='375'
-        />
-        <ItemCard
-          //
-          className='out-of-stock'
-          src={crew}
-          description='Work Shirt - White'
-          price='375'
-        />
+        ))}
       </div>
-      {/* shop components with data from Strapi CMS */}
     </div>
   );
 }
