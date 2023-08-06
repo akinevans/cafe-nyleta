@@ -106,7 +106,8 @@
 - [] Implement page transitions
 - [] Write tests
 - [x] Button Hover & Click states
-- [] Strapi CMS
+- [] Begin Working on Strapi CMS
+- [] Finish Strapi CMS
 - [x] Setup Sass
 - [x] Reorganize Components into separate folders with styles
 - [] Framer Motion
