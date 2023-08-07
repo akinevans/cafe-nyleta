@@ -22,6 +22,11 @@
   @include widthHeight(90%, fit-content);
   @include maxWidth(1076px);
   // @include temporaryOutline(green);
+
+  .item-card-link {
+    //^ Removes the underline from ItemCard component text
+    text-decoration: none;
+  }
 }
 
 //^ Utility classes

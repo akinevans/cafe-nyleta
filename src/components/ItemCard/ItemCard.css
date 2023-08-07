@@ -22,8 +22,7 @@
   font-size: var(--Label);
   color: var(--Black);
 }
-.item-card-outer-wrapper .item-card-text-wrapper p,
-.item-card-outer-wrapper .item-card-text-wrapper h1 {
+.item-card-outer-wrapper .item-card-text-wrapper p {
   margin: 0;
   padding: 0;
 }

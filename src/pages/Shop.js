@@ -41,7 +41,7 @@ export default function Shop() {
           ? "Loading..."
           : product.map((data) => (
               //! add a dynamic link tag that takes user to a ItemDetail page for each store item
-              <Link to={`/itemdetail/${data.id}`}>
+              <Link className='item-card-link' to={`/itemdetail/${data.id}`}>
                 <ItemCard
                   //^ must set item = item
                   item={data}
