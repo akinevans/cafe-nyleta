@@ -7,11 +7,10 @@ import ItemCard from "../components/ItemCard/ItemCard";
 
 export default function Shop() {
   // category and filterPath as an empty string returns all products
+  // to display all products just remove filter
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
   const apiFilterPath = "&[filters][type][$eq]=";
-
-  //! to display all just remove filter
 
   const { product, loading } = useFetch(
     `/products?populate=*${filterPath}${category}`
@@ -20,32 +19,24 @@ export default function Shop() {
 
   return (
     <div className='shop-page-wrapper'>
-      {/* //! add prop to shop header to filter api call */}
       <ShopHeader
-        // filter all
-        filterAll={() => {
-          setCategory("");
-          setFilterPath("");
-        }}
-        // filter apparel
-        filterApparel={() => {
-          setCategory("apparel");
-          setFilterPath(apiFilterPath);
-        }}
-        // filter accessories
-        filterAccessories={() => {
-          setCategory("accessories");
-          setFilterPath(apiFilterPath);
-        }}
-        // filter home-goods
-        filterHomeGoods={() => {
-          setCategory("home-goods");
-          setFilterPath(apiFilterPath);
+        // Function that filters store products by category. It works by updating the url in the useFetch hook via setState calls that pass in strings from the ShopHeader Component.
+        filterProducts={(category) => {
+          if (category === "all") {
+            // empty string shows all products
+            setCategory("");
+            setFilterPath("");
+          } else {
+            // show only the passed in category string
+            setCategory(category);
+            // update the url with filter parameters for the API call
+            setFilterPath(apiFilterPath);
+          }
         }}
       />
 
       <div className='shop-products-wrapper'>
-        {/*//& Fetch items from Strapi API here  */}
+        {/*//& Fetch and map over items from Strapi API here  */}
         {loading
           ? "Loading..."
           : product.map((data) => (
