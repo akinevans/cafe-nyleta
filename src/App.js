@@ -16,7 +16,8 @@ function App() {
       <Route path='/' element={<Landing />} />
       <Route path='/about' element={<About />} />
       <Route path='/shop' element={<Shop />} />
-      <Route path='/itemdetail' element={<ItemDetail />} />
+      {/* //! does item detail need an ":id" in the link? */}
+      <Route path='/itemdetail/:id' element={<ItemDetail />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/privacy-policy' element={<PrivacyPolicy />} />
       <Route path='/terms-and-conditions' element={<TermsAndConditions />} />

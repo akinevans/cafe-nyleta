@@ -106,7 +106,8 @@
 - [] Implement page transitions
 - [] Write tests
 - [x] Button Hover & Click states
-- [] Begin Working on Strapi CMS
+- [x] Begin Working on Strapi CMS
+- [x] Implement Axios for API calls
 - [] Finish Strapi CMS
 - [x] Setup Sass
 - [x] Reorganize Components into separate folders with styles

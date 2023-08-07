@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useFetch from "../hooks/useFetch";
-
+import { Link } from "react-router-dom";
 import "../pages/page_styling/Shop/Shop.css";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ItemCard from "../components/ItemCard/ItemCard";
@@ -15,7 +15,7 @@ export default function Shop() {
   const { product, loading } = useFetch(
     `/products?populate=*${filterPath}${category}`
   );
-  // console.log(products);
+  console.log("product  " + product);
 
   return (
     <div className='shop-page-wrapper'>
@@ -40,18 +40,20 @@ export default function Shop() {
         {loading
           ? "Loading..."
           : product.map((data) => (
-              // add a dynamic link tag that takes user to a new page for each store item
-              <ItemCard
-                //^ must set item = item
-                item={data}
-                //^ every instance of the ItemCard component that is rendered will need its own key prop
-                key={data.id}
-                className=''
-                description={data?.attributes?.description}
-                src={data?.attributes?.image}
-                alt={data?.attributes?.description}
-                price={data?.attributes?.price}
-              />
+              //! add a dynamic link tag that takes user to a ItemDetail page for each store item
+              <Link to={`/itemdetail/${data.id}`}>
+                <ItemCard
+                  //^ must set item = item
+                  item={data}
+                  // every instance of the ItemCard component that is rendered will need its own key prop
+                  key={data.id}
+                  className=''
+                  description={data?.attributes?.description}
+                  src={data?.attributes?.image}
+                  alt={data?.attributes?.description}
+                  price={data?.attributes?.price}
+                />
+              </Link>
             ))}
       </div>
     </div>

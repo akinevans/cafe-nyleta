@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import useFetch from "../hooks/useFetch";
 import "../pages/page_styling/ItemDetail/ItemDetail.css";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
@@ -11,15 +12,36 @@ import shirt from "../assets/images/shop/workshirt_white_02.jpg";
 
 export default function ItemDetail(props) {
   const [visible, setVisible] = useState(false);
+  const [category, setCategory] = useState("");
+  const [filterPath, setFilterPath] = useState("");
+  const apiFilterPath = "&[filters][type][$eq]=";
+
+  const { product, loading } = useFetch(
+    `/products?populate=*${filterPath}${category}`
+  );
 
   return (
     <div className='item-detail-page-outer-wrapper'>
-      <ShopHeader />
+      <ShopHeader
+        filterProducts={(category) => {
+          if (category === "all") {
+            // empty string shows all products
+            setCategory("");
+            setFilterPath("");
+          } else {
+            // show only the passed in category string
+            setCategory(category);
+            // update the url with filter parameters for the API call
+            setFilterPath(apiFilterPath);
+          }
+        }}
+      />
       <div className='item-detail-page-inner-wrapper'>
         <div className='item-detail-left-wrapper'>
           {/* On click image should cycle */}
           <img
             className={`product ${visible ? "gray-out" : ""}`}
+            //! dynamically get image and info
             src={shirt}
             alt=''
           />
@@ -31,7 +53,9 @@ export default function ItemDetail(props) {
           </div>
         </div>
         <div className='item-detail-right-wrapper'>
-          <h1 className='product-name'>Work Shirt - White</h1>
+          {/* //TODO: itemdetail page now has :id routes, so each product has its own link as noted by its id. */}
+          {/* //! dynamically get name, price, description */}
+          <h1 className='product-name'>{"PLACEHOLDER"}</h1>
           <h1 className='price'>$375 USD</h1>
           <p className='description'>
             Made from high-quality, breathable materials, this <br />
