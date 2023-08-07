@@ -7,7 +7,7 @@ import ItemCard from "../components/ItemCard/ItemCard";
 
 export default function Shop() {
   // category and filterPath as an empty string returns all products
-  // to display all products just remove filter
+  // to display all products just remove apiFilterPath
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
   const apiFilterPath = "&[filters][type][$eq]=";
@@ -47,7 +47,6 @@ export default function Shop() {
                   item={data}
                   // every instance of the ItemCard component that is rendered will need its own key prop
                   key={data.id}
-                  className=''
                   description={data?.attributes?.description}
                   src={data?.attributes?.image}
                   alt={data?.attributes?.description}
