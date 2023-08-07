@@ -28,7 +28,7 @@
 
     .nav-links-wrapper {
       @include widthHeight(409px, 45px);
-      // @include temporaryOutline(green);v
+      // @include temporaryOutline(green);
 
       //^ Router Link tags are treated as anchor tags, so using 'a' here is sufficient
       a,
@@ -53,6 +53,39 @@
         outline: none;
         border: none;
       }
+
+      .hamburger-menu {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin-right: 25px;
+      }
     } // End nav links wrapper desktop
   } // End nav inner wrapper desktop
 } // End nav-outer-wrapper desktop
+
+//Begin Tablet Media Queries
+@media screen and (max-width: 834px) {
+  .nav-links-wrapper {
+    @include flexPosition(flex-end, center);
+
+    a,
+    .cart-btn {
+      display: none;
+    }
+    .hamburger-menu {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      img {
+        width: 35.41px;
+        height: 32.19px;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+  border: 2px solid red;
+}

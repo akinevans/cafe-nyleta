@@ -1,13 +1,33 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./Navbar.css";
 import logo from "../../assets/icons/cafe-nyleta-logo.png";
 import WaitlistModal from "../WaitlistModal/WaitlistModal";
+import hamburger from "../../assets/icons/hamburger-menu.svg";
+import exit from "../../assets/icons/exit.svg";
 
 export default function Navbar(props) {
   const [visible, setVisible] = useState(false);
+
+  //Window width for showing / hiding hamburger menu
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   return (
     <nav className='nav-outer-wrapper'>
@@ -30,6 +50,12 @@ export default function Navbar(props) {
           <Link to='/contact'>
             <Button className='btn grey contact' title='Contact Us' />
           </Link>
+          {/*  hamburger menu */}
+          <button
+            className={`hamburger-menu ${windowSize[0] <= 834 ? "" : "hide"}`}
+          >
+            <img src={hamburger} alt='' className='hamburger-img' />
+          </button>
         </div>
       </div>
       <WaitlistModal

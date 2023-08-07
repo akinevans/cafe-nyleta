@@ -56,4 +56,34 @@
   background-color: transparent;
   outline: none;
   border: none;
+}
+.nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .hamburger-menu {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-right: 25px;
+}
+
+@media screen and (max-width: 834px) {
+  .nav-links-wrapper {
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-links-wrapper a,
+  .nav-links-wrapper .cart-btn {
+    display: none;
+  }
+  .nav-links-wrapper .hamburger-menu {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+  .nav-links-wrapper .hamburger-menu img {
+    width: 35.41px;
+    height: 32.19px;
+  }
+}
+.hide {
+  display: none;
+  border: 2px solid red;
 }/*# sourceMappingURL=Navbar.css.map */

@@ -8,9 +8,10 @@ import Button from "../components/Button/Button";
 import WaitlistModal from "../components/WaitlistModal/WaitlistModal";
 
 // image imports
+//! delete shirt asset once API is connected
 import shirt from "../assets/images/shop/workshirt_white_02.jpg";
 
-export default function ItemDetail(props) {
+export default function ItemDetail(props, { item }) {
   const [visible, setVisible] = useState(false);
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
