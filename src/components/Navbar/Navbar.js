@@ -9,6 +9,8 @@ import HamburgerMenuModal from "../HamburgerMenuModal/HamburgerMenuModal";
 import hamburger from "../../assets/icons/hamburger-menu.svg";
 import exit from "../../assets/icons/exit.svg";
 
+//TODO: There is no way to navigate to the Cart while in tablet / mobile view. Look at Figma to see if Kevin made any changes
+
 export default function Navbar(props) {
   const [cartVisible, setCartVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
@@ -40,7 +42,6 @@ export default function Navbar(props) {
       <div className='nav-inner-wrapper'>
         <Link to='/'>
           <img
-            //
             src={logo}
             alt='cafe nyleta logo'
             className='nav-logo'
@@ -66,6 +67,7 @@ export default function Navbar(props) {
           <Link to='/contact'>
             <Button className='btn grey contact' title='Contact Us' />
           </Link>
+
           {/* //&  Hamburger menu */}
           <button
             className={`hamburger-menu ${windowSize[0] <= 834 ? "" : "hide"}`}

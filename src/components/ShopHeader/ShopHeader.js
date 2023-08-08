@@ -1,6 +1,6 @@
 import React from "react";
-import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./ShopHeader.css";
 
 export default function ShopHeader(props) {
@@ -9,45 +9,48 @@ export default function ShopHeader(props) {
       <div className='shop-header-inner-wrapper'>
         <ul className='shop-header-list'>
           <li>
-            {/* filter on click */}
-            <button
-              onClick={() => {
-                props.filterProducts("all");
-              }}
-              className='filter-btn'
-            >
-              All
-            </button>
+            <Link to='/shop'>
+              {/* filter on click */}
+              <button
+                onClick={() => {
+                  //! delete the filter function, its no longer necessary after making each product category its own page
+                  // props.filterProducts("all");
+                }}
+                className='filter-btn'
+              >
+                All
+              </button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => {
-                props.filterProducts("apparel");
-              }}
-              className='filter-btn'
-            >
-              Apparel
-            </button>
+            <Link to='/shop/apparel'>
+              {/* //! remove buttons and update styling */}
+              <button className='filter-btn'>Apparel</button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => {
-                props.filterProducts("accessories");
-              }}
-              className='filter-btn'
-            >
-              Accessories
-            </button>
+            <Link to='/shop/accessories'>
+              <button
+                onClick={() => {
+                  // props.filterProducts("accessories");
+                }}
+                className='filter-btn'
+              >
+                Accessories
+              </button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => {
-                props.filterProducts("home-goods");
-              }}
-              className='filter-btn'
-            >
-              Home Goods
-            </button>
+            <Link to='/shop/homegoods'>
+              <button
+                onClick={() => {
+                  // props.filterProducts("home-goods");
+                }}
+                className='filter-btn'
+              >
+                Home Goods
+              </button>
+            </Link>
           </li>
         </ul>
       </div>
