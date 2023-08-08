@@ -5,11 +5,17 @@ import Button from "../Button/Button";
 import "./Navbar.css";
 import logo from "../../assets/icons/cafe-nyleta-logo.png";
 import WaitlistModal from "../WaitlistModal/WaitlistModal";
+import HamburgerMenuModal from "../HamburgerMenuModal/HamburgerMenuModal";
 import hamburger from "../../assets/icons/hamburger-menu.svg";
 import exit from "../../assets/icons/exit.svg";
 
 export default function Navbar(props) {
-  const [visible, setVisible] = useState(false);
+  const [cartVisible, setCartVisible] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
+  // lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
+  const [lockNav, setLockNav] = useState(false);
+  // true == hamburger icon, false == X icon
+  const [menuIcon, setMenuIcon] = useState(true);
 
   //Window width for showing / hiding hamburger menu
   const [windowSize, setWindowSize] = useState([
@@ -23,18 +29,28 @@ export default function Navbar(props) {
     };
 
     window.addEventListener("resize", handleWindowResize);
-
+    console.log("window width is: " + window.innerWidth);
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
 
   return (
-    <nav className='nav-outer-wrapper'>
-      {/* //^ colored react comment */}
+    <nav className={`nav-outer-wrapper ${lockNav ? "lock" : ""}`}>
       <div className='nav-inner-wrapper'>
         <Link to='/'>
-          <img src={logo} alt='cafe nyleta logo' className='nav-logo' />
+          <img
+            //
+            src={logo}
+            alt='cafe nyleta logo'
+            className='nav-logo'
+            onClick={() => {
+              // Reset menu icon and hide modal (tablet / mobile view) when cafe-nyleta logo is clicked
+              setMenuIcon(true);
+              setMenuVisible(false);
+              setLockNav(false);
+            }}
+          />
         </Link>
         <div className='nav-links-wrapper'>
           <Link to='/about'>About</Link>
@@ -42,7 +58,7 @@ export default function Navbar(props) {
           <button
             className='cart-btn'
             onClick={() => {
-              setVisible(!visible);
+              setCartVisible(!cartVisible);
             }}
           >
             {`Cart (${props.quantity})`}
@@ -50,16 +66,26 @@ export default function Navbar(props) {
           <Link to='/contact'>
             <Button className='btn grey contact' title='Contact Us' />
           </Link>
-          {/*  hamburger menu */}
+          {/* //&  Hamburger menu */}
           <button
             className={`hamburger-menu ${windowSize[0] <= 834 ? "" : "hide"}`}
+            onClick={() => {
+              setMenuVisible(!menuVisible);
+              setMenuIcon(!menuIcon);
+              setLockNav(!lockNav);
+            }}
           >
-            <img src={hamburger} alt='' className='hamburger-img' />
+            <img
+              src={menuIcon ? hamburger : exit}
+              alt=''
+              className='hamburger-img'
+            />
           </button>
         </div>
       </div>
+      {/* //& Waitlist Modal */}
       <WaitlistModal
-        className={visible ? "gray-out" : "hidden"}
+        className={cartVisible ? "gray-out" : "hidden"}
         header='My Cart'
         quantity={`(${0})`}
         name='Work Shirt - White'
@@ -67,7 +93,18 @@ export default function Navbar(props) {
         price='375'
         //^btnOnClick is a custom prop
         btnOnClick={() => {
-          setVisible(!visible);
+          setCartVisible(!cartVisible);
+        }}
+      />
+      {/* //& Hamburger modal */}
+
+      <HamburgerMenuModal
+        //windowSize[0] is width [1] is height
+        className={`${menuVisible && windowSize[0] <= 834 ? "" : "hide"}`}
+        onClick={() => {
+          setMenuVisible(!menuVisible);
+          setMenuIcon(!menuIcon);
+          setLockNav(!lockNav);
         }}
       />
     </nav>

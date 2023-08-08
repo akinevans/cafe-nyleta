@@ -1,0 +1,40 @@
+@import "../styleFunctions/functions";
+
+.burger-menu-outer-wrapper {
+  //^ set parent relative
+  position: fixed;
+  top: 142px;
+  //   @include flex(column);
+  //   @include flexPosition(flex-start, center);
+  @include widthHeight(100vw, 100vh);
+  @include maxWidth(834px);
+  margin: auto;
+  background-color: var(--Background);
+  z-index: 999;
+  // @include temporaryOutline(red);
+
+  .burger-menu-link {
+    @include flex(column);
+    @include flexPosition(center, center);
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    height: 75px;
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Heading-1);
+    text-align: center;
+    text-decoration: none;
+    color: var(--Grey-100);
+    cursor: pointer;
+    // @include temporaryOutline(blue);
+
+    &:hover {
+      background-color: var(--HighlightMobile);
+    }
+
+    &:active {
+      opacity: 85%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.burger-menu-outer-wrapper {
+  position: fixed;
+  top: 142px;
+  width: 100vw;
+  height: 100vh;
+  max-width: 834px;
+  margin: auto;
+  background-color: var(--Background);
+  z-index: 999;
+}
+.burger-menu-outer-wrapper .burger-menu-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  height: 75px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Heading-1);
+  text-align: center;
+  text-decoration: none;
+  color: var(--Grey-100);
+  cursor: pointer;
+}
+.burger-menu-outer-wrapper .burger-menu-link:hover {
+  background-color: var(--HighlightMobile);
+}
+.burger-menu-outer-wrapper .burger-menu-link:active {
+  opacity: 85%;
+}/*# sourceMappingURL=HamburgerMenuModal.css.map */

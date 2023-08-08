@@ -7,6 +7,7 @@
 }
 
 .nav-outer-wrapper {
+  position: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +62,7 @@
   background-color: transparent;
   outline: none;
   border: none;
-  margin-right: 25px;
+  margin-right: -5px;
 }
 
 @media screen and (max-width: 834px) {
@@ -73,11 +74,6 @@
   .nav-links-wrapper .cart-btn {
     display: none;
   }
-  .nav-links-wrapper .hamburger-menu {
-    background-color: transparent;
-    outline: none;
-    border: none;
-  }
   .nav-links-wrapper .hamburger-menu img {
     width: 35.41px;
     height: 32.19px;
@@ -86,4 +82,10 @@
 .hide {
   display: none;
   border: 2px solid red;
+}
+
+.lock {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }/*# sourceMappingURL=Navbar.css.map */

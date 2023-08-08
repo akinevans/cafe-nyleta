@@ -43,7 +43,7 @@
 
 ### - [] Media Queries for Tablet
 
-- [] Nav
+- [x] Nav
 - [] Hero
 - [] Clients
 - [] Carousel
@@ -55,7 +55,7 @@
 
 ### - [] Media Queries for Mobile
 
-- [] Nav
+- [x] Nav
 - [] Hero
 - [] Clients
 - [] Carousel
@@ -115,6 +115,10 @@
 - [] Compress images (webpack)
 - [] Redux
 - [] Spacer components if necessary
+
+## Known Bugs:
+
+- [] Hamburger menu icon, and modal should reset if resizing the window > 834px then back again to <= 834px. (The X remains)
 
 ## Getting Started with Create React App
 

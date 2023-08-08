@@ -7,6 +7,7 @@
 }
 
 .nav-outer-wrapper {
+  position: inherit;
   @include flex(column);
   @include flexPosition(center, center);
   @include widthHeight(var(--Full), 142px);
@@ -58,7 +59,7 @@
         background-color: transparent;
         outline: none;
         border: none;
-        margin-right: 25px;
+        margin-right: -5px;
       }
     } // End nav links wrapper desktop
   } // End nav inner wrapper desktop
@@ -74,9 +75,6 @@
       display: none;
     }
     .hamburger-menu {
-      background-color: transparent;
-      outline: none;
-      border: none;
       img {
         width: 35.41px;
         height: 32.19px;
@@ -85,7 +83,16 @@
   }
 }
 
+//^ Utility Class
 .hide {
   display: none;
   border: 2px solid red;
+}
+
+// lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
+.lock {
+  // position: fixed;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
