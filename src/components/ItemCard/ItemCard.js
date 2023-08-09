@@ -2,7 +2,7 @@ import React from "react";
 import "./ItemCard.css";
 
 const ItemCard = ({ item }) => {
-  console.log(item);
+  // console.log(item);
   return (
     <div className='item-card-outer-wrapper'>
       <img

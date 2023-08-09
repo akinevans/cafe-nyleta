@@ -11,7 +11,6 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Careers from "./pages/Careers";
-import HamburgerMenuModal from "./components/HamburgerMenuModal/HamburgerMenuModal";
 
 function App() {
   return (
