@@ -7,6 +7,14 @@
   // @include temporaryOutline(blue);
 }
 
+//Begin Tablet Media Queries
+@media screen and (max-width: 834px) {
+  //! be mindful of specificity issues
+  .hero-img {
+    margin-bottom: 68px;
+  }
+}
+
 //^ Utility classes
 
 .zeroBottomMargin {

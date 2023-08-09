@@ -27,7 +27,6 @@ function App() {
       <Route path='/privacy-policy' element={<PrivacyPolicy />} />
       <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
       <Route path='/careers' element={<Careers />} />
-      {/* <Route path='' element={<HamburgerMenuModal />} /> */}
     </Routes>
   );
 }

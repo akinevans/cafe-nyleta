@@ -31,7 +31,7 @@ export default function Landing(props) {
       <Hero
         //
         message={landingPageData.message}
-        image={landingPageData.image}
+        // image={landingPageData.image}
         alt={landingPageData.alt}
       />
       <FeatureImage image={landingPageData.image} />

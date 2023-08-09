@@ -34,7 +34,11 @@
 
 @media screen and (max-width: 850px) {
   .carousel-outer-wrapper {
-    margin: 0;
     transition: all 0.2s ease;
+  }
+}
+@media screen and (max-width: 834px) {
+  .carousel-outer-wrapper {
+    margin-bottom: 68px;
   }
 }/*# sourceMappingURL=Carousel.css.map */

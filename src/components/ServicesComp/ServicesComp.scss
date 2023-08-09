@@ -33,3 +33,15 @@
     }
   }
 }
+
+//Begin Tablet Media Queries
+@media screen and (max-width: 834px) {
+  .services-inner-wrapper {
+    .component-title-wrapper {
+      .component-title {
+        font-size: var(--Heading-2);
+        margin: 0 0 40px 0;
+      }
+    }
+  }
+}

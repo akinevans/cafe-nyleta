@@ -102,3 +102,47 @@
     } // End img-bottom class
   } // End clients img wrapper
 } // End Outer Wrapper
+
+//Begin Tablet Media Queries
+@media screen and (max-width: 834px) {
+  //! be mindful of specificity issues
+  .clients-inner-wrapper {
+    .clients-text-wrapper {
+      margin-bottom: 50px;
+      h1 {
+        font-size: var(--Heading-2);
+      }
+      p {
+        display: none;
+      }
+    }
+    //TODO: Fix the positioning issue
+    .clients-img-wrapper {
+      @include flex(row);
+      @include flexPosition(space-between, center);
+      @include widthHeight(470px, fit-content);
+      @include maxWidth(95%);
+      @include temporaryOutline(pink);
+      //^ Faster way of making everything larger
+      transform: scale(1.25);
+      margin-bottom: 120px;
+
+      .img-top,
+      .img-bottom {
+        gap: 10px;
+        @include flex(column);
+        @include flexPosition(center, center);
+        @include widthHeight(50%, 100%);
+        // @include temporaryOutline(black);
+        height: 450px;
+
+        img {
+          @include maxWidth(130px);
+        }
+      }
+      .img-bottom {
+        gap: 80px;
+      }
+    }
+  }
+}

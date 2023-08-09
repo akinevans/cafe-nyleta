@@ -5,6 +5,11 @@
   margin: 5px 0 120px 0;
 }
 
+@media screen and (max-width: 834px) {
+  .hero-img {
+    margin-bottom: 68px;
+  }
+}
 .zeroBottomMargin {
   margin-bottom: 0;
 }
