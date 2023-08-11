@@ -46,8 +46,9 @@ export default function Shop(props) {
           ? "Loading..."
           : product.map((data) => (
               <Link className='item-card-link' to={`/itemdetail/${data.id}`}>
+                {/* data is the json object returned from the API */}
                 <ItemCard
-                  //^ must set item = item
+                  //^ must set item = data
                   item={data}
                   // every instance of the ItemCard component that is rendered will need its own key prop
                   key={data.id}

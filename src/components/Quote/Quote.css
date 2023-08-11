@@ -28,10 +28,44 @@
   font-family: var(--Windsor);
   font-size: 32px;
   margin: 0 0 64px 0;
+  line-height: normal;
 }
 .quote-outer-wrapper .quote-inner-wrapper p {
   font-family: var(--HN-Light-Italic);
   font-weight: var(--Light-Weight);
   font-size: 18px;
   margin: 0;
+}
+
+@media screen and (max-width: 834px) {
+  .quote-outer-wrapper {
+    padding: 103px 0;
+  }
+  .quote-outer-wrapper .quote-inner-wrapper h1 {
+    max-width: 724px;
+    margin-bottom: 51px;
+    font-size: 42.769px;
+    font-weight: 5;
+    line-height: normal;
+  }
+  .quote-outer-wrapper .quote-inner-wrapper p {
+    font-size: 34.215px;
+    line-height: 55.6px; /* 162.5% */
+  }
+}
+@media screen and (max-width: 390px) {
+  .quote-outer-wrapper {
+    padding: 48px 0;
+  }
+  .quote-outer-wrapper .quote-inner-wrapper h1 {
+    max-width: 339px;
+    margin-bottom: 24px;
+    font-size: var(--Heading-3);
+    font-weight: 5;
+    line-height: normal;
+  }
+  .quote-outer-wrapper .quote-inner-wrapper p {
+    font-size: var(--Body-Small);
+    line-height: 55.6px; /* 162.5% */
+  }
 }/*# sourceMappingURL=Quote.css.map */
