@@ -122,4 +122,111 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.6s ease;
+}
+
+@media screen and (max-width: 834px) {
+  .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper {
+    width: 612px;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 90%;
+    margin-bottom: 68px;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper h1 {
+    font-size: var(--Heading-2);
+    line-height: normal;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper p {
+    font-size: var(--Body);
+    line-height: 26px; /* 144.444% */
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 727px;
+    margin-bottom: 110px;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .vietnam-modal {
+    top: 37%;
+    left: 46%;
+    width: 210px;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .china-modal {
+    top: 29.2%;
+    left: 48%;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper {
+    width: 287px;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 90%;
+    margin-bottom: 32px;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper h1 {
+    font-size: var(--Heading-2);
+    line-height: normal;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper p {
+    margin-top: 16px;
+    font-size: var(--Body-Small);
+    line-height: 26px; /* 144.444% */
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 727px;
+    margin-bottom: 110px;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .triangle {
+    position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid var(--Accent);
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .america {
+    top: 22%;
+    left: 23%;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .america-modal {
+    width: -moz-fit-content;
+    width: fit-content;
+    top: 19.5%;
+    left: 28.5%;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .turkey {
+    top: 23.6%;
+    right: 40.8%;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .turkey-modal {
+    max-width: 220px;
+    top: 21%;
+    left: 1%;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .vietnam {
+    top: 39%;
+    right: 20.2%;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .vietnam-modal {
+    top: 37%;
+    left: 14%;
+    width: 210px;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .china {
+    top: 31.5%;
+    right: 19.5%;
+  }
+  .factories-outer-wrapper .factories-inner-wrapper .factories-img-wrapper .china-modal {
+    top: 29.2%;
+    left: 18%;
+    width: 200px;
+  }
 }/*# sourceMappingURL=Factories.css.map */

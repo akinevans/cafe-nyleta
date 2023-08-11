@@ -141,3 +141,134 @@
     } // End img wrapper
   } // End inner wrapper
 }
+
+//Begin Tablet Media Queries
+@media screen and (max-width: 834px) {
+  .factories-outer-wrapper {
+    .factories-inner-wrapper {
+      .factories-text-wrapper {
+        @include widthHeight(612px, fit-content);
+        @include maxWidth(90%);
+        margin-bottom: 68px;
+
+        h1 {
+          font-size: var(--Heading-2);
+          line-height: normal;
+        }
+        p {
+          font-size: var(--Body);
+          line-height: 26px; /* 144.444% */
+        }
+      }
+      .factories-img-wrapper {
+        position: relative;
+        @include widthHeight(fit-content, fit-content);
+        @include maxWidth(727px);
+        // @include temporaryOutline(green);
+        margin-bottom: 110px;
+
+        .vietnam-modal {
+          top: 37%;
+          // right: -17.5%;
+          left: 46%;
+          width: 210px;
+        }
+
+        .china-modal {
+          top: 29.2%;
+          // right: -17.2%;
+          left: 48%;
+          width: 200px;
+        }
+      } // End img wrapper
+    }
+  }
+}
+
+//Begin Mobile Media Queries
+@media screen and (max-width: 390px) {
+  .factories-outer-wrapper {
+    .factories-inner-wrapper {
+      .factories-text-wrapper {
+        @include widthHeight(287px, fit-content);
+        @include maxWidth(90%);
+        margin-bottom: 32px;
+
+        h1 {
+          font-size: var(--Heading-2);
+          line-height: normal;
+        }
+        p {
+          margin-top: 16px;
+          font-size: var(--Body-Small);
+          line-height: 26px; /* 144.444% */
+        }
+      }
+      .factories-img-wrapper {
+        position: relative;
+        @include widthHeight(fit-content, fit-content);
+        @include maxWidth(727px);
+        // @include temporaryOutline(green);
+        margin-bottom: 110px;
+
+        .triangle {
+          position: absolute;
+          // @include widthHeight(0px, 0px);
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 10px solid var(--Accent);
+          // transition: all 0.2s ease;
+        }
+
+        .america {
+          top: 22%;
+          left: 23%;
+        }
+
+        .america-modal {
+          width: fit-content;
+          top: 19.5%;
+          left: 28.5%;
+        }
+
+        .turkey {
+          top: 23.6%;
+          right: 40.8%;
+        }
+
+        .turkey-modal {
+          @include maxWidth(220px);
+
+          top: 21%;
+          //^ using 'right' breaks layout on screen size. If using position absolute only use 'top' and 'left'
+          // right: 0.5%;
+          left: 1%;
+        }
+
+        .vietnam {
+          top: 39%;
+          right: 20.2%;
+        }
+
+        .vietnam-modal {
+          top: 37%;
+          // right: -17.5%;
+          left: 14%;
+          width: 210px;
+        }
+
+        .china {
+          top: 31.5%;
+          right: 19.5%;
+        }
+
+        .china-modal {
+          top: 29.2%;
+          // right: -17.2%;
+          left: 18%;
+          width: 200px;
+        }
+      } // End img wrapper
+    }
+  }
+}

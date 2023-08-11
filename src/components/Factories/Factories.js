@@ -56,7 +56,7 @@ export default function Factories() {
     <section className='factories-outer-wrapper'>
       <div className='factories-inner-wrapper'>
         <div className='factories-text-wrapper'>
-          <h1>Factories & vendors</h1>
+          <h1>Factories & Vendors</h1>
           <p>
             Our network is built on a roster of reliable, time-tested factories
             and vendors that have been carefully curated and assessed to ensure
