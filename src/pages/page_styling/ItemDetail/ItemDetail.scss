@@ -32,6 +32,10 @@
       //   @include temporaryOutline(orange);
     }
 
+    .out-of-stock {
+      opacity: 60%;
+    }
+
     .cycle-box-wrapper {
       position: absolute;
       bottom: 65px;
@@ -75,6 +79,7 @@
     }
 
     .description {
+      @include maxWidth(381px);
       margin-bottom: 115px;
       font-size: var(--Body-Small);
       line-height: 26px;

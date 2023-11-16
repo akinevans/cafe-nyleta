@@ -38,7 +38,6 @@ export default function Shop(props) {
       //   }
       // }}
       />
-
       <div className='shop-products-wrapper'>
         {/*//& Fetch and map over items from Strapi API here  */}
         {/* //! This can be a custom hook */}
@@ -46,7 +45,6 @@ export default function Shop(props) {
           ? "Loading..."
           : product.map((data) => (
               <Link className='item-card-link' to={`/itemdetail/${data.id}`}>
-                {/* data is the json object returned from the API */}
                 <ItemCard
                   //^ must set item = data
                   item={data}

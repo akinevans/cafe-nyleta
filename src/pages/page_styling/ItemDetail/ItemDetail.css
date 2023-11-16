@@ -32,6 +32,9 @@
   width: 550px;
   height: auto;
 }
+.item-detail-page-inner-wrapper .item-detail-left-wrapper .out-of-stock {
+  opacity: 60%;
+}
 .item-detail-page-inner-wrapper .item-detail-left-wrapper .cycle-box-wrapper {
   position: absolute;
   bottom: 65px;
@@ -72,6 +75,7 @@
   margin-top: 75px;
 }
 .item-detail-page-inner-wrapper .item-detail-right-wrapper .description {
+  max-width: 381px;
   margin-bottom: 115px;
   font-size: var(--Body-Small);
   line-height: 26px;
