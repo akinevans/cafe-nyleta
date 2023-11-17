@@ -29,6 +29,7 @@
 
     .product {
       @include widthHeight(550px, auto);
+      cursor: pointer;
       //   @include temporaryOutline(orange);
     }
 
