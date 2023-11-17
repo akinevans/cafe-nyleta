@@ -19,6 +19,33 @@ export default function ItemDetail(props, { item }) {
   const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
   console.log(product);
 
+  const productImages = [
+    product?.attributes?.image?.data?.attributes?.url,
+    product?.attributes?.image2?.data?.attributes?.url,
+    product?.attributes?.image3?.data?.attributes?.url,
+  ];
+  let index = 0;
+
+  const cycleImages = (e) => {
+    //check if product has multiple images, if not return null
+    if (productImages[1] === undefined || productImages[2] === undefined) {
+      console.log("product only has 1 image");
+      return null;
+    }
+
+    //if product does have multiple images, cycle images on click
+    if (index === 0 || index === 1) {
+      index += 1;
+    } else if (index === 2) {
+      index = 0;
+    }
+
+    e.target.setAttribute(
+      "src",
+      process.env.REACT_APP_UPLOAD_URL + productImages[index]
+    );
+  };
+
   return (
     <div className='item-detail-page-outer-wrapper'>
       <ShopHeader
@@ -46,11 +73,11 @@ export default function ItemDetail(props, { item }) {
               className={`product ${
                 product?.attributes?.inStock ? "" : "out-of-stock"
               }`}
-              src={
-                process.env.REACT_APP_UPLOAD_URL +
-                product?.attributes?.image?.data?.attributes?.url
-              }
+              src={process.env.REACT_APP_UPLOAD_URL + productImages[0]}
               alt={product?.attributes?.title}
+              onClick={(e) => {
+                cycleImages(e);
+              }}
             />
             {/* utility class 'grey' to color selected box */}
             <div className='cycle-box-wrapper'>
