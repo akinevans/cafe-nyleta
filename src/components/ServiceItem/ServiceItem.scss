@@ -21,7 +21,7 @@
   @include widthHeight(780px, auto);
   max-width: 100%;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 
   //   @include temporaryOutline(blue);
 
@@ -65,7 +65,7 @@
       line-height: 26px;
       color: var(--Black);
       text-align: left;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.4s ease-in-out;
     }
   } // end message wrapper
 
@@ -73,7 +73,7 @@
     opacity: 1;
     visibility: visible;
     // transform: translateY(0px);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   //^ Utility class for hiding and shrinking the inner wrapper with state. Must not be nested inside inner wrapper
@@ -83,7 +83,7 @@
     max-height: 0px;
     opacity: 0;
     margin: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
+    // visibility: hidden;
+    transition: all 0.4s ease-in-out;
   }
 } // end inner wrapper
