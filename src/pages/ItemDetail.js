@@ -17,13 +17,7 @@ export default function ItemDetail(props, { item }) {
   const id = useParams().id;
 
   const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
-  // console.log(product);
-
-  const productImages = [
-    product?.attributes?.image?.data?.attributes?.url,
-    product?.attributes?.image2?.data?.attributes?.url,
-    product?.attributes?.image3?.data?.attributes?.url,
-  ];
+  console.log(product);
 
   let imageIndex = 0;
 
@@ -32,15 +26,16 @@ export default function ItemDetail(props, { item }) {
     imageIndex += 1;
 
     //check if the next image exists, if not reset index to 0
-    if (productImages[imageIndex] === undefined) {
+    if (!product?.attributes?.images?.data[imageIndex]?.attributes?.url) {
       console.log(`Product only has ${imageIndex} images`);
       imageIndex = 0;
     }
 
-    //finally, cycle the images
+    //finally, set the new image
     e.target.setAttribute(
       "src",
-      process.env.REACT_APP_UPLOAD_URL + productImages[imageIndex]
+      process.env.REACT_APP_UPLOAD_URL +
+        product?.attributes?.images?.data[imageIndex]?.attributes?.url
     );
   };
 
@@ -71,7 +66,10 @@ export default function ItemDetail(props, { item }) {
               className={`product ${
                 product?.attributes?.inStock ? "" : "out-of-stock"
               }`}
-              src={process.env.REACT_APP_UPLOAD_URL + productImages[imageIndex]}
+              src={
+                process.env.REACT_APP_UPLOAD_URL +
+                product?.attributes?.images?.data[0]?.attributes?.url
+              }
               alt={product?.attributes?.title}
               onClick={(e) => {
                 cycleImages(e);
