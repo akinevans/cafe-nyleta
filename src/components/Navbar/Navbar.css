@@ -79,9 +79,26 @@
     height: 32.19px;
   }
 }
+@media screen and (max-width: 530px) {
+  .nav-inner-wrapper .nav-logo {
+    max-width: 128.57px;
+    margin-left: 25px;
+  }
+  .nav-inner-wrapper .nav-links-wrapper {
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-inner-wrapper .nav-links-wrapper a,
+  .nav-inner-wrapper .nav-links-wrapper .cart-btn {
+    display: none;
+  }
+  .nav-inner-wrapper .nav-links-wrapper .hamburger-menu img {
+    width: 30px;
+    height: 30px;
+  }
+}
 .hide {
   display: none;
-  border: 2px solid red;
 }
 
 .lock {

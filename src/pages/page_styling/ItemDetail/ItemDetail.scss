@@ -40,6 +40,7 @@
       // @include widthHeight(550px, auto);
       max-width: 76.39%;
       height: auto;
+      margin-top: 60px;
       cursor: pointer;
       // @include temporaryOutline(orange);
     }
@@ -51,7 +52,7 @@
 
     .cycle-box-wrapper {
       position: absolute;
-      bottom: 12%;
+      bottom: -3%;
       @include flex(row);
       @include flexPosition(center, center);
       gap: 9px;
@@ -140,11 +141,13 @@
       .product {
         max-width: 69.48%;
         height: auto;
+        margin-top: 50px;
+
         // @include temporaryOutline(orange);
       }
 
       .cycle-box-wrapper {
-        bottom: 12%;
+        bottom: -3%;
         // @include temporaryOutline(black);
 
         .cycle-box {
@@ -181,6 +184,77 @@
       .item-detail-btn,
       .item-detail-filter-btn {
         @include maxWidth(100%);
+      }
+    } // end right wrapper
+  } // end inner wrapper
+}
+
+//Begin Mobile Media Queries
+@media screen and (max-width: 530px) {
+  .item-detail-page-inner-wrapper {
+    @include flex(column);
+    @include flexPosition(flex-start, center);
+    height: fit-content;
+    // @include temporaryOutline(blue);
+
+    .item-detail-left-wrapper {
+      @include maxWidth(100%);
+      max-height: 35%;
+      margin-bottom: 50px;
+      // @include temporaryOutline(green);
+
+      .image-and-cycle-wrapper {
+        // @include temporaryOutline(yellow);
+      }
+
+      .product {
+        max-width: 75%;
+        // @include temporaryOutline(orange);
+      }
+
+      .cycle-box-wrapper {
+        bottom: -5%;
+        // @include temporaryOutline(black);
+
+        .cycle-box {
+          @include widthHeight(18px, 7.2px);
+          // @include temporaryOutline(red);
+        } // end cycle box
+      } // end cycle box wrapper
+    } // end left wrapper
+
+    .item-detail-right-wrapper {
+      @include flexPosition(flex-start, flex-start);
+
+      @include maxWidth(100%);
+      height: fit-content;
+      margin: 0 25px 0 0;
+      // @include temporaryOutline(rgb(19, 230, 230));
+
+      .product-name,
+      .price,
+      .description {
+        font-family: var(--HN-Light);
+        // font-weight: 300;
+        font-size: var(--Heading-2);
+      }
+
+      .product-name {
+        margin: 10px 0 10px 0;
+      }
+
+      .description {
+        width: 78%;
+        margin-bottom: 35px;
+        font-size: var(--Body-Small);
+        line-height: 26px;
+      }
+
+      .item-detail-btn,
+      .item-detail-filter-btn {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
       }
     } // end right wrapper
   } // end inner wrapper

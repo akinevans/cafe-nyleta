@@ -83,10 +83,37 @@
   }
 }
 
+//Begin Mobile Media Queries
+@media screen and (max-width: 530px) {
+  .nav-inner-wrapper {
+    .nav-logo {
+      max-width: 128.57px;
+      margin-left: 25px;
+    }
+
+    .nav-links-wrapper {
+      @include flexPosition(flex-end, center);
+
+      a,
+      .cart-btn {
+        display: none;
+      }
+
+      .hamburger-menu {
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
 //^ Utility Class
+
 .hide {
   display: none;
-  border: 2px solid red;
+  // border: 2px solid red;
 }
 
 // lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
