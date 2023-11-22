@@ -27,9 +27,11 @@
     //^ Removes the underline from ItemCard component text
     text-decoration: none;
   }
-}
 
-//^ Utility classes
-.out-of-stock {
-  opacity: 50%;
+  //^ Utility classes
+  .out-of-stock {
+    opacity: 50%;
+    background-color: transparent;
+    cursor: pointer;
+  }
 }

@@ -56,3 +56,18 @@
   @include widthHeight(204px, 45px);
   padding: 8px 16px;
 }
+
+.out-of-stock {
+  font-family: var(--HN-Medium);
+  color: var(--White);
+  background-color: var(--Grey-100);
+  opacity: 20%;
+  cursor: default;
+  &:hover {
+    opacity: 20%;
+  }
+
+  &:active {
+    opacity: 20%;
+  }
+}

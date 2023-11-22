@@ -24,7 +24,8 @@
 .shop-products-wrapper .item-card-link {
   text-decoration: none;
 }
-
-.out-of-stock {
+.shop-products-wrapper .out-of-stock {
   opacity: 50%;
+  background-color: transparent;
+  cursor: pointer;
 }/*# sourceMappingURL=Shop.css.map */

@@ -17,9 +17,10 @@ export default function ItemDetail(props, { item }) {
   const id = useParams().id;
 
   const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
-  console.log(product);
+  // console.log(product);
 
   let imageIndex = 0;
+  const inStock = product?.attributes?.inStock;
 
   const cycleImages = (e) => {
     // move to the next url in productImages array
@@ -27,7 +28,7 @@ export default function ItemDetail(props, { item }) {
 
     //check if the next image exists, if not reset index to 0
     if (!product?.attributes?.images?.data[imageIndex]?.attributes?.url) {
-      console.log(`Product only has ${imageIndex} images`);
+      // console.log(`Product only has ${imageIndex} images`);
       imageIndex = 0;
     }
 
@@ -63,9 +64,7 @@ export default function ItemDetail(props, { item }) {
           <div className='item-detail-left-wrapper'>
             {/* On click image should cycle */}
             <img
-              className={`product ${
-                product?.attributes?.inStock ? "" : "out-of-stock"
-              }`}
+              className={`product ${inStock ? "" : "out-of-stock"}`}
               src={
                 process.env.REACT_APP_UPLOAD_URL +
                 product?.attributes?.images?.data[0]?.attributes?.url
@@ -93,11 +92,17 @@ export default function ItemDetail(props, { item }) {
 
             <ButtonFilter />
             <Button
-              className='btn grey waitlist'
-              title='Add to cart'
+              // product?.attributes?.inStock
+              className={`btn waitlist ${inStock ? "grey" : "out-of-stock"}`}
+              title={inStock ? "Add to cart" : "Out of stock"}
               onClick={() => {
-                setVisible(!visible);
-                console.log("Add to waitlist btn pressed");
+                if (inStock) {
+                  setVisible(!visible);
+                } else {
+                  // alert("Item is currently out of stock");
+                  return null;
+                }
+                // console.log("Add to waitlist btn pressed");
               }}
             />
           </div>
