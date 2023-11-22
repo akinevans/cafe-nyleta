@@ -4,33 +4,44 @@
   position: relative;
   @include flex(column);
   @include flexPosition(flex-start, center);
-  //   @include widthHeight(var(--Full), 825px);
+  // @include widthHeight(var(--Full), 825px);
   height: 897px;
   background-color: var(--Background);
-  //   @include temporaryOutline(red);
+  // @include temporaryOutline(red);
 }
 
 .item-detail-page-inner-wrapper {
   @include flex(row);
-  //! Temp gap
-  //   gap: 190px;
   @include flexPosition(space-evenly, flex-start);
-  @include widthHeight(var(--Desktop), fit-content);
+  // @include widthHeight(var(--Desktop), fit-content);
   @include maxWidth(var(--Desktop));
+  height: fit-content;
+  margin: 0 40px;
   // @include temporaryOutline(blue);
 
   .item-detail-left-wrapper {
-    position: relative;
     @include flex(column);
-    @include flexPosition(space-evenly, center);
-    @include widthHeight(50%, 676px);
+    @include flexPosition(flex-start, center);
+    // @include widthHeight(50%, 676px);
+    @include maxWidth(50%);
+    height: 676px;
     margin-top: 0px;
     // @include temporaryOutline(green);
 
+    .image-and-cycle-wrapper {
+      position: relative;
+      @include flex(column);
+      @include flexPosition(flex-start, center);
+      max-height: 676px;
+      // @include temporaryOutline(yellow);
+    }
+
     .product {
-      @include widthHeight(550px, auto);
+      // @include widthHeight(550px, auto);
+      max-width: 76.39%;
+      height: auto;
       cursor: pointer;
-      //   @include temporaryOutline(orange);
+      // @include temporaryOutline(orange);
     }
 
     .out-of-stock {
@@ -40,11 +51,12 @@
 
     .cycle-box-wrapper {
       position: absolute;
-      bottom: 65px;
+      bottom: 12%;
       @include flex(row);
+      @include flexPosition(center, center);
       gap: 9px;
-      @include widthHeight(71.65px, auto);
-      //   @include temporaryOutline(black);
+      @include widthHeight(71.65px, fit-content);
+      // @include temporaryOutline(black);
 
       .cycle-box {
         @include widthHeight(18px, 7.2px);
@@ -62,7 +74,9 @@
   .item-detail-right-wrapper {
     @include flex(column);
     @include flexPosition(center, flex-start);
-    @include widthHeight(35%, fit-content);
+    // @include widthHeight(35%, fit-content);
+    @include maxWidth(35%);
+    height: fit-content;
     margin-top: 0px;
     // @include temporaryOutline(rgb(19, 230, 230));
 
@@ -77,7 +91,11 @@
     }
 
     .product-name {
-      margin-top: 75px;
+      margin: 0 0 16px 0;
+    }
+
+    .price {
+      margin: 0 0 24px 0;
     }
 
     .description {
@@ -85,6 +103,11 @@
       margin-bottom: 115px;
       font-size: var(--Body-Small);
       line-height: 26px;
+    }
+
+    .item-detail-btn,
+    .item-detail-filter-btn {
+      @include maxWidth(100%);
     }
   } // end right wrapper
 } // end inner wrapper
@@ -95,4 +118,70 @@
   top: 41%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+//Begin Tablet Media Queries
+
+@media screen and (max-width: 834px) {
+  .item-detail-page-inner-wrapper {
+    @include flexPosition(space-between, flex-start);
+
+    // @include temporaryOutline(blue);
+
+    .item-detail-left-wrapper {
+      @include maxWidth(65%);
+
+      // @include temporaryOutline(green);
+
+      .image-and-cycle-wrapper {
+        // @include temporaryOutline(yellow);
+      }
+
+      .product {
+        max-width: 69.48%;
+        height: auto;
+        // @include temporaryOutline(orange);
+      }
+
+      .cycle-box-wrapper {
+        bottom: 12%;
+        // @include temporaryOutline(black);
+
+        .cycle-box {
+          @include widthHeight(11.145px, 4.458px);
+          // @include temporaryOutline(red);
+        } // end cycle box
+      } // end cycle box wrapper
+    } // end left wrapper
+
+    .item-detail-right-wrapper {
+      @include maxWidth(35%);
+      height: fit-content;
+
+      // @include temporaryOutline(rgb(19, 230, 230));
+
+      .product-name,
+      .price,
+      .description {
+        font-family: var(--HN-Light);
+        // font-weight: 300;
+        font-size: var(--Heading-2);
+      }
+
+      .product-name {
+        margin-top: 75px;
+      }
+
+      .description {
+        @include maxWidth(100%);
+        margin-bottom: 18px;
+        font-size: var(--Body);
+      }
+
+      .item-detail-btn,
+      .item-detail-filter-btn {
+        @include maxWidth(100%);
+      }
+    } // end right wrapper
+  } // end inner wrapper
 }

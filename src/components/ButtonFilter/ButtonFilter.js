@@ -1,9 +1,9 @@
 import React from "react";
 import "./ButtonFilter.css";
 
-export default function ButtonFilter() {
+export default function ButtonFilter(props) {
   return (
-    <div className='button-filter-outer-wrapper'>
+    <div className={`button-filter-outer-wrapper ${props.className}`}>
       {/* select size on click */}
       <button
         onClick={() => {

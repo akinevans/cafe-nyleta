@@ -67,23 +67,24 @@ export default function ItemDetail(props, { item }) {
       ) : (
         <div className='item-detail-page-inner-wrapper'>
           <div className='item-detail-left-wrapper'>
-            {/* On click image should cycle */}
-            <img
-              className={`product ${inStock ? "" : "out-of-stock"}`}
-              src={
-                process.env.REACT_APP_UPLOAD_URL +
-                product?.attributes?.images?.data[0]?.attributes?.url
-              }
-              alt={altDescription}
-              onClick={(e) => {
-                cycleImages(e);
-              }}
-            />
-            {/* utility class 'grey' to color selected box */}
-            <div className='cycle-box-wrapper'>
-              <div className='cycle-box cb-1 grey'></div>
-              <div className='cycle-box cb-2'></div>
-              <div className='cycle-box cb-3'></div>
+            <div className='image-and-cycle-wrapper'>
+              <img
+                className={`product ${inStock ? "" : "out-of-stock"}`}
+                src={
+                  process.env.REACT_APP_UPLOAD_URL +
+                  product?.attributes?.images?.data[0]?.attributes?.url
+                }
+                alt={altDescription}
+                onClick={(e) => {
+                  cycleImages(e);
+                }}
+              />
+              {/* utility class 'grey' to color selected box */}
+              <div className='cycle-box-wrapper'>
+                <div className='cycle-box cb-1 grey'></div>
+                <div className='cycle-box cb-2'></div>
+                <div className='cycle-box cb-3'></div>
+              </div>
             </div>
           </div>
           <div className='item-detail-right-wrapper'>
@@ -95,10 +96,12 @@ export default function ItemDetail(props, { item }) {
 
             <p className='description'>{productDescription}</p>
 
-            <ButtonFilter />
+            <ButtonFilter className='item-detail-filter-btn' />
             <Button
               // product?.attributes?.inStock
-              className={`btn waitlist ${inStock ? "grey" : "out-of-stock"}`}
+              className={`btn waitlist item-detail-btn ${
+                inStock ? "grey" : "out-of-stock"
+              }`}
               title={inStock ? "Add to cart" : "Out of stock"}
               onClick={() => {
                 if (inStock) {
