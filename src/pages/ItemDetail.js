@@ -17,10 +17,15 @@ export default function ItemDetail(props, { item }) {
   const id = useParams().id;
 
   const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
-  // console.log(product);
+  console.log(product);
+
+  const productName = product?.attributes?.title,
+    productDescription = product?.attributes?.description,
+    productPrice = product?.attributes?.price,
+    inStock = product?.attributes?.inStock,
+    altDescription = product?.attributes?.alt;
 
   let imageIndex = 0;
-  const inStock = product?.attributes?.inStock;
 
   const cycleImages = (e) => {
     // move to the next url in productImages array
@@ -69,7 +74,7 @@ export default function ItemDetail(props, { item }) {
                 process.env.REACT_APP_UPLOAD_URL +
                 product?.attributes?.images?.data[0]?.attributes?.url
               }
-              alt={product?.attributes?.alt}
+              alt={altDescription}
               onClick={(e) => {
                 cycleImages(e);
               }}
@@ -84,11 +89,11 @@ export default function ItemDetail(props, { item }) {
           <div className='item-detail-right-wrapper'>
             {/* //^ itemdetail page now has :id routes, so each product has its own link as noted by its id. */}
             {/* // dynamically get name, price, description */}
-            <h1 className='product-name'>{product?.attributes?.title}</h1>
+            <h1 className='product-name'>{productName}</h1>
 
-            <h1 className='price'>{`$${product?.attributes?.price} USD`}</h1>
+            <h1 className='price'>{`$${productPrice} USD`}</h1>
 
-            <p className='description'>{product?.attributes?.description}</p>
+            <p className='description'>{productDescription}</p>
 
             <ButtonFilter />
             <Button
@@ -112,10 +117,16 @@ export default function ItemDetail(props, { item }) {
         //^ modal position is styled in ItemDetail.scss */
         className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
         header='My Cart'
+        src={
+          process.env.REACT_APP_UPLOAD_URL +
+          product?.attributes?.images?.data[0]?.attributes?.url
+        }
+        alt={altDescription}
+        //useEffect to get quantity -> get element input value on change
         quantity={`(${0})`}
-        name='Work Shirt - White'
+        name={productName}
         size='L'
-        price='375'
+        price={productPrice}
         btnOnClick={() => {
           //^onCLick event for 'Back to shop btn'
           setVisible(!visible);

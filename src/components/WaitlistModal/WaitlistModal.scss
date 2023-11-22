@@ -42,7 +42,7 @@
     border-bottom: 1px solid var(--Black);
     .waitlist-left {
       .waitlist-img {
-        @include widthHeight(142px, 158px);
+        @include widthHeight(125px, 158px);
       }
       //   @include temporaryOutline(green);
     }

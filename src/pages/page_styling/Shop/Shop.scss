@@ -15,8 +15,7 @@
   column-gap: 100px;
   margin-top: 140px;
   margin-bottom: 212px;
-  //! delete padding
-  // padding: 5px;
+
   @include flex(row);
   @include flexPosition(space-evenly, space-evenly);
   @include widthHeight(90%, fit-content);
@@ -30,7 +29,7 @@
 
   //^ Utility classes
   .out-of-stock {
-    opacity: 50%;
+    opacity: 100%;
     background-color: transparent;
     cursor: pointer;
   }

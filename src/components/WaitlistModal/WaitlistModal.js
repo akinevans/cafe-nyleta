@@ -3,7 +3,6 @@ import { useState } from "react";
 import "./WaitlistModal.css";
 import Button from "../Button/Button";
 import arrow from "../../assets/icons/down-arrow.svg";
-import shirt from "../../assets/images/shop/workshirt_white_02.jpg";
 
 export default function WaitlistModal(props) {
   const [visible, setVisible] = useState(false);
@@ -17,7 +16,7 @@ export default function WaitlistModal(props) {
         {/* Body Wrapper will get top and bottom underlines */}
         <div className='waitlist-body-wrapper'>
           <div className='waitlist-left'>
-            <img src={shirt} alt='' className='waitlist-img' />
+            <img src={props.src} alt={props.alt} className='waitlist-img' />
           </div>
           <div className='waitlist-right'>
             <div className='waitlist-detail'>

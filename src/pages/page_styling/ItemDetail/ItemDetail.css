@@ -34,7 +34,7 @@
   cursor: pointer;
 }
 .item-detail-page-inner-wrapper .item-detail-left-wrapper .out-of-stock {
-  opacity: 60%;
+  opacity: 100%;
 }
 .item-detail-page-inner-wrapper .item-detail-left-wrapper .cycle-box-wrapper {
   position: absolute;
