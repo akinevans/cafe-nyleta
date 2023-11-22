@@ -83,7 +83,7 @@
   color: var(--Grey-100);
 }
 .item-detail-page-inner-wrapper .item-detail-right-wrapper .product-name {
-  margin: 0 0 16px 0;
+  margin: 75px 0 16px 0;
 }
 .item-detail-page-inner-wrapper .item-detail-right-wrapper .price {
   margin: 0 0 24px 0;
@@ -137,7 +137,7 @@
     font-size: var(--Heading-2);
   }
   .item-detail-page-inner-wrapper .item-detail-right-wrapper .product-name {
-    margin-top: 75px;
+    margin-top: 60px;
   }
   .item-detail-page-inner-wrapper .item-detail-right-wrapper .description {
     max-width: 100%;
