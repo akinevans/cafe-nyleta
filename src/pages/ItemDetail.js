@@ -70,7 +70,7 @@ export default function ItemDetail(props, { item }) {
                 process.env.REACT_APP_UPLOAD_URL +
                 product?.attributes?.images?.data[0]?.attributes?.url
               }
-              alt={product?.attributes?.title}
+              alt={product?.attributes?.alt}
               onClick={(e) => {
                 cycleImages(e);
               }}

@@ -5,6 +5,8 @@ import "../pages/page_styling/Shop/Shop.css";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ItemCard from "../components/ItemCard/ItemCard";
 
+//TODO: look into key prop error
+
 export default function Shop(props) {
   // category and filterPath as an empty string returns all products
   // to display all products just remove apiFilterPath
@@ -43,17 +45,13 @@ export default function Shop(props) {
         {/* //! This can be a custom hook */}
         {loading
           ? "Loading..."
-          : product.map((data) => (
-              <Link className='item-card-link' to={`/itemdetail/${data.id}`}>
+          : product.map((objData) => (
+              <Link className='item-card-link' to={`/itemdetail/${objData.id}`}>
                 <ItemCard
                   //^ must set item = data
-                  item={data}
+                  item={objData}
                   // every instance of the ItemCard component that is rendered will need its own key prop
-                  key={data.id}
-                  description={data?.attributes?.description}
-                  src={data?.attributes?.image}
-                  alt={data?.attributes?.description}
-                  price={data?.attributes?.price}
+                  key={objData.id}
                 />
               </Link>
             ))}
