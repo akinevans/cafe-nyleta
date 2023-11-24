@@ -3,10 +3,13 @@ import { useState } from "react";
 import "./WaitlistModal.css";
 import Button from "../Button/Button";
 import arrow from "../../assets/icons/down-arrow.svg";
+import { useSelector } from "react-redux";
 
 export default function WaitlistModal(props) {
   const [visible, setVisible] = useState(false);
   const [label, setLabel] = useState(1);
+
+  const products = useSelector((state) => state.cart.products);
 
   return (
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
