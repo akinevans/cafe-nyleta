@@ -6,7 +6,7 @@ import arrow from "../../assets/icons/down-arrow.svg";
 
 export default function WaitlistModal(props) {
   const [visible, setVisible] = useState(false);
-  const [label, setLabel] = useState("1");
+  const [label, setLabel] = useState(1);
 
   return (
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
@@ -53,7 +53,7 @@ export default function WaitlistModal(props) {
                 htmlFor='0'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel("0");
+                  setLabel(0);
                   setVisible(!visible);
                 }}
               >
@@ -72,7 +72,7 @@ export default function WaitlistModal(props) {
                 htmlFor='1'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel("1");
+                  setLabel(1);
                   setVisible(!visible);
                 }}
               >
@@ -91,7 +91,7 @@ export default function WaitlistModal(props) {
                 htmlFor='2'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel("2");
+                  setLabel(2);
                   setVisible(!visible);
                 }}
               >
@@ -110,7 +110,7 @@ export default function WaitlistModal(props) {
                 htmlFor='3'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel("3");
+                  setLabel(3);
                   setVisible(!visible);
                 }}
               >
@@ -129,7 +129,7 @@ export default function WaitlistModal(props) {
                 htmlFor='4'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel("4");
+                  setLabel(4);
                   setVisible(!visible);
                 }}
               >
@@ -148,7 +148,7 @@ export default function WaitlistModal(props) {
                 htmlFor='5'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel("5");
+                  setLabel(5);
                   setVisible(!visible);
                 }}
               >
