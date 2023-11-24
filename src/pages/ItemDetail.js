@@ -23,7 +23,7 @@ export default function ItemDetail(props, { item }) {
   const id = useParams().id;
 
   const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
-  console.log(product);
+  // console.log(product);
 
   const productName = product?.attributes?.title,
     productDescription = product?.attributes?.description,
@@ -132,7 +132,7 @@ export default function ItemDetail(props, { item }) {
         }
         alt={altDescription}
         //useEffect to get quantity -> get element input value on change
-        quantity={`(${products.quantity})`}
+        quantity={`(${products.length})`}
         name={productName}
         size='L'
         price={productPrice}
@@ -143,7 +143,7 @@ export default function ItemDetail(props, { item }) {
         addBtnOnClick={() =>
           dispatch(
             addToCart({
-              //payload -> 5 keys
+              //redux payload -> 5 keys
               id: product.id,
               title: product.attributes.title,
               description: product.attributes.description,

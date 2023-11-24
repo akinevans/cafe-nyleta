@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import Button from "../Button/Button";
 import "./Navbar.css";
 import logo from "../../assets/icons/cafe-nyleta-logo.png";
-import WaitlistModal from "../WaitlistModal/WaitlistModal";
+import ShoppingCartModal from "../ShoppingCartModal/ShoppingCartModal";
 import HamburgerMenuModal from "../HamburgerMenuModal/HamburgerMenuModal";
 import hamburger from "../../assets/icons/hamburger-menu.svg";
 import exit from "../../assets/icons/exit.svg";
@@ -14,10 +16,14 @@ import exit from "../../assets/icons/exit.svg";
 export default function Navbar(props) {
   const [cartVisible, setCartVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
+  //TODO: react context for changing quantity in nav bar
+  const [cartQuantity, setCartQuantity] = useState();
   // lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
   const [lockNav, setLockNav] = useState(false);
   // true == hamburger icon, false == X icon
   const [menuIcon, setMenuIcon] = useState(true);
+
+  const products = useSelector((state) => state.cart.products);
 
   //Window width for showing / hiding hamburger menu
   const [windowSize, setWindowSize] = useState([
@@ -62,7 +68,8 @@ export default function Navbar(props) {
               setCartVisible(!cartVisible);
             }}
           >
-            {`Cart (${props.quantity})`}
+            {/* //get the length of the products data array */}
+            {`Cart (${products.length})`}
           </button>
           <Link to='/contact'>
             <Button className='btn grey contact' title='Contact Us' />
@@ -85,17 +92,18 @@ export default function Navbar(props) {
           </button>
         </div>
       </div>
-      {/* //& Waitlist Modal */}
-      <WaitlistModal
+      {/* //& Shopping Cart Modal */}
+      <ShoppingCartModal
         className={cartVisible ? "gray-out" : "hidden"}
         header='My Cart'
-        quantity={`(${0})`}
-        name='Work Shirt - White'
-        size='L'
-        price='375'
+        headerQuantity={products.length ? products.length : "0"}
         //^btnOnClick is a custom prop
-        btnOnClick={() => {
+        closeBtnOnClick={() => {
           setCartVisible(!cartVisible);
+        }}
+        checkoutBtnOnClick={() => {
+          //navigate to checkout page
+          alert("checkout btn pressed");
         }}
       />
       {/* //& Hamburger modal */}

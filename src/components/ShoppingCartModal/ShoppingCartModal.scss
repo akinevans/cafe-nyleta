@@ -1,0 +1,58 @@
+@import "../../components/styleFunctions/functions";
+
+//^This class exists for the purpose graying out the background when the modal is visible. Think of it as an invisible overlay of the entire page. This work in conjunction with the grey-out class at the bottom of this file
+.cart-modal-page-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include flex(row);
+  @include flexPosition(center, center);
+  @include widthHeight(100vw, 1700px);
+  //   background-color: red;
+  z-index: 999;
+}
+
+.cart-wrapper {
+  z-index: 999;
+  @include flex(column);
+  //   align-items: space-evenly;
+  @include widthHeight(680px, fit-content);
+  @include maxWidth(680px);
+  padding: 30px 40px 0;
+  background-color: var(--Background);
+  //   @include temporaryOutline(red);
+
+  h1,
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    font-size: var(--Heading-2);
+    color: var(--Black);
+  }
+
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  .cart-btn-wrapper {
+    @include flex(row);
+    gap: 8px;
+    @include flexPosition(flex-end, center);
+    margin-bottom: 25px;
+    // @include temporaryOutline(green);
+  }
+} // end cart wrapper
+
+//^ Util class for showing and hiding modal
+.hidden {
+  display: none;
+}
+
+//^ Utility class for graying out the page
+.gray-out {
+  background-color: #00000033;
+}

@@ -1,0 +1,93 @@
+.item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: -6px 0 5px;
+  border-top: 1px solid var(--Black);
+  border-bottom: 1px solid var(--Black);
+}
+.item-wrapper .cart-left .cart-img {
+  width: 125px;
+  height: 135px;
+  margin: 10px 0;
+}
+.item-wrapper .cart-right {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.item-wrapper .cart-right .cart-detail h2 {
+  margin-bottom: 10px;
+  font-size: var(--Body);
+}
+.item-wrapper .cart-right .number-dropdown-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 15px 0 0 15px;
+  padding: 0 16px;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body-Small);
+  color: var(--Black);
+  background-color: var(--White);
+  border: none;
+  outline: none;
+  border: 1px solid var(--Black);
+  cursor: pointer;
+}
+.item-wrapper .cart-right .number-dropdown-button .arrow {
+  margin-top: 6px;
+}
+.item-wrapper .cart-right .cart-dropdown-wrapper {
+  position: absolute;
+  top: 85%;
+  right: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50px;
+  height: 98px;
+  padding-top: 85px;
+  background-color: var(--White);
+  border: 1px solid var(--Black);
+  border-top: none;
+  overflow-y: scroll;
+}
+.item-wrapper .cart-right .cart-dropdown-wrapper .cart-option {
+  display: none;
+}
+.item-wrapper .cart-right .cart-dropdown-wrapper label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 6px 0 6px 0;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Body-Small);
+  color: var(--Black);
+  text-align: center;
+  cursor: pointer;
+}
+.item-wrapper .cart-right .cart-dropdown-wrapper label:hover {
+  font-family: var(--HN-Medium);
+}
+.item-wrapper .cart-right .cart-dropdown-wrapper label:active {
+  opacity: 65%;
+}
+.item-wrapper .cart-right .hidden {
+  display: none;
+}
+.item-wrapper .cart-right .bold {
+  color: var(--Grey-100);
+}/*# sourceMappingURL=ShoppingCartItem.css.map */
