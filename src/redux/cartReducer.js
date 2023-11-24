@@ -14,7 +14,7 @@ export const cartSlice = createSlice({
       if (item) {
         item.quantity += action.payload.quantity;
       } else {
-        state.push(action.payload);
+        state.products.push(action.payload);
       }
 
       // Redux Toolkit allows us to write "mutating" logic in reducers. It

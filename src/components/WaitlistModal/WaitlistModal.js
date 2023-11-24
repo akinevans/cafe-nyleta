@@ -1,15 +1,13 @@
 import React from "react";
 import { useState } from "react";
+
 import "./WaitlistModal.css";
 import Button from "../Button/Button";
 import arrow from "../../assets/icons/down-arrow.svg";
-import { useSelector } from "react-redux";
 
 export default function WaitlistModal(props) {
   const [visible, setVisible] = useState(false);
   const [label, setLabel] = useState(1);
-
-  const products = useSelector((state) => state.cart.products);
 
   return (
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
@@ -164,12 +162,12 @@ export default function WaitlistModal(props) {
           <Button
             className='btn white back-to-shop'
             title='Close'
-            onClick={props.btnOnClick}
+            onClick={props.closeBtnOnClick}
           />
           <Button
             className='btn grey back-to-shop'
             title='Add to cart'
-            onClick={props.btnOnClick}
+            onClick={props.addBtnOnClick}
           />
         </div>
       </div>

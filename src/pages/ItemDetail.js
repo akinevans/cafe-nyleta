@@ -2,16 +2,22 @@ import React from "react";
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
-import "../pages/page_styling/ItemDetail/ItemDetail.css";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../redux/cartReducer";
+
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
 import Button from "../components/Button/Button";
 import WaitlistModal from "../components/WaitlistModal/WaitlistModal";
+import "../pages/page_styling/ItemDetail/ItemDetail.css";
 
 export default function ItemDetail(props, { item }) {
   const [visible, setVisible] = useState(false);
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
+
+  const products = useSelector((state) => state.cart.products);
+  const dispatch = useDispatch();
 
   const apiFilterPath = "&[filters][type][$eq]=";
   const id = useParams().id;
@@ -126,14 +132,26 @@ export default function ItemDetail(props, { item }) {
         }
         alt={altDescription}
         //useEffect to get quantity -> get element input value on change
-        quantity={`(${0})`}
+        quantity={`(${products.quantity})`}
         name={productName}
         size='L'
         price={productPrice}
-        btnOnClick={() => {
+        closeBtnOnClick={() => {
           //^onCLick event for 'Back to shop btn'
           setVisible(!visible);
         }}
+        addBtnOnClick={() =>
+          dispatch(
+            addToCart({
+              //payload -> 5 keys
+              id: product.id,
+              title: product.attributes.title,
+              description: product.attributes.description,
+              price: product.attributes.price,
+              image: product.attributes.images.data[0].attributes.url,
+            })
+          )
+        }
       />
     </div>
   );

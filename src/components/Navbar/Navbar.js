@@ -31,7 +31,6 @@ export default function Navbar(props) {
     };
 
     window.addEventListener("resize", handleWindowResize);
-    console.log("window width is: " + window.innerWidth);
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
@@ -56,6 +55,7 @@ export default function Navbar(props) {
         <div className='nav-links-wrapper'>
           <Link to='/about'>About</Link>
           <Link to='/shop'>Shop</Link>
+          {/* //TODO: Build a shopping cart component separate from waitlist that will store all items in cart */}
           <button
             className='cart-btn'
             onClick={() => {
