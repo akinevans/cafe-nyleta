@@ -89,9 +89,10 @@
         position: absolute;
         top: 85%;
         right: 0%;
+        z-index: 999;
         @include flex(column);
         @include flexPosition(center, flex-start);
-        @include widthHeight(50px, 98px);
+        @include widthHeight(50px, 97px);
         padding-top: 85px;
         background-color: var(--White);
         border: 1px solid var(--Black);

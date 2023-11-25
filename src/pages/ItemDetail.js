@@ -2,8 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../redux/cartReducer";
 
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
@@ -16,8 +14,7 @@ export default function ItemDetail(props, { item }) {
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
 
-  const products = useSelector((state) => state.cart.products);
-  const dispatch = useDispatch();
+  // const products = useSelector((state) => state.cart.products);
 
   const apiFilterPath = "&[filters][type][$eq]=";
   const id = useParams().id;
@@ -130,33 +127,17 @@ export default function ItemDetail(props, { item }) {
       <WaitlistModal
         //^ modal position is styled in ItemDetail.scss */
         className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
-        header='My Cart'
         src={
           process.env.REACT_APP_UPLOAD_URL +
           product?.attributes?.images?.data[0]?.attributes?.url
         }
         alt={altDescription}
-        //useEffect to get quantity -> get element input value on change
-        quantity={`(${products.length})`}
         name={productName}
         size='L'
         price={productPrice}
         closeBtnOnClick={() => {
-          //^onCLick event for 'Back to shop btn'
           setVisible(!visible);
         }}
-        addBtnOnClick={() =>
-          dispatch(
-            addToCart({
-              //redux payload -> 5 keys
-              id: product.id,
-              title: product.attributes.title,
-              description: product.attributes.description,
-              price: product.attributes.price,
-              image: product.attributes.images.data[0].attributes.url,
-            })
-          )
-        }
       />
     </div>
   );

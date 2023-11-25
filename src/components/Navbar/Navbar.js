@@ -16,7 +16,7 @@ import exit from "../../assets/icons/exit.svg";
 export default function Navbar(props) {
   const [cartVisible, setCartVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
-  //TODO: react context for changing quantity in nav bar
+  //! pull quantity data from cartReducer
   const [cartQuantity, setCartQuantity] = useState();
   // lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
   const [lockNav, setLockNav] = useState(false);

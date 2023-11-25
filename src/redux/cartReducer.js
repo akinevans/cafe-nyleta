@@ -11,8 +11,15 @@ export const cartSlice = createSlice({
     addToCart: (state, action) => {
       const item = state.products.find((item) => item.id === action.payload.id);
 
+      //update the quantity of the product in the cart
       if (item) {
-        item.quantity += action.payload.quantity;
+        // update item quantity to zero if zero is selected
+        if (action.payload.itemQuantity <= 0) {
+          item.itemQuantity = action.payload.itemQuantity;
+          //else increment
+        } else if (action.payload.itemQuantity > 0) {
+          item.itemQuantity += action.payload.itemQuantity;
+        }
       } else {
         state.products.push(action.payload);
       }

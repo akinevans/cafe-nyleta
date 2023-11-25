@@ -1,5 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
+import useFetch from "../../hooks/useFetch";
+import { useParams } from "react-router-dom";
 
 import "./WaitlistModal.css";
 import Button from "../Button/Button";
@@ -7,13 +11,29 @@ import arrow from "../../assets/icons/down-arrow.svg";
 
 export default function WaitlistModal(props) {
   const [visible, setVisible] = useState(false);
-  const [label, setLabel] = useState(1);
+  const [itemQuantity, setItemQuantity] = useState(1);
+  const [cartQuantity, setCartQuantity] = useState(0);
+
+  // const apiFilterPath = "&[filters][type][$eq]=";
+  const id = useParams().id;
+
+  // const products = useSelector((state) => state.cart.products);
+  const dispatch = useDispatch();
+  const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
+
+  const handleCartQuantity = (currentItemQuantity) => {
+    // const prevItemQuantity = itemQuantity;
+    if (currentItemQuantity > 0) {
+      setCartQuantity(cartQuantity + currentItemQuantity);
+    }
+    //TODO: code to remove items from cart
+  };
 
   return (
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
       <div className='waitlist-wrapper'>
         {/* if props.quantity is undefined, display nothing */}
-        <h1>{`${props.header} ${props.quantity ? props.quantity : ""}`}</h1>
+        <h1>{`My Cart ${cartQuantity}`}</h1>
         {/* Body Wrapper will get top and bottom underlines */}
         <div className='waitlist-body-wrapper'>
           <div className='waitlist-left'>
@@ -34,7 +54,7 @@ export default function WaitlistModal(props) {
                 setVisible(!visible);
               }}
             >
-              {label}
+              {itemQuantity}
               <img src={arrow} alt='' className='arrow' />
             </button>
 
@@ -42,25 +62,6 @@ export default function WaitlistModal(props) {
               className={`waitlist-dropdown-wrapper ${visible ? "" : "hidden"}`}
               id='dropdown'
             >
-              <input
-                type='radio'
-                id='select-0'
-                name='0'
-                value='0'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='0'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setLabel(0);
-                  setVisible(!visible);
-                }}
-              >
-                0
-              </label>
-
               <input
                 type='radio'
                 id='select-1'
@@ -73,7 +74,8 @@ export default function WaitlistModal(props) {
                 htmlFor='1'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel(1);
+                  setItemQuantity(1);
+                  console.log(itemQuantity);
                   setVisible(!visible);
                 }}
               >
@@ -92,7 +94,8 @@ export default function WaitlistModal(props) {
                 htmlFor='2'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel(2);
+                  setItemQuantity(2);
+                  // console.log(quantity);
                   setVisible(!visible);
                 }}
               >
@@ -111,7 +114,7 @@ export default function WaitlistModal(props) {
                 htmlFor='3'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel(3);
+                  setItemQuantity(3);
                   setVisible(!visible);
                 }}
               >
@@ -130,7 +133,7 @@ export default function WaitlistModal(props) {
                 htmlFor='4'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel(4);
+                  setItemQuantity(4);
                   setVisible(!visible);
                 }}
               >
@@ -149,7 +152,7 @@ export default function WaitlistModal(props) {
                 htmlFor='5'
                 className='waitlist-select-item'
                 onClick={() => {
-                  setLabel(5);
+                  setItemQuantity(5);
                   setVisible(!visible);
                 }}
               >
@@ -167,7 +170,21 @@ export default function WaitlistModal(props) {
           <Button
             className='btn grey back-to-shop'
             title='Add to cart'
-            onClick={props.addBtnOnClick}
+            onClick={() => {
+              handleCartQuantity(itemQuantity);
+
+              dispatch(
+                addToCart({
+                  //redux payload -> 5 keys
+                  id: product.id,
+                  title: product.attributes.title,
+                  description: product.attributes.description,
+                  price: product.attributes.price,
+                  image: product.attributes.images.data[0].attributes.url,
+                  itemQuantity,
+                })
+              );
+            }}
           />
         </div>
       </div>
