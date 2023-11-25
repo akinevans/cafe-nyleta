@@ -17,7 +17,7 @@ export default function Navbar(props) {
   const [cartVisible, setCartVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   //! pull quantity data from cartReducer
-  const [cartQuantity, setCartQuantity] = useState();
+  const [cartQuantity, setCartQuantity] = useState(0);
   // lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
   const [lockNav, setLockNav] = useState(false);
   // true == hamburger icon, false == X icon

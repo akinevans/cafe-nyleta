@@ -14,11 +14,8 @@ export default function WaitlistModal(props) {
   const [itemQuantity, setItemQuantity] = useState(1);
   const [cartQuantity, setCartQuantity] = useState(0);
 
-  // const apiFilterPath = "&[filters][type][$eq]=";
-  const id = useParams().id;
-
-  // const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
+  const id = useParams().id;
   const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
 
   const handleCartQuantity = (currentItemQuantity) => {
