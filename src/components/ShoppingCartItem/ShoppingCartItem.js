@@ -7,7 +7,33 @@ import "./ShoppingCartItem.css";
 
 export default function ShoppingCartItem(props, { data }) {
   const [visible, setVisible] = useState(false);
-  const [label, setLabel] = useState(1);
+  const [itemQuantity, setItemQuantity] = useState(1);
+
+  const quantityLabels = [1, 2, 3, 4, 5];
+  const generateQuantityLabels = (num) => {
+    return (
+      <>
+        <input
+          type='radio'
+          id={`select-${num}`}
+          name={num}
+          value={num}
+          className='cart-option'
+        ></input>
+        <label
+          htmlFor={num}
+          className='cart-select-item'
+          onClick={() => {
+            setItemQuantity(num);
+            // console.log(itemQuantity);
+            setVisible(!visible);
+          }}
+        >
+          {num}
+        </label>
+      </>
+    );
+  };
 
   return (
     <div className='item-wrapper'>
@@ -37,7 +63,7 @@ export default function ShoppingCartItem(props, { data }) {
             setVisible(!visible);
           }}
         >
-          {label}
+          {itemQuantity}
           <img src={arrow} alt='' className='arrow' />
         </button>
 
@@ -45,119 +71,7 @@ export default function ShoppingCartItem(props, { data }) {
           className={`cart-dropdown-wrapper ${visible ? "" : "hidden"}`}
           id='dropdown'
         >
-          <input
-            type='radio'
-            id='select-0'
-            name='0'
-            value='0'
-            className='cart-option'
-          ></input>
-
-          <label
-            htmlFor='0'
-            className='cart-select-item'
-            onClick={() => {
-              setLabel(0);
-              setVisible(!visible);
-            }}
-          >
-            0
-          </label>
-
-          <input
-            type='radio'
-            id='select-1'
-            name='1'
-            value='1'
-            className='cart-option'
-          ></input>
-
-          <label
-            htmlFor='1'
-            className='cart-select-item'
-            onClick={() => {
-              setLabel(1);
-              setVisible(!visible);
-            }}
-          >
-            1
-          </label>
-
-          <input
-            type='radio'
-            id='select-2'
-            name='2'
-            value='2'
-            className='cart-option'
-          ></input>
-
-          <label
-            htmlFor='2'
-            className='cart-select-item'
-            onClick={() => {
-              setLabel(2);
-              setVisible(!visible);
-            }}
-          >
-            2
-          </label>
-
-          <input
-            type='radio'
-            id='select-3'
-            name='3'
-            value='3'
-            className='cart-option'
-          ></input>
-
-          <label
-            htmlFor='3'
-            className='cart-select-item'
-            onClick={() => {
-              setLabel(3);
-              setVisible(!visible);
-            }}
-          >
-            3
-          </label>
-
-          <input
-            type='radio'
-            id='select-4'
-            name='4'
-            value='4'
-            className='cart-option'
-          ></input>
-
-          <label
-            htmlFor='4'
-            className='cart-select-item'
-            onClick={() => {
-              setLabel(4);
-              setVisible(!visible);
-            }}
-          >
-            4
-          </label>
-
-          <input
-            type='radio'
-            id='select-5'
-            name='5'
-            value='5'
-            className='cart-option'
-          ></input>
-
-          <label
-            htmlFor='5'
-            className='cart-select-item'
-            onClick={() => {
-              setLabel(5);
-              setVisible(!visible);
-            }}
-          >
-            5
-          </label>
+          {quantityLabels.map(generateQuantityLabels)}
         </div>
       </div>
     </div>

@@ -26,6 +26,32 @@ export default function WaitlistModal(props) {
     //TODO: code to remove items from cart
   };
 
+  const quantityLabels = [1, 2, 3, 4, 5];
+  const generateQuantityLabels = (num) => {
+    return (
+      <>
+        <input
+          type='radio'
+          id={`select-${num}`}
+          name={num}
+          value={num}
+          className='waitlist-option'
+        ></input>
+        <label
+          htmlFor={num}
+          className='waitlist-select-item'
+          onClick={() => {
+            setItemQuantity(num);
+            // console.log(itemQuantity);
+            setVisible(!visible);
+          }}
+        >
+          {num}
+        </label>
+      </>
+    );
+  };
+
   return (
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
       <div className='waitlist-wrapper'>
@@ -42,7 +68,6 @@ export default function WaitlistModal(props) {
               <h2>{`Size: ${props.size}`}</h2>
               <h2>{`$${props.price} USD`}</h2>
             </div>
-            {/* build number selector here */}
 
             <button
               className='number-dropdown-button'
@@ -59,102 +84,8 @@ export default function WaitlistModal(props) {
               className={`waitlist-dropdown-wrapper ${visible ? "" : "hidden"}`}
               id='dropdown'
             >
-              <input
-                type='radio'
-                id='select-1'
-                name='1'
-                value='1'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='1'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setItemQuantity(1);
-                  console.log(itemQuantity);
-                  setVisible(!visible);
-                }}
-              >
-                1
-              </label>
-
-              <input
-                type='radio'
-                id='select-2'
-                name='2'
-                value='2'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='2'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setItemQuantity(2);
-                  // console.log(quantity);
-                  setVisible(!visible);
-                }}
-              >
-                2
-              </label>
-
-              <input
-                type='radio'
-                id='select-3'
-                name='3'
-                value='3'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='3'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setItemQuantity(3);
-                  setVisible(!visible);
-                }}
-              >
-                3
-              </label>
-
-              <input
-                type='radio'
-                id='select-4'
-                name='4'
-                value='4'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='4'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setItemQuantity(4);
-                  setVisible(!visible);
-                }}
-              >
-                4
-              </label>
-
-              <input
-                type='radio'
-                id='select-5'
-                name='5'
-                value='5'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='5'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setItemQuantity(5);
-                  setVisible(!visible);
-                }}
-              >
-                5
-              </label>
+              {/* //& Dropdown numbers for item quantity */}
+              {quantityLabels.map(generateQuantityLabels)}
             </div>
           </div>
         </div>
