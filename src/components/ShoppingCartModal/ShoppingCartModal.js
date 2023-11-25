@@ -12,24 +12,20 @@ export default function ShoppingCartModal(props) {
   return (
     <div className={`cart-modal-page-wrapper ${props.className}`}>
       <div className='cart-wrapper'>
-        {/* if props.quantity is undefined, display nothing */}
-
         <h1>{`My Cart (${props.headerQuantity})`}</h1>
 
         {/* //TODO: map over cart data and return a ShoppingCartItem component for each product */}
         {/* {console.log(props.quantity)} */}
 
         {products.map((data) => (
-          <>
-            <Link to={`/itemdetail/${data.id}`} onClick={props.closeBtnOnClick}>
-              <ShoppingCartItem
-                name={data.title}
-                price={data.price}
-                imgSrc={process.env.REACT_APP_UPLOAD_URL + data?.image}
-                imgAlt={data.title}
-              />
-            </Link>
-          </>
+          <ShoppingCartItem
+            name={data.title}
+            price={data.price}
+            imgSrc={process.env.REACT_APP_UPLOAD_URL + data?.image}
+            imgAlt={data.title}
+            navigationLink={`/itemdetail/${data.id}`}
+            closeBtnOnClick={props.closeBtnOnClick}
+          />
         ))}
         <div className='cart-btn-wrapper'>
           <Button

@@ -92,12 +92,10 @@ export default function Navbar(props) {
           </button>
         </div>
       </div>
-      {/* //& Shopping Cart Modal */}
+      {/* //& Shopping Cart modal */}
       <ShoppingCartModal
         className={cartVisible ? "gray-out" : "hidden"}
-        header='My Cart'
         headerQuantity={products.length ? products.length : "0"}
-        //^btnOnClick is a custom prop
         closeBtnOnClick={() => {
           setCartVisible(!cartVisible);
         }}
