@@ -18,10 +18,11 @@
   z-index: 999;
   @include flex(column);
   //   align-items: space-evenly;
-  @include widthHeight(680px, fit-content);
+  @include widthHeight(680px, 640px);
   @include maxWidth(680px);
   padding: 30px 40px 0;
   background-color: var(--Background);
+  overflow-y: scroll;
   //   @include temporaryOutline(red);
 
   h1,

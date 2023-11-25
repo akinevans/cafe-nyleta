@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+
 import "./ShoppingCartModal.css";
 import ShoppingCartItem from "../ShoppingCartItem/ShoppingCartItem";
 import Button from "../Button/Button";
