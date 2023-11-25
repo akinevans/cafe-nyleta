@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -50,6 +50,11 @@ export default function ItemDetail(props, { item }) {
         product?.attributes?.images?.data[imageIndex]?.attributes?.url
     );
   };
+
+  // scroll to the top of the page on render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className='item-detail-page-outer-wrapper'>
