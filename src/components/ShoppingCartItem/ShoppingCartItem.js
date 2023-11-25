@@ -9,6 +9,7 @@ export default function ShoppingCartItem(props, { data }) {
   const [visible, setVisible] = useState(false);
   const [itemQuantity, setItemQuantity] = useState(1);
 
+  //TODO: Cart should have the ability to change total product quantity
   const quantityLabels = [1, 2, 3, 4, 5];
   const generateQuantityLabels = (num) => {
     return (
