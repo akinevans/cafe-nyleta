@@ -17,13 +17,27 @@ export default function Navbar(props) {
   const [cartVisible, setCartVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   //! pull quantity data from cartReducer
-  const [cartQuantity, setCartQuantity] = useState(0);
   // lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
   const [lockNav, setLockNav] = useState(false);
   // true == hamburger icon, false == X icon
   const [menuIcon, setMenuIcon] = useState(true);
 
+  //! write a function that reads data from cartReducer to get total product quantity
+  // iterate over array and += the itemQuantity of each array index
   const products = useSelector((state) => state.cart.products);
+  // console.log(products);
+  // console.log(products.length > 0 ? products[0].itemQuantity : "length is < 0");
+
+  //! export to module
+  const getCartQuantityAndPrice = () => {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    for (let i = 0; i < products.length; i++) {
+      totalQuantity += products[i].itemQuantity;
+    }
+    return [totalQuantity, totalPrice];
+  };
 
   //Window width for showing / hiding hamburger menu
   const [windowSize, setWindowSize] = useState([
@@ -69,7 +83,8 @@ export default function Navbar(props) {
             }}
           >
             {/* //get the length of the products data array */}
-            {`Cart (${products.length})`}
+            {/* // products[0].itemQuantity works if product array length > 0*/}
+            {`Cart (${getCartQuantityAndPrice()[0]})`}
           </button>
           <Link to='/contact'>
             <Button className='btn grey contact' title='Contact Us' />

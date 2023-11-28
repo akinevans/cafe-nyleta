@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
+// import { useSelector } from "react-redux";
 
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";

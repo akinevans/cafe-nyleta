@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import "./ShoppingCartModal.css";
 import ShoppingCartItem from "../ShoppingCartItem/ShoppingCartItem";
@@ -7,15 +7,23 @@ import Button from "../Button/Button";
 
 export default function ShoppingCartModal(props) {
   const products = useSelector((state) => state.cart.products);
-  console.log(products);
+  // console.log(products);
+
+  //! export to module
+  const getCartQuantityAndPrice = () => {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    for (let i = 0; i < products.length; i++) {
+      totalQuantity += products[i].itemQuantity;
+    }
+    return [totalQuantity, totalPrice];
+  };
 
   return (
     <div className={`cart-modal-page-wrapper ${props.className}`}>
       <div className='cart-wrapper'>
-        <h1>{`My Cart (${props.headerQuantity})`}</h1>
-
-        {/* //TODO: map over cart data and return a ShoppingCartItem component for each product */}
-        {/* {console.log(props.quantity)} */}
+        <h1>{`My Cart (${getCartQuantityAndPrice()[0]})`}</h1>
 
         {products.map((data) => (
           <ShoppingCartItem
