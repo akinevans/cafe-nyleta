@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
 import { Link } from "react-router-dom";
 
 import arrow from "../../assets/icons/down-arrow.svg";
@@ -8,6 +10,10 @@ import "./ShoppingCartItem.css";
 export default function ShoppingCartItem(props, { data }) {
   const [visible, setVisible] = useState(false);
   const [itemQuantity, setItemQuantity] = useState(1);
+
+  const products = useSelector((state) => state.cart.products);
+  console.log(products);
+  const currentQuantity = products[0].itemQuantity;
 
   //TODO: Cart should have the ability to change total product quantity
   const quantityLabels = [1, 2, 3, 4, 5];
@@ -64,7 +70,8 @@ export default function ShoppingCartItem(props, { data }) {
             setVisible(!visible);
           }}
         >
-          {itemQuantity}
+          {/* {currentQuantity} */}
+          {props.individualItemQuantity}
           <img src={arrow} alt='' className='arrow' />
         </button>
 

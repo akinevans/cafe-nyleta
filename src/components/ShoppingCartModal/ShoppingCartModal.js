@@ -13,22 +13,25 @@ export default function ShoppingCartModal(props) {
   const getCartQuantityAndPrice = () => {
     let totalQuantity = 0;
     let totalPrice = 0;
+    let individualItemQuantity = 0;
 
     for (let i = 0; i < products.length; i++) {
       totalQuantity += products[i].itemQuantity;
+      individualItemQuantity = products[i].itemQuantity;
     }
-    return [totalQuantity, totalPrice];
+    return [individualItemQuantity, totalPrice, totalQuantity];
   };
 
   return (
     <div className={`cart-modal-page-wrapper ${props.className}`}>
       <div className='cart-wrapper'>
-        <h1>{`My Cart (${getCartQuantityAndPrice()[0]})`}</h1>
+        <h1>{`My Cart (${getCartQuantityAndPrice()[2]})`}</h1>
 
         {products.map((data) => (
           <ShoppingCartItem
             name={data.title}
             price={data.price}
+            individualItemQuantity={getCartQuantityAndPrice()[0]}
             imgSrc={process.env.REACT_APP_UPLOAD_URL + data?.image}
             imgAlt={data.title}
             navigationLink={`/itemdetail/${data.id}`}
