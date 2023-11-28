@@ -10,10 +10,15 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const item = state.products.find((item) => item.id === action.payload.id);
+      const maxQuantity = 5;
 
       //update the quantity of the product in the cart
       if (item) {
-        if (action.payload.itemQuantity > 0) {
+        // check if there are more than 5 of the product in cart
+        if (item.itemQuantity + action.payload.itemQuantity > maxQuantity) {
+          item.itemQuantity = maxQuantity;
+          alert("Limit 5 per customer");
+        } else {
           item.itemQuantity += action.payload.itemQuantity;
         }
       } else {
