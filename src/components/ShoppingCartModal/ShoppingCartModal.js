@@ -10,28 +10,38 @@ export default function ShoppingCartModal(props) {
   // console.log(products);
 
   //! export to module
+  //* This function serves 3 purposes. To get total quantity, total price, and individual quantity
+  //find the product by id
+  //
   const getCartQuantityAndPrice = () => {
     let totalQuantity = 0;
     let totalPrice = 0;
-    let individualItemQuantity = 0;
 
+    // calculate total cart quantity and total cost
     for (let i = 0; i < products.length; i++) {
-      totalQuantity += products[i].itemQuantity;
-      individualItemQuantity = products[i].itemQuantity;
+      let itemPrice = products[i].price;
+      let itemQuantity = products[i].itemQuantity;
+      let itemCost = itemPrice * itemQuantity;
+
+      totalQuantity += itemQuantity;
+      totalPrice += itemCost;
     }
-    return [individualItemQuantity, totalPrice, totalQuantity];
+
+    return [totalPrice.toFixed(2), totalQuantity];
   };
 
   return (
     <div className={`cart-modal-page-wrapper ${props.className}`}>
       <div className='cart-wrapper'>
-        <h1>{`My Cart (${getCartQuantityAndPrice()[2]})`}</h1>
+        <h1>{`My Cart (${getCartQuantityAndPrice()[1]})`}</h1>
+        <h1>{`Total Price: $${getCartQuantityAndPrice()[0]}`}</h1>
 
         {products.map((data) => (
           <ShoppingCartItem
             name={data.title}
             price={data.price}
-            individualItemQuantity={getCartQuantityAndPrice()[0]}
+            individualItemQuantity={data.itemQuantity}
+            totalItemPrice={data.itemQuantity * data.price}
             imgSrc={process.env.REACT_APP_UPLOAD_URL + data?.image}
             imgAlt={data.title}
             navigationLink={`/itemdetail/${data.id}`}
