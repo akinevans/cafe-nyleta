@@ -11,8 +11,6 @@ export default function ShoppingCartModal(props) {
 
   //! export to module
   //* This function serves 3 purposes. To get total quantity, total price, and individual quantity
-  //find the product by id
-  //
   const getCartQuantityAndPrice = () => {
     let totalQuantity = 0;
     let totalPrice = 0;
@@ -38,6 +36,7 @@ export default function ShoppingCartModal(props) {
 
         {products.map((data) => (
           <ShoppingCartItem
+            id={data.id}
             name={data.title}
             price={data.price}
             individualItemQuantity={data.itemQuantity}

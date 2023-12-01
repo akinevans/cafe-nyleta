@@ -43,7 +43,8 @@
   .cart-btn-wrapper {
     @include flex(row);
     gap: 8px;
-    @include flexPosition(flex-end, center);
+    @include flexPosition(center, center);
+    margin-top: 45px;
     margin-bottom: 25px;
     // @include temporaryOutline(green);
   }

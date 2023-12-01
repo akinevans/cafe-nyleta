@@ -9,6 +9,8 @@ import "./WaitlistModal.css";
 import Button from "../Button/Button";
 import arrow from "../../assets/icons/down-arrow.svg";
 
+//TODO: rename this component addToCartModal
+
 export default function WaitlistModal(props) {
   const [visible, setVisible] = useState(false);
   const [itemQuantity, setItemQuantity] = useState(1);
@@ -17,6 +19,7 @@ export default function WaitlistModal(props) {
   const id = useParams().id;
   const { product } = useFetch(`/products/${id}?populate=*`);
   const products = useSelector((state) => state.cart.products);
+  // console.log(product);
 
   //! export to module
   const getCartQuantityAndPrice = () => {

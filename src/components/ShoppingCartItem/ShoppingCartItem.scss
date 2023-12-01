@@ -53,8 +53,10 @@
     .cart-dropdown-wrapper {
       //^ Number drop down menu
       position: absolute;
-      top: 85%;
+      top: 76.5%;
       right: 0%;
+      z-index: 99;
+
       @include flex(column);
       @include flexPosition(center, flex-start);
       @include widthHeight(50px, 98px);
