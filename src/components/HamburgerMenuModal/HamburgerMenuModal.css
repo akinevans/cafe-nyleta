@@ -6,7 +6,7 @@
   max-width: 834px;
   margin: auto;
   background-color: var(--Background);
-  z-index: 999;
+  z-index: 888;
 }
 .burger-menu-outer-wrapper .burger-menu-link {
   display: flex;

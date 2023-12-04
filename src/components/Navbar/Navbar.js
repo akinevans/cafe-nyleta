@@ -75,15 +75,14 @@ export default function Navbar(props) {
         <div className='nav-links-wrapper'>
           <Link to='/about'>About</Link>
           <Link to='/shop'>Shop</Link>
-          {/* //TODO: Build a shopping cart component separate from waitlist that will store all items in cart */}
+
           <button
             className='cart-btn'
             onClick={() => {
               setCartVisible(!cartVisible);
             }}
           >
-            {/* //get the length of the products data array */}
-            {/* // products[0].itemQuantity works if product array length > 0*/}
+            {/* //get the total quantity only from getCart function */}
             {`Cart (${getCartQuantityAndPrice()[0]})`}
           </button>
           <Link to='/contact'>
@@ -128,6 +127,9 @@ export default function Navbar(props) {
           setMenuVisible(!menuVisible);
           setMenuIcon(!menuIcon);
           setLockNav(!lockNav);
+        }}
+        cartOnClick={() => {
+          setCartVisible(true);
         }}
       />
     </nav>
