@@ -7,6 +7,34 @@ export default function SelectDropdown(props) {
   const [visible, setVisible] = useState(false);
   const [label, setLabel] = useState("Service");
 
+  const contactFormData = [
+    {
+      id: "select-design",
+      key: 0,
+      value: "Design",
+    },
+    {
+      id: "select-sourcing",
+      key: 1,
+      value: "Sourcing",
+    },
+    {
+      id: "select-consulting",
+      key: 2,
+      value: "Consulting",
+    },
+    {
+      id: "select-product",
+      key: 3,
+      value: "Product Development",
+    },
+    {
+      id: "select-distribution",
+      key: 4,
+      value: "Distribution",
+    },
+  ];
+
   return (
     <div className='dropdown-outer-wrapper'>
       <button
@@ -25,105 +53,28 @@ export default function SelectDropdown(props) {
         className={`dropdown-wrapper ${visible ? "" : "hidden"}`}
         id='dropdown'
       >
-        {/* <label for='Service' className='select-item'>
-          Service
-        </label> */}
+        {contactFormData.map((element) => (
+          <div className='option-wrapper' key={element.key}>
+            <input
+              type='radio'
+              id={element.id}
+              name={element.value}
+              value={element.value}
+              className='option'
+            ></input>
 
-        <input
-          type='radio'
-          id='select-design'
-          name='Design'
-          value='Design'
-          className='option'
-        ></input>
-
-        <label
-          for='Design'
-          className='select-item'
-          //& call function to set buttons value, adn reset dropdown visibility
-          onClick={() => {
-            setLabel("Design");
-            setVisible(!visible);
-          }}
-        >
-          Design
-        </label>
-
-        <input
-          type='radio'
-          id='select-sourcing'
-          name='Sourcing'
-          value='Sourcing'
-          className='option'
-        ></input>
-
-        <label
-          for='Sourcing'
-          className='select-item'
-          onClick={() => {
-            setLabel("Sourcing");
-            setVisible(!visible);
-          }}
-        >
-          Sourcing
-        </label>
-
-        <input
-          type='radio'
-          id='select-consulting'
-          name='Consulting'
-          value='Consulting'
-          className='option'
-        ></input>
-
-        <label
-          for='Consulting'
-          className='select-item'
-          onClick={() => {
-            setLabel("Consulting");
-            setVisible(!visible);
-          }}
-        >
-          Consulting
-        </label>
-
-        <input
-          type='radio'
-          id='select-product'
-          name='Product Development'
-          value='Product Development'
-          className='option'
-        ></input>
-
-        <label
-          for='Product Development'
-          className='select-item'
-          onClick={() => {
-            setLabel("Product Development");
-            setVisible(!visible);
-          }}
-        >
-          Product Development
-        </label>
-
-        <input
-          type='radio'
-          id='select-distribution'
-          name='Distribution'
-          value='Distribution'
-          className='option'
-        ></input>
-
-        <label
-          for='Distribution'
-          className='select-item'
-          onClick={() => {
-            setLabel("Distribution");
-            setVisible(!visible);
-          }}
-        >
-          Distribution
-        </label>
+            <label
+              htmlFor={element.value}
+              className='select-item'
+              onClick={() => {
+                setLabel(element.value);
+                setVisible(!visible);
+              }}
+            >
+              {element.value}
+            </label>
+          </div>
+        ))}
       </div>
     </div>
   );

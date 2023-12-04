@@ -42,14 +42,20 @@
 
   // @include temporaryOutline(red);
 
+  .option-wrapper {
+    width: 100%;
+    @include flex(column);
+    @include flexPosition(center, flex-start);
+  }
+
   .option {
     display: none;
   }
 
   label {
-    //^ width 100% allows the mouse to select the label without hovering directly over text
     width: 100%;
-    margin: 12.5px 0 12.5px 0;
+    // margin: 12.5px 0 12.5px 0;
+    padding: 12.5px 0;
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
     color: var(--Grey-100);

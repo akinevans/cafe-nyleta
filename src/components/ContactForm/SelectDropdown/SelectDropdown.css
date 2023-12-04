@@ -42,12 +42,19 @@
   border: 1px solid var(--Black);
   border-top: none;
 }
+.dropdown-wrapper .option-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 .dropdown-wrapper .option {
   display: none;
 }
 .dropdown-wrapper label {
   width: 100%;
-  margin: 12.5px 0 12.5px 0;
+  padding: 12.5px 0;
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
   color: var(--Grey-100);
