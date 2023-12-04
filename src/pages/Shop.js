@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
 import "../pages/page_styling/Shop/Shop.css";
@@ -25,34 +25,17 @@ export default function Shop(props) {
 
   return (
     <div className='shop-page-wrapper'>
-      <ShopHeader
-      // Function that filters store products by category. It works by updating the url in the useFetch hook via setState calls that pass in strings from the ShopHeader Component.
-      // filterProducts={(category) => {
-      //   if (category === "all") {
-      //     // empty string shows all products
-      //     setCategory("");
-      //     setFilterPath("");
-      //   } else {
-      //     // show only the passed in category string
-      //     setCategory(category);
-      //     // update the url with filter parameters for the API call
-      //     setFilterPath(apiFilterPath);
-      //   }
-      // }}
-      />
+      <ShopHeader />
       <div className='shop-products-wrapper'>
-        {/*//& Fetch and map over items from Strapi API here  */}
-        {/* //! This can be a custom hook */}
         {loading
           ? "Loading..."
           : product.map((objData) => (
-              <Link className='item-card-link' to={`/itemdetail/${objData.id}`}>
-                <ItemCard
-                  //^ must set item = data
-                  item={objData}
-                  // every instance of the ItemCard component that is rendered will need its own key prop
-                  key={objData.id}
-                />
+              <Link
+                className='item-card-link'
+                to={`/itemdetail/${objData.id}`}
+                key={objData.id}
+              >
+                <ItemCard item={objData} />
               </Link>
             ))}
       </div>
