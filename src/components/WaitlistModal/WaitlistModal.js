@@ -33,9 +33,10 @@ export default function WaitlistModal(props) {
   };
 
   const quantityLabels = [1, 2, 3, 4, 5];
+
   const generateQuantityLabels = (num) => {
     return (
-      <>
+      <div className='quantity-label-wrapper' key={num}>
         <input
           type='radio'
           id={`select-${num}`}
@@ -54,7 +55,7 @@ export default function WaitlistModal(props) {
         >
           {num}
         </label>
-      </>
+      </div>
     );
   };
 

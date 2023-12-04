@@ -96,6 +96,14 @@
   border-top: none;
   overflow-y: scroll;
 }
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper .quantity-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 97px;
+}
 .waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper .waitlist-option {
   display: none;
 }
