@@ -62,6 +62,14 @@
   border-top: none;
   overflow-y: scroll;
 }
+.item-wrapper .cart-right .cart-dropdown-wrapper .quantity-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 97px;
+}
 .item-wrapper .cart-right .cart-dropdown-wrapper .cart-option {
   display: none;
 }

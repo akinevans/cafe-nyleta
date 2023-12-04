@@ -19,7 +19,7 @@ export default function ShoppingCartItem(props, { data }) {
   const generateQuantityLabels = (numberLabel) => {
     const newQuantity = numberLabel;
     return (
-      <>
+      <div className='quantity-label-wrapper' key={numberLabel}>
         <input
           type='radio'
           id={`select-${numberLabel}`}
@@ -43,7 +43,7 @@ export default function ShoppingCartItem(props, { data }) {
         >
           {numberLabel}
         </label>
-      </>
+      </div>
     );
   };
 

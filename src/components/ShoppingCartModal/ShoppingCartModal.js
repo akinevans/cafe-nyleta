@@ -37,6 +37,8 @@ export default function ShoppingCartModal(props) {
         {products.map((data) => (
           <ShoppingCartItem
             id={data.id}
+            //! update key once sizes are included, multiple children will have the same id (id + size will work)
+            key={data.id}
             name={data.title}
             price={data.price}
             individualItemQuantity={data.itemQuantity}
@@ -47,6 +49,7 @@ export default function ShoppingCartModal(props) {
             closeBtnOnClick={props.closeBtnOnClick}
           />
         ))}
+
         <div className='cart-btn-wrapper'>
           <Button
             className='btn white back-to-shop'

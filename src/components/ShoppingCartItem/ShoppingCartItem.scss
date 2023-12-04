@@ -68,6 +68,12 @@
 
       // @include temporaryOutline(red);
 
+      .quantity-label-wrapper {
+        @include flex(column);
+        @include flexPosition(center, center);
+        @include widthHeight(30px, 97px);
+      }
+
       .cart-option {
         display: none;
       }
