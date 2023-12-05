@@ -34,7 +34,9 @@ export default function ShoppingCartModal(props) {
     <div className={`cart-modal-page-wrapper ${props.className}`}>
       <div className='cart-wrapper'>
         <h1>{`My Cart (${getCartQuantityAndPrice()[1]})`}</h1>
-        <h1>{`Total Price: $${getCartQuantityAndPrice()[0]}`}</h1>
+        <h1 className={cartEmpty ? "hidden" : ""}>{`Total Price: $${
+          getCartQuantityAndPrice()[0]
+        }`}</h1>
         <h1
           className={`cart-empty-message ${cartEmpty ? "visible" : "hidden"}`}
         >

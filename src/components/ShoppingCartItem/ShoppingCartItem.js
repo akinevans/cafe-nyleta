@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/cartReducer";
+import { addToCart, removeItem } from "../../redux/cartReducer";
 import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 import arrow from "../../assets/icons/down-arrow.svg";
@@ -15,7 +15,7 @@ export default function ShoppingCartItem(props, { data }) {
   const { product } = useFetch(`/products/${props.id}?populate`);
   // console.log(product);
 
-  const quantityLabels = [1, 2, 3, 4, 5];
+  const quantityLabels = [0, 1, 2, 3, 4, 5];
   const generateQuantityLabels = (numberLabel) => {
     const newQuantity = numberLabel;
     return (
@@ -32,12 +32,21 @@ export default function ShoppingCartItem(props, { data }) {
           className='cart-select-item'
           onClick={() => {
             // update quantity in cart when user selects a different value by sending newQuantity to addToCart function
-            dispatch(
-              addToCart({
-                id: product.id,
-                newQuantity,
-              })
-            );
+            if (newQuantity > 0) {
+              dispatch(
+                addToCart({
+                  id: product.id,
+                  newQuantity,
+                })
+              );
+            } else {
+              dispatch(
+                removeItem({
+                  id: product.id,
+                  newQuantity,
+                })
+              );
+            }
             setVisible(!visible);
           }}
         >
