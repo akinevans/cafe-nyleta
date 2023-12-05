@@ -40,6 +40,10 @@
     margin-bottom: 15px;
   }
 
+  .cart-empty-message {
+    text-align: center;
+  }
+
   .cart-btn-wrapper {
     @include flex(row);
     gap: 8px;

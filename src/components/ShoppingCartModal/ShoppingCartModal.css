@@ -36,6 +36,9 @@
 .cart-wrapper h1 {
   margin-bottom: 15px;
 }
+.cart-wrapper .cart-empty-message {
+  text-align: center;
+}
 .cart-wrapper .cart-btn-wrapper {
   display: flex;
   flex-direction: row;

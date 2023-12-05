@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 import "./ShoppingCartModal.css";
@@ -28,12 +28,18 @@ export default function ShoppingCartModal(props) {
     return [totalPrice.toFixed(2), totalQuantity];
   };
 
+  const cartEmpty = getCartQuantityAndPrice()[0] <= 0;
+
   return (
     <div className={`cart-modal-page-wrapper ${props.className}`}>
       <div className='cart-wrapper'>
         <h1>{`My Cart (${getCartQuantityAndPrice()[1]})`}</h1>
         <h1>{`Total Price: $${getCartQuantityAndPrice()[0]}`}</h1>
-
+        <h1
+          className={`cart-empty-message ${cartEmpty ? "visible" : "hidden"}`}
+        >
+          Cart Empty
+        </h1>
         {products.map((data) => (
           <ShoppingCartItem
             id={data.id}
@@ -49,7 +55,6 @@ export default function ShoppingCartModal(props) {
             closeBtnOnClick={props.closeBtnOnClick}
           />
         ))}
-
         <div className='cart-btn-wrapper'>
           <Button
             className='btn white back-to-shop'
@@ -57,9 +62,9 @@ export default function ShoppingCartModal(props) {
             onClick={props.closeBtnOnClick}
           />
           <Button
-            className='btn grey back-to-shop'
+            className={`btn grey back-to-shop ${cartEmpty ? " disabled " : ""}`}
             title='Checkout'
-            onClick={props.checkoutBtnOnClick}
+            onClick={!cartEmpty ? props.checkoutBtnOnClick : null}
           />
         </div>
       </div>

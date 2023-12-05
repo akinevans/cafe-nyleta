@@ -58,16 +58,19 @@
   padding: 8px 16px;
 }
 
-.out-of-stock {
+.out-of-stock,
+.disabled {
   font-family: var(--HN-Medium);
   color: var(--White);
   background-color: var(--Grey-100);
   opacity: 20%;
   cursor: default;
 }
-.out-of-stock:hover {
+.out-of-stock:hover,
+.disabled:hover {
   opacity: 20%;
 }
-.out-of-stock:active {
+.out-of-stock:active,
+.disabled:active {
   opacity: 20%;
 }/*# sourceMappingURL=Button.css.map */

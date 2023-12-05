@@ -47,7 +47,7 @@ export default function HamburgerMenuModal(props) {
       </Link>
 
       <h1 className='burger-menu-link' onClick={props.cartOnClick}>
-        {`Cart(${getCartQuantityAndPrice()[0]})`}
+        {`Cart (${getCartQuantityAndPrice()[0]})`}
       </h1>
     </div>
   );
