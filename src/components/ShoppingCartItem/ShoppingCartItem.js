@@ -36,6 +36,7 @@ export default function ShoppingCartItem(props, { data }) {
               dispatch(
                 addToCart({
                   id: product.id,
+                  size: props.size,
                   newQuantity,
                 })
               );

@@ -15,11 +15,6 @@ export const cartSlice = createSlice({
 
       if (item) {
         if (state.products.includes(item)) {
-          // mutate from shoppingCartItem
-          if (action.payload.newQuantity) {
-            item.itemQuantity = action.payload.newQuantity;
-            return;
-          }
           //loop until a match is found, if no match found by end of array, push to cart
           for (let i = 0; i < state.products.length; i++) {
             let isIdMatch = state.products[i].id === action.payload.id;
@@ -27,6 +22,13 @@ export const cartSlice = createSlice({
 
             if (isIdMatch && isSizeMatch) {
               console.log("Match found " + isIdMatch + " " + isSizeMatch);
+
+              // mutate from shoppingCartItem
+              if (action.payload.newQuantity) {
+                state.products[i].itemQuantity = action.payload.newQuantity;
+                return;
+              }
+
               if (action.payload.itemQuantity) {
                 // mutate from waitlistModal aka addToCart component
                 if (
@@ -66,6 +68,7 @@ export const cartSlice = createSlice({
 
       state.value += 1;
     },
+    //TODO: fix bug in removeItem, all products of the same ID get removed, need to check against size as well
     removeItem: (state, action) => {
       state.products = state.products.filter(
         (item) => item.id !== action.payload.id
