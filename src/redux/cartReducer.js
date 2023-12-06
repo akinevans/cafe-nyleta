@@ -9,7 +9,10 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const item = state.products.find((item) => item.id === action.payload.id);
+      // search for item in state cart array, find by id
+      let item = state.products.find((item) => item.id === action.payload.id);
+      // now that we have the product id, filter by size
+      item = state.products.find((item) => item.size === action.payload.size);
       const maxQuantity = 5;
 
       //TODO: iterate over state, calculate item totals for each product by size, if total > maxQuantity throw error
@@ -18,7 +21,7 @@ export const cartSlice = createSlice({
       if (item) {
         if (
           state.products.includes(item) &&
-          item.size === action.payload.size
+          action.payload.size === item.size
         ) {
           //!check if this item, in the payload size is already in the cart
           if (action.payload.itemQuantity) {
@@ -37,11 +40,14 @@ export const cartSlice = createSlice({
             item.itemQuantity = action.payload.newQuantity;
           }
         } else {
+          alert("failed second check");
+
           //! dont immediately push item into state,
           // add item to state products array
           state.products.push(action.payload);
         }
       } else {
+        alert("failed first check");
         // add item to state products array
         state.products.push(action.payload);
       }
