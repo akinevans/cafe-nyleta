@@ -14,7 +14,7 @@ export default function ItemDetail(props, { item }) {
   const [visible, setVisible] = useState(false);
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
-  const [productSize, setProductSize] = useState("S");
+  const [productSize, setProductSize] = useState("M");
 
   // const products = useSelector((state) => state.cart.products);
 
