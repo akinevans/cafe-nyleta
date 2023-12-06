@@ -46,9 +46,10 @@ export default function ShoppingCartModal(props) {
           <ShoppingCartItem
             id={data.id}
             //! update key once sizes are included, multiple children will have the same id (id + size will work)
-            key={data.id}
+            key={data.id + data.size}
             name={data.title}
             price={data.price}
+            size={data.size}
             individualItemQuantity={data.itemQuantity}
             totalItemPrice={data.itemQuantity * data.price}
             imgSrc={process.env.REACT_APP_UPLOAD_URL + data?.image}

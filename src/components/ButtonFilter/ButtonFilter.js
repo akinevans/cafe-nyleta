@@ -1,21 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ButtonFilter.css";
 
 export default function ButtonFilter(props) {
+  const [size, setSize] = useState(null);
+
   return (
     <div className={`button-filter-outer-wrapper ${props.className}`}>
       {/* select size on click */}
       <button
-        onClick={() => {
-          console.log("Small size selected");
+        onClick={(e) => {
+          props.sizeOnClick(e.target.textContent);
         }}
         className='filter-btn'
       >
         S
       </button>
-      <button className='filter-btn'>M</button>
-      <button className='filter-btn'>L</button>
-      <button className='filter-btn'>XL</button>
+      <button
+        className='filter-btn'
+        onClick={(e) => {
+          props.sizeOnClick(e.target.textContent);
+        }}
+      >
+        M
+      </button>
+      <button
+        className='filter-btn'
+        onClick={(e) => {
+          props.sizeOnClick(e.target.textContent);
+        }}
+      >
+        L
+      </button>
+      <button
+        className='filter-btn'
+        onClick={(e) => {
+          props.sizeOnClick(e.target.textContent);
+        }}
+      >
+        XL
+      </button>
     </div>
   );
 }

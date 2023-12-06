@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   products: [],
-  // itemQuantity: 0,
 };
 
 export const cartSlice = createSlice({
@@ -13,22 +12,34 @@ export const cartSlice = createSlice({
       const item = state.products.find((item) => item.id === action.payload.id);
       const maxQuantity = 5;
 
-      //check if item exists in state array
-      if (item) {
-        // mutate from waitlistModal / addToCart component
-        if (action.payload.itemQuantity) {
-          if (item.itemQuantity + action.payload.itemQuantity > maxQuantity) {
-            item.itemQuantity = maxQuantity;
-            //TODO: build custom alert modal
-            alert("Limit 5 per customer");
-          } else {
-            item.itemQuantity += action.payload.itemQuantity;
-          }
-        }
+      //TODO: iterate over state, calculate item totals for each product by size, if total > maxQuantity throw error
 
-        // mutate from shoppingCartItem
-        if (action.payload.newQuantity) {
-          item.itemQuantity = action.payload.newQuantity;
+      //* check if item exists in state array and check if this item exists in array in its current payload size  */
+      if (item) {
+        if (
+          state.products.includes(item) &&
+          item.size === action.payload.size
+        ) {
+          //!check if this item, in the payload size is already in the cart
+          if (action.payload.itemQuantity) {
+            // mutate from waitlistModal / addToCart component
+            if (item.itemQuantity + action.payload.itemQuantity > maxQuantity) {
+              item.itemQuantity = maxQuantity;
+              //TODO: build custom alert modal
+              alert("Limit 5 per customer");
+            } else {
+              item.itemQuantity += action.payload.itemQuantity;
+            }
+          }
+
+          // mutate from shoppingCartItem
+          if (action.payload.newQuantity) {
+            item.itemQuantity = action.payload.newQuantity;
+          }
+        } else {
+          //! dont immediately push item into state,
+          // add item to state products array
+          state.products.push(action.payload);
         }
       } else {
         // add item to state products array

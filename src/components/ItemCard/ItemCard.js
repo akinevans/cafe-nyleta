@@ -5,7 +5,6 @@ const ItemCard = ({ item }, props) => {
   // console.log(item);
   const firstImage = item?.attributes?.images?.data[0]?.attributes?.url;
 
-  // console.log(firstImage);
   return (
     <div className='item-card-outer-wrapper'>
       <img

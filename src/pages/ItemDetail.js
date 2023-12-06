@@ -14,6 +14,7 @@ export default function ItemDetail(props, { item }) {
   const [visible, setVisible] = useState(false);
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
+  const [productSize, setProductSize] = useState("S");
 
   // const products = useSelector((state) => state.cart.products);
 
@@ -104,8 +105,13 @@ export default function ItemDetail(props, { item }) {
             <h1 className='price'>{`$${productPrice} USD`}</h1>
 
             <p className='description'>{productDescription}</p>
-
-            <ButtonFilter className='item-detail-filter-btn' />
+            {/* //* Size Selector */}
+            <ButtonFilter
+              className='item-detail-filter-btn'
+              sizeOnClick={(size) => {
+                setProductSize(size);
+              }}
+            />
             <Button
               // product?.attributes?.inStock
               className={`btn waitlist item-detail-btn ${
@@ -134,7 +140,7 @@ export default function ItemDetail(props, { item }) {
         }
         alt={altDescription}
         name={productName}
-        size='L'
+        size={productSize}
         price={productPrice}
         closeBtnOnClick={() => {
           setVisible(!visible);

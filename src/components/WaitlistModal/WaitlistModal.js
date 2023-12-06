@@ -113,6 +113,7 @@ export default function WaitlistModal(props) {
                   title: product.attributes.title,
                   description: product.attributes.description,
                   price: product.attributes.price,
+                  size: props.size,
                   image: product.attributes.images.data[0].attributes.url,
                   itemQuantity,
                 })
