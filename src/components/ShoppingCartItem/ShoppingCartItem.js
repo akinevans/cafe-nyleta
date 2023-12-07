@@ -44,6 +44,7 @@ export default function ShoppingCartItem(props, { data }) {
               dispatch(
                 removeItem({
                   id: product.id,
+                  size: props.size,
                   newQuantity,
                 })
               );

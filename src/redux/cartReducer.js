@@ -8,6 +8,7 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    //! known bug, itemQuantity is off by 1 when adding to cart, replication conditions currently unknown
     addToCart: (state, action) => {
       // search for item in state cart array, find by id
       let item = state.products.find((item) => item.id === action.payload.id);
@@ -70,9 +71,25 @@ export const cartSlice = createSlice({
     },
     //TODO: fix bug in removeItem, all products of the same ID get removed, need to check against size as well
     removeItem: (state, action) => {
-      state.products = state.products.filter(
-        (item) => item.id !== action.payload.id
-      );
+      //loop until a match is found, then remove item from array
+      for (let i = 0; i < state.products.length; i++) {
+        let isIdMatch = state.products[i].id === action.payload.id;
+        let isSizeMatch = state.products[i].size === action.payload.size;
+
+        if (isIdMatch && isSizeMatch) {
+          alert("found match in removeItem at index " + i);
+          //remove element i from state array while mutating array
+          state.products.splice(i, 1);
+          break;
+        } else {
+          //if at end of state array stop
+          if (i === state.products.length - 1) {
+            break;
+          } else {
+            continue;
+          }
+        }
+      } // end loop
     },
     resetCart: (state, action) => {
       //empty the state products array
