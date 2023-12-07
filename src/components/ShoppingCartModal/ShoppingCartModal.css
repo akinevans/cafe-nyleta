@@ -23,6 +23,7 @@
   padding: 30px 40px 0;
   background-color: var(--Background);
   overflow-y: scroll;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1));
 }
 .cart-wrapper h1,
 .cart-wrapper h2 {

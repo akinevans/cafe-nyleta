@@ -22,6 +22,7 @@
   @include maxWidth(680px);
   padding: 30px 40px 0;
   background-color: var(--Background);
+  filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.1));
   //   @include temporaryOutline(red);
 
   h1,
