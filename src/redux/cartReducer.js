@@ -8,9 +8,6 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    //! known bug, itemQuantity is off by 1 when adding to cart, steps to replicate:
-    // add item to cart
-    // add same item in a different size, its payload quantity will be double the selected amount
     addToCart: (state, action) => {
       // search for item in state cart array, find by id
       let item = state.products.find((item) => item.id === action.payload.id);
@@ -23,11 +20,12 @@ export const cartSlice = createSlice({
             let isIdMatch = state.products[i].id === action.payload.id;
             let isSizeMatch = state.products[i].size === action.payload.size;
 
+            //check that product ID AND size match
             if (isIdMatch && isSizeMatch) {
               console.log("Match found " + isIdMatch + " " + isSizeMatch);
 
-              // mutate from shoppingCartItem
               if (action.payload.newQuantity) {
+                // mutate from shoppingCartItem
                 state.products[i].itemQuantity = action.payload.newQuantity;
                 return;
               }
@@ -46,7 +44,6 @@ export const cartSlice = createSlice({
                     "itemQuantity at end of increment : " +
                       action.payload.itemQuantity
                   );
-                  //! off by 1 bug is here
                   console.log(state.products[i].itemQuantity);
                   console.log(action.payload.itemQuantity);
                   state.products[i].itemQuantity += action.payload.itemQuantity;
@@ -60,6 +57,8 @@ export const cartSlice = createSlice({
                 // console.log("NO match found " + isIdMatch + " " + isSizeMatch);
                 alert("failed third check, no matches found");
                 state.products.push(action.payload);
+                // no matches found in array, terminate loop to avoid incorrect incrementing
+                break;
               } else {
                 continue;
               }

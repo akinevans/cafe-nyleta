@@ -47,7 +47,6 @@ export default function WaitlistModal(props) {
         <label
           htmlFor={num}
           className='waitlist-select-item'
-          //! off by 1 bug may be here
           onClick={() => {
             setItemQuantity(num);
             // console.log(itemQuantity);
