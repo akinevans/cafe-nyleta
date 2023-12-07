@@ -22,7 +22,7 @@ export const cartSlice = createSlice({
 
             //check that product ID AND size match
             if (isIdMatch && isSizeMatch) {
-              console.log("Match found " + isIdMatch + " " + isSizeMatch);
+              // console.log("Match found " + isIdMatch + " " + isSizeMatch);
 
               if (action.payload.newQuantity) {
                 // mutate from shoppingCartItem
@@ -40,12 +40,12 @@ export const cartSlice = createSlice({
                   state.products[i].itemQuantity = maxQuantity;
                   break;
                 } else {
-                  alert(
-                    "itemQuantity at end of increment : " +
-                      action.payload.itemQuantity
-                  );
-                  console.log(state.products[i].itemQuantity);
-                  console.log(action.payload.itemQuantity);
+                  // alert(
+                  //   "itemQuantity at end of increment : " +
+                  //     action.payload.itemQuantity
+                  // );
+                  // console.log(state.products[i].itemQuantity);
+                  // console.log(action.payload.itemQuantity);
                   state.products[i].itemQuantity += action.payload.itemQuantity;
                   break;
                 }
@@ -55,7 +55,7 @@ export const cartSlice = createSlice({
               //if true, that means no match was found, push item into array
               if (i === state.products.length - 1) {
                 // console.log("NO match found " + isIdMatch + " " + isSizeMatch);
-                alert("failed third check, no matches found");
+                // alert("failed third check, no matches found");
                 state.products.push(action.payload);
                 // no matches found in array, terminate loop to avoid incorrect incrementing
                 break;
@@ -65,11 +65,11 @@ export const cartSlice = createSlice({
             }
           } // end  loop
         } else {
-          alert("failed second check");
+          // alert("failed second check");
           state.products.push(action.payload);
         }
       } else {
-        alert("failed first check");
+        // alert("failed first check");
         // add item to state products array
         state.products.push(action.payload);
       }
@@ -84,7 +84,7 @@ export const cartSlice = createSlice({
         let isSizeMatch = state.products[i].size === action.payload.size;
 
         if (isIdMatch && isSizeMatch) {
-          alert("found match in removeItem at index " + i);
+          // alert("found match in removeItem at index " + i);
           //remove element i from state array while mutating array
           state.products.splice(i, 1);
           break;

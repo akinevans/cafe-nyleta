@@ -25,7 +25,6 @@
     // @include temporaryOutline(blue);
 
     &:hover {
-      font-family: var(--HN-Medium);
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-decoration-color: var(--Black);
@@ -36,3 +35,14 @@
     }
   } // end filter btn
 } // end outer wrapper
+
+//^ Utility classes
+
+.selected {
+  font-family: var(--HN-Medium);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--Black);
+  text-underline-offset: 2px;
+  font-weight: bold;
+}
