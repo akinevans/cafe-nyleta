@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cafe-nyleta/static/css/main.400fc4ba.css",
-    "main.js": "/cafe-nyleta/static/js/main.09c46ae7.js",
+    "main.css": "/cafe-nyleta/static/css/main.b50d9db8.css",
+    "main.js": "/cafe-nyleta/static/js/main.016f7262.js",
     "static/js/787.c83355ab.chunk.js": "/cafe-nyleta/static/js/787.c83355ab.chunk.js",
     "static/media/feature.jpg": "/cafe-nyleta/static/media/feature.c1ce6e2fbdde813a365b.jpg",
     "static/media/carousel_06.jpg": "/cafe-nyleta/static/media/carousel_06.d179de792bbe4623d25b.jpg",
@@ -25,7 +25,6 @@
     "static/media/carousel_04.jpg": "/cafe-nyleta/static/media/carousel_04.5ea63743d1f00410b9b2.jpg",
     "static/media/carousel_102.jpg": "/cafe-nyleta/static/media/carousel_102.938f9c9dd0b8b5bb0598.jpg",
     "static/media/carousel_105.jpg": "/cafe-nyleta/static/media/carousel_105.a0b0c22d71ac4558d9e0.jpg",
-    "static/media/workshirt_white_02.jpg": "/cafe-nyleta/static/media/workshirt_white_02.9739b00ca66074ca7465.jpg",
     "static/media/02_arcteryx.png": "/cafe-nyleta/static/media/02_arcteryx.f8f1431cae5ba54c097d.png",
     "static/media/carousel_101.jpg": "/cafe-nyleta/static/media/carousel_101.c0e5145f021fd6c24441.jpg",
     "static/media/04_acg_nike.png": "/cafe-nyleta/static/media/04_acg_nike.5e5757564382b04c8802.png",
@@ -51,12 +50,12 @@
     "static/media/hamburger-menu.svg": "/cafe-nyleta/static/media/hamburger-menu.6341fb9032c35400dc472c5e6791ef96.svg",
     "static/media/plus-sign.svg": "/cafe-nyleta/static/media/plus-sign.337ce5299841cd01b10dcc8a385ad06d.svg",
     "static/media/minus-sign.svg": "/cafe-nyleta/static/media/minus-sign.994df67bf4ac74eced081283cd71c907.svg",
-    "main.400fc4ba.css.map": "/cafe-nyleta/static/css/main.400fc4ba.css.map",
-    "main.09c46ae7.js.map": "/cafe-nyleta/static/js/main.09c46ae7.js.map",
+    "main.b50d9db8.css.map": "/cafe-nyleta/static/css/main.b50d9db8.css.map",
+    "main.016f7262.js.map": "/cafe-nyleta/static/js/main.016f7262.js.map",
     "787.c83355ab.chunk.js.map": "/cafe-nyleta/static/js/787.c83355ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.400fc4ba.css",
-    "static/js/main.09c46ae7.js"
+    "static/css/main.b50d9db8.css",
+    "static/js/main.016f7262.js"
   ]
 }
