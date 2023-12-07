@@ -1,18 +1,69 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
+import useFetch from "../../hooks/useFetch";
+import { useParams } from "react-router-dom";
+
 import "./WaitlistModal.css";
 import Button from "../Button/Button";
 import arrow from "../../assets/icons/down-arrow.svg";
 
+//TODO: rename this component addToCartModal
+
 export default function WaitlistModal(props) {
   const [visible, setVisible] = useState(false);
-  const [label, setLabel] = useState("1");
+  const [itemQuantity, setItemQuantity] = useState(1);
+
+  const dispatch = useDispatch();
+  const id = useParams().id;
+  const { product } = useFetch(`/products/${id}?populate=*`);
+  const products = useSelector((state) => state.cart.products);
+  // console.log(product);
+
+  //! export to module
+  const getCartQuantityAndPrice = () => {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    for (let i = 0; i < products.length; i++) {
+      totalQuantity += products[i].itemQuantity;
+    }
+    return [totalQuantity, totalPrice];
+  };
+
+  const quantityLabels = [1, 2, 3, 4, 5];
+
+  const generateQuantityLabels = (num) => {
+    return (
+      <div className='quantity-label-wrapper' key={num}>
+        <input
+          type='radio'
+          id={`select-${num}`}
+          name={num}
+          value={num}
+          className='waitlist-option'
+        ></input>
+        <label
+          htmlFor={num}
+          className='waitlist-select-item'
+          onClick={() => {
+            setItemQuantity(num);
+            // console.log(itemQuantity);
+            setVisible(!visible);
+          }}
+        >
+          {num}
+        </label>
+      </div>
+    );
+  };
 
   return (
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
       <div className='waitlist-wrapper'>
         {/* if props.quantity is undefined, display nothing */}
-        <h1>{`${props.header} ${props.quantity ? props.quantity : ""}`}</h1>
+        <h1>{`My Cart ${getCartQuantityAndPrice()[0]} <--- waitlist modal`}</h1>
         {/* Body Wrapper will get top and bottom underlines */}
         <div className='waitlist-body-wrapper'>
           <div className='waitlist-left'>
@@ -24,7 +75,6 @@ export default function WaitlistModal(props) {
               <h2>{`Size: ${props.size}`}</h2>
               <h2>{`$${props.price} USD`}</h2>
             </div>
-            {/* build number selector here */}
 
             <button
               className='number-dropdown-button'
@@ -33,7 +83,7 @@ export default function WaitlistModal(props) {
                 setVisible(!visible);
               }}
             >
-              {label}
+              {itemQuantity}
               <img src={arrow} alt='' className='arrow' />
             </button>
 
@@ -41,119 +91,8 @@ export default function WaitlistModal(props) {
               className={`waitlist-dropdown-wrapper ${visible ? "" : "hidden"}`}
               id='dropdown'
             >
-              <input
-                type='radio'
-                id='select-0'
-                name='0'
-                value='0'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='0'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setLabel("0");
-                  setVisible(!visible);
-                }}
-              >
-                0
-              </label>
-
-              <input
-                type='radio'
-                id='select-1'
-                name='1'
-                value='1'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='1'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setLabel("1");
-                  setVisible(!visible);
-                }}
-              >
-                1
-              </label>
-
-              <input
-                type='radio'
-                id='select-2'
-                name='2'
-                value='2'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='2'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setLabel("2");
-                  setVisible(!visible);
-                }}
-              >
-                2
-              </label>
-
-              <input
-                type='radio'
-                id='select-3'
-                name='3'
-                value='3'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='3'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setLabel("3");
-                  setVisible(!visible);
-                }}
-              >
-                3
-              </label>
-
-              <input
-                type='radio'
-                id='select-4'
-                name='4'
-                value='4'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='4'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setLabel("4");
-                  setVisible(!visible);
-                }}
-              >
-                4
-              </label>
-
-              <input
-                type='radio'
-                id='select-5'
-                name='5'
-                value='5'
-                className='waitlist-option'
-              ></input>
-
-              <label
-                htmlFor='5'
-                className='waitlist-select-item'
-                onClick={() => {
-                  setLabel("5");
-                  setVisible(!visible);
-                }}
-              >
-                5
-              </label>
+              {/* //& Dropdown numbers for item quantity */}
+              {quantityLabels.map(generateQuantityLabels)}
             </div>
           </div>
         </div>
@@ -161,12 +100,25 @@ export default function WaitlistModal(props) {
           <Button
             className='btn white back-to-shop'
             title='Close'
-            onClick={props.btnOnClick}
+            onClick={props.closeBtnOnClick}
           />
           <Button
             className='btn grey back-to-shop'
             title='Add to cart'
-            onClick={props.btnOnClick}
+            onClick={() => {
+              dispatch(
+                addToCart({
+                  //redux payload -> 6 keys
+                  id: product.id,
+                  title: product.attributes.title,
+                  description: product.attributes.description,
+                  price: product.attributes.price,
+                  size: props.size,
+                  image: product.attributes.images.data[0].attributes.url,
+                  itemQuantity,
+                })
+              );
+            }}
           />
         </div>
       </div>

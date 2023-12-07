@@ -22,6 +22,7 @@
   max-width: 680px;
   padding: 30px 40px 0;
   background-color: var(--Background);
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1));
 }
 .waitlist-wrapper h1,
 .waitlist-wrapper h2 {
@@ -37,23 +38,21 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0 25px;
+  margin: 10px 0 5px;
   border-top: 1px solid var(--Black);
   border-bottom: 1px solid var(--Black);
 }
 .waitlist-wrapper .waitlist-body-wrapper .waitlist-left .waitlist-img {
   width: 125px;
-  height: 158px;
+  height: 135px;
+  margin: 10px 0;
 }
 .waitlist-wrapper .waitlist-body-wrapper .waitlist-right {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-}
-.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-detail {
-  margin-top: 20px;
+  align-items: center;
 }
 .waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-detail h2 {
   margin-bottom: 10px;
@@ -83,19 +82,28 @@
 }
 .waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper {
   position: absolute;
-  top: 58%;
+  top: 85%;
   right: 0%;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   width: 50px;
-  height: 98px;
+  height: 97px;
   padding-top: 85px;
   background-color: var(--White);
   border: 1px solid var(--Black);
   border-top: none;
   overflow-y: scroll;
+}
+.waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper .quantity-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 97px;
 }
 .waitlist-wrapper .waitlist-body-wrapper .waitlist-right .waitlist-dropdown-wrapper .waitlist-option {
   display: none;
@@ -107,7 +115,7 @@
   align-items: center;
   width: 100%;
   height: 40px;
-  margin: 6px 0 6px 0;
+  padding: 6px 0 6px 0;
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
   font-size: var(--Body-Small);

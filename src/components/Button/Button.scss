@@ -57,7 +57,8 @@
   padding: 8px 16px;
 }
 
-.out-of-stock {
+.out-of-stock,
+.disabled {
   font-family: var(--HN-Medium);
   color: var(--White);
   background-color: var(--Grey-100);

@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import Button from "../Button/Button";
 import "./Navbar.css";
 import logo from "../../assets/icons/cafe-nyleta-logo.png";
-import WaitlistModal from "../WaitlistModal/WaitlistModal";
+import ShoppingCartModal from "../ShoppingCartModal/ShoppingCartModal";
 import HamburgerMenuModal from "../HamburgerMenuModal/HamburgerMenuModal";
 import hamburger from "../../assets/icons/hamburger-menu.svg";
 import exit from "../../assets/icons/exit.svg";
@@ -14,10 +16,28 @@ import exit from "../../assets/icons/exit.svg";
 export default function Navbar(props) {
   const [cartVisible, setCartVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
+  //! pull quantity data from cartReducer
   // lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
   const [lockNav, setLockNav] = useState(false);
   // true == hamburger icon, false == X icon
   const [menuIcon, setMenuIcon] = useState(true);
+
+  //! write a function that reads data from cartReducer to get total product quantity
+  // iterate over array and += the itemQuantity of each array index
+  const products = useSelector((state) => state.cart.products);
+  // console.log(products);
+  // console.log(products.length > 0 ? products[0].itemQuantity : "length is < 0");
+
+  //! export to module
+  const getCartQuantityAndPrice = () => {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    for (let i = 0; i < products.length; i++) {
+      totalQuantity += products[i].itemQuantity;
+    }
+    return [totalQuantity, totalPrice];
+  };
 
   //Window width for showing / hiding hamburger menu
   const [windowSize, setWindowSize] = useState([
@@ -31,7 +51,6 @@ export default function Navbar(props) {
     };
 
     window.addEventListener("resize", handleWindowResize);
-    console.log("window width is: " + window.innerWidth);
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
@@ -56,13 +75,15 @@ export default function Navbar(props) {
         <div className='nav-links-wrapper'>
           <Link to='/about'>About</Link>
           <Link to='/shop'>Shop</Link>
+
           <button
             className='cart-btn'
             onClick={() => {
               setCartVisible(!cartVisible);
             }}
           >
-            {`Cart (${props.quantity})`}
+            {/* //get the total quantity only from getCart function */}
+            {`Cart (${getCartQuantityAndPrice()[0]})`}
           </button>
           <Link to='/contact'>
             <Button className='btn grey contact' title='Contact Us' />
@@ -85,17 +106,16 @@ export default function Navbar(props) {
           </button>
         </div>
       </div>
-      {/* //& Waitlist Modal */}
-      <WaitlistModal
+      {/* //& Shopping Cart modal */}
+      <ShoppingCartModal
         className={cartVisible ? "gray-out" : "hidden"}
-        header='My Cart'
-        quantity={`(${0})`}
-        name='Work Shirt - White'
-        size='L'
-        price='375'
-        //^btnOnClick is a custom prop
-        btnOnClick={() => {
+        headerQuantity={products.length ? products.length : "0"}
+        closeBtnOnClick={() => {
           setCartVisible(!cartVisible);
+        }}
+        checkoutBtnOnClick={() => {
+          //navigate to checkout page
+          alert("checkout btn pressed");
         }}
       />
       {/* //& Hamburger modal */}
@@ -107,6 +127,9 @@ export default function Navbar(props) {
           setMenuVisible(!menuVisible);
           setMenuIcon(!menuIcon);
           setLockNav(!lockNav);
+        }}
+        cartOnClick={() => {
+          setCartVisible(true);
         }}
       />
     </nav>

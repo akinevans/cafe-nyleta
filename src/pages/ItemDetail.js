@@ -1,23 +1,28 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
-import "../pages/page_styling/ItemDetail/ItemDetail.css";
+// import { useSelector } from "react-redux";
+
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
 import Button from "../components/Button/Button";
 import WaitlistModal from "../components/WaitlistModal/WaitlistModal";
+import "../pages/page_styling/ItemDetail/ItemDetail.css";
 
 export default function ItemDetail(props, { item }) {
   const [visible, setVisible] = useState(false);
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
+  const [productSize, setProductSize] = useState("M");
+
+  // const products = useSelector((state) => state.cart.products);
 
   const apiFilterPath = "&[filters][type][$eq]=";
   const id = useParams().id;
 
   const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
-  console.log(product);
+  // console.log(product);
 
   const productName = product?.attributes?.title,
     productDescription = product?.attributes?.description,
@@ -44,6 +49,11 @@ export default function ItemDetail(props, { item }) {
         product?.attributes?.images?.data[imageIndex]?.attributes?.url
     );
   };
+
+  // scroll to the top of the page on render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className='item-detail-page-outer-wrapper'>
@@ -95,8 +105,13 @@ export default function ItemDetail(props, { item }) {
             <h1 className='price'>{`$${productPrice} USD`}</h1>
 
             <p className='description'>{productDescription}</p>
-
-            <ButtonFilter className='item-detail-filter-btn' />
+            {/* //* Size Selector */}
+            <ButtonFilter
+              className='item-detail-filter-btn'
+              sizeOnClick={(size) => {
+                setProductSize(size);
+              }}
+            />
             <Button
               // product?.attributes?.inStock
               className={`btn waitlist item-detail-btn ${
@@ -119,19 +134,15 @@ export default function ItemDetail(props, { item }) {
       <WaitlistModal
         //^ modal position is styled in ItemDetail.scss */
         className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
-        header='My Cart'
         src={
           process.env.REACT_APP_UPLOAD_URL +
           product?.attributes?.images?.data[0]?.attributes?.url
         }
         alt={altDescription}
-        //useEffect to get quantity -> get element input value on change
-        quantity={`(${0})`}
         name={productName}
-        size='L'
+        size={productSize}
         price={productPrice}
-        btnOnClick={() => {
-          //^onCLick event for 'Back to shop btn'
+        closeBtnOnClick={() => {
           setVisible(!visible);
         }}
       />
