@@ -8,7 +8,9 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    //! known bug, itemQuantity is off by 1 when adding to cart, replication conditions currently unknown
+    //! known bug, itemQuantity is off by 1 when adding to cart, steps to replicate:
+    // add item to cart
+    // add same item in a different size, its payload quantity will be double the selected amount
     addToCart: (state, action) => {
       // search for item in state cart array, find by id
       let item = state.products.find((item) => item.id === action.payload.id);
@@ -39,8 +41,14 @@ export const cartSlice = createSlice({
                   alert("Limit 5 per customer, per size");
                   state.products[i].itemQuantity = maxQuantity;
                   break;
-                  //TODO: build custom alert modal
                 } else {
+                  alert(
+                    "itemQuantity at end of increment : " +
+                      action.payload.itemQuantity
+                  );
+                  //! off by 1 bug is here
+                  console.log(state.products[i].itemQuantity);
+                  console.log(action.payload.itemQuantity);
                   state.products[i].itemQuantity += action.payload.itemQuantity;
                   break;
                 }
@@ -69,7 +77,7 @@ export const cartSlice = createSlice({
 
       state.value += 1;
     },
-    //TODO: fix bug in removeItem, all products of the same ID get removed, need to check against size as well
+
     removeItem: (state, action) => {
       //loop until a match is found, then remove item from array
       for (let i = 0; i < state.products.length; i++) {
