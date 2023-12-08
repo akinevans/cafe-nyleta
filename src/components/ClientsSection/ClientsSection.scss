@@ -51,11 +51,10 @@
   } // End clients text wrapper
 
   .clients-img-wrapper {
-    @include flex(column);
+    @include flex();
     @include flexPosition(center, center);
     @include widthHeight(580px, fit-content);
     @include maxWidth(95%);
-    //   @include temporaryOutline(pink);
     margin-bottom: 120px;
 
     .client-logos-image {
@@ -78,14 +77,7 @@
       }
     }
     .clients-img-wrapper {
-      @include flex(row);
-      @include flexPosition(center, center);
       @include widthHeight(470px, fit-content);
-      @include maxWidth(95%);
-      // @include temporaryOutline(pink);
-      //^ Faster way of making everything larger
-      transform: scale(1.25);
-      margin-bottom: 120px;
 
       .client-logos-image {
         max-width: 60%;
@@ -98,29 +90,13 @@
 //Begin Mobile Media Queries
 @media screen and (max-width: 390px) {
   //! be mindful of specificity issues
-  .clients-inner-wrapper {
-    .clients-text-wrapper {
-      margin-bottom: 50px;
-      h1 {
-        font-size: var(--Heading-2);
-      }
-      p {
-        display: none;
-      }
-    }
-    .clients-img-wrapper {
-      @include flex(row);
-      @include flexPosition(center, center);
-      @include widthHeight(470px, fit-content);
-      @include maxWidth(95%);
-      // @include temporaryOutline(pink);
-      //^ Faster way of making everything larger
-      transform: scale(1.25);
-      margin-bottom: 120px;
+  .clients-img-wrapper {
+    @include widthHeight(470px, fit-content);
+    @include maxWidth(95%);
+    margin-bottom: 120px;
 
-      .client-logos-image {
-        content: url("../../assets/images/home/client-logos/logos_mobile.svg");
-      }
+    .client-logos-image {
+      content: url("../../assets/images/home/client-logos/logos_mobile.svg");
     }
   }
 }
