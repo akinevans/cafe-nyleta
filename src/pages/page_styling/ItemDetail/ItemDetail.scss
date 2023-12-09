@@ -57,7 +57,7 @@
       @include flex(row);
       @include flexPosition(center, center);
       gap: 9px;
-      @include widthHeight(71.65px, fit-content);
+      @include widthHeight(fit-content, fit-content);
       // @include temporaryOutline(black);
 
       .cycle-box {
