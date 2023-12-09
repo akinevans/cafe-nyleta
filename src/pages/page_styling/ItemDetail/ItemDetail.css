@@ -38,7 +38,8 @@
 .item-detail-page-inner-wrapper .item-detail-left-wrapper .product {
   max-width: 76.39%;
   height: auto;
-  margin-top: 60px;
+  max-height: 95%;
+  margin-top: 30px;
   cursor: pointer;
 }
 .item-detail-page-inner-wrapper .item-detail-left-wrapper .out-of-stock {
