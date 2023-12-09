@@ -15,6 +15,7 @@ export default function ItemDetail(props, { item }) {
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
   const [productSize, setProductSize] = useState("M");
+  const [currentCycleBox, setCurrentCycleBox] = useState(0);
 
   // const products = useSelector((state) => state.cart.products);
 
@@ -30,23 +31,31 @@ export default function ItemDetail(props, { item }) {
     inStock = product?.attributes?.inStock,
     altDescription = product?.attributes?.alt;
 
-  let imageIndex = 0;
+  const numOfImages = [];
+  const getNumOfImages = () => {
+    for (let i = 0; i < product?.attributes?.images?.data.length; i++) {
+      numOfImages.push(i);
+    }
+  };
+  getNumOfImages();
+  // console.log(numOfImages);
 
   const cycleImages = (e) => {
-    // move to the next url in productImages array
-    imageIndex += 1;
+    const nextImage =
+      product?.attributes?.images?.data[currentCycleBox + 1]?.attributes?.url;
 
-    //check if the next image exists, if not reset index to 0
-    if (!product?.attributes?.images?.data[imageIndex]?.attributes?.url) {
-      // console.log(`Product only has ${imageIndex} images`);
-      imageIndex = 0;
+    //check if the next image exists, if true increment, if false reset index to 0
+    if (nextImage) {
+      setCurrentCycleBox((prevCurrentCycleBox) => prevCurrentCycleBox + 1);
+    } else {
+      setCurrentCycleBox(0);
     }
 
-    //finally, set the new image
+    //finally, set the new image src
     e.target.setAttribute(
       "src",
       process.env.REACT_APP_UPLOAD_URL +
-        product?.attributes?.images?.data[imageIndex]?.attributes?.url
+        product?.attributes?.images?.data[currentCycleBox]?.attributes?.url
     );
   };
 
@@ -82,18 +91,27 @@ export default function ItemDetail(props, { item }) {
                 className={`product ${inStock ? "" : "out-of-stock"}`}
                 src={
                   process.env.REACT_APP_UPLOAD_URL +
-                  product?.attributes?.images?.data[0]?.attributes?.url
+                  product?.attributes?.images?.data[currentCycleBox]?.attributes
+                    ?.url
                 }
                 alt={altDescription}
                 onClick={(e) => {
                   cycleImages(e);
                 }}
               />
-              {/* utility class 'grey' to color selected box */}
               <div className='cycle-box-wrapper'>
-                <div className='cycle-box cb-1 grey'></div>
-                <div className='cycle-box cb-2'></div>
-                <div className='cycle-box cb-3'></div>
+                {/* use utility class 'active' to color selected box */}
+                {/* // i represents each iteration of map function*/}
+                {product?.attributes?.images?.data.map((element, i) => (
+                  <>
+                    {/* <p>{i}</p> */}
+                    <div
+                      className={`cycle-box ${
+                        currentCycleBox === i ? "active" : ""
+                      }`}
+                    ></div>
+                  </>
+                ))}
               </div>
             </div>
           </div>
