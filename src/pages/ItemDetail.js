@@ -29,7 +29,8 @@ export default function ItemDetail(props, { item }) {
     productDescription = product?.attributes?.description,
     productPrice = product?.attributes?.price,
     inStock = product?.attributes?.inStock,
-    altDescription = product?.attributes?.alt;
+    altDescription = product?.attributes?.alt,
+    isOneSize = product?.attributes?.size === "ONESIZE";
 
   const numOfImages = [];
   const getNumOfImages = () => {
@@ -126,12 +127,12 @@ export default function ItemDetail(props, { item }) {
             {/* //* Size Selector */}
             <ButtonFilter
               className='item-detail-filter-btn'
+              isOneSize={isOneSize}
               sizeOnClick={(size) => {
                 setProductSize(size);
               }}
             />
             <Button
-              // product?.attributes?.inStock
               className={`btn waitlist item-detail-btn ${
                 inStock ? "grey" : "out-of-stock"
               }`}
@@ -158,7 +159,7 @@ export default function ItemDetail(props, { item }) {
         }
         alt={altDescription}
         name={productName}
-        size={productSize}
+        size={isOneSize ? "One Size" : productSize}
         price={productPrice}
         closeBtnOnClick={() => {
           setVisible(!visible);
