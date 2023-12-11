@@ -117,6 +117,9 @@
   .item-detail-page-inner-wrapper .item-detail-left-wrapper {
     max-width: 65%;
   }
+  .item-detail-page-inner-wrapper .item-detail-left-wrapper .image-and-cycle-wrapper {
+    max-height: 100%;
+  }
   .item-detail-page-inner-wrapper .item-detail-left-wrapper .product {
     max-width: 69.48%;
     height: auto;

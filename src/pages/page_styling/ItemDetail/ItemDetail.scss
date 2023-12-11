@@ -33,6 +33,7 @@
       @include flex(column);
       @include flexPosition(flex-start, center);
       max-height: 676px;
+
       // @include temporaryOutline(yellow);
     }
 
@@ -123,19 +124,17 @@
 }
 
 //Begin Tablet Media Queries
-
 @media screen and (max-width: 834px) {
   .item-detail-page-inner-wrapper {
     @include flexPosition(space-between, flex-start);
-
     // @include temporaryOutline(blue);
 
     .item-detail-left-wrapper {
       @include maxWidth(65%);
-
       // @include temporaryOutline(green);
 
       .image-and-cycle-wrapper {
+        max-height: 100%;
         // @include temporaryOutline(yellow);
       }
 
