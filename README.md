@@ -32,11 +32,11 @@
 - [x] Carousel w/ props
   - [] Drag Functionality
   - [] Scroll Functionality
-  - [] Fix resizing issue
+  - [x] Fix resizing issue
   - [] Gradient
 - [x] Services
 - [x] Quote w/ props
-- [] Carousel 2 w/ props
+- [x] Carousel 2 w/ props
 - [x] WorldMap
   - [x] WorldMap Modals
 - [x] Footer
@@ -45,12 +45,12 @@
 
 - [x] Nav
 - [] Hero
-- [] Clients
-- [] Carousel
+- [x] Clients
+- [x] Carousel
 - [x] Services
 - [] Quote w/ props
 - [] Carousel 2
-- [] WorldMap
+- [x] WorldMap
 - [x] Footer
 
 ### - [] Media Queries for Mobile
@@ -78,12 +78,12 @@
 
 ## Shop Page:
 
-- [] Import assets
+- [x] Import assets
 - [x] Build Shop Header
 - [x] Build Shop Modal
 - [x] Build UI for Desktop
-- [] Build UI for Tablet
-- [] Build UI for Mobile
+- [x] Build UI for Tablet
+- [x] Build UI for Mobile
 
 ---
 
@@ -108,12 +108,12 @@
 - [x] Button Hover & Click states
 - [x] Begin Working on Strapi CMS
 - [x] Implement Axios for API calls
-- [] Finish Strapi CMS
+- [x] Finish Strapi CMS
 - [x] Setup Sass
 - [x] Reorganize Components into separate folders with styles
 - [] Framer Motion
 - [] Compress images (webpack)
-- [] Redux
+- [x] Redux reducers
 - [] Spacer components if necessary
 
 ## Known Bugs:
