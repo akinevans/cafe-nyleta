@@ -8,6 +8,7 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    //! refactor with guard clauses, this tree runs too deep
     addToCart: (state, action) => {
       // search for item in state cart array, find by id
       let item = state.products.find((item) => item.id === action.payload.id);
