@@ -29,7 +29,9 @@
   //   @include temporaryOutline(red);
 
   h1,
-  h2 {
+  h2,
+  .cart-text,
+  .cart-price {
     margin: 0;
     padding: 0;
     font-family: var(--HN-Light);
@@ -42,8 +44,24 @@
     margin-bottom: 15px;
   }
 
+  .cart-price {
+    font-weight: bold;
+  }
+
   .cart-empty-message {
     text-align: center;
+  }
+
+  .total-wrapper {
+    @include flex(row);
+    @include flexPosition(flex-end, center);
+    @include widthHeight(auto, auto);
+    margin-top: 32px;
+
+    .cart-text,
+    .cart-price {
+      font-size: var(--Body);
+    }
   }
 
   .cart-btn-wrapper {

@@ -33,10 +33,8 @@ export default function ShoppingCartModal(props) {
   return (
     <div className={`cart-modal-page-wrapper ${props.className}`}>
       <div className='cart-wrapper'>
-        <h1>{`My Cart (${getCartQuantityAndPrice()[1]})`}</h1>
-        <h1 className={cartEmpty ? "hidden" : ""}>{`Total Price: $${
-          getCartQuantityAndPrice()[0]
-        }`}</h1>
+        <h1>{`Cart (${getCartQuantityAndPrice()[1]})`}</h1>
+
         <h1
           className={`cart-empty-message ${cartEmpty ? "visible" : "hidden"}`}
         >
@@ -58,6 +56,12 @@ export default function ShoppingCartModal(props) {
             closeBtnOnClick={props.closeBtnOnClick}
           />
         ))}
+        <div className='total-wrapper'>
+          <h1 className={`cart-text ${cartEmpty ? "hidden" : ""}`}>
+            {`Total (${getCartQuantityAndPrice()[1]}):`}{" "}
+            <span className='cart-price'>${getCartQuantityAndPrice()[0]}</span>{" "}
+          </h1>
+        </div>
         <div className='cart-btn-wrapper'>
           <Button
             className='btn white back-to-shop'
