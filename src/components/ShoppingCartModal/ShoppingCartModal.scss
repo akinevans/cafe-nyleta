@@ -26,7 +26,10 @@
   overflow-y: scroll;
   filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.1));
 
-  //   @include temporaryOutline(red);
+  .shopping-cart-item-component-wrapper {
+    border-top: 1px solid var(--Black);
+    border-bottom: 1px solid var(--Black);
+  }
 
   h1,
   h2,

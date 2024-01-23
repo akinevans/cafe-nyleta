@@ -4,8 +4,7 @@
   @include flex(row);
   @include flexPosition(space-between, center);
   margin: -6px 0 5px;
-  border-top: 1px solid var(--Black);
-  border-bottom: 1px solid var(--Black);
+
   .cart-left {
     .cart-img {
       @include widthHeight(125px, 135px);
