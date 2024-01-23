@@ -66,18 +66,20 @@ export default function ShoppingCartModal(props) {
               ${getCartQuantityAndPrice()[0]} USD
             </span>{" "}
           </h1>
-        </div>
-        <div className='cart-btn-wrapper'>
-          <Button
-            className='btn white back-to-shop'
-            title='Close'
-            onClick={props.closeBtnOnClick}
-          />
-          <Button
-            className={`btn grey back-to-shop ${cartEmpty ? " disabled " : ""}`}
-            title='Checkout'
-            onClick={!cartEmpty ? props.checkoutBtnOnClick : null}
-          />
+          <div className='cart-btn-wrapper'>
+            <Button
+              className='btn white back-to-shop'
+              title='Close'
+              onClick={props.closeBtnOnClick}
+            />
+            <Button
+              className={`btn grey back-to-shop ${
+                cartEmpty ? " disabled " : ""
+              }`}
+              title='Check out'
+              onClick={!cartEmpty ? props.checkoutBtnOnClick : null}
+            />
+          </div>
         </div>
       </div>
     </div>

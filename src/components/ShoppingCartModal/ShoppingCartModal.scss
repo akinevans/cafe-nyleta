@@ -21,7 +21,7 @@
   @include widthHeight(680px, auto);
   @include maxWidth(680px);
   max-height: 640px;
-  padding: 0 30px 40px;
+  padding: 0 30px;
   background-color: var(--Background);
   overflow-y: scroll;
   filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.1));
@@ -35,7 +35,7 @@
     padding: 0 30px;
     background-color: var(--Background);
     z-index: 1;
-    border-bottom: 1px solid var(--Black);
+    border-bottom: 1px solid var(--Grey-50);
 
     // border: 2px solid red;
 
@@ -45,8 +45,7 @@
   }
 
   .shopping-cart-item-component-wrapper {
-    // border-top: 1px solid var(--Black);
-    border-bottom: 1px solid var(--Black);
+    // border-bottom: 1px solid var(--Grey-50);
   }
 
   h1,
@@ -75,13 +74,19 @@
   }
 
   .total-wrapper {
-    @include flex(row);
-    @include flexPosition(flex-end, center);
-    @include widthHeight(auto, auto);
+    position: sticky;
+    bottom: 0;
+    @include flex(column);
+    @include flexPosition(flex-end, flex-end);
+    @include widthHeight(100%, auto);
     margin-top: 32px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--Grey-50);
+    background-color: var(--Background);
 
     .cart-text,
     .cart-price {
+      margin: 32px 0;
       font-size: var(--Body);
     }
   }
@@ -90,8 +95,6 @@
     @include flex(row);
     gap: 8px;
     @include flexPosition(center, center);
-    margin-top: 45px;
-    margin-bottom: 25px;
     // @include temporaryOutline(green);
   }
 } // end cart wrapper
