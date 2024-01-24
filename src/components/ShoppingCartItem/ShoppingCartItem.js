@@ -70,14 +70,15 @@ export default function ShoppingCartItem(props, { data }) {
         >
           <img src={props.imgSrc} alt={props.imgAlt} className='cart-img' />
         </Link>
-      </div>
-      <div className='cart-right'>
         <div className='cart-detail'>
           <h2>{props.name}</h2>
           <h2>{`Size: ${props.size}`}</h2>
-          <h2>{`$${props.price} USD x ${props.individualItemQuantity}`}</h2>
-          <h2>{`$${props.totalItemPrice}`}</h2>
+          {/* <h2>{`$${props.price}`}</h2> */}
+          {/* <h2>{`$${props.price} USD x ${props.individualItemQuantity}`}</h2> */}
+          {/* <h2>{`$${props.totalItemPrice}`}</h2> */}
         </div>
+      </div>
+      <div className='cart-right'>
         {/* //& Number value picker */}
 
         <button
@@ -97,6 +98,7 @@ export default function ShoppingCartItem(props, { data }) {
         >
           {quantityLabels.map(generateQuantityLabels)}
         </div>
+        <h2 className='item-price'>{`$${props.price} USD`}</h2>
       </div>
     </div>
   );
