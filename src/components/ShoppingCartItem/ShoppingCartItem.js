@@ -87,32 +87,47 @@ export default function ShoppingCartItem(props, { data }) {
         </div>
       </div>
       <div className='cart-right'>
-        <div className='increment-btn-wrapper'>
-          <button
+        <div className='increment-and-remove-btn-wrapper'>
+          <div className='increment-btn-wrapper'>
+            <button
+              onClick={() => {
+                updateProductQuantity(
+                  "decrement",
+                  getProduct(props.id, props.size)
+                );
+                // console.log(itemQuantity);
+              }}
+            >
+              -
+            </button>
+
+            <p className='quantity'>{productQuantity}</p>
+            {/* <p className='quantity'>{props.individualItemQuantity}</p> */}
+
+            <button
+              onClick={() => {
+                updateProductQuantity(
+                  "increment",
+                  getProduct(props.id, props.size)
+                );
+              }}
+            >
+              +
+            </button>
+          </div>
+          <p
+            className='remove-btn'
             onClick={() => {
-              updateProductQuantity(
-                "decrement",
-                getProduct(props.id, props.size)
+              dispatch(
+                removeItem({
+                  id: product.id,
+                  size: props.size,
+                })
               );
-              // console.log(itemQuantity);
             }}
           >
-            -
-          </button>
-
-          <p className='quantity'>{productQuantity}</p>
-          {/* <p className='quantity'>{props.individualItemQuantity}</p> */}
-
-          <button
-            onClick={() => {
-              updateProductQuantity(
-                "increment",
-                getProduct(props.id, props.size)
-              );
-            }}
-          >
-            +
-          </button>
+            Remove
+          </p>
         </div>
 
         <h2 className='item-price'>{`$${props.price} USD`}</h2>

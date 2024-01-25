@@ -34,7 +34,13 @@
   justify-content: center;
   align-items: center;
 }
-.item-wrapper .cart-right .increment-btn-wrapper {
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -44,13 +50,13 @@
   background-color: var(--White);
   border: 1px solid #000;
 }
-.item-wrapper .cart-right .increment-btn-wrapper button,
-.item-wrapper .cart-right .increment-btn-wrapper .quantity {
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper button,
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper .quantity {
   font-size: var(--Body-Small);
   color: var(--Black);
   font-weight: 400;
 }
-.item-wrapper .cart-right .increment-btn-wrapper button {
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper button {
   background-color: var(--White);
   border: none;
   outline: none;
@@ -58,16 +64,27 @@
   font-weight: 400;
   cursor: pointer;
 }
-.item-wrapper .cart-right .increment-btn-wrapper .quantity {
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper .quantity {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.item-wrapper .cart-right .hidden {
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper .hidden {
   display: none;
 }
-.item-wrapper .cart-right .bold {
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper .bold {
   color: var(--Grey-100);
+}
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .remove-btn {
+  margin: 8px 0 0 0;
+  font-family: var(--HN-Light);
+  font-weight: 300;
+  font-size: var(--Label);
+  color: var(--Grey-50);
+  cursor: pointer;
+}
+.item-wrapper .cart-right .increment-and-remove-btn-wrapper .remove-btn:active {
+  color: var(--Black);
 }
 .item-wrapper .cart-right .item-price {
   margin-left: 55px;

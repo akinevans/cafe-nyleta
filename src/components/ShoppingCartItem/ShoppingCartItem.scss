@@ -28,137 +28,71 @@
       }
     }
     //   @include temporaryOutline(green);
-  }
+  } // end cart left
   .cart-right {
     position: relative;
     @include flex(row);
     @include flexPosition(center, center);
     // @include temporaryOutline(green);
 
-    .increment-btn-wrapper {
-      @include flex(row);
-      @include flexPosition(space-evenly, center);
-      @include widthHeight(110px, 50px);
-      background-color: var(--White);
-      border: 1px solid #000;
-      // border: 2px solid red;
+    .increment-and-remove-btn-wrapper {
+      @include flex(column);
+      @include flexPosition(center, flex-start);
+      // border: 2px solid blue;
 
-      button,
-      .quantity {
-        font-size: var(--Body-Small);
-        color: var(--Black);
-        font-weight: 400;
-      }
-
-      button {
+      .increment-btn-wrapper {
+        @include flex(row);
+        @include flexPosition(space-evenly, center);
+        @include widthHeight(110px, 50px);
         background-color: var(--White);
-        border: none;
-        outline: none;
+        border: 1px solid #000;
+        // border: 2px solid red;
 
-        color: var(--Black);
-        font-weight: 400;
+        button,
+        .quantity {
+          font-size: var(--Body-Small);
+          color: var(--Black);
+          font-weight: 400;
+        }
+
+        button {
+          background-color: var(--White);
+          border: none;
+          outline: none;
+
+          color: var(--Black);
+          font-weight: 400;
+          cursor: pointer;
+          // border: 1px solid blue;
+        }
+
+        .quantity {
+          user-select: none;
+        }
+
+        //^ These util classes for showing / hiding number dropdown menu must be inside cart-right class in order to function
+        .hidden {
+          display: none;
+        }
+
+        .bold {
+          color: var(--Grey-100);
+        }
+      } // end increment btn wrapper
+
+      .remove-btn {
+        margin: 8px 0 0 0;
+        font-family: var(--HN-Light);
+        font-weight: 300;
+        font-size: var(--Label);
+        color: var(--Grey-50);
         cursor: pointer;
-        // border: 1px solid blue;
+        &:active {
+          color: var(--Black);
+        }
       }
+    } // end increment and remove btn wrapper
 
-      .quantity {
-        user-select: none;
-      }
-
-      // input {
-      //   @include widthHeight(33%, 100%);
-      //   border: none;
-
-      //   &:focus {
-      //     border: none;
-      //     outline: none;
-      //   }
-      // }
-    }
-
-    // .number-dropdown-button {
-    //   @include flex(row);
-    //   @include flexPosition(center, center);
-    //   @include widthHeight(50px, 50px);
-    //   margin: 15px 0 0 15px;
-    //   padding: 0 16px;
-    //   font-family: var(--HN-Light);
-    //   font-weight: var(--Light-Weight);
-    //   font-size: var(--Body-Small);
-    //   color: var(--Black);
-    //   background-color: var(--White);
-    //   border: none;
-    //   outline: none;
-    //   border: 1px solid var(--Black);
-    //   cursor: pointer;
-
-    //   .arrow {
-    //     margin-top: 6px;
-    //   } // end arrow
-    // } // end drop down btn
-
-    // .cart-dropdown-wrapper {
-    //   //^ Number drop down menu
-    //   position: absolute;
-    //   top: 76.5%;
-    //   right: 0%;
-    //   z-index: 99;
-
-    //   @include flex(column);
-    //   @include flexPosition(center, flex-start);
-    //   @include widthHeight(50px, 98px);
-    //   padding-top: 125px;
-    //   background-color: var(--White);
-    //   border: 1px solid var(--Black);
-    //   border-top: none;
-    //   overflow-y: scroll;
-
-    //   // @include temporaryOutline(red);
-
-    //   .quantity-label-wrapper {
-    //     @include flex(column);
-    //     @include flexPosition(center, center);
-    //     @include widthHeight(30px, 97px);
-    //   }
-
-    //   .cart-option {
-    //     display: none;
-    //   }
-
-    //   label {
-    //     //*cart-select-item class
-    //     //^ width 100% allows the mouse to select the label without hovering directly over text
-    //     @include flex(column);
-    //     @include flexPosition(center, center);
-    //     width: 100%;
-    //     height: 40px;
-    //     padding: 6px 0 6px 0;
-    //     font-family: var(--HN-Light);
-    //     font-weight: var(--Light-Weight);
-    //     font-size: var(--Body-Small);
-    //     color: var(--Black);
-    //     text-align: center;
-
-    //     cursor: pointer;
-
-    //     &:hover {
-    //       font-family: var(--HN-Medium);
-    //     }
-
-    //     &:active {
-    //       opacity: 65%;
-    //     }
-    //   }
-    // } // end drop down wrapper
-
-    //^ These util classes for showing / hiding number dropdown menu must be inside cart-right class in order to function
-    .hidden {
-      display: none;
-    }
-
-    .bold {
-      color: var(--Grey-100);
-    }
     .item-price {
       margin-left: 55px;
       font-family: var(--HN-Light);
@@ -170,4 +104,4 @@
     }
   } // end cart right
   // @include temporaryOutline(blue);
-} // end cart body wrapper
+} // end item wrapper
