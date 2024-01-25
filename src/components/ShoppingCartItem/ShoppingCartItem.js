@@ -1,36 +1,27 @@
 import React from "react";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeItem } from "../../redux/cartReducer";
 import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 import "./ShoppingCartItem.css";
 
-//TODO: add UI elements to zero out an item from the cart
 export default function ShoppingCartItem(props, { data }) {
-  const dispatch = useDispatch();
   const { product } = useFetch(`/products/${props.id}?populate`);
-
-  // products and state works perfectly, don't change
   const products = useSelector((state) => state.cart.products);
 
-  //! this state is where each shoppingCartItem component gets its starting quantity
-  const [productQuantity, setProductQuantity] = useState(
-    props.individualItemQuantity
-  );
   const maxQuantityPerProduct = 5;
   const minQuantityPerProduct = 1;
+  const dispatch = useDispatch();
 
   // console.log(product);
   // console.log(products);
   // console.log(typeof productQuantity);
 
-  //get correct product by matching id and size
+  //get correct product from cart by matching its id and size
   const getProduct = (id, size) => {
     // console.log(id, size);
     for (let i = 0; i < products.length; i++) {
       if (id === products[i].id && size === products[i].size) {
-        // setProductQuantity(products[i].itemQuantity);
         // alert("match found!!");
         return products[i].itemQuantity;
       } else {
@@ -43,9 +34,8 @@ export default function ShoppingCartItem(props, { data }) {
 
   const updateProductQuantity = (operation, currentQuantity) => {
     if (operation === "increment") {
-      if (productQuantity < maxQuantityPerProduct) {
-        setProductQuantity(currentQuantity + 1);
-        const newQuantity = productQuantity + 1;
+      if (props.individualItemQuantity < maxQuantityPerProduct) {
+        const newQuantity = props.individualItemQuantity + 1;
         dispatch(
           addToCart({
             id: product.id,
@@ -55,9 +45,8 @@ export default function ShoppingCartItem(props, { data }) {
         );
       }
     } else if (operation === "decrement") {
-      if (productQuantity > minQuantityPerProduct) {
-        setProductQuantity(currentQuantity - 1);
-        const newQuantity = productQuantity - 1;
+      if (props.individualItemQuantity > minQuantityPerProduct) {
+        const newQuantity = props.individualItemQuantity - 1;
         dispatch(
           addToCart({
             id: product.id,
@@ -95,14 +84,12 @@ export default function ShoppingCartItem(props, { data }) {
                   "decrement",
                   getProduct(props.id, props.size)
                 );
-                // console.log(itemQuantity);
               }}
             >
               -
             </button>
 
-            <p className='quantity'>{productQuantity}</p>
-            {/* <p className='quantity'>{props.individualItemQuantity}</p> */}
+            <p className='quantity'>{props.individualItemQuantity}</p>
 
             <button
               onClick={() => {

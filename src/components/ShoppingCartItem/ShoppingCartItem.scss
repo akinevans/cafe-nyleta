@@ -4,8 +4,12 @@
   @include flex(row);
   @include flexPosition(space-between, center);
   margin: -6px 0 5px;
+  user-select: none;
 
   .cart-left {
+    @include widthHeight(60%, 100%);
+    // border: 1px solid red;
+
     position: relative;
     @include flex(row);
     @include flexPosition(center, center);
@@ -15,7 +19,7 @@
     }
     // @include temporaryOutline(green);
     .cart-detail {
-      @include widthHeight(auto, 100%);
+      @include widthHeight(170px, 100%);
       // border: 2px solid red;
 
       // margin-top: 15px;
@@ -30,10 +34,11 @@
     //   @include temporaryOutline(green);
   } // end cart left
   .cart-right {
+    @include widthHeight(40%, 100%);
     position: relative;
     @include flex(row);
-    @include flexPosition(center, center);
-    // @include temporaryOutline(green);
+    @include flexPosition(space-evenly, flex-start);
+    // border: 1px solid blue;
 
     .increment-and-remove-btn-wrapper {
       @include flex(column);
@@ -67,7 +72,7 @@
         }
 
         .quantity {
-          user-select: none;
+          // user-select: none;
         }
 
         //^ These util classes for showing / hiding number dropdown menu must be inside cart-right class in order to function
@@ -94,13 +99,16 @@
     } // end increment and remove btn wrapper
 
     .item-price {
-      margin-left: 55px;
+      width: 40%;
+      margin-top: 14px;
       font-family: var(--HN-Light);
       font-weight: bold;
       font-size: var(--Body-Small);
       color: var(--Black);
       line-height: 26px;
       letter-spacing: 0.6px;
+      text-align: center;
+      // border: 1px solid green;
     }
   } // end cart right
   // @include temporaryOutline(blue);
