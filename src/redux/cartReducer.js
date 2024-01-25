@@ -26,13 +26,14 @@ export const cartSlice = createSlice({
               // console.log("Match found " + isIdMatch + " " + isSizeMatch);
 
               if (action.payload.newQuantity) {
-                // mutate from shoppingCartItem
+                //^ mutate from shoppingCartItem
                 state.products[i].itemQuantity = action.payload.newQuantity;
+                //! add max 5 alert
                 return;
               }
 
               if (action.payload.itemQuantity) {
-                // mutate from waitlistModal aka addToCart component
+                //^ mutate from waitlistModal aka addToCart component
                 if (
                   state.products[i].itemQuantity + action.payload.itemQuantity >
                   maxQuantity

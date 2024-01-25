@@ -1,67 +1,78 @@
 import React from "react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeItem } from "../../redux/cartReducer";
 import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
-import arrow from "../../assets/icons/down-arrow.svg";
 import "./ShoppingCartItem.css";
 
 //TODO: add UI elements to zero out an item from the cart
 export default function ShoppingCartItem(props, { data }) {
-  const [visible, setVisible] = useState(false);
-
   const dispatch = useDispatch();
   const { product } = useFetch(`/products/${props.id}?populate`);
-  // console.log(product);
 
-  const quantityLabels = [0, 1, 2, 3, 4, 5];
-  const generateQuantityLabels = (numberLabel) => {
-    const newQuantity = numberLabel;
-    return (
-      <div className='quantity-label-wrapper' key={numberLabel}>
-        <input
-          type='radio'
-          id={`select-${numberLabel}`}
-          name={numberLabel}
-          value={numberLabel}
-          className='cart-option'
-        ></input>
-        <label
-          htmlFor={numberLabel}
-          className='cart-select-item'
-          onClick={() => {
-            // update quantity in cart when user selects a different value by sending newQuantity to addToCart function
-            if (newQuantity > 0) {
-              dispatch(
-                addToCart({
-                  id: product.id,
-                  size: props.size,
-                  newQuantity,
-                })
-              );
-            } else {
-              dispatch(
-                removeItem({
-                  id: product.id,
-                  size: props.size,
-                  newQuantity,
-                })
-              );
-            }
-            setVisible(!visible);
-          }}
-        >
-          {numberLabel}
-        </label>
-      </div>
-    );
+  // products and state works perfectly, don't change
+  const products = useSelector((state) => state.cart.products);
+
+  //! this state is where each shoppingCartItem component gets its starting quantity
+  const [productQuantity, setProductQuantity] = useState(
+    props.individualItemQuantity
+  );
+  const maxQuantityPerProduct = 5;
+  const minQuantityPerProduct = 1;
+
+  // console.log(product);
+  // console.log(products);
+  // console.log(typeof productQuantity);
+
+  //get correct product by matching id and size
+  const getProduct = (id, size) => {
+    // console.log(id, size);
+    for (let i = 0; i < products.length; i++) {
+      if (id === products[i].id && size === products[i].size) {
+        // setProductQuantity(products[i].itemQuantity);
+        // alert("match found!!");
+        return products[i].itemQuantity;
+      } else {
+        continue;
+      }
+    }
+    alert("no match found");
+    return;
+  };
+
+  const updateProductQuantity = (operation, currentQuantity) => {
+    if (operation === "increment") {
+      if (productQuantity < maxQuantityPerProduct) {
+        setProductQuantity(currentQuantity + 1);
+        const newQuantity = productQuantity + 1;
+        dispatch(
+          addToCart({
+            id: product.id,
+            size: props.size,
+            newQuantity,
+          })
+        );
+      }
+    } else if (operation === "decrement") {
+      if (productQuantity > minQuantityPerProduct) {
+        setProductQuantity(currentQuantity - 1);
+        const newQuantity = productQuantity - 1;
+        dispatch(
+          addToCart({
+            id: product.id,
+            size: props.size,
+            newQuantity,
+          })
+        );
+      }
+    } else return;
+    // console.log(productQuantity);
   };
 
   return (
     <div className='item-wrapper'>
       <div className='cart-left'>
-        {/* //TODO: get data from redux */}
         <Link
           to={props.navigationLink}
           onClick={() => {
@@ -73,31 +84,37 @@ export default function ShoppingCartItem(props, { data }) {
         <div className='cart-detail'>
           <h2>{props.name}</h2>
           <h2>{`Size: ${props.size}`}</h2>
-          {/* <h2>{`$${props.price}`}</h2> */}
-          {/* <h2>{`$${props.price} USD x ${props.individualItemQuantity}`}</h2> */}
-          {/* <h2>{`$${props.totalItemPrice}`}</h2> */}
         </div>
       </div>
       <div className='cart-right'>
-        {/* //& Number value picker */}
+        <div className='increment-btn-wrapper'>
+          <button
+            onClick={() => {
+              updateProductQuantity(
+                "decrement",
+                getProduct(props.id, props.size)
+              );
+              // console.log(itemQuantity);
+            }}
+          >
+            -
+          </button>
 
-        <button
-          className='number-dropdown-button'
-          id='button'
-          onClick={() => {
-            setVisible(!visible);
-          }}
-        >
-          {props.individualItemQuantity}
-          <img src={arrow} alt='' className='arrow' />
-        </button>
+          <p className='quantity'>{productQuantity}</p>
+          {/* <p className='quantity'>{props.individualItemQuantity}</p> */}
 
-        <div
-          className={`cart-dropdown-wrapper ${visible ? "" : "hidden"}`}
-          id='dropdown'
-        >
-          {quantityLabels.map(generateQuantityLabels)}
+          <button
+            onClick={() => {
+              updateProductQuantity(
+                "increment",
+                getProduct(props.id, props.size)
+              );
+            }}
+          >
+            +
+          </button>
         </div>
+
         <h2 className='item-price'>{`$${props.price} USD`}</h2>
       </div>
     </div>
