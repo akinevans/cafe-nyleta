@@ -70,7 +70,9 @@ export default function ShoppingCartItem(props, { data }) {
         <Link
           to={props.navigationLink}
           onClick={() => {
-            alert("close modal");
+            // props.closeBtnOnClick -->> will close the modal from ShoppingCartModal, and navigate to item page
+            props.closeBtnOnClick();
+            // alert("close modal");
           }}
         >
           <img src={props.imgSrc} alt={props.imgAlt} className='cart-img' />

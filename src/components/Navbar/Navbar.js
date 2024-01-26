@@ -118,8 +118,8 @@ export default function Navbar(props) {
           alert("checkout btn pressed");
         }}
       />
-      {/* //& Hamburger modal */}
 
+      {/* //& Hamburger modal */}
       <HamburgerMenuModal
         //windowSize[0] is width [1] is height
         className={`${menuVisible && windowSize[0] <= 834 ? "" : "hide"}`}
