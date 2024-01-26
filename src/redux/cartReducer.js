@@ -1,3 +1,5 @@
+// Redux persist (in store.js) saves the state of the shopping cart so that when the page reloads the user will still have items in cart
+
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {

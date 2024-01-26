@@ -4,8 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, HashRouter } from "react-router-dom";
-import { store } from "./redux/store";
+import { store, persistor } from "./redux/store";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -16,7 +17,9 @@ root.render(
     <Provider store={store}>
       <HashRouter>
         <Navbar quantity='0' />
-        <App />
+        <PersistGate loading={"Loading"} persistor={persistor}>
+          <App />
+        </PersistGate>
         <Footer />
       </HashRouter>
     </Provider>
