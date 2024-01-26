@@ -21,6 +21,7 @@ const ItemCard = ({ item }, props) => {
         }`}
       >
         <p>{item?.attributes?.title}</p>
+        {/* <p>{item?.attributes?.color}</p> */}
         <p>{`$${item?.attributes?.price} USD`}</p>
       </div>
     </div>

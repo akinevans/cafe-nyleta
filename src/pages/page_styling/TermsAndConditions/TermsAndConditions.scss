@@ -1,0 +1,56 @@
+@import "../../../components/styleFunctions/functions";
+
+.terms-conditions-page-wrapper {
+  margin: 0 auto;
+}
+
+.terms-conditions-page-wrapper,
+.terms-inner-wrapper {
+  @include flex(column);
+  @include flexPosition(center, center);
+  @include maxWidth(var(--Desktop));
+  //   @include temporaryOutline(red);
+
+  .terms-inner-wrapper {
+    @include widthHeight(90%, fit-content);
+    font-family: var(--HN-Light);
+    font-weight: var(--Light-Weight);
+    color: var(--Grey-100);
+    // @include temporaryOutline(blue);
+
+    .page-title {
+      font-size: var(--Heading-1);
+    }
+
+    .page-subtitle {
+      margin-top: 10px;
+    }
+
+    .body-text-wrapper {
+      @include flex(column);
+      @include flexPosition(center, center);
+      margin: 0 25px;
+
+      .welcome-message {
+        @include maxWidth(85%);
+        font-size: var(--Heading-3);
+        text-align: center;
+      }
+
+      ol {
+        li {
+          font-size: var(--Heading-2);
+        }
+        p {
+          margin-bottom: 20px;
+          font-size: var(--Body);
+        }
+      }
+      .contact-message {
+        margin-top: 0;
+        text-align: center;
+        font-size: var(--Body);
+      }
+    }
+  }
+}

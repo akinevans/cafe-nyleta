@@ -33,6 +33,7 @@
       @include flex(column);
       @include flexPosition(flex-start, center);
       max-height: 676px;
+
       // @include temporaryOutline(yellow);
     }
 
@@ -40,7 +41,8 @@
       // @include widthHeight(550px, auto);
       max-width: 76.39%;
       height: auto;
-      margin-top: 60px;
+      max-height: 95%;
+      margin-top: 30px;
       cursor: pointer;
       // @include temporaryOutline(orange);
     }
@@ -56,7 +58,7 @@
       @include flex(row);
       @include flexPosition(center, center);
       gap: 9px;
-      @include widthHeight(71.65px, fit-content);
+      @include widthHeight(fit-content, fit-content);
       // @include temporaryOutline(black);
 
       .cycle-box {
@@ -66,7 +68,7 @@
       } // end cycle box
 
       //^Utility class for switching cycle box color
-      .grey {
+      .active {
         background-color: var(--Grey-100);
       } // end util class
     } // end cycle box wrapper
@@ -122,19 +124,17 @@
 }
 
 //Begin Tablet Media Queries
-
 @media screen and (max-width: 834px) {
   .item-detail-page-inner-wrapper {
     @include flexPosition(space-between, flex-start);
-
     // @include temporaryOutline(blue);
 
     .item-detail-left-wrapper {
       @include maxWidth(65%);
-
       // @include temporaryOutline(green);
 
       .image-and-cycle-wrapper {
+        max-height: 100%;
         // @include temporaryOutline(yellow);
       }
 

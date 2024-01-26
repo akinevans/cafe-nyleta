@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./WaitlistModal.css";
 import Button from "../Button/Button";
@@ -67,11 +68,18 @@ export default function WaitlistModal(props) {
         {/* Body Wrapper will get top and bottom underlines */}
         <div className='waitlist-body-wrapper'>
           <div className='waitlist-left'>
-            <img src={props.src} alt={props.alt} className='waitlist-img' />
+            <Link
+              to={`/itemdetail/${product.id}`}
+              onClick={props.closeBtnOnClick}
+            >
+              <img src={props.src} alt={props.alt} className='waitlist-img' />
+            </Link>
           </div>
           <div className='waitlist-right'>
             <div className='waitlist-detail'>
-              <h2>{props.name}</h2>
+              <h2>{`${props.name} ${
+                product.attributes?.color ? "- " + props.color : ""
+              }`}</h2>
               <h2>{`Size: ${props.size}`}</h2>
               <h2>{`$${props.price} USD`}</h2>
             </div>
@@ -114,6 +122,7 @@ export default function WaitlistModal(props) {
                   description: product.attributes.description,
                   price: product.attributes.price,
                   size: props.size,
+                  color: props.color,
                   image: product.attributes.images.data[0].attributes.url,
                   itemQuantity,
                 })

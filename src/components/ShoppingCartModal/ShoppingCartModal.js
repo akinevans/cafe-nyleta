@@ -33,42 +33,53 @@ export default function ShoppingCartModal(props) {
   return (
     <div className={`cart-modal-page-wrapper ${props.className}`}>
       <div className='cart-wrapper'>
-        <h1>{`My Cart (${getCartQuantityAndPrice()[1]})`}</h1>
-        <h1 className={cartEmpty ? "hidden" : ""}>{`Total Price: $${
-          getCartQuantityAndPrice()[0]
-        }`}</h1>
+        <div className='top-cart-title-wrapper'>
+          <h1>{`Cart (${getCartQuantityAndPrice()[1]})`}</h1>
+        </div>
         <h1
           className={`cart-empty-message ${cartEmpty ? "visible" : "hidden"}`}
         >
           Cart Empty
         </h1>
-        {products.map((data) => (
-          <ShoppingCartItem
-            id={data.id}
-            //! update key once sizes are included, multiple children will have the same id (id + size will work)
-            key={data.id + data.size}
-            name={data.title}
-            price={data.price}
-            size={data.size}
-            individualItemQuantity={data.itemQuantity}
-            totalItemPrice={data.itemQuantity * data.price}
-            imgSrc={process.env.REACT_APP_UPLOAD_URL + data?.image}
-            imgAlt={data.title}
-            navigationLink={`/itemdetail/${data.id}`}
-            closeBtnOnClick={props.closeBtnOnClick}
-          />
-        ))}
-        <div className='cart-btn-wrapper'>
-          <Button
-            className='btn white back-to-shop'
-            title='Close'
-            onClick={props.closeBtnOnClick}
-          />
-          <Button
-            className={`btn grey back-to-shop ${cartEmpty ? " disabled " : ""}`}
-            title='Checkout'
-            onClick={!cartEmpty ? props.checkoutBtnOnClick : null}
-          />
+        <div className='shopping-cart-item-component-wrapper'>
+          {products.map((data) => (
+            <ShoppingCartItem
+              id={data.id}
+              key={data.id + data.size}
+              name={data.title}
+              price={data.price}
+              color={data.color}
+              size={data.size}
+              individualItemQuantity={data.itemQuantity}
+              totalItemPrice={data.itemQuantity * data.price}
+              imgSrc={process.env.REACT_APP_UPLOAD_URL + data?.image}
+              imgAlt={data.title}
+              navigationLink={`/itemdetail/${data.id}`}
+              closeBtnOnClick={props.closeBtnOnClick}
+            />
+          ))}
+        </div>
+        <div className='total-wrapper'>
+          <h1 className={`cart-text ${cartEmpty ? "hidden" : ""}`}>
+            {`Total (${getCartQuantityAndPrice()[1]}):`}{" "}
+            <span className='cart-price'>
+              ${getCartQuantityAndPrice()[0]} USD
+            </span>{" "}
+          </h1>
+          <div className='cart-btn-wrapper'>
+            <Button
+              className='btn white back-to-shop'
+              title='Close'
+              onClick={props.closeBtnOnClick}
+            />
+            <Button
+              className={`btn grey back-to-shop ${
+                cartEmpty ? " disabled " : ""
+              }`}
+              title='Check out'
+              onClick={!cartEmpty ? props.checkoutBtnOnClick : null}
+            />
+          </div>
         </div>
       </div>
     </div>

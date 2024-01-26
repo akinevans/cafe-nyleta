@@ -1,0 +1,58 @@
+.privacy-policy-page-wrapper {
+  margin: 0 auto;
+}
+
+.privacy-policy-page-wrapper,
+.privacy-policy-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: var(--Desktop);
+}
+.privacy-policy-page-wrapper .privacy-policy-inner-wrapper,
+.privacy-policy-inner-wrapper .privacy-policy-inner-wrapper {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  color: var(--Grey-100);
+}
+.privacy-policy-page-wrapper .privacy-policy-inner-wrapper .page-title,
+.privacy-policy-inner-wrapper .privacy-policy-inner-wrapper .page-title {
+  font-size: var(--Heading-1);
+}
+.privacy-policy-page-wrapper .privacy-policy-inner-wrapper .page-subtitle,
+.privacy-policy-inner-wrapper .privacy-policy-inner-wrapper .page-subtitle {
+  margin-top: 10px;
+}
+.privacy-policy-page-wrapper .privacy-policy-inner-wrapper .body-text-wrapper,
+.privacy-policy-inner-wrapper .privacy-policy-inner-wrapper .body-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px;
+}
+.privacy-policy-page-wrapper .privacy-policy-inner-wrapper .body-text-wrapper .welcome-message,
+.privacy-policy-inner-wrapper .privacy-policy-inner-wrapper .body-text-wrapper .welcome-message {
+  max-width: 85%;
+  font-size: var(--Heading-3);
+  text-align: center;
+}
+.privacy-policy-page-wrapper .privacy-policy-inner-wrapper .body-text-wrapper ol li,
+.privacy-policy-inner-wrapper .privacy-policy-inner-wrapper .body-text-wrapper ol li {
+  font-size: var(--Heading-2);
+}
+.privacy-policy-page-wrapper .privacy-policy-inner-wrapper .body-text-wrapper ol p,
+.privacy-policy-inner-wrapper .privacy-policy-inner-wrapper .body-text-wrapper ol p {
+  margin-bottom: 20px;
+  font-size: var(--Body);
+}
+.privacy-policy-page-wrapper .privacy-policy-inner-wrapper .body-text-wrapper .closing-message,
+.privacy-policy-inner-wrapper .privacy-policy-inner-wrapper .body-text-wrapper .closing-message {
+  margin-top: 0;
+  text-align: center;
+  font-size: var(--Body);
+}/*# sourceMappingURL=PrivacyPolicy.css.map */
