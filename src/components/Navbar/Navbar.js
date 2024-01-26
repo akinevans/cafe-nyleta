@@ -115,7 +115,7 @@ export default function Navbar(props) {
         }}
         checkoutBtnOnClick={() => {
           //navigate to checkout page
-          alert("checkout btn pressed");
+          // alert("checkout btn pressed");
         }}
       />
 

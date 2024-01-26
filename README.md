@@ -1,8 +1,10 @@
 # Cafe Nyleta
 
-### UI Designer: [Kevin Nguyen Do](http://www.kevinnguyendo.com/)
+### An Ecommerce shopping application built using React, JavaScript, Strapi CMS, Redux, SASS and Axios.
 
 ### Web Developer: [Akin Evans](http://www.akinevans.com/)
+
+### UI Designer: [Kevin Nguyen Do](http://www.kevinnguyendo.com/)
 
 ![Cafe Nyleta Homepage](./src/assets/images/item-demo.png)
 ![Cafe Nyleta Homepage](./src/assets/images/homepage.png)

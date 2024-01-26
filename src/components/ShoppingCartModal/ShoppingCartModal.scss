@@ -70,7 +70,7 @@
 
   .cart-empty-message {
     text-align: center;
-    margin: 15px 0;
+    margin: 15px 0 5px 0;
   }
 
   .total-wrapper {
@@ -79,14 +79,14 @@
     @include flex(column);
     @include flexPosition(flex-end, flex-end);
     @include widthHeight(100%, auto);
-    margin-top: 32px;
+    margin-top: 16px;
     padding-bottom: 40px;
     border-top: 1px solid var(--Grey-50);
     background-color: var(--Background);
 
     .cart-text,
     .cart-price {
-      margin: 32px 0;
+      margin: 32px 0 16px 0;
       font-size: var(--Body);
     }
   }
@@ -95,6 +95,7 @@
     @include flex(row);
     gap: 8px;
     @include flexPosition(center, center);
+    margin-top: 16px;
     // @include temporaryOutline(green);
   }
 } // end cart wrapper

@@ -64,7 +64,7 @@ export default function WaitlistModal(props) {
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
       <div className='waitlist-wrapper'>
         {/* if props.quantity is undefined, display nothing */}
-        <h1>{`My Cart ${getCartQuantityAndPrice()[0]} <--- waitlist modal`}</h1>
+        <h1>{`My Cart ${getCartQuantityAndPrice()[0]}`}</h1>
         {/* Body Wrapper will get top and bottom underlines */}
         <div className='waitlist-body-wrapper'>
           <div className='waitlist-left'>

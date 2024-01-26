@@ -32,12 +32,11 @@
 .button-filter-outer-wrapper .filter-btn:active {
   opacity: 80%;
 }
-
-.selected {
+.button-filter-outer-wrapper .selected {
   font-family: var(--HN-Medium);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-decoration-color: var(--Black);
   text-underline-offset: 2px;
-  font-weight: bold;
+  font-weight: 600;
 }/*# sourceMappingURL=ButtonFilter.css.map */

@@ -139,7 +139,7 @@ export default function ItemDetail(props, { item }) {
               className={`btn waitlist item-detail-btn ${
                 inStock ? "grey" : "out-of-stock"
               }`}
-              title={inStock ? "Add to cart" : "Out of stock"}
+              title={inStock ? "Add to Cart" : "Out of stock"}
               onClick={() => {
                 if (inStock) {
                   setVisible(!visible);

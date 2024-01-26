@@ -34,15 +34,15 @@
       opacity: 80%;
     }
   } // end filter btn
+
+  //^ Utility classes
+
+  .selected {
+    font-family: var(--HN-Medium);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--Black);
+    text-underline-offset: 2px;
+    font-weight: 600;
+  }
 } // end outer wrapper
-
-//^ Utility classes
-
-.selected {
-  font-family: var(--HN-Medium);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--Black);
-  text-underline-offset: 2px;
-  font-weight: bold;
-}
