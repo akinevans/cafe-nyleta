@@ -4,7 +4,9 @@
 
 ### Web Developer: [Akin Evans](http://www.akinevans.com/)
 
+![Cafe Nyleta Homepage](./src/assets/images/item-demo.png)
 ![Cafe Nyleta Homepage](./src/assets/images/homepage.png)
+![Cafe Nyleta Homepage](./src/assets/images/store-demo.png)
 
 ---
 
