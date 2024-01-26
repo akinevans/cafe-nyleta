@@ -22,7 +22,7 @@ export default function ItemDetail(props, { item }) {
   const apiFilterPath = "&[filters][type][$eq]=";
   const id = useParams().id;
 
-  const { product, loading, error } = useFetch(`/products/${id}?populate=*`);
+  const { product, loading } = useFetch(`/products/${id}?populate=*`);
   // console.log(product);
 
   const productName = product?.attributes?.title,

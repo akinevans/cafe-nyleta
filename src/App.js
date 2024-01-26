@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
