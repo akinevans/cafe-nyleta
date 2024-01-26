@@ -164,6 +164,7 @@ export default function ItemDetail(props, { item }) {
         name={productName}
         size={isOneSize ? "One Size" : productSize}
         price={productPrice}
+        color={productColor}
         closeBtnOnClick={() => {
           setVisible(!visible);
         }}

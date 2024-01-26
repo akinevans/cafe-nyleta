@@ -45,10 +45,10 @@ export default function ShoppingCartModal(props) {
           {products.map((data) => (
             <ShoppingCartItem
               id={data.id}
-              //! update key once sizes are included, multiple children will have the same id (id + size will work)
               key={data.id + data.size}
               name={data.title}
               price={data.price}
+              color={data.color}
               size={data.size}
               individualItemQuantity={data.itemQuantity}
               totalItemPrice={data.itemQuantity * data.price}

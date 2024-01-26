@@ -9,8 +9,6 @@ export default function ShoppingCartItem(props, { data }) {
   const { product } = useFetch(`/products/${props.id}?populate`);
   const products = useSelector((state) => state.cart.products);
 
-  const maxQuantityPerProduct = 5;
-  const minQuantityPerProduct = 1;
   const dispatch = useDispatch();
 
   // console.log(product);
@@ -33,28 +31,35 @@ export default function ShoppingCartItem(props, { data }) {
   };
 
   const updateProductQuantity = (operation, currentQuantity) => {
-    if (operation === "increment") {
-      if (props.individualItemQuantity < maxQuantityPerProduct) {
-        const newQuantity = props.individualItemQuantity + 1;
-        dispatch(
-          addToCart({
-            id: product.id,
-            size: props.size,
-            newQuantity,
-          })
-        );
-      }
-    } else if (operation === "decrement") {
-      if (props.individualItemQuantity > minQuantityPerProduct) {
-        const newQuantity = props.individualItemQuantity - 1;
-        dispatch(
-          addToCart({
-            id: product.id,
-            size: props.size,
-            newQuantity,
-          })
-        );
-      }
+    const maxQuantityPerProduct = 5;
+    const minQuantityPerProduct = 1;
+
+    if (
+      operation === "increment" &&
+      props.individualItemQuantity < maxQuantityPerProduct
+    ) {
+      const newQuantity = props.individualItemQuantity + 1;
+      dispatch(
+        addToCart({
+          id: product.id,
+          size: props.size,
+          color: props.color,
+          newQuantity,
+        })
+      );
+    } else if (
+      operation === "decrement" &&
+      props.individualItemQuantity > minQuantityPerProduct
+    ) {
+      const newQuantity = props.individualItemQuantity - 1;
+      dispatch(
+        addToCart({
+          id: product.id,
+          size: props.size,
+          color: props.color,
+          newQuantity,
+        })
+      );
     } else return;
     // console.log(productQuantity);
   };
@@ -71,7 +76,9 @@ export default function ShoppingCartItem(props, { data }) {
           <img src={props.imgSrc} alt={props.imgAlt} className='cart-img' />
         </Link>
         <div className='cart-detail'>
-          <h2>{props.name}</h2>
+          <h2>{`${props.name} ${
+            product.attributes?.color ? "- " + props.color : ""
+          }`}</h2>
           <h2>{`Size: ${props.size}`}</h2>
         </div>
       </div>

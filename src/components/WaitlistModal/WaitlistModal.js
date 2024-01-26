@@ -71,7 +71,9 @@ export default function WaitlistModal(props) {
           </div>
           <div className='waitlist-right'>
             <div className='waitlist-detail'>
-              <h2>{props.name}</h2>
+              <h2>{`${props.name} ${
+                product.attributes?.color ? "- " + props.color : ""
+              }`}</h2>
               <h2>{`Size: ${props.size}`}</h2>
               <h2>{`$${props.price} USD`}</h2>
             </div>
@@ -114,6 +116,7 @@ export default function WaitlistModal(props) {
                   description: product.attributes.description,
                   price: product.attributes.price,
                   size: props.size,
+                  color: props.color,
                   image: product.attributes.images.data[0].attributes.url,
                   itemQuantity,
                 })
