@@ -26,6 +26,7 @@ export default function ItemDetail(props, { item }) {
   // console.log(product);
 
   const productName = product?.attributes?.title,
+    productColor = product?.attributes?.color,
     productDescription = product?.attributes?.description,
     productPrice = product?.attributes?.price,
     inStock = product?.attributes?.inStock,
@@ -119,7 +120,9 @@ export default function ItemDetail(props, { item }) {
           <div className='item-detail-right-wrapper'>
             {/* //^ itemdetail page now has :id routes, so each product has its own link as noted by its id. */}
             {/* // dynamically get name, price, description */}
-            <h1 className='product-name'>{productName}</h1>
+            <h1 className='product-name'>{`${productName} ${
+              productColor ? "- " + productColor : ""
+            }`}</h1>
 
             <h1 className='price'>{`$${productPrice} USD`}</h1>
 
