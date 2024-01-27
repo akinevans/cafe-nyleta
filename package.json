@@ -1,7 +1,7 @@
 {
   "name": "cafe-nyleta",
   "version": "0.1.0",
-  "homepage": "http://akinevans.github.io/cafe-nyleta/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@material-tailwind/react": "^2.1.4",
