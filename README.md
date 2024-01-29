@@ -96,7 +96,7 @@
 - [x] Import assets
 - [x] Build contact modal
 - [x] Build contact dropdown
-- [x] Build UI for Desktop
+- [] Build UI for Desktop
 - [] Build UI for Tablet
 - [] Build UI for Mobile
 
