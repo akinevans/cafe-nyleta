@@ -14,14 +14,12 @@ export default function Shop(props) {
   // const [filterPath, setFilterPath] = useState("");
   const apiFilterPath = "&[filters][type][$eq]=";
 
-  const { product, loading } = useFetch(
-    // First ternary operator: if a filter prop is supplied in an instance of the Shop component, concatenate the apiFilterPath string to the api fetch path. Else do nothing. (An empty string is used because 'null' breaks the operation)
+  // First ternary operator: if a filter prop is supplied in an instance of the Shop component, concatenate the apiFilterPath string to the api fetch path. Else do nothing. (An empty string is used because 'null' breaks the operation)
 
-    // Second ternary operator: if a filter prop is supplied in an instance of the Shop component, render products of that filter category, else, render all products. Note - providing an empty string returns all products from the API
-    `/products?populate=*
-    ${props.filter ? apiFilterPath : ""}${props.filter ? props.filter : ""}`
-  );
-  // console.log("product  " + product);
+  // Second ternary operator: if a filter prop is supplied in an instance of the Shop component, render products of that filter category, else, render all products. Note - providing an empty string returns all products from the API
+  const { product, loading } = useFetch(`/products?populate=*
+    ${props.filter ? apiFilterPath : ""}${props.filter ? props.filter : ""}`);
+  console.log("product  " + product);
 
   return (
     <div className='shop-page-wrapper'>
