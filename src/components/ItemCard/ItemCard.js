@@ -3,12 +3,7 @@ import "./ItemCard.css";
 
 const ItemCard = ({ item }, props) => {
   // console.log(item);
-  const firstImgExists =
-    item?.attributes?.images?.data[0]?.attributes?.url !== null;
-
-  const firstImage = firstImgExists
-    ? item?.attributes?.images?.data[0]?.attributes?.url
-    : undefined;
+  const firstImage = item?.attributes?.images?.data[0]?.attributes?.url;
 
   return (
     <div className='item-card-outer-wrapper'>
@@ -17,11 +12,7 @@ const ItemCard = ({ item }, props) => {
         className={`item-card-img ${
           item.attributes.inStock ? "" : "out-of-stock"
         }`}
-        src={
-          firstImage !== null
-            ? process.env.REACT_APP_UPLOAD_URL + firstImage
-            : null
-        }
+        src={process.env.REACT_APP_UPLOAD_URL + firstImage}
         alt={item?.attributes?.alt}
       />
       <div
