@@ -3,7 +3,12 @@ import "./ItemCard.css";
 
 const ItemCard = ({ item }, props) => {
   // console.log(item);
-  const firstImage = item?.attributes?.images?.data[0]?.attributes?.url;
+  const firstImgExists =
+    item?.attributes?.images?.data[0]?.attributes?.url !== null;
+
+  const firstImage = firstImgExists
+    ? item?.attributes?.images?.data[0]?.attributes?.url
+    : undefined;
 
   return (
     <div className='item-card-outer-wrapper'>
