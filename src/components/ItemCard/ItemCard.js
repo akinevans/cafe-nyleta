@@ -5,8 +5,6 @@ const ItemCard = ({ item }, props) => {
   console.log(item);
   const firstImage = item?.attributes?.images?.data[0]?.attributes?.url;
 
-  console.log(item?.attributes?.images?.data[0]?.attributes?.url);
-
   return (
     <div className='item-card-outer-wrapper'>
       <img
@@ -14,7 +12,7 @@ const ItemCard = ({ item }, props) => {
         className={`item-card-img ${
           item.attributes.inStock ? "" : "out-of-stock"
         }`}
-        src={process.env.REACT_APP_UPLOAD_URL + firstImage}
+        src={firstImage}
         alt={item?.attributes?.alt}
       />
       <div
