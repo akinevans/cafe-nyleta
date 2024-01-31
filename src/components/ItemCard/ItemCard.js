@@ -2,8 +2,10 @@ import React from "react";
 import "./ItemCard.css";
 
 const ItemCard = ({ item }, props) => {
-  // console.log(item);
+  console.log(item);
   const firstImage = item?.attributes?.images?.data[0]?.attributes?.url;
+
+  console.log(item?.attributes?.images?.data[0]?.attributes?.url);
 
   return (
     <div className='item-card-outer-wrapper'>
