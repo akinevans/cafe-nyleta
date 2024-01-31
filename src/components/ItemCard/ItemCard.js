@@ -12,7 +12,7 @@ const ItemCard = ({ item }, props) => {
         className={`item-card-img ${
           item.attributes.inStock ? "" : "out-of-stock"
         }`}
-        src={process.env.CLOUDINARY_URL + firstImage}
+        src={process.env.REACT_APP_UPLOAD_URL + firstImage}
         alt={item?.attributes?.alt}
       />
       <div
