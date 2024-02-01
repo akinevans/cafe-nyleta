@@ -90,7 +90,7 @@
 }
 @media screen and (max-width: 530px) {
   .clients-outer-wrapper {
-    margin-bottom: 64px;
+    margin-bottom: 0px;
   }
   .clients-outer-wrapper .clients-inner-wrapper .clients-text-wrapper {
     margin-bottom: 24px;

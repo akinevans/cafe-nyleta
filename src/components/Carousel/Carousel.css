@@ -47,4 +47,7 @@
   .carousel-outer-wrapper {
     margin-bottom: 68px;
   }
+  .carousel-outer-wrapper .carousel-inner-wrapper {
+    height: 420px;
+  }
 }/*# sourceMappingURL=Carousel.css.map */

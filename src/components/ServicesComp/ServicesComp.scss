@@ -45,3 +45,18 @@
     }
   }
 }
+
+//Begin Mobile Media Queries
+@media screen and (max-width: 530px) {
+  .services-outer-wrapper {
+    margin-top: -70px;
+    .services-inner-wrapper {
+      .component-title-wrapper {
+        .component-title {
+          font-size: var(--Heading-2);
+          margin: 0 0 40px 0;
+        }
+      }
+    }
+  }
+}
