@@ -8,6 +8,7 @@
   height: 897px;
   background-color: var(--Background);
   // @include temporaryOutline(red);
+  user-select: none;
 }
 
 .item-detail-page-inner-wrapper {

@@ -6,6 +6,9 @@
   align-items: center;
   height: 897px;
   background-color: var(--Background);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .item-detail-page-inner-wrapper {
