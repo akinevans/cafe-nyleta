@@ -160,7 +160,10 @@
     width: 200px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 530px) {
+  .factories-outer-wrapper {
+    margin-top: -70px;
+  }
   .factories-outer-wrapper .factories-inner-wrapper .factories-text-wrapper {
     width: 287px;
     height: -moz-fit-content;

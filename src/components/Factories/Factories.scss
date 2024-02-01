@@ -186,9 +186,11 @@
 }
 
 //Begin Mobile Media Queries
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 530px) {
   .factories-outer-wrapper {
+    margin-top: -70px;
     .factories-inner-wrapper {
+      // border: 2px solid red;
       .factories-text-wrapper {
         @include widthHeight(287px, fit-content);
         @include maxWidth(90%);
