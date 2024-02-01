@@ -14,6 +14,13 @@
     margin-bottom: 68px;
   }
 }
+//Begin Mobile Media Queries
+@media screen and (max-width: 530px) {
+  //! be mindful of specificity issues
+  .hero-img {
+    margin-bottom: 32px;
+  }
+}
 
 //^ Utility classes
 
