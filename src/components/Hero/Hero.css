@@ -35,4 +35,21 @@
   font-size: var(--Heading-1);
   color: var(--Grey-100);
   text-align: center;
+}
+
+@media screen and (max-width: 530px) {
+  .hero-outer-wrapper {
+    margin: -15px 0 64px 0;
+  }
+  .hero-outer-wrapper .hero-inner-wrapper .hero-text-wrapper {
+    width: 340px;
+  }
+  .hero-outer-wrapper .hero-inner-wrapper .hero-text-wrapper p {
+    margin: 4px 0;
+    font-family: var(--HN-Light);
+    font-size: var(--Heading-2);
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+  }
 }/*# sourceMappingURL=Hero.css.map */

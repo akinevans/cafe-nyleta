@@ -39,7 +39,6 @@
         font-size: var(--Heading-3);
         color: var(--Black);
         text-decoration: none;
-        cursor: pointer;
 
         &:hover {
           text-decoration: underline;
@@ -60,6 +59,7 @@
         outline: none;
         border: none;
         margin-right: -5px;
+        cursor: pointer;
       }
     } // End nav links wrapper desktop
   } // End nav inner wrapper desktop
