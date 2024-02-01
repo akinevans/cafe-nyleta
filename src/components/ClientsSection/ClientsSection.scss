@@ -51,7 +51,7 @@
   } // End clients text wrapper
 
   .clients-img-wrapper {
-    @include flex();
+    @include flex(row);
     @include flexPosition(center, center);
     @include widthHeight(580px, fit-content);
     @include maxWidth(95%);

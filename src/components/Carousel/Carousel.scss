@@ -8,7 +8,10 @@
 }
 
 .carousel-outer-wrapper {
-  @include widthHeight(var(--Full), fit-content);
+  @include widthHeight(100%, fit-content);
+  @include maxWidth(100%);
+  object-fit: contain;
+
   margin-bottom: 120px;
   // @include temporaryOutline(red);
 }
@@ -18,7 +21,9 @@
   //! media queries for inner height for tablet and mobile
   @include flexPosition(flex-start, flex-start);
   @include widthHeight(100%, fit-content);
+  @include maxWidth(100%);
   // @include temporaryOutline(green);
+  object-fit: contain;
 
   overflow: scroll;
   scroll-behavior: smooth;

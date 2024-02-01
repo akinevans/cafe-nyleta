@@ -1,4 +1,5 @@
 @import-normalize;
+@import "../src/components/styleFunctions/functions";
 
 /* CSS Variable Declarations */
 :root {
@@ -44,6 +45,7 @@
 }
 
 html {
+  @include flexPosition(center, center);
   background-color: var(--Background);
 }
 

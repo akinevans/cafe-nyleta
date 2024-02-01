@@ -1,10 +1,10 @@
 @import "../styleFunctions/functions";
 
 .hero-img {
-  @include widthHeight(100%, fit-content);
+  @include widthHeight(100%, 100%);
   // @include maxWidth(var(--Desktop));
   margin: 5px 0 120px 0;
-  // @include temporaryOutline(blue);
+  // @include temporaryOutline(red);
 }
 
 //Begin Tablet Media Queries

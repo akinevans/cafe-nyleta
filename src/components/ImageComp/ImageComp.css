@@ -1,6 +1,8 @@
 .img {
   scroll-snap-align: start;
   transition: all 0.2s ease-out;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .large {

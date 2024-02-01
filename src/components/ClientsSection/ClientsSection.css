@@ -55,7 +55,7 @@
 }
 .clients-outer-wrapper .clients-img-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 580px;
@@ -79,16 +79,9 @@
     display: none;
   }
   .clients-inner-wrapper .clients-img-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 470px;
     height: -moz-fit-content;
     height: fit-content;
-    max-width: 95%;
-    transform: scale(1.25);
-    margin-bottom: 120px;
   }
   .clients-inner-wrapper .clients-img-wrapper .client-logos-image {
     max-width: 60%;
@@ -96,28 +89,14 @@
   }
 }
 @media screen and (max-width: 390px) {
-  .clients-inner-wrapper .clients-text-wrapper {
-    margin-bottom: 50px;
-  }
-  .clients-inner-wrapper .clients-text-wrapper h1 {
-    font-size: var(--Heading-2);
-  }
-  .clients-inner-wrapper .clients-text-wrapper p {
-    display: none;
-  }
-  .clients-inner-wrapper .clients-img-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  .clients-img-wrapper {
     width: 470px;
     height: -moz-fit-content;
     height: fit-content;
     max-width: 95%;
-    transform: scale(1.25);
     margin-bottom: 120px;
   }
-  .clients-inner-wrapper .clients-img-wrapper .client-logos-image {
+  .clients-img-wrapper .client-logos-image {
     content: url("../../assets/images/home/client-logos/logos_mobile.svg");
   }
 }/*# sourceMappingURL=ClientsSection.css.map */

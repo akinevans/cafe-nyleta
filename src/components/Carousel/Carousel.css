@@ -8,9 +8,12 @@
 }
 
 .carousel-outer-wrapper {
-  width: var(--Full);
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-bottom: 120px;
 }
 
@@ -20,6 +23,9 @@
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   overflow: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;

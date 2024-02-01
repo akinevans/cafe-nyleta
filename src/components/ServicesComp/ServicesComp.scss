@@ -8,14 +8,14 @@
 
 .services-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
-  //   @include temporaryOutline(red);
+  // @include temporaryOutline(red);
 }
 
 .services-inner-wrapper {
   //   @include widthHeight(780px, 100%);
   //   @include maxWidth(780px);
   max-width: 82%;
-  margin: 0 50px 118px 50px;
+  margin: 0 25px 118px 25px;
   //   @include temporaryOutline(pink);
 
   .component-title-wrapper {
