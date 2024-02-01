@@ -13,11 +13,11 @@ export default function Shop(props) {
   // const [category, setCategory] = useState("");
   // const [filterPath, setFilterPath] = useState("");
   const apiFilterPath = "&[filters][type][$eq]=";
-  const sortByIdPath = "&sort=id:asc";
-  //^ &sort=id:asc allows the shop page to sort by id, price, name or any other property in the strapi content type. asc = ascending, desc = descending
+  const sortPath = "&sort=displayOrder:asc";
+  //^ &sort=id:asc allows the shop page to sort by id, price, displayOrder, name or any other property in the strapi content type. asc = ascending, desc = descending
 
   const { product, loading } = useFetch(`/products?populate=*
-    ${props.filter ? apiFilterPath + props.filter : ""}${sortByIdPath}`);
+    ${props.filter ? apiFilterPath + props.filter : ""}${sortPath}`);
 
   console.log("product  " + product);
 
