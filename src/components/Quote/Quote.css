@@ -53,6 +53,25 @@
     line-height: 55.6px; /* 162.5% */
   }
 }
+@media screen and (max-width: 530px) {
+  .quote-outer-wrapper {
+    padding: 0;
+  }
+  .quote-outer-wrapper .quote-inner-wrapper {
+    padding: 48px 0;
+  }
+  .quote-outer-wrapper .quote-inner-wrapper h1 {
+    max-width: 339px;
+    margin-bottom: 24px;
+    font-size: var(--Heading-3);
+    font-weight: 5;
+    line-height: normal;
+  }
+  .quote-outer-wrapper .quote-inner-wrapper p {
+    font-size: var(--Body-Small);
+    line-height: 26px;
+  }
+}
 @media screen and (max-width: 390px) {
   .quote-outer-wrapper {
     padding: 48px 0;
