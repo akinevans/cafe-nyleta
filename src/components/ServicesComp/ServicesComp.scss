@@ -49,8 +49,12 @@
 //Begin Mobile Media Queries
 @media screen and (max-width: 530px) {
   .services-outer-wrapper {
+    // @include widthHeight(var(--Full), 350px);
+    // border: 2px solid red;
+
     margin-top: -70px;
     .services-inner-wrapper {
+      margin-bottom: 32px;
       .component-title-wrapper {
         .component-title {
           font-size: var(--Heading-2);

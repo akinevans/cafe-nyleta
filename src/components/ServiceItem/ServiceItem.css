@@ -73,4 +73,21 @@
   opacity: 0;
   margin: 0;
   transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 530px) {
+  .service-item-outer-wrapper {
+    margin: 8px 0;
+  }
+  .service-item-outer-wrapper .service-item-inner-wrapper {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+  .service-item-outer-wrapper .service-item-inner-wrapper .service-item-title-wrapper {
+    margin: 8px 0;
+  }
+  .service-item-outer-wrapper .service-item-inner-wrapper .service-item-title-wrapper .service-item-title {
+    margin: 0 0 0 15px;
+    line-height: normal;
+  }
 }/*# sourceMappingURL=ServiceItem.css.map */
