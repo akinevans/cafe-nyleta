@@ -85,24 +85,41 @@
 
 //Begin Mobile Media Queries
 @media screen and (max-width: 530px) {
-  .nav-inner-wrapper {
-    .nav-logo {
-      max-width: 128.57px;
-      margin-left: 25px;
-    }
+  .nav-outer-wrapper {
+    .nav-inner-wrapper {
+      @include widthHeight(90%, 45px);
 
-    .nav-links-wrapper {
-      @include flexPosition(flex-end, center);
+      @include flexPosition(center, center);
 
-      a,
-      .cart-btn {
-        display: none;
+      a {
+        width: fit-content;
+        height: fit-content;
       }
 
-      .hamburger-menu {
-        img {
-          width: 30px;
-          height: 30px;
+      a {
+        .nav-logo {
+          width: 128.57px;
+          width: 128.57px;
+          max-width: 128.57px;
+          height: 64px;
+          margin-left: 0px;
+          // border: 2px solid red;
+        }
+      }
+
+      .nav-links-wrapper {
+        @include flexPosition(flex-end, center);
+
+        a,
+        .cart-btn {
+          display: none;
+        }
+
+        .hamburger-menu {
+          img {
+            width: 30px;
+            height: 30px;
+          }
         }
       }
     }

@@ -80,19 +80,34 @@
   }
 }
 @media screen and (max-width: 530px) {
-  .nav-inner-wrapper .nav-logo {
-    max-width: 128.57px;
-    margin-left: 25px;
+  .nav-outer-wrapper .nav-inner-wrapper {
+    width: 90%;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
   }
-  .nav-inner-wrapper .nav-links-wrapper {
+  .nav-outer-wrapper .nav-inner-wrapper a {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .nav-outer-wrapper .nav-inner-wrapper a .nav-logo {
+    width: 128.57px;
+    width: 128.57px;
+    max-width: 128.57px;
+    height: 64px;
+    margin-left: 0px;
+  }
+  .nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper {
     justify-content: flex-end;
     align-items: center;
   }
-  .nav-inner-wrapper .nav-links-wrapper a,
-  .nav-inner-wrapper .nav-links-wrapper .cart-btn {
+  .nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper a,
+  .nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .cart-btn {
     display: none;
   }
-  .nav-inner-wrapper .nav-links-wrapper .hamburger-menu img {
+  .nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .hamburger-menu img {
     width: 30px;
     height: 30px;
   }
