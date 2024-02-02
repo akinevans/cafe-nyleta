@@ -1,6 +1,7 @@
 @import "../../styleFunctions/functions";
 
 .dropdown-outer-wrapper {
+  @include widthHeight(100%, auto);
   position: relative;
   //z-index fixes bug where 'Message* text appears in the dropdown menu'
   z-index: 1;
@@ -9,7 +10,7 @@
 .service-button {
   @include flex(row);
   @include flexPosition(space-between, center);
-  @include widthHeight(580px, 45px);
+  @include widthHeight(100%, 45px);
   padding: 0 16px;
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
@@ -30,10 +31,10 @@
 .dropdown-wrapper {
   position: absolute;
   top: 100%;
-  right: 0%;
+  left: 0%;
   @include flex(column);
   @include flexPosition(center, flex-start);
-  @include widthHeight(580px, fit-content);
+  @include widthHeight(100%, fit-content);
   padding: 0 0 0 16px;
   background-color: var(--White);
   border: 1px solid var(--Black);

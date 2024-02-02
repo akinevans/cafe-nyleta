@@ -17,9 +17,10 @@
 .contact-form {
   justify-content: center;
   align-items: flex-start;
-  width: 580px;
+  width: 85%;
   height: -moz-fit-content;
   height: fit-content;
+  max-width: var(--Desktop);
 }
 .contact-form .form-title {
   width: 100%;
@@ -33,7 +34,7 @@
 }
 .contact-form input,
 .contact-form .contact-select {
-  width: 580px;
+  width: 100%;
   height: 45px;
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
@@ -80,10 +81,9 @@
   font-family: var(--HN-Medium);
 }
 .contact-form textarea {
-  width: 580px;
+  width: 100%;
   height: 158px;
-  max-width: 580px;
-  min-width: 580px;
+  max-width: 100%;
   min-height: 64px;
   margin: 24px 0 24px 0;
   padding: 16px 0 16px 16px;
