@@ -26,13 +26,21 @@
     // @include temporaryOutline(blue);
 
     &:hover {
+      color: var(--Black);
+
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-decoration-color: var(--Black);
       text-underline-offset: 2px;
     }
     &:active {
+      color: var(--Black);
+
       opacity: 80%;
+    }
+
+    &visited {
+      color: var(--Black);
     }
   } // end filter btn
 
@@ -40,6 +48,7 @@
 
   .selected {
     font-family: var(--HN-Medium);
+    color: var(--Black);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-decoration-color: var(--Black);
