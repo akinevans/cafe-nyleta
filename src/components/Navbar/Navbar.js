@@ -11,8 +11,6 @@ import HamburgerMenuModal from "../HamburgerMenuModal/HamburgerMenuModal";
 import hamburger from "../../assets/icons/hamburger-menu.svg";
 import exit from "../../assets/icons/exit.svg";
 
-//TODO: There is no way to navigate to the Cart while in tablet / mobile view. Look at Figma to see if Kevin made any changes
-
 export default function Navbar(props) {
   const [cartVisible, setCartVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
