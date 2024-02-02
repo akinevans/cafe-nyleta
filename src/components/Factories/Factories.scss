@@ -1,5 +1,4 @@
 @import "../styleFunctions/functions";
-//! Build Modal that triggers when hovering over arrow on map
 .factories-outer-wrapper,
 .factories-inner-wrapper {
   @include flex(column);
@@ -247,11 +246,9 @@
 
         .turkey-modal {
           @include maxWidth(220px);
-
           top: 21%;
-          //^ using 'right' breaks layout on screen size. If using position absolute only use 'top' and 'left'
           // right: 0.5%;
-          left: 15%;
+          left: 0%;
         }
 
         .vietnam {
