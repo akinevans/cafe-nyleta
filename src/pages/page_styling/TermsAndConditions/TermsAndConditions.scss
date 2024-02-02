@@ -12,7 +12,7 @@
   //   @include temporaryOutline(red);
 
   .terms-inner-wrapper {
-    @include widthHeight(90%, fit-content);
+    @include widthHeight(95%, fit-content);
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
     color: var(--Grey-100);
@@ -20,6 +20,7 @@
 
     .page-title {
       font-size: var(--Heading-1);
+      text-align: center;
     }
 
     .page-subtitle {
@@ -32,7 +33,7 @@
       margin: 0 25px;
 
       .welcome-message {
-        @include maxWidth(85%);
+        @include maxWidth(100%);
         font-size: var(--Heading-3);
         text-align: center;
       }
