@@ -60,6 +60,30 @@
   }
 }
 
+//Begin Tablet Media Queries
+@media screen and (max-width: 530px) {
+  .quote-outer-wrapper {
+    // height: 194px;
+    padding: 0;
+
+    .quote-inner-wrapper {
+      padding: 48px 0;
+      // border: 2px solid red;
+      h1 {
+        @include maxWidth(339px);
+        margin-bottom: 24px;
+        font-size: var(--Heading-3);
+        font-weight: 5;
+        line-height: normal;
+      }
+      p {
+        font-size: var(--Body-Small);
+        line-height: 26px;
+      }
+    }
+  }
+}
+
 //Begin Mobile Media Queries
 @media screen and (max-width: 390px) {
   .quote-outer-wrapper {

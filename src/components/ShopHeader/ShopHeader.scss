@@ -26,11 +26,21 @@
     }
 
     .shop-header-list {
+      width: 50%;
+      max-width: 500px;
+      @include flex(row);
+      @include flexPosition(space-between, space-evenly);
       list-style: none;
       margin: 0 0 0 10px;
       padding: 0;
 
+      li {
+        min-width: fit-content;
+      }
+
       .filter-link {
+        @include widthHeight(fit-content, fit-content);
+        min-width: fit-content;
         margin: 0 26px 0 0;
         padding: 0;
         background-color: transparent;
@@ -40,6 +50,7 @@
         font-weight: var(--Light-Weight);
         font-size: var(--Label);
         color: var(--Grey-100);
+        text-align: left;
         text-decoration: none;
         cursor: pointer;
 

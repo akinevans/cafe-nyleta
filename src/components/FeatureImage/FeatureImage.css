@@ -9,6 +9,11 @@
     margin-bottom: 68px;
   }
 }
+@media screen and (max-width: 530px) {
+  .hero-img {
+    margin-bottom: 32px;
+  }
+}
 .zeroBottomMargin {
   margin-bottom: 0;
 }

@@ -1,5 +1,4 @@
 @import "../styleFunctions/functions";
-//! Build Modal that triggers when hovering over arrow on map
 .factories-outer-wrapper,
 .factories-inner-wrapper {
   @include flex(column);
@@ -94,10 +93,10 @@
       }
 
       .turkey-modal {
-        top: 20%;
+        top: 22%;
         //^ using 'right' breaks layout on screen size. If using position absolute only use 'top' and 'left'
         // right: 0.5%;
-        left: 4%;
+        left: 23%;
       }
 
       .vietnam {
@@ -180,15 +179,24 @@
           left: 48%;
           width: 200px;
         }
+
+        .turkey-modal {
+          top: 22%;
+          //^ using 'right' breaks layout on screen size. If using position absolute only use 'top' and 'left'
+          // right: 0.5%;
+          left: 29%;
+        }
       } // End img wrapper
     }
   }
 }
 
 //Begin Mobile Media Queries
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 530px) {
   .factories-outer-wrapper {
+    margin-top: -70px;
     .factories-inner-wrapper {
+      // border: 2px solid red;
       .factories-text-wrapper {
         @include widthHeight(287px, fit-content);
         @include maxWidth(90%);
@@ -238,11 +246,9 @@
 
         .turkey-modal {
           @include maxWidth(220px);
-
           top: 21%;
-          //^ using 'right' breaks layout on screen size. If using position absolute only use 'top' and 'left'
           // right: 0.5%;
-          left: 1%;
+          left: 0%;
         }
 
         .vietnam {
@@ -253,7 +259,7 @@
         .vietnam-modal {
           top: 37%;
           // right: -17.5%;
-          left: 14%;
+          left: 30%;
           width: 210px;
         }
 
@@ -265,7 +271,7 @@
         .china-modal {
           top: 29.2%;
           // right: -17.2%;
-          left: 18%;
+          left: 34%;
           width: 200px;
         }
       } // End img wrapper

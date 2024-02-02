@@ -41,3 +41,20 @@
     }
   }
 }
+
+//Begin Tablet Media Queries
+@media screen and (max-width: 530px) {
+  .footer-outer-wrapper {
+    @include flexPosition(center, flex-start);
+    @include widthHeight(var(--Full), fit-content);
+    .footer-content-wrapper {
+      margin: 0;
+      img {
+        width: 128.57px;
+        max-width: 128.57px;
+        height: 64px;
+        margin-left: 0px;
+      }
+    }
+  }
+}

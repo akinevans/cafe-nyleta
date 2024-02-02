@@ -22,6 +22,14 @@ export default function HamburgerMenuModal(props) {
     <div className={`burger-menu-outer-wrapper ${props.className}`}>
       <Link
         //
+        to='/'
+        className='burger-menu-link'
+        onClick={props.onClick}
+      >
+        Home
+      </Link>
+      <Link
+        //
         to='/about'
         className='burger-menu-link'
         onClick={props.onClick}

@@ -50,7 +50,6 @@ export default function Factories() {
     },
   ];
 
-  //! Build Modal that triggers when hovering over arrow on map
   //^ Classes for modal visibility are located in Factories.scss
   return (
     <section className='factories-outer-wrapper'>
@@ -80,6 +79,9 @@ export default function Factories() {
                 duration: 0.2,
               },
             }}
+            onPointerDownCapture={() => {
+              setAmericaVisible(!americaVisible);
+            }}
             onMouseEnter={() => {
               setAmericaVisible(!americaVisible);
             }}
@@ -98,6 +100,9 @@ export default function Factories() {
                 ease: "easeOut",
                 duration: 0.2,
               },
+            }}
+            onPointerDownCapture={() => {
+              setTurkeyVisible(!turkeyVisible);
             }}
             onMouseEnter={() => {
               setTurkeyVisible(!turkeyVisible);
@@ -119,6 +124,9 @@ export default function Factories() {
                 duration: 0.2,
               },
             }}
+            onPointerDownCapture={() => {
+              setVietnamVisible(!vietnamVisible);
+            }}
             onMouseEnter={() => {
               setVietnamVisible(!vietnamVisible);
             }}
@@ -138,6 +146,9 @@ export default function Factories() {
                 ease: "easeOut",
                 duration: 0.2,
               },
+            }}
+            onPointerDownCapture={() => {
+              setChinaVisible(!chinaVisible);
             }}
             onMouseEnter={() => {
               setChinaVisible(!chinaVisible);

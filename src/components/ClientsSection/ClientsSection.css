@@ -88,15 +88,21 @@
     content: url("../../assets/images/home/client-logos/logos_tablet.svg");
   }
 }
-@media screen and (max-width: 390px) {
-  .clients-img-wrapper {
+@media screen and (max-width: 530px) {
+  .clients-outer-wrapper {
+    margin-bottom: 0px;
+  }
+  .clients-outer-wrapper .clients-inner-wrapper .clients-text-wrapper {
+    margin-bottom: 24px;
+  }
+  .clients-outer-wrapper .clients-inner-wrapper .clients-img-wrapper {
     width: 470px;
     height: -moz-fit-content;
     height: fit-content;
     max-width: 95%;
-    margin-bottom: 120px;
+    margin-bottom: 64px;
   }
-  .clients-img-wrapper .client-logos-image {
+  .clients-outer-wrapper .clients-inner-wrapper .clients-img-wrapper .client-logos-image {
     content: url("../../assets/images/home/client-logos/logos_mobile.svg");
   }
 }/*# sourceMappingURL=ClientsSection.css.map */

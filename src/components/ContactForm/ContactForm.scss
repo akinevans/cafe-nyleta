@@ -9,14 +9,15 @@
   @include flexPosition(center, center);
   @include widthHeight(var(--Full), fit-content);
   margin-bottom: 164px;
-  //   @include temporaryOutline(red);
+  // @include temporaryOutline(red);
 }
 
 // This is the inner wrapper
 .contact-form {
   @include flexPosition(center, flex-start);
-  @include widthHeight(580px, fit-content);
-  //   @include temporaryOutline(green);
+  @include widthHeight(85%, fit-content);
+  @include maxWidth(var(--Desktop));
+  // @include temporaryOutline(green);
 
   .form-title {
     @include widthHeight(100%, fit-content);
@@ -25,12 +26,12 @@
     font-weight: var(--Light-Weight);
     font-size: var(--Heading-1);
     text-align: left;
-    //   @include temporaryOutline(green);
+    // @include temporaryOutline(green);
   }
 
   input,
   .contact-select {
-    @include widthHeight(580px, 45px);
+    @include widthHeight(100%, 45px);
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
     font-size: var(--Body);
@@ -90,9 +91,8 @@
   // }
 
   textarea {
-    @include widthHeight(580px, 158px);
-    @include maxWidth(580px);
-    min-width: 580px;
+    @include widthHeight(100%, 158px);
+    @include maxWidth(100%);
     min-height: 64px;
     margin: 24px 0 24px 0;
     padding: 16px 0 16px 16px;

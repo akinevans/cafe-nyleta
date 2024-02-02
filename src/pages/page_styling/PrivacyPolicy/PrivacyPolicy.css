@@ -12,7 +12,7 @@
 }
 .privacy-policy-page-wrapper .privacy-policy-inner-wrapper,
 .privacy-policy-inner-wrapper .privacy-policy-inner-wrapper {
-  width: 90%;
+  width: 95%;
   height: -moz-fit-content;
   height: fit-content;
   font-family: var(--HN-Light);
@@ -37,7 +37,7 @@
 }
 .privacy-policy-page-wrapper .privacy-policy-inner-wrapper .body-text-wrapper .welcome-message,
 .privacy-policy-inner-wrapper .privacy-policy-inner-wrapper .body-text-wrapper .welcome-message {
-  max-width: 85%;
+  max-width: 100%;
   font-size: var(--Heading-3);
   text-align: center;
 }

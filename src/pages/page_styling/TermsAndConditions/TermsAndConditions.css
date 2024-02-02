@@ -12,7 +12,7 @@
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper,
 .terms-inner-wrapper .terms-inner-wrapper {
-  width: 90%;
+  width: 95%;
   height: -moz-fit-content;
   height: fit-content;
   font-family: var(--HN-Light);
@@ -22,6 +22,7 @@
 .terms-conditions-page-wrapper .terms-inner-wrapper .page-title,
 .terms-inner-wrapper .terms-inner-wrapper .page-title {
   font-size: var(--Heading-1);
+  text-align: center;
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper .page-subtitle,
 .terms-inner-wrapper .terms-inner-wrapper .page-subtitle {
@@ -37,7 +38,7 @@
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper .body-text-wrapper .welcome-message,
 .terms-inner-wrapper .terms-inner-wrapper .body-text-wrapper .welcome-message {
-  max-width: 85%;
+  max-width: 100%;
   font-size: var(--Heading-3);
   text-align: center;
 }

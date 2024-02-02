@@ -46,3 +46,24 @@
 @media screen and (max-width: 834px) {
   //! be mindful of specificity issues
 }
+
+//Begin Mobile Media Queries
+@media screen and (max-width: 530px) {
+  //! be mindful of specificity issues
+  .hero-outer-wrapper {
+    margin: -15px 0 64px 0;
+    .hero-inner-wrapper {
+      .hero-text-wrapper {
+        width: 340px;
+        p {
+          margin: 4px 0;
+          font-family: var(--HN-Light);
+          font-size: var(--Heading-2);
+          font-weight: 300;
+          line-height: normal;
+          text-align: center;
+        }
+      }
+    } // End hero inner wrapper
+  }
+}

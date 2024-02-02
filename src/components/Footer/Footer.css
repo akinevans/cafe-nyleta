@@ -40,4 +40,23 @@
 }
 .footer-content-wrapper a:active {
   opacity: 85%;
+}
+
+@media screen and (max-width: 530px) {
+  .footer-outer-wrapper {
+    justify-content: center;
+    align-items: flex-start;
+    width: var(--Full);
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer-outer-wrapper .footer-content-wrapper {
+    margin: 0;
+  }
+  .footer-outer-wrapper .footer-content-wrapper img {
+    width: 128.57px;
+    max-width: 128.57px;
+    height: 64px;
+    margin-left: 0px;
+  }
 }/*# sourceMappingURL=Footer.css.map */

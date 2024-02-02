@@ -23,7 +23,7 @@ export default function Footer() {
         <Link to='/privacy-policy'>Privacy Policy</Link>
         <Link to='/terms-and-conditions'>Terms & Conditions</Link>
         <Link to='/careers'>Careers</Link>
-        <Link to='/contact'>Contact us</Link>
+        <Link to='/contact'>Contact Us</Link>
       </div>
     </footer>
   );

@@ -88,15 +88,24 @@
 }
 
 //Begin Mobile Media Queries
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 530px) {
   //! be mindful of specificity issues
-  .clients-img-wrapper {
-    @include widthHeight(470px, fit-content);
-    @include maxWidth(95%);
-    margin-bottom: 120px;
+  .clients-outer-wrapper {
+    margin-bottom: 0px;
+    .clients-inner-wrapper {
+      .clients-text-wrapper {
+        margin-bottom: 24px;
+      }
 
-    .client-logos-image {
-      content: url("../../assets/images/home/client-logos/logos_mobile.svg");
+      .clients-img-wrapper {
+        @include widthHeight(470px, fit-content);
+        @include maxWidth(95%);
+        margin-bottom: 64px;
+
+        .client-logos-image {
+          content: url("../../assets/images/home/client-logos/logos_mobile.svg");
+        }
+      }
     }
   }
 }
