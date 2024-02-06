@@ -7,6 +7,7 @@ export default function Button(props) {
       className={props.className}
       type={props.type}
       onClick={props.onClick}
+      value={props.title}
     >
       {props.title}
     </button>
