@@ -8,27 +8,27 @@
   background-color: var(--White);
   outline: 0.5px solid var(--Black);
 }
-.factory-modal-wrapper h1,
-.factory-modal-wrapper h3,
+.factory-modal-wrapper .location-title,
+.factory-modal-wrapper .sub-title,
 .factory-modal-wrapper li {
   color: var(--Black);
 }
-.factory-modal-wrapper h1,
-.factory-modal-wrapper h3 {
+.factory-modal-wrapper .location-title,
+.factory-modal-wrapper .sub-title {
   margin: 0;
   font-size: var(--Heading-3);
   border-bottom: 0.25px solid var(--Black);
 }
-.factory-modal-wrapper h3,
+.factory-modal-wrapper .sub-title,
 .factory-modal-wrapper li {
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
 }
-.factory-modal-wrapper h1 {
+.factory-modal-wrapper .location-title {
   padding-bottom: 8px;
   font-family: var(--HN-Medium);
 }
-.factory-modal-wrapper h3 {
+.factory-modal-wrapper .sub-title {
   padding: 8px 0px;
 }
 .factory-modal-wrapper ul {
