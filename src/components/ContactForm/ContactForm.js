@@ -15,23 +15,25 @@ export default function ContactForm() {
         <h1 className='form-title'>Contact</h1>
 
         <input
-          //
           type='text'
           name='name'
           placeholder='Name*'
+          htmlFor='name'
           required
         ></input>
+
         <input
           type='text'
           name='company name'
           placeholder='Company Name*'
+          htmlFor='company name'
           required
         ></input>
         <input
-          //
           type='email'
           name='email'
           placeholder='Email*'
+          htmlFor='email'
           required
         ></input>
         {/* SelectDropdown Component Here */}
