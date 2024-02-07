@@ -60,7 +60,7 @@ export default function Navbar(props) {
         <Link to='/'>
           <img
             src={logo}
-            alt='cafe nyleta logo'
+            alt='cafe nyleta logo navbar'
             className='nav-logo'
             onClick={() => {
               // Reset menu icon and hide modal (tablet / mobile view) when cafe-nyleta logo is clicked

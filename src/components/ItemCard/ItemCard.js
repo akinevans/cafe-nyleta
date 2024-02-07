@@ -15,7 +15,7 @@ const ItemCard = ({ item }, props) => {
           item.attributes.inStock ? "" : "out-of-stock"
         }`}
         src={process.env.REACT_APP_UPLOAD_URL + firstImage}
-        alt={item?.attributes?.alt}
+        alt={`${item?.attributes?.alt} ${item?.attributes?.color}`}
       />
       <div
         className={`item-card-text-wrapper ${
