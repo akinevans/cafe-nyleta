@@ -38,56 +38,55 @@ export default function Carousel(props) {
   // large & small are class names provided to each ImageComp component
   const large = "img large";
   const small = "img small";
-  const description = "fashion model;";
 
   const LandingPageData1 = [
     {
       name: "c101",
       className: large,
       src: c101,
-      alt: description,
+      alt: "Model in pink hat with white striped top and white shorts",
     },
     {
       name: "c102",
       className: large,
       src: c102,
-      alt: description,
+      alt: "Model in White Stussy top, grey cargo pants",
     },
     {
       name: "c103",
       className: large,
       src: c103,
-      alt: description,
+      alt: "Model wearing red, yellow, purple ombre top. Black shorts, and pink sneakers",
     },
     {
       name: "c104",
       className: large,
       src: c104,
-      alt: description,
+      alt: "Model wearing pink Nike sweat suit",
     },
     {
       name: "c105",
       className: large,
       src: c105,
-      alt: description,
+      alt: "Model wearing black, maroon, orange hoodie and brown sweatpants",
     },
     {
       name: "c106",
       className: large,
       src: c106,
-      alt: description,
+      alt: "Model wearing brown/black hoodie and maroon pants. Model wearing black maroon hoodie and brown pants",
     },
     {
       name: "c107",
       className: large,
       src: c107,
-      alt: description,
+      alt: "Models, the first wearing a black hooded jacket with brown pants. The second wearing a black coat",
     },
     {
       name: "c108",
       className: `${large} last`,
       src: c108,
-      alt: description,
+      alt: "Model wearing a green hoodie underneath a maroon coat with multicolored white black and maroon pants",
     },
   ];
 
@@ -96,49 +95,49 @@ export default function Carousel(props) {
       name: "c201",
       className: small,
       src: c201,
-      alt: description,
+      alt: "A row of factory workers sewing clothing.",
     },
     {
       name: "c202",
       className: small,
       src: c202,
-      alt: description,
+      alt: "A factory sewing machine",
     },
     {
       name: "c203",
       className: small,
       src: c203,
-      alt: description,
+      alt: "Clothing printing press",
     },
     {
       name: "c204",
       className: small,
       src: c204,
-      alt: description,
+      alt: "Loading fabric into a sewing machine",
     },
     {
       name: "c205",
       className: small,
       src: c205,
-      alt: description,
+      alt: "Maintaining a sewing machine",
     },
     {
       name: "c206",
       className: small,
       src: c206,
-      alt: description,
+      alt: "Carving the sole of  a shoe",
     },
     {
       name: "c207",
       className: small,
       src: c207,
-      alt: description,
+      alt: "A stack of clothing materials",
     },
     {
       name: "c208",
       className: `${small} last`,
       src: c208,
-      alt: description,
+      alt: "Green fabric in a sewing machine",
     },
   ];
 

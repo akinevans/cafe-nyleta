@@ -18,7 +18,7 @@ export default function Footer() {
             scrollToTop();
           }}
         >
-          <img src={logo} alt='cafe nyleta logo' />
+          <img src={logo} alt='cafe nyleta logo footer' />
         </Link>
         <Link to='/privacy-policy'>Privacy Policy</Link>
         <Link to='/terms-and-conditions'>Terms & Conditions</Link>

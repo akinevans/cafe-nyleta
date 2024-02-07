@@ -19,18 +19,18 @@
   height: fit-content;
   max-width: 990px;
 }
-.quote-outer-wrapper .quote-inner-wrapper h1,
-.quote-outer-wrapper .quote-inner-wrapper p {
+.quote-outer-wrapper .quote-inner-wrapper .quote-title,
+.quote-outer-wrapper .quote-inner-wrapper .quote-author {
   color: var(--White);
   text-align: center;
 }
-.quote-outer-wrapper .quote-inner-wrapper h1 {
+.quote-outer-wrapper .quote-inner-wrapper .quote-title {
   font-family: var(--Windsor);
   font-size: 32px;
   margin: 0 0 64px 0;
   line-height: normal;
 }
-.quote-outer-wrapper .quote-inner-wrapper p {
+.quote-outer-wrapper .quote-inner-wrapper .quote-author {
   font-family: var(--HN-Light-Italic);
   font-weight: var(--Light-Weight);
   font-size: 18px;
@@ -41,14 +41,14 @@
   .quote-outer-wrapper {
     padding: 103px 0;
   }
-  .quote-outer-wrapper .quote-inner-wrapper h1 {
+  .quote-outer-wrapper .quote-inner-wrapper .quote-title {
     max-width: 724px;
     margin-bottom: 51px;
     font-size: 42.769px;
     font-weight: 5;
     line-height: normal;
   }
-  .quote-outer-wrapper .quote-inner-wrapper p {
+  .quote-outer-wrapper .quote-inner-wrapper .quote-author {
     font-size: 34.215px;
     line-height: 55.6px; /* 162.5% */
   }
@@ -60,14 +60,14 @@
   .quote-outer-wrapper .quote-inner-wrapper {
     padding: 48px 0;
   }
-  .quote-outer-wrapper .quote-inner-wrapper h1 {
+  .quote-outer-wrapper .quote-inner-wrapper .quote-title {
     max-width: 339px;
     margin-bottom: 24px;
     font-size: var(--Heading-3);
     font-weight: 5;
     line-height: normal;
   }
-  .quote-outer-wrapper .quote-inner-wrapper p {
+  .quote-outer-wrapper .quote-inner-wrapper .quote-author {
     font-size: var(--Body-Small);
     line-height: 26px;
   }
@@ -76,14 +76,14 @@
   .quote-outer-wrapper {
     padding: 48px 0;
   }
-  .quote-outer-wrapper .quote-inner-wrapper h1 {
+  .quote-outer-wrapper .quote-inner-wrapper .quote-title {
     max-width: 339px;
     margin-bottom: 24px;
     font-size: var(--Heading-3);
     font-weight: 5;
     line-height: normal;
   }
-  .quote-outer-wrapper .quote-inner-wrapper p {
+  .quote-outer-wrapper .quote-inner-wrapper .quote-author {
     font-size: var(--Body-Small);
     line-height: 55.6px; /* 162.5% */
   }

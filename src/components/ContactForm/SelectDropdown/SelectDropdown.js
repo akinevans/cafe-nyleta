@@ -46,7 +46,7 @@ export default function SelectDropdown(props) {
         }}
       >
         {label}
-        <img src={arrow} alt='' className='arrow' />
+        <img src={arrow} alt='service dropdown arrow' className='arrow' />
       </button>
 
       <div
@@ -55,14 +55,6 @@ export default function SelectDropdown(props) {
       >
         {contactFormData.map((element) => (
           <div className='option-wrapper' key={element.key}>
-            <input
-              type='radio'
-              id={element.id}
-              name={element.value}
-              value={element.value}
-              className='option'
-            ></input>
-
             <label
               htmlFor={element.value}
               className='select-item'
@@ -73,6 +65,15 @@ export default function SelectDropdown(props) {
             >
               {element.value}
             </label>
+
+            <input
+              type='radio'
+              id={element.value}
+              name={element.value}
+              value={element.value}
+              className='option'
+              htmlFor={element.value}
+            ></input>
           </div>
         ))}
       </div>

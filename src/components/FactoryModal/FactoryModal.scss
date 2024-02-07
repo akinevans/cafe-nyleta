@@ -9,32 +9,32 @@
   background-color: var(--White);
   outline: 0.5px solid var(--Black);
 
-  h1,
-  h3,
+  .location-title,
+  .sub-title,
   li {
     color: var(--Black);
   }
 
-  h1,
-  h3 {
+  .location-title,
+  .sub-title {
     margin: 0;
     font-size: var(--Heading-3);
 
     border-bottom: 0.25px solid var(--Black);
   }
 
-  h3,
+  .sub-title,
   li {
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
   }
 
-  h1 {
+  .location-title {
     padding-bottom: 8px;
     font-family: var(--HN-Medium);
   }
 
-  h3 {
+  .sub-title {
     padding: 8px 0px;
   }
 

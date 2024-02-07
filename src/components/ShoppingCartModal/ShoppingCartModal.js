@@ -53,7 +53,7 @@ export default function ShoppingCartModal(props) {
               individualItemQuantity={data.itemQuantity}
               totalItemPrice={data.itemQuantity * data.price}
               imgSrc={process.env.REACT_APP_UPLOAD_URL + data?.image}
-              imgAlt={data.title}
+              imgAlt={`${data.title} ${data.color ? data.color : ""}`}
               navigationLink={`/itemdetail/${data.id}`}
               closeBtnOnClick={props.closeBtnOnClick}
             />

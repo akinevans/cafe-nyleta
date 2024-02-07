@@ -14,29 +14,53 @@ export default function ContactForm() {
       >
         <h1 className='form-title'>Contact</h1>
 
+        <label htmlFor='name' className='label'>
+          Name
+        </label>
         <input
-          //
           type='text'
           name='name'
           placeholder='Name*'
+          id='name'
+          htmlFor='name'
           required
         ></input>
+
+        <label htmlFor='company name' className='label'>
+          Company Name
+        </label>
         <input
           type='text'
           name='company name'
           placeholder='Company Name*'
+          id='company name'
+          htmlFor='company name'
           required
         ></input>
+
+        <label htmlFor='email' className='label'>
+          Company Name
+        </label>
         <input
-          //
           type='email'
           name='email'
           placeholder='Email*'
+          id='email'
+          htmlFor='email'
           required
         ></input>
         {/* SelectDropdown Component Here */}
         <SelectDropdown />
-        <textarea name='message' placeholder='Message*' required></textarea>
+
+        <label htmlFor='message' className='label'>
+          Message
+        </label>
+        <textarea
+          name='message'
+          placeholder='Message*'
+          id='message'
+          required
+        ></textarea>
 
         <Button className='btn grey submit' type='submit' title='Submit' />
       </form>

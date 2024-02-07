@@ -34,7 +34,10 @@ export default function Landing(props) {
         // image={landingPageData.image}
         alt={landingPageData.alt}
       />
-      <FeatureImage image={landingPageData.image} />
+      <FeatureImage
+        image={landingPageData.image}
+        alt={"Fashion model wearing red windbreaker in the forest"}
+      />
       <ClientsSection />
       <Carousel page='landing1' />
       <ServicesComp />

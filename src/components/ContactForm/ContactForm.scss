@@ -16,7 +16,7 @@
 .contact-form {
   @include flexPosition(center, flex-start);
   @include widthHeight(85%, fit-content);
-  @include maxWidth(var(--Desktop));
+  @include maxWidth(548px);
   // @include temporaryOutline(green);
 
   .form-title {
@@ -27,6 +27,10 @@
     font-size: var(--Heading-1);
     text-align: left;
     // @include temporaryOutline(green);
+  }
+
+  .label {
+    display: none;
   }
 
   input,
@@ -46,6 +50,7 @@
 
     &:focus {
       color: var(--Grey-100);
+      outline: none;
     }
   }
 
@@ -114,6 +119,11 @@
     //^ Hide scrollbar  (IE, Edge, Firefox)
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Remove scrollbar Firefox image-wrapper  */
+
+    &:focus {
+      color: var(--Grey-100);
+      outline: none;
+    }
   }
 
   //! Modal
