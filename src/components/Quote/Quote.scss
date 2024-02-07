@@ -17,20 +17,20 @@
     // @include temporaryOutline(blue);
     @include maxWidth(990px);
 
-    h1,
-    p {
+    .quote-title,
+    .quote-author {
       color: var(--White);
       text-align: center;
     }
 
-    h1 {
+    .quote-title {
       font-family: var(--Windsor);
       font-size: 32px;
       margin: 0 0 64px 0;
       line-height: normal;
     }
 
-    p {
+    .quote-author {
       font-family: var(--HN-Light-Italic);
       font-weight: var(--Light-Weight);
       font-size: 18px;
@@ -45,14 +45,14 @@
     padding: 103px 0;
 
     .quote-inner-wrapper {
-      h1 {
+      .quote-title {
         @include maxWidth(724px);
         margin-bottom: 51px;
         font-size: 42.769px;
         font-weight: 5;
         line-height: normal;
       }
-      p {
+      .quote-author {
         font-size: 34.215px;
         line-height: 55.6px; /* 162.5% */
       }
@@ -69,14 +69,14 @@
     .quote-inner-wrapper {
       padding: 48px 0;
       // border: 2px solid red;
-      h1 {
+      .quote-title {
         @include maxWidth(339px);
         margin-bottom: 24px;
         font-size: var(--Heading-3);
         font-weight: 5;
         line-height: normal;
       }
-      p {
+      .quote-author {
         font-size: var(--Body-Small);
         line-height: 26px;
       }
@@ -90,14 +90,14 @@
     padding: 48px 0;
 
     .quote-inner-wrapper {
-      h1 {
+      .quote-title {
         @include maxWidth(339px);
         margin-bottom: 24px;
         font-size: var(--Heading-3);
         font-weight: 5;
         line-height: normal;
       }
-      p {
+      .quote-author {
         font-size: var(--Body-Small);
         line-height: 55.6px; /* 162.5% */
       }
