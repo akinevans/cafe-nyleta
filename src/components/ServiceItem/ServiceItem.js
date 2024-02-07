@@ -20,7 +20,7 @@ export default function ServiceItem(props) {
       >
         <AnimatePresence initial={true}>
           <div className='service-item-title-wrapper'>
-            <h1 className='service-item-title'>{props.title}</h1>
+            <h2 className='service-item-title'>{props.title}</h2>
             <img
               className={`${open ? "minus" : "plus"}`}
               src={`${open ? minus : plus}`}

@@ -33,7 +33,7 @@
   margin: 10px 0;
 }
 .service-item-inner-wrapper .service-item-title-wrapper .service-item-title {
-  margin-left: 15px;
+  margin: 16px 0 16px 15px;
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
   font-size: var(--Heading-2);
