@@ -74,19 +74,19 @@ export default function Carousel(props) {
       name: "c106",
       className: large,
       src: c106,
-      alt: "Two models, the first wearing brown and black hoodie, with Maroon sweatpants. The second wearing black, maroon, orange hoodie and brown sweatpants.",
+      alt: "Model wearing brown/black hoodie and maroon pants. Model wearing black maroon hoodie and brown pants",
     },
     {
       name: "c107",
       className: large,
       src: c107,
-      alt: "Two models, the first wearing a black hooded jacket with brown pants. The second wearing a black coat.",
+      alt: "Models, the first wearing a black hooded jacket with brown pants. The second wearing a black coat",
     },
     {
       name: "c108",
       className: `${large} last`,
       src: c108,
-      alt: "Model wearing a green hoodie underneath a maroon coat, with multicolored white black and maroon pants.",
+      alt: "Model wearing a green hoodie underneath a maroon coat with multicolored white black and maroon pants",
     },
   ];
 
