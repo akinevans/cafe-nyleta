@@ -29,6 +29,10 @@
     // @include temporaryOutline(green);
   }
 
+  .label {
+    display: none;
+  }
+
   input,
   .contact-select {
     @include widthHeight(100%, 45px);

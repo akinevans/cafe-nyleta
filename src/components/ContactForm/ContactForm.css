@@ -32,6 +32,9 @@
   font-size: var(--Heading-1);
   text-align: left;
 }
+.contact-form .label {
+  display: none;
+}
 .contact-form input,
 .contact-form .contact-select {
   width: 100%;
