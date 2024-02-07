@@ -24,7 +24,7 @@ export default function ServiceItem(props) {
             <img
               className={`${open ? "minus" : "plus"}`}
               src={`${open ? minus : plus}`}
-              alt=''
+              alt='plus / minus icon'
             />
           </div>
           {/* We want the message to disappear so we conditionally render it */}
