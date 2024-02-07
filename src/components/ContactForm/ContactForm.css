@@ -20,7 +20,7 @@
   width: 85%;
   height: -moz-fit-content;
   height: fit-content;
-  max-width: var(--Desktop);
+  max-width: 548px;
 }
 .contact-form .form-title {
   width: 100%;
@@ -48,6 +48,7 @@
 }
 .contact-form input:focus {
   color: var(--Grey-100);
+  outline: none;
 }
 .contact-form .contact-select,
 .contact-form select {
@@ -99,6 +100,10 @@
 }
 .contact-form textarea -webkit-scrollbar {
   scrollbar-width: none;
+}
+.contact-form textarea:focus {
+  color: var(--Grey-100);
+  outline: none;
 }
 .contact-form .modal-center {
   position: absolute;
