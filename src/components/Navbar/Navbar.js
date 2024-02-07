@@ -99,7 +99,7 @@ export default function Navbar(props) {
           >
             <img
               src={menuIcon ? hamburger : exit}
-              alt=''
+              alt={menuIcon ? "hamburger menu icon" : "exit icon"}
               className='hamburger-img'
             />
             ''
