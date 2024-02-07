@@ -95,12 +95,14 @@ export default function Navbar(props) {
               setMenuIcon(!menuIcon);
               setLockNav(!lockNav);
             }}
+            value=''
           >
             <img
               src={menuIcon ? hamburger : exit}
               alt=''
               className='hamburger-img'
             />
+            ''
           </button>
         </div>
       </div>
