@@ -8,6 +8,7 @@
 
 .services-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
+  min-height: 405px;
   // @include temporaryOutline(red);
 }
 
@@ -15,6 +16,8 @@
   //   @include widthHeight(780px, 100%);
   //   @include maxWidth(780px);
   max-width: 82%;
+  min-height: 373px;
+
   margin: 0 25px 118px 25px;
   //   @include temporaryOutline(pink);
 

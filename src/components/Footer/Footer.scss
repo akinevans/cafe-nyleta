@@ -4,6 +4,7 @@
   @include flex(row);
   @include flexPosition(center, center);
   @include widthHeight(var(--Full), 296px);
+  min-height: 234px;
   background-color: var(--White);
   //   @include temporaryOutline(red);
 }
@@ -12,6 +13,7 @@
   @include flex(column);
   @include flexPosition(center, flex-start);
   @include widthHeight(90%, fit-content);
+  min-width: 300px;
   margin: auto 0;
   padding-left: 10px;
   background-color: var(--White);

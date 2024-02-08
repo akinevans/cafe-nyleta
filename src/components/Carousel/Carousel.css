@@ -12,6 +12,7 @@
   height: -moz-fit-content;
   height: fit-content;
   max-width: 100%;
+  min-height: 280px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 120px;

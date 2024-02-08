@@ -20,6 +20,7 @@
   @include flexPosition(space-evenly, space-evenly);
   @include widthHeight(90%, fit-content);
   @include maxWidth(1076px);
+  min-height: 645px;
   // @include temporaryOutline(green);
 
   .item-card-link {

@@ -19,6 +19,7 @@
   max-width: var(--Desktop);
   height: -moz-fit-content;
   height: fit-content;
+  min-height: 676px;
   margin: 0 40px;
 }
 .item-detail-page-inner-wrapper .item-detail-left-wrapper {
@@ -28,6 +29,8 @@
   align-items: center;
   max-width: 50%;
   height: 676px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   margin-top: 0px;
 }
 .item-detail-page-inner-wrapper .item-detail-left-wrapper .image-and-cycle-wrapper {
@@ -77,6 +80,8 @@
   max-width: 35%;
   height: -moz-fit-content;
   height: fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   margin-top: 0px;
 }
 .item-detail-page-inner-wrapper .item-detail-right-wrapper .product-name,

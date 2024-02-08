@@ -10,10 +10,12 @@
   width: var(--Full);
   height: -moz-fit-content;
   height: fit-content;
+  min-height: 405px;
 }
 
 .services-inner-wrapper {
   max-width: 82%;
+  min-height: 373px;
   margin: 0 25px 118px 25px;
 }
 .services-inner-wrapper .component-title-wrapper {

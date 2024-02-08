@@ -8,11 +8,14 @@
 
 .factories-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
+  min-height: 538px;
   // @include temporaryOutline(red);
 
   .factories-inner-wrapper {
     @include widthHeight(var(--Desktop), fit-content);
     @include maxWidth(90%);
+    min-height: 614px;
+
     // @include temporaryOutline(blue);
 
     .factories-text-wrapper {

@@ -19,7 +19,7 @@ export default function Shop(props) {
   const { product, loading } = useFetch(`/products?populate=*
     ${props.filter ? apiFilterPath + props.filter : ""}${sortPath}`);
 
-  console.log("product  " + product);
+  // console.log("product  " + product);
 
   return (
     <div className='shop-page-wrapper'>
