@@ -9,6 +9,7 @@
 
 .quote-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
+  min-height: 319px;
   //   @include temporaryOutline(red);
   padding: 120px 100px;
 

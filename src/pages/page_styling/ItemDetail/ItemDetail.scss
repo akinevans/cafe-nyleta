@@ -17,6 +17,7 @@
   // @include widthHeight(var(--Desktop), fit-content);
   @include maxWidth(var(--Desktop));
   height: fit-content;
+  min-height: 676px;
   margin: 0 40px;
   // @include temporaryOutline(blue);
 
@@ -26,6 +27,7 @@
     // @include widthHeight(50%, 676px);
     @include maxWidth(50%);
     height: 676px;
+    min-height: fit-content;
     margin-top: 0px;
     // @include temporaryOutline(green);
 
@@ -81,6 +83,8 @@
     // @include widthHeight(35%, fit-content);
     @include maxWidth(35%);
     height: fit-content;
+    min-height: fit-content;
+
     margin-top: 0px;
     // @include temporaryOutline(rgb(19, 230, 230));
 

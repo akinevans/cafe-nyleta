@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Factories.css";
-import world_map from "../../assets/images/home/worldmap.png";
+import world_map from "../../assets/images/home/worldmap.webp";
 import FactoryModal from "../FactoryModal/FactoryModal";
 import { motion } from "framer-motion";
 

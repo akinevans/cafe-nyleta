@@ -6,10 +6,9 @@ import Carousel from "../components/Carousel/Carousel";
 import Collaborations from "../components/Collaborations/Collaborations";
 
 // Image Imports
-import cafe from "../assets/images/about/01_head_banner.jpg";
-
-import cup from "../assets/images/about/02_cup.jpg";
-import joss_sticks from "../assets/images/about/03_joss_sticks.jpg";
+import cafe from "../assets/images/about/01_head_banner.webp";
+import cup from "../assets/images/about/02_cup.webp";
+import joss_sticks from "../assets/images/about/03_joss_sticks.webp";
 
 export default function About() {
   const aboutPageData = {
@@ -31,6 +30,8 @@ export default function About() {
       <FeatureImage
         image={aboutPageData.cafeImage}
         alt={aboutPageData.cafeAlt}
+        width='1484'
+        height='719'
       />
       <TextSection />
       <FeatureImage
@@ -38,6 +39,8 @@ export default function About() {
         className='negativeBottomMargin'
         image={aboutPageData.cupImage}
         alt={aboutPageData.cupAlt}
+        width='1124'
+        height='514'
       />
       <Quote
         quoteText={aboutPageData.aboutQuoteText}
@@ -51,6 +54,9 @@ export default function About() {
         className='zeroBottomMargin'
         image={aboutPageData.jossImage}
         alt={aboutPageData.jossAlt}
+        loading='lazy'
+        width='1875'
+        height='846'
       />
     </>
   );

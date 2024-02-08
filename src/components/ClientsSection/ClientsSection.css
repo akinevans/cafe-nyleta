@@ -12,6 +12,7 @@
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 120px;
+  min-height: 410px;
 }
 .clients-outer-wrapper .clients-inner-wrapper {
   width: 780px;

@@ -11,11 +11,13 @@
 .clients-outer-wrapper {
   @include widthHeight(var(--Full), fit-content);
   margin-bottom: 120px;
+  min-height: 410px;
   // @include temporaryOutline(red);
 
   .clients-inner-wrapper {
     @include widthHeight(780px, fit-content);
     @include maxWidth(90%);
+
     //   @include temporaryOutline(blue);
   }
 

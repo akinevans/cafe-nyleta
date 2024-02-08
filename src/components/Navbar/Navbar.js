@@ -102,7 +102,6 @@ export default function Navbar(props) {
               alt={menuIcon ? "hamburger menu icon" : "exit icon"}
               className='hamburger-img'
             />
-            ''
           </button>
         </div>
       </div>

@@ -8,7 +8,7 @@ import Quote from "../components/Quote/Quote";
 import Factories from "../components/Factories/Factories";
 
 //image imports
-import landing_img from "../../src/assets/images/home/feature.jpg";
+import landing_img from "../../src/assets/images/home/feature.webp";
 
 export default function Landing(props) {
   const landingPageData = {
@@ -37,6 +37,8 @@ export default function Landing(props) {
       <FeatureImage
         image={landingPageData.image}
         alt={"Fashion model wearing red windbreaker in the forest"}
+        width='1000'
+        height='667'
       />
       <ClientsSection />
       <Carousel page='landing1' />

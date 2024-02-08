@@ -10,6 +10,7 @@
 .carousel-outer-wrapper {
   @include widthHeight(100%, fit-content);
   @include maxWidth(100%);
+  min-height: 280px;
   object-fit: contain;
 
   margin-bottom: 120px;

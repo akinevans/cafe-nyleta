@@ -20,6 +20,7 @@
   height: -moz-fit-content;
   height: fit-content;
   max-width: 1076px;
+  min-height: 645px;
 }
 .shop-products-wrapper .item-card-link {
   text-decoration: none;
