@@ -50,6 +50,7 @@ export default function About() {
         className='zeroBottomMargin'
         image={aboutPageData.jossImage}
         alt={aboutPageData.jossAlt}
+        loading='lazy'
       />
     </>
   );
