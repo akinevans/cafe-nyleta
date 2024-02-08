@@ -6,10 +6,9 @@ import Carousel from "../components/Carousel/Carousel";
 import Collaborations from "../components/Collaborations/Collaborations";
 
 // Image Imports
-import cafe from "../assets/images/about/01_head_banner.jpg";
-
-import cup from "../assets/images/about/02_cup.jpg";
-import joss_sticks from "../assets/images/about/03_joss_sticks.jpg";
+import cafe from "../assets/images/about/01_head_banner.webp";
+import cup from "../assets/images/about/02_cup.webp";
+import joss_sticks from "../assets/images/about/03_joss_sticks.webp";
 
 export default function About() {
   const aboutPageData = {
