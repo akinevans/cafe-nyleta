@@ -16,6 +16,8 @@ const ItemCard = ({ item }, props) => {
         }`}
         src={process.env.REACT_APP_UPLOAD_URL + firstImage}
         alt={`${item?.attributes?.alt} ${item?.attributes?.color}`}
+        width='180'
+        height='240'
       />
       <div
         className={`item-card-text-wrapper ${
