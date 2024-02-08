@@ -4,24 +4,24 @@ import "./Carousel.css";
 import ImageComp from "../../components/ImageComp/ImageComp";
 
 // Image imports for top carousel Landing Page
-import c101 from "../../assets/images/home/carousel-1/carousel_101.jpg";
-import c102 from "../../assets/images/home/carousel-1/carousel_102.jpg";
-import c103 from "../../assets/images/home/carousel-1/carousel_103.jpg";
-import c104 from "../../assets/images/home/carousel-1/carousel_104.jpg";
-import c105 from "../../assets/images/home/carousel-1/carousel_105.jpg";
-import c106 from "../../assets/images/home/carousel-1/carousel_106.jpg";
-import c107 from "../../assets/images/home/carousel-1/carousel_107.jpg";
-import c108 from "../../assets/images/home/carousel-1/carousel_108.jpg";
+import c101 from "../../assets/images/home/carousel-1/carousel_01.webp";
+import c102 from "../../assets/images/home/carousel-1/carousel_02.webp";
+import c103 from "../../assets/images/home/carousel-1/carousel_03.webp";
+import c104 from "../../assets/images/home/carousel-1/carousel_04.webp";
+import c105 from "../../assets/images/home/carousel-1/carousel_05.webp";
+import c106 from "../../assets/images/home/carousel-1/carousel_06.webp";
+import c107 from "../../assets/images/home/carousel-1/carousel_07.webp";
+import c108 from "../../assets/images/home/carousel-1/carousel_08.webp";
 
 // Image imports for bottom carousel Landing Page
-import c201 from "../../assets/images/home/carousel-2/carousel_201.jpeg";
-import c202 from "../../assets/images/home/carousel-2/carousel_202.jpeg";
-import c203 from "../../assets/images/home/carousel-2/carousel_203.jpeg";
-import c204 from "../../assets/images/home/carousel-2/carousel_204.jpeg";
-import c205 from "../../assets/images/home/carousel-2/carousel_205.jpeg";
-import c206 from "../../assets/images/home/carousel-2/carousel_206.jpeg";
-import c207 from "../../assets/images/home/carousel-2/carousel_207.jpeg";
-import c208 from "../../assets/images/home/carousel-2/carousel_208.jpeg";
+import c201 from "../../assets/images/home/carousel-2/carousel_201.webp";
+import c202 from "../../assets/images/home/carousel-2/carousel_202.webp";
+import c203 from "../../assets/images/home/carousel-2/carousel_203.webp";
+import c204 from "../../assets/images/home/carousel-2/carousel_204.webp";
+import c205 from "../../assets/images/home/carousel-2/carousel_205.webp";
+import c206 from "../../assets/images/home/carousel-2/carousel_206.webp";
+import c207 from "../../assets/images/home/carousel-2/carousel_207.webp";
+import c208 from "../../assets/images/home/carousel-2/carousel_208.webp";
 
 // Image imports for carousel About Page
 import c301 from "../../assets/images/about/carousel/carousel_01.jpg";

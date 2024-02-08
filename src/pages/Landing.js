@@ -8,7 +8,7 @@ import Quote from "../components/Quote/Quote";
 import Factories from "../components/Factories/Factories";
 
 //image imports
-import landing_img from "../../src/assets/images/home/feature.jpg";
+import landing_img from "../../src/assets/images/home/feature.webp";
 
 export default function Landing(props) {
   const landingPageData = {
