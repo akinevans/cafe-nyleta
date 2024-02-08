@@ -24,14 +24,14 @@ import c207 from "../../assets/images/home/carousel-2/carousel_207.webp";
 import c208 from "../../assets/images/home/carousel-2/carousel_208.webp";
 
 // Image imports for carousel About Page
-import c301 from "../../assets/images/about/carousel/carousel_01.jpg";
-import c302 from "../../assets/images/about/carousel/carousel_02.jpg";
-import c303 from "../../assets/images/about/carousel/carousel_03.jpg";
-import c304 from "../../assets/images/about/carousel/carousel_04.jpg";
-import c305 from "../../assets/images/about/carousel/carousel_05.jpg";
-import c306 from "../../assets/images/about/carousel/carousel_06.jpg";
-import c307 from "../../assets/images/about/carousel/carousel_07.jpg";
-import c308 from "../../assets/images/about/carousel/carousel_08.jpg";
+import c301 from "../../assets/images/about/carousel/carousel_01.webp";
+import c302 from "../../assets/images/about/carousel/carousel_02.webp";
+import c303 from "../../assets/images/about/carousel/carousel_03.webp";
+import c304 from "../../assets/images/about/carousel/carousel_04.webp";
+import c305 from "../../assets/images/about/carousel/carousel_05.webp";
+import c306 from "../../assets/images/about/carousel/carousel_06.webp";
+import c307 from "../../assets/images/about/carousel/carousel_07.webp";
+import c308 from "../../assets/images/about/carousel/carousel_08.webp";
 //! Images should scroll on X axis with both scroll wheels
 
 export default function Carousel(props) {
