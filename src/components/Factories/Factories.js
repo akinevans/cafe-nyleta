@@ -64,7 +64,7 @@ export default function Factories() {
           </p>
         </div>
         <div className='factories-img-wrapper'>
-          <img src={world_map} alt='world map' />
+          <img src={world_map} alt='world map' loading='lazy' />
 
           {/* Map Triangles */}
           <motion.div

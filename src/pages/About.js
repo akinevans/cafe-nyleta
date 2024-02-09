@@ -41,6 +41,7 @@ export default function About() {
         alt={aboutPageData.cupAlt}
         width='1124'
         height='514'
+        loading='lazy'
       />
       <Quote
         quoteText={aboutPageData.aboutQuoteText}
