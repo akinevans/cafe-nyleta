@@ -17,16 +17,18 @@
   height: fit-content;
   font-family: var(--HN-Light);
   font-weight: var(--Light-Weight);
+  font-size: var(--Body);
   color: var(--Grey-100);
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper .page-title,
 .terms-inner-wrapper .terms-inner-wrapper .page-title {
-  font-size: var(--Heading-1);
+  font-size: var(--Body);
   text-align: center;
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper .page-subtitle,
 .terms-inner-wrapper .terms-inner-wrapper .page-subtitle {
   margin-top: 10px;
+  font-size: var(--Body);
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper .body-text-wrapper,
 .terms-inner-wrapper .terms-inner-wrapper .body-text-wrapper {
@@ -35,16 +37,17 @@
   justify-content: center;
   align-items: center;
   margin: 0 25px;
+  font-size: var(--Body);
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper .body-text-wrapper .welcome-message,
 .terms-inner-wrapper .terms-inner-wrapper .body-text-wrapper .welcome-message {
   max-width: 100%;
-  font-size: var(--Heading-3);
+  font-size: var(--Body);
   text-align: center;
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper .body-text-wrapper ol li,
 .terms-inner-wrapper .terms-inner-wrapper .body-text-wrapper ol li {
-  font-size: var(--Heading-2);
+  font-size: var(--Body);
 }
 .terms-conditions-page-wrapper .terms-inner-wrapper .body-text-wrapper ol p,
 .terms-inner-wrapper .terms-inner-wrapper .body-text-wrapper ol p {
