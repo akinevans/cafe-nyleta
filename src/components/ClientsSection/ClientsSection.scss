@@ -12,11 +12,13 @@
   @include widthHeight(var(--Full), fit-content);
   margin-bottom: 120px;
   min-height: 410px;
+  background-color: var(--Background);
   // @include temporaryOutline(red);
 
   .clients-inner-wrapper {
     @include widthHeight(780px, fit-content);
     @include maxWidth(90%);
+    background-color: var(--Background);
 
     //   @include temporaryOutline(blue);
   }
@@ -58,9 +60,10 @@
     @include widthHeight(580px, fit-content);
     @include maxWidth(95%);
     margin-bottom: 120px;
+    background-color: var(--Background);
 
     .client-logos-image {
-      content: url("../../assets/images/home/client-logos/logos_desktop.svg");
+      content: url("../../assets/images/home/client-logos/logos_desktop.webp");
     }
   } // End clients img wrapper
 } // End Outer Wrapper
@@ -83,7 +86,7 @@
 
       .client-logos-image {
         max-width: 60%;
-        content: url("../../assets/images/home/client-logos/logos_tablet.svg");
+        content: url("../../assets/images/home/client-logos/logos_tablet.webp");
       }
     }
   }
@@ -105,7 +108,7 @@
         margin-bottom: 64px;
 
         .client-logos-image {
-          content: url("../../assets/images/home/client-logos/logos_mobile.svg");
+          content: url("../../assets/images/home/client-logos/logos_mobile.webp");
         }
       }
     }

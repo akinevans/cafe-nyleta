@@ -13,12 +13,14 @@
   height: fit-content;
   margin-bottom: 120px;
   min-height: 410px;
+  background-color: var(--Background);
 }
 .clients-outer-wrapper .clients-inner-wrapper {
   width: 780px;
   height: -moz-fit-content;
   height: fit-content;
   max-width: 90%;
+  background-color: var(--Background);
 }
 .clients-outer-wrapper .clients-text-wrapper {
   display: flex;
@@ -64,9 +66,10 @@
   height: fit-content;
   max-width: 95%;
   margin-bottom: 120px;
+  background-color: var(--Background);
 }
 .clients-outer-wrapper .clients-img-wrapper .client-logos-image {
-  content: url("../../assets/images/home/client-logos/logos_desktop.svg");
+  content: url("../../assets/images/home/client-logos/logos_desktop.webp");
 }
 
 @media screen and (max-width: 834px) {
@@ -86,7 +89,7 @@
   }
   .clients-inner-wrapper .clients-img-wrapper .client-logos-image {
     max-width: 60%;
-    content: url("../../assets/images/home/client-logos/logos_tablet.svg");
+    content: url("../../assets/images/home/client-logos/logos_tablet.webp");
   }
 }
 @media screen and (max-width: 530px) {
@@ -104,6 +107,6 @@
     margin-bottom: 64px;
   }
   .clients-outer-wrapper .clients-inner-wrapper .clients-img-wrapper .client-logos-image {
-    content: url("../../assets/images/home/client-logos/logos_mobile.svg");
+    content: url("../../assets/images/home/client-logos/logos_mobile.webp");
   }
 }/*# sourceMappingURL=ClientsSection.css.map */

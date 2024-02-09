@@ -101,6 +101,8 @@
 }
 .item-detail-page-inner-wrapper .item-detail-right-wrapper .description {
   max-width: 381px;
+  height: auto;
+  min-height: 100px;
   margin-bottom: 115px;
   font-size: var(--Body-Small);
   line-height: 26px;
