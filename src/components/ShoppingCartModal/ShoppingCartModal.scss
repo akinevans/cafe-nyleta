@@ -10,41 +10,49 @@
   @include flex(row);
   @include flexPosition(center, center);
   @include widthHeight(100vw, 1700px);
-  //   background-color: red;
   z-index: 999;
 }
 
 .cart-wrapper {
   z-index: 999;
   @include flex(column);
-  // align-items: space-evenly;
-  @include widthHeight(680px, auto);
-  @include maxWidth(680px);
+  // justify-content: center;
+  align-items: center;
+  @include widthHeight(85%, auto);
+  // @include maxWidth(680px);
   max-height: 640px;
-  padding: 0 30px;
+  // padding: 0 30px;
   background-color: var(--Background);
   overflow-y: scroll;
   filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.1));
 
   .top-cart-title-wrapper {
-    @include widthHeight(100%, 100%);
-    @include flex(row);
-    @include flexPosition(flex-start, center);
     position: sticky;
     top: 0;
-    padding: 0 30px;
+    @include flex(row);
+    @include flexPosition(flex-start, center);
+    @include widthHeight(89.5%, 100%);
+    @include maxWidth(608px);
+    // margin: 0 auto;
+    // left: 50%;
+    // padding: 0 40px;
     background-color: var(--Background);
-    z-index: 1;
     border-bottom: 1px solid var(--Grey-50);
-
-    // border: 2px solid red;
+    // border: 2px solid blue;
+    z-index: 1;
 
     h1 {
-      margin: 15px 0;
+      margin: 38px 0 15px 0;
     }
   }
 
   .shopping-cart-item-component-wrapper {
+    @include flex(column);
+    @include flexPosition(center, center);
+    @include widthHeight(100%, auto);
+    @include maxWidth(680px);
+    margin: 0 auto;
+    // border: 2px solid green;
     // border-bottom: 1px solid var(--Grey-50);
   }
 
@@ -78,11 +86,13 @@
     bottom: 0;
     @include flex(column);
     @include flexPosition(flex-end, flex-end);
-    @include widthHeight(100%, auto);
-    margin-top: 16px;
-    padding-bottom: 40px;
+    @include widthHeight(89.5%, 100%);
+    @include maxWidth(608px);
+    margin: 16px auto 0;
+    padding-bottom: 38px;
     border-top: 1px solid var(--Grey-50);
     background-color: var(--Background);
+    z-index: 1;
 
     .cart-text,
     .cart-price {
