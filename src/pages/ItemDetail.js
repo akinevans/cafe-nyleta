@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
-// import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../src/redux/cartReducer";
 
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
@@ -15,10 +16,11 @@ export default function ItemDetail(props, { item }) {
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
   const [productSize, setProductSize] = useState("M");
+  const [itemQuantity, setItemQuantity] = useState(1);
   const [currentCycleBox, setCurrentCycleBox] = useState(0);
 
   // const products = useSelector((state) => state.cart.products);
-
+  const dispatch = useDispatch();
   const apiFilterPath = "&[filters][type][$eq]=";
   const id = useParams().id;
 
@@ -133,6 +135,7 @@ export default function ItemDetail(props, { item }) {
               isOneSize={isOneSize}
               sizeOnClick={(size) => {
                 setProductSize(size);
+                console.log(productSize);
               }}
             />
             <Button
@@ -142,7 +145,20 @@ export default function ItemDetail(props, { item }) {
               title={inStock ? "Add to Cart" : "Out of stock"}
               onClick={() => {
                 if (inStock) {
-                  setVisible(!visible);
+                  // setVisible(!visible);
+                  dispatch(
+                    addToCart({
+                      //redux payload -> 8 keys
+                      id: product.id,
+                      title: product.attributes.title,
+                      description: product.attributes.description,
+                      price: product.attributes.price,
+                      size: productSize,
+                      color: product.attributes.color,
+                      image: product.attributes.images.data[0].attributes.url,
+                      itemQuantity,
+                    })
+                  );
                 } else {
                   // alert("Item is currently out of stock");
                   return null;

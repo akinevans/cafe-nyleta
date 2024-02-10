@@ -1,3 +1,8 @@
+//! OBSOLETE CODE - This component is no longer in use
+//! OBSOLETE CODE - This component is no longer in use
+//! OBSOLETE CODE - This component is no longer in use
+//! OBSOLETE CODE - This component is no longer in use
+
 import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -5,12 +10,9 @@ import { addToCart } from "../../redux/cartReducer";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-
 import "./WaitlistModal.css";
 import Button from "../Button/Button";
 import arrow from "../../assets/icons/down-arrow.svg";
-
-//TODO: rename this component addToCartModal
 
 export default function WaitlistModal(props) {
   const [visible, setVisible] = useState(false);
@@ -22,7 +24,7 @@ export default function WaitlistModal(props) {
   const products = useSelector((state) => state.cart.products);
   // console.log(product);
 
-  //! export to module
+  //^ export to module
   const getCartQuantityAndPrice = () => {
     let totalQuantity = 0;
     let totalPrice = 0;
