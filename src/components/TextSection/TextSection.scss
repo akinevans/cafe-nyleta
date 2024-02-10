@@ -38,6 +38,7 @@
     margin-bottom: 68px;
     .textsection-inner-wrapper {
       @include maxWidth(730px);
+      margin: 0 25px;
       // border: 1px solid blue;
 
       .bold {
@@ -61,3 +62,35 @@
     }
   }
 } // end tablet queries
+
+//Begin mobile Queries
+@media screen and (max-width: 390px) {
+  .textsection-outer-wrapper {
+    margin-top: 0;
+    margin-bottom: 68px;
+    .textsection-inner-wrapper {
+      @include maxWidth(340px);
+      margin: 0 18px;
+      // border: 1px solid blue;
+
+      .bold {
+        font-family: var(--HN-Medium);
+      }
+
+      p {
+        margin: 0;
+        padding: 0px;
+        line-height: 26px;
+        font-family: var(--HN-Light);
+        font-weight: 300;
+        font-size: var(--Body-Small);
+        color: var(--Grey-100);
+      }
+
+      .text-split {
+        display: block;
+        margin-top: 25px;
+      }
+    }
+  }
+} // end mobile queries
