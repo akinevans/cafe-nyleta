@@ -18,12 +18,17 @@
   z-index: 999;
   @include flex(column);
   //   align-items: space-evenly;
-  @include widthHeight(680px, fit-content);
-  @include maxWidth(680px);
+  @include widthHeight(450px, fit-content);
+  @include maxWidth(450px);
   padding: 30px 40px 0;
   background-color: var(--Background);
   filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.1));
   //   @include temporaryOutline(red);
+
+  .waitlist-title-wrapper {
+    @include flex(row);
+    @include flexPosition(space-between, center);
+  }
 
   h1,
   h2 {

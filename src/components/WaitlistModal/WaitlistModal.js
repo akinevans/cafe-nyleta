@@ -1,7 +1,6 @@
-//! OBSOLETE CODE - This component is no longer in use
-//! OBSOLETE CODE - This component is no longer in use
-//! OBSOLETE CODE - This component is no longer in use
-//! OBSOLETE CODE - This component is no longer in use
+//! RENAME COMPONENT TO CART CONFIRMATION MODAL
+//! RENAME COMPONENT TO CART CONFIRMATION MODAL
+//! RENAME COMPONENT TO CART CONFIRMATION MODAL
 
 import React from "react";
 import { useState } from "react";
@@ -35,39 +34,12 @@ export default function WaitlistModal(props) {
     return [totalQuantity, totalPrice];
   };
 
-  const quantityLabels = [1, 2, 3, 4, 5];
-
-  const generateQuantityLabels = (num) => {
-    return (
-      <div className='quantity-label-wrapper' key={num}>
-        <input
-          type='radio'
-          id={`select-${num}`}
-          name={num}
-          value={num}
-          className='waitlist-option'
-        ></input>
-        <label
-          htmlFor={num}
-          className='waitlist-select-item'
-          onClick={() => {
-            setItemQuantity(num);
-            // console.log(itemQuantity);
-            setVisible(!visible);
-          }}
-        >
-          {num}
-        </label>
-      </div>
-    );
-  };
-
   return (
     <div className={`waitlist-modal-page-wrapper ${props.className}`}>
       <div className='waitlist-wrapper'>
-        {/* if props.quantity is undefined, display nothing */}
-        <h1>{`My Cart ${getCartQuantityAndPrice()[0]}`}</h1>
-        {/* Body Wrapper will get top and bottom underlines */}
+        <div className='waitlist-title-wrapper'>
+          <h1>{`Added to Cart (${getCartQuantityAndPrice()[0]})`}</h1>
+        </div>
         <div className='waitlist-body-wrapper'>
           <div className='waitlist-left'>
             <Link
@@ -85,25 +57,6 @@ export default function WaitlistModal(props) {
               <h2>{`Size: ${props.size}`}</h2>
               <h2>{`$${props.price} USD`}</h2>
             </div>
-
-            <button
-              className='number-dropdown-button'
-              id='button'
-              onClick={() => {
-                setVisible(!visible);
-              }}
-            >
-              {itemQuantity}
-              <img src={arrow} alt='' className='arrow' />
-            </button>
-
-            <div
-              className={`waitlist-dropdown-wrapper ${visible ? "" : "hidden"}`}
-              id='dropdown'
-            >
-              {/* //& Dropdown numbers for item quantity */}
-              {quantityLabels.map(generateQuantityLabels)}
-            </div>
           </div>
         </div>
         <div className='waitlist-btn-wrapper'>
@@ -111,25 +64,6 @@ export default function WaitlistModal(props) {
             className='btn white back-to-shop'
             title='Close'
             onClick={props.closeBtnOnClick}
-          />
-          <Button
-            className='btn grey back-to-shop'
-            title='Add to cart'
-            onClick={() => {
-              dispatch(
-                addToCart({
-                  //redux payload -> 6 keys
-                  id: product.id,
-                  title: product.attributes.title,
-                  description: product.attributes.description,
-                  price: product.attributes.price,
-                  size: props.size,
-                  color: props.color,
-                  image: product.attributes.images.data[0].attributes.url,
-                  itemQuantity,
-                })
-              );
-            }}
           />
         </div>
       </div>

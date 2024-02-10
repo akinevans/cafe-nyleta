@@ -25,7 +25,11 @@ export default function ItemDetail(props, { item }) {
   const id = useParams().id;
 
   const { product, loading } = useFetch(`/products/${id}?populate=*`);
+  const products = useSelector((state) => state.cart.products);
   // console.log(product);
+  // console.log(products);
+  // console.log(product.id);
+  // console.log(product.attributes?.size);
 
   const productName = product?.attributes?.title,
     productColor = product?.attributes?.color,
@@ -35,6 +39,21 @@ export default function ItemDetail(props, { item }) {
     altDescription = product?.attributes?.alt,
     isOneSize = product?.attributes?.size === "ONESIZE";
 
+  const getProductQuantity = (id, size) => {
+    for (let i = 0; i < products.length; i++) {
+      if (id === products[i].id && size === products[i].size) {
+        // alert("match found!!");
+        return products[i].itemQuantity;
+      } else {
+        continue;
+      }
+    }
+    // alert("no match found, adding new item to cart");
+    return true;
+  };
+
+  const cartEmpty = products.length === 0;
+  // const productNotInCart =
   const numOfImages = [];
   const getNumOfImages = () => {
     for (let i = 0; i < product?.attributes?.images?.data.length; i++) {
@@ -145,20 +164,31 @@ export default function ItemDetail(props, { item }) {
               title={inStock ? "Add to Cart" : "Out of stock"}
               onClick={() => {
                 if (inStock) {
-                  // setVisible(!visible);
-                  dispatch(
-                    addToCart({
-                      //redux payload -> 8 keys
-                      id: product.id,
-                      title: product.attributes.title,
-                      description: product.attributes.description,
-                      price: product.attributes.price,
-                      size: productSize,
-                      color: product.attributes.color,
-                      image: product.attributes.images.data[0].attributes.url,
-                      itemQuantity,
-                    })
-                  );
+                  if (
+                    cartEmpty ||
+                    getProductQuantity(product.id, product.attributes?.size)
+                  ) {
+                    setVisible(true);
+                    dispatch(
+                      addToCart({
+                        //redux payload -> 8 keys
+                        id: product.id,
+                        title: product.attributes.title,
+                        description: product.attributes.description,
+                        price: product.attributes.price,
+                        size: productSize,
+                        color: product.attributes.color,
+                        image: product.attributes.images.data[0].attributes.url,
+                        itemQuantity,
+                      })
+                    );
+                    //& Close waitlist modal
+                    //& Close waitlist modal
+                    //& Close waitlist modal
+                  } else {
+                    // alert("error in itemDetail");
+                    // alert("Limit 5 per customer, per size");
+                  }
                 } else {
                   // alert("Item is currently out of stock");
                   return null;
