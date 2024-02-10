@@ -37,7 +37,7 @@
     //   @include temporaryOutline(green);
   } // end cart left
   .cart-right {
-    // @include widthHeight(40%, 100%);
+    @include widthHeight(40%, 100%);
     position: relative;
     @include flex(row);
     @include flexPosition(space-between, flex-start);
@@ -118,7 +118,7 @@
 } // end item wrapper
 
 //Begin Tablet Media Queries
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 715px) {
   .item-wrapper {
     @include flexPosition(center, center);
 
@@ -143,7 +143,7 @@
     } // end cart left
     .cart-right {
       @include flex(column);
-      @include flexPosition(center, center);
+      @include flexPosition(space-between, center);
       @include widthHeight(40%, 100%);
       border: 1px solid green;
 

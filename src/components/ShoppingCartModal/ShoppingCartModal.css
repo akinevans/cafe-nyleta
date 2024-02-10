@@ -19,6 +19,7 @@
   align-items: center;
   width: 85%;
   height: auto;
+  max-width: 680px;
   max-height: 640px;
   background-color: var(--Background);
   overflow-y: scroll;
