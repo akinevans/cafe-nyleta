@@ -26,7 +26,7 @@
   text-decoration: none;
 }
 .shop-products-wrapper .out-of-stock {
-  opacity: 65%;
+  opacity: 100%;
   background-color: transparent;
   cursor: pointer;
 }/*# sourceMappingURL=Shop.css.map */

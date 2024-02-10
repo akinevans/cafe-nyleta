@@ -2,28 +2,31 @@
 
 .item-wrapper {
   @include flex(row);
+  @include widthHeight(89.5%, 100%);
   @include flexPosition(space-between, center);
   margin: -6px 0 5px;
   user-select: none;
+  // border: 2px solid red;
 
   .cart-left {
-    @include widthHeight(60%, 100%);
-    // border: 1px solid red;
-
     position: relative;
     @include flex(row);
-    @include flexPosition(center, center);
+    @include flexPosition(space-between, center);
+    @include widthHeight(50%, 100%);
+    // border: 1px solid blue;
+
     .cart-img {
       @include widthHeight(125px, 150px);
       margin: 10px 0;
+      // @include temporaryOutline(green);
     }
     // @include temporaryOutline(green);
     .cart-detail {
-      @include widthHeight(170px, 100%);
+      @include widthHeight(140px, 100%);
       // border: 2px solid red;
 
       // margin-top: 15px;
-      margin-left: 25px;
+      // margin-left: 25px;
 
       h2 {
         margin-bottom: 6px;
@@ -37,7 +40,7 @@
     @include widthHeight(40%, 100%);
     position: relative;
     @include flex(row);
-    @include flexPosition(space-evenly, flex-start);
+    @include flexPosition(space-between, flex-start);
     // border: 1px solid blue;
 
     .increment-and-remove-btn-wrapper {
@@ -99,7 +102,7 @@
     } // end increment and remove btn wrapper
 
     .item-price {
-      width: 40%;
+      width: fit-content;
       margin-top: 14px;
       font-family: var(--HN-Light);
       font-weight: bold;
@@ -113,3 +116,43 @@
   } // end cart right
   // @include temporaryOutline(blue);
 } // end item wrapper
+
+//Begin Tablet Media Queries
+@media screen and (max-width: 715px) {
+  .item-wrapper {
+    @include flexPosition(center, center);
+
+    .cart-left {
+      @include flex(column);
+      @include flexPosition(center, center);
+      border: 1px solid orange;
+
+      .cart-img {
+        @include widthHeight(125px, 150px);
+        margin: 0;
+        // @include temporaryOutline(green);
+      }
+      // @include temporaryOutline(green);
+      .cart-detail {
+        h2 {
+          text-align: center;
+          color: red;
+          line-height: normal;
+        }
+      }
+    } // end cart left
+    .cart-right {
+      @include flex(column);
+      @include flexPosition(space-between, center);
+      @include widthHeight(40%, 100%);
+      border: 1px solid green;
+
+      .increment-and-remove-btn-wrapper {
+        @include flexPosition(center, center);
+      }
+      .item-price {
+        color: red;
+      }
+    } // end cart right
+  }
+} // end tablet media queries

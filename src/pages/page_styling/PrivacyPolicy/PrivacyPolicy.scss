@@ -15,31 +15,34 @@
     @include widthHeight(95%, fit-content);
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
+    font-size: var(--Body);
     color: var(--Grey-100);
     // @include temporaryOutline(blue);
 
     .page-title {
-      font-size: var(--Heading-1);
+      font-size: var(--Body);
     }
 
     .page-subtitle {
       margin-top: 10px;
+      font-size: var(--Body);
     }
 
     .body-text-wrapper {
       @include flex(column);
       @include flexPosition(center, center);
       margin: 0 25px;
+      font-size: var(--Body);
 
       .welcome-message {
         @include maxWidth(100%);
-        font-size: var(--Heading-3);
+        font-size: var(--Body);
         text-align: center;
       }
 
       ol {
         li {
-          font-size: var(--Heading-2);
+          font-size: var(--Body);
         }
         p {
           margin-bottom: 20px;

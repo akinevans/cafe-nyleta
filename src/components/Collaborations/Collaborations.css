@@ -45,7 +45,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 54%;
+  width: 70%;
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 77px;
@@ -85,4 +85,41 @@
   font-size: var(--Body);
   text-align: left;
   line-height: 26px;
+}
+
+@media screen and (max-width: 834px) {
+  .collab-outer-wrapper .collab-inner-wrapper h1,
+  .collab-outer-wrapper .collab-inner-wrapper li,
+  .collab-outer-wrapper .collab-inner-wrapper p {
+    font-weight: 300;
+  }
+  .collab-outer-wrapper .collab-inner-wrapper h1 {
+    font-size: var(--Heading-2);
+  }
+  .collab-outer-wrapper .collab-inner-wrapper .collab-list-section {
+    margin-top: 50px;
+  }
+  .collab-outer-wrapper .collab-inner-wrapper .collab-list-section .collab-list ul {
+    margin: 0;
+    padding: 0;
+  }
+  .collab-outer-wrapper .collab-inner-wrapper .collab-list-section .collab-list ul li {
+    margin-bottom: 5px;
+    line-height: 26px;
+    list-style: none;
+    font-size: var(--Body);
+  }
+}
+@media screen and (max-width: 550px) {
+  .collab-outer-wrapper .collab-inner-wrapper .collab-list-section {
+    margin-top: 24px;
+  }
+  .collab-outer-wrapper .collab-inner-wrapper .collab-list-section .collab-list ul li {
+    font-size: var(--Body-Small);
+  }
+}
+@media screen and (max-width: 380px) {
+  .collab-outer-wrapper .collab-inner-wrapper .collab-list-section .collab-list ul li {
+    font-size: var(--Label);
+  }
 }/*# sourceMappingURL=Collaborations.css.map */

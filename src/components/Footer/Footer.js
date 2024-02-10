@@ -22,7 +22,7 @@ export default function Footer() {
         </Link>
         <Link to='/privacy-policy'>Privacy Policy</Link>
         <Link to='/terms-and-conditions'>Terms & Conditions</Link>
-        <Link to='/careers'>Careers</Link>
+        {/* <Link to='/careers'>Careers</Link> */}
         <Link to='/contact'>Contact Us</Link>
       </div>
     </footer>
