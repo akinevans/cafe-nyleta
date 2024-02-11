@@ -12,7 +12,7 @@ import AddToCartConfirmationModal from "../components/AddToCartConfirmationModal
 import "../pages/page_styling/ItemDetail/ItemDetail.css";
 
 export default function ItemDetail(props, { item }) {
-  const [visible, setVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
   const [productSize, setProductSize] = useState("M");
@@ -23,7 +23,6 @@ export default function ItemDetail(props, { item }) {
   const dispatch = useDispatch();
   const apiFilterPath = "&[filters][type][$eq]=";
   const id = useParams().id;
-
   const { product, loading } = useFetch(`/products/${id}?populate=*`);
   const products = useSelector((state) => state.cart.products);
   // console.log(product);
@@ -39,6 +38,9 @@ export default function ItemDetail(props, { item }) {
     altDescription = product?.attributes?.alt,
     isOneSize = product?.attributes?.size === "ONESIZE";
 
+  const cartEmpty = products.length === 0;
+  const maxQuantity = 5;
+
   const getProductQuantity = (id, size) => {
     for (let i = 0; i < products.length; i++) {
       if (id === products[i].id && size === products[i].size) {
@@ -52,8 +54,12 @@ export default function ItemDetail(props, { item }) {
     return true;
   };
 
-  const cartEmpty = products.length === 0;
-  // const productNotInCart =
+  const canBeAddedToCart = () => {
+    return (
+      cartEmpty || getProductQuantity(product.id, product.attributes?.size)
+    );
+  };
+
   const numOfImages = [];
   const getNumOfImages = () => {
     for (let i = 0; i < product?.attributes?.images?.data.length; i++) {
@@ -154,7 +160,7 @@ export default function ItemDetail(props, { item }) {
               isOneSize={isOneSize}
               sizeOnClick={(size) => {
                 setProductSize(size);
-                console.log(productSize);
+                // console.log(productSize);
               }}
             />
             <Button
@@ -163,12 +169,10 @@ export default function ItemDetail(props, { item }) {
               }`}
               title={inStock ? "Add to Cart" : "Out of stock"}
               onClick={() => {
+                //! Bug, modal opens when a product quantity is === 5
                 if (inStock) {
-                  if (
-                    cartEmpty ||
-                    getProductQuantity(product.id, product.attributes?.size)
-                  ) {
-                    setVisible(true);
+                  if (canBeAddedToCart) {
+                    setModalVisible(true);
                     dispatch(
                       addToCart({
                         //redux payload -> 8 keys
@@ -182,12 +186,19 @@ export default function ItemDetail(props, { item }) {
                         itemQuantity,
                       })
                     );
-                    //& Close waitlist modal after X amount of time
-                    //& Close waitlist modal after X amount of time
-                    //& Close waitlist modal after X amount of time
+                    // Only open AddToCartConfirmationModal if the products quantity in the cart is below 5
+                    if (
+                      getProductQuantity(product.id, productSize) >= maxQuantity
+                    ) {
+                      setModalVisible(false);
+                      //& Close waitlist modal after X amount of time
+                      //& Close waitlist modal after X amount of time
+                      //& Close waitlist modal after X amount of time
+                    }
                   } else {
                     // alert("error in itemDetail");
                     // alert("Limit 5 per customer, per size");
+                    return null;
                   }
                 } else {
                   // alert("Item is currently out of stock");
@@ -201,7 +212,9 @@ export default function ItemDetail(props, { item }) {
       )}
       <AddToCartConfirmationModal
         //^ modal position is styled in ItemDetail.scss */
-        className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
+        className={`${
+          modalVisible ? "gray-out" : "hidden"
+        } waitlist-modal-position`}
         src={
           process.env.REACT_APP_UPLOAD_URL +
           product?.attributes?.images?.data[0]?.attributes?.url
@@ -212,7 +225,7 @@ export default function ItemDetail(props, { item }) {
         price={productPrice}
         color={productColor}
         closeBtnOnClick={() => {
-          setVisible(!visible);
+          setModalVisible(false);
         }}
       />
     </div>
