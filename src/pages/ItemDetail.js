@@ -8,7 +8,7 @@ import { addToCart } from "../../src/redux/cartReducer";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
 import Button from "../components/Button/Button";
-import WaitlistModal from "../components/WaitlistModal/WaitlistModal";
+import AddToCartConfirmationModal from "../components/AddToCartConfirmationModal/AddToCartConfirmationModal";
 import "../pages/page_styling/ItemDetail/ItemDetail.css";
 
 export default function ItemDetail(props, { item }) {
@@ -199,7 +199,7 @@ export default function ItemDetail(props, { item }) {
           </div>
         </div>
       )}
-      <WaitlistModal
+      <AddToCartConfirmationModal
         //^ modal position is styled in ItemDetail.scss */
         className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
         src={

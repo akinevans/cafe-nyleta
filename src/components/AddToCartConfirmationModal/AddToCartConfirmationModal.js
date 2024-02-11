@@ -1,23 +1,12 @@
-//! RENAME COMPONENT TO CART CONFIRMATION MODAL
-//! RENAME COMPONENT TO CART CONFIRMATION MODAL
-//! RENAME COMPONENT TO CART CONFIRMATION MODAL
-
 import React from "react";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../redux/cartReducer";
+import { useSelector } from "react-redux";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./WaitlistModal.css";
+import "./AddToCartConfirmationModal.css";
 import Button from "../Button/Button";
-import arrow from "../../assets/icons/down-arrow.svg";
 
 export default function WaitlistModal(props) {
-  const [visible, setVisible] = useState(false);
-  const [itemQuantity, setItemQuantity] = useState(1);
-
-  const dispatch = useDispatch();
   const id = useParams().id;
   const { product } = useFetch(`/products/${id}?populate=*`);
   const products = useSelector((state) => state.cart.products);
@@ -35,22 +24,27 @@ export default function WaitlistModal(props) {
   };
 
   return (
-    <div className={`waitlist-modal-page-wrapper ${props.className}`}>
-      <div className='waitlist-wrapper'>
-        <div className='waitlist-title-wrapper'>
-          <h1>{`Added to Cart (${getCartQuantityAndPrice()[0]})`}</h1>
+    <div className={`confirmation-modal-page-wrapper ${props.className}`}>
+      <div className='confirmation-wrapper'>
+        <div className='confirmation-title-wrapper'>
+          {/* <h1>{`Added to Cart (${getCartQuantityAndPrice()[0]})`}</h1> */}
+          <h1>Added to Cart</h1>
         </div>
-        <div className='waitlist-body-wrapper'>
-          <div className='waitlist-left'>
+        <div className='confirmation-body-wrapper'>
+          <div className='confirmation-left'>
             <Link
               to={`/itemdetail/${product.id}`}
               onClick={props.closeBtnOnClick}
             >
-              <img src={props.src} alt={props.alt} className='waitlist-img' />
+              <img
+                src={props.src}
+                alt={props.alt}
+                className='confirmation-img'
+              />
             </Link>
           </div>
-          <div className='waitlist-right'>
-            <div className='waitlist-detail'>
+          <div className='confirmation-right'>
+            <div className='confirmation-detail'>
               <h2>{`${props.name} ${
                 product.attributes?.color ? "- " + props.color : ""
               }`}</h2>
@@ -59,7 +53,7 @@ export default function WaitlistModal(props) {
             </div>
           </div>
         </div>
-        <div className='waitlist-btn-wrapper'>
+        <div className='confirmation-btn-wrapper'>
           <Button
             className='btn white back-to-shop'
             title='Close'
