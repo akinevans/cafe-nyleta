@@ -9,10 +9,12 @@ import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
 import Button from "../components/Button/Button";
 import AddToCartConfirmationModal from "../components/AddToCartConfirmationModal/AddToCartConfirmationModal";
+import ShoppingCartLimitModal from "../components/ShoppingCartLimitModal/ShoppingCartLimitModal";
 import "../pages/page_styling/ItemDetail/ItemDetail.css";
 
 export default function ItemDetail(props, { item }) {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [addModalVisible, setAddModalVisible] = useState(false);
+  const [limitModalVisible, setLimitModalVisible] = useState(false);
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
   const [productSize, setProductSize] = useState("M");
@@ -169,10 +171,9 @@ export default function ItemDetail(props, { item }) {
               }`}
               title={inStock ? "Add to Cart" : "Out of stock"}
               onClick={() => {
-                //! Bug, modal opens when a product quantity is === 5
                 if (inStock) {
                   if (canBeAddedToCart) {
-                    setModalVisible(true);
+                    setAddModalVisible(true);
                     dispatch(
                       addToCart({
                         //redux payload -> 8 keys
@@ -190,7 +191,8 @@ export default function ItemDetail(props, { item }) {
                     if (
                       getProductQuantity(product.id, productSize) >= maxQuantity
                     ) {
-                      setModalVisible(false);
+                      setAddModalVisible(false);
+                      setLimitModalVisible(true);
                       //& Close waitlist modal after X amount of time
                       //& Close waitlist modal after X amount of time
                       //& Close waitlist modal after X amount of time
@@ -213,7 +215,7 @@ export default function ItemDetail(props, { item }) {
       <AddToCartConfirmationModal
         //^ modal position is styled in ItemDetail.scss */
         className={`${
-          modalVisible ? "gray-out" : "hidden"
+          addModalVisible ? "gray-out" : "hidden"
         } waitlist-modal-position`}
         src={
           process.env.REACT_APP_UPLOAD_URL +
@@ -225,7 +227,16 @@ export default function ItemDetail(props, { item }) {
         price={productPrice}
         color={productColor}
         closeBtnOnClick={() => {
-          setModalVisible(false);
+          setAddModalVisible(false);
+        }}
+      />
+      <ShoppingCartLimitModal
+        //^ modal position is styled in ItemDetail.scss */
+        className={`${
+          limitModalVisible ? "gray-out" : "hidden"
+        } limit-modal-position`}
+        closeBtnOnClick={() => {
+          setLimitModalVisible(false);
         }}
       />
     </div>

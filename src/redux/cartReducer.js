@@ -30,7 +30,6 @@ export const cartSlice = createSlice({
               if (action.payload.newQuantity) {
                 //^ mutate from shoppingCartItem
                 state.products[i].itemQuantity = action.payload.newQuantity;
-                //! add max 5 alert
                 return;
               }
 
@@ -40,7 +39,7 @@ export const cartSlice = createSlice({
                   state.products[i].itemQuantity + action.payload.itemQuantity >
                   maxQuantity
                 ) {
-                  alert("Limit 5 per customer, per size");
+                  // alert("Limit 5 per customer, per size");
                   state.products[i].itemQuantity = maxQuantity;
                   break;
                 } else {

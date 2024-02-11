@@ -24,7 +24,10 @@ export default function WaitlistModal(props) {
   };
 
   return (
-    <div className={`confirmation-modal-page-wrapper ${props.className}`}>
+    <div
+      className={`confirmation-modal-page-wrapper ${props.className}`}
+      onClick={props.closeBtnOnClick}
+    >
       <div className='confirmation-wrapper'>
         <div className='confirmation-title-wrapper'>
           {/* <h1>{`Added to Cart (${getCartQuantityAndPrice()[0]})`}</h1> */}
