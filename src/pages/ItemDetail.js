@@ -182,9 +182,9 @@ export default function ItemDetail(props, { item }) {
                         itemQuantity,
                       })
                     );
-                    //& Close waitlist modal
-                    //& Close waitlist modal
-                    //& Close waitlist modal
+                    //& Close waitlist modal after X amount of time
+                    //& Close waitlist modal after X amount of time
+                    //& Close waitlist modal after X amount of time
                   } else {
                     // alert("error in itemDetail");
                     // alert("Limit 5 per customer, per size");
