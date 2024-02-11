@@ -16,6 +16,20 @@ export const getProductQuantity = (products, id, size) => {
 //
 //
 
+export const getCartQuantityAndPrice = (products) => {
+  let totalQuantity = 0;
+  let totalPrice = 0;
+
+  for (let i = 0; i < products.length; i++) {
+    totalQuantity += products[i].itemQuantity;
+    totalPrice += products[i].itemQuantity * products[i].price;
+  }
+  return [totalQuantity, totalPrice.toFixed(2)];
+};
+
+//
+//
+
 export const canBeAddedToCart = (products, product) => {
   const cartEmpty = products.length === 0;
   return (
@@ -60,3 +74,6 @@ export const cycleImages = (
       product?.attributes?.images?.data[currentCycleBox]?.attributes?.url
   );
 };
+
+//
+//
