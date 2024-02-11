@@ -2,15 +2,24 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../src/redux/cartReducer";
 
+// component imports
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
 import Button from "../components/Button/Button";
 import AddToCartConfirmationModal from "../components/AddToCartConfirmationModal/AddToCartConfirmationModal";
 import ShoppingCartLimitModal from "../components/ShoppingCartLimitModal/ShoppingCartLimitModal";
 import "../pages/page_styling/ItemDetail/ItemDetail.css";
+
+//utility imports
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../src/redux/cartReducer";
+import {
+  getProductQuantity,
+  canBeAddedToCart,
+  getNumOfImages,
+  cycleImages,
+} from "../utils/shopping";
 
 export default function ItemDetail(props, { item }) {
   const [addModalVisible, setAddModalVisible] = useState(false);
@@ -21,7 +30,6 @@ export default function ItemDetail(props, { item }) {
   const [itemQuantity, setItemQuantity] = useState(1);
   const [currentCycleBox, setCurrentCycleBox] = useState(0);
 
-  // const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
   const apiFilterPath = "&[filters][type][$eq]=";
   const id = useParams().id;
@@ -40,55 +48,8 @@ export default function ItemDetail(props, { item }) {
     altDescription = product?.attributes?.alt,
     isOneSize = product?.attributes?.size === "ONESIZE";
 
-  const cartEmpty = products.length === 0;
   const maxQuantity = 5;
-
-  const getProductQuantity = (id, size) => {
-    for (let i = 0; i < products.length; i++) {
-      if (id === products[i].id && size === products[i].size) {
-        // alert("match found!!");
-        return products[i].itemQuantity;
-      } else {
-        continue;
-      }
-    }
-    // alert("no match found, adding new item to cart");
-    return true;
-  };
-
-  const canBeAddedToCart = () => {
-    return (
-      cartEmpty || getProductQuantity(product.id, product.attributes?.size)
-    );
-  };
-
-  const numOfImages = [];
-  const getNumOfImages = () => {
-    for (let i = 0; i < product?.attributes?.images?.data.length; i++) {
-      numOfImages.push(i);
-    }
-  };
-  getNumOfImages();
-  // console.log(numOfImages);
-
-  const cycleImages = (e) => {
-    const nextImage =
-      product?.attributes?.images?.data[currentCycleBox + 1]?.attributes?.url;
-
-    //check if the next image exists, if true increment, if false reset index to 0
-    if (nextImage) {
-      setCurrentCycleBox((prevCurrentCycleBox) => prevCurrentCycleBox + 1);
-    } else {
-      setCurrentCycleBox(0);
-    }
-
-    //finally, set the new image src
-    e.target.setAttribute(
-      "src",
-      process.env.REACT_APP_UPLOAD_URL +
-        product?.attributes?.images?.data[currentCycleBox]?.attributes?.url
-    );
-  };
+  getNumOfImages(product);
 
   // scroll to the top of the page on render
   useEffect(() => {
@@ -127,7 +88,7 @@ export default function ItemDetail(props, { item }) {
                 }
                 alt={altDescription}
                 onClick={(e) => {
-                  cycleImages(e);
+                  cycleImages(e, product, currentCycleBox, setCurrentCycleBox);
                 }}
               />
               <div className='cycle-box-wrapper'>
@@ -189,7 +150,8 @@ export default function ItemDetail(props, { item }) {
                     );
                     // Only open AddToCartConfirmationModal if the products quantity in the cart is below 5
                     if (
-                      getProductQuantity(product.id, productSize) >= maxQuantity
+                      getProductQuantity(products, product.id, productSize) >=
+                      maxQuantity
                     ) {
                       setAddModalVisible(false);
                       setLimitModalVisible(true);

@@ -44,8 +44,8 @@
 
   .limit-btn-wrapper {
     @include flex(row);
-    gap: 8px;
     @include flexPosition(flex-end, center);
+    gap: 8px;
     margin-bottom: 25px;
     // @include temporaryOutline(green);
   }
