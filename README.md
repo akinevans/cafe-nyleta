@@ -1,5 +1,7 @@
 # Cafe Nyleta
 
+# [See the live site here](https://cafe-nyleta.netlify.app/)
+
 ### An Ecommerce shopping application built using React, JavaScript, Strapi CMS, Redux, SASS and Axios.
 
 ### Web Developer: [Akin Evans](http://www.akinevans.com/)
