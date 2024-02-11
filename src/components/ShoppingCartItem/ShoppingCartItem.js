@@ -1,68 +1,16 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removeItem } from "../../redux/cartReducer";
-import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 import "./ShoppingCartItem.css";
 
+// utility imports
+import useFetch from "../../hooks/useFetch";
+import { useDispatch } from "react-redux";
+import { addToCart, removeItem } from "../../redux/cartReducer";
+import { updateProductQuantity } from "../../utils/shopping";
+
 export default function ShoppingCartItem(props, { data }) {
   const { product } = useFetch(`/products/${props.id}?populate`);
-  const products = useSelector((state) => state.cart.products);
-
   const dispatch = useDispatch();
-
-  // console.log(product);
-  // console.log(products);
-  // console.log(typeof productQuantity);
-
-  //get correct product from cart by matching its id and size
-  const getProduct = (id, size) => {
-    // console.log(id, size);
-    for (let i = 0; i < products.length; i++) {
-      if (id === products[i].id && size === products[i].size) {
-        // alert("match found!!");
-        return products[i].itemQuantity;
-      } else {
-        continue;
-      }
-    }
-    alert("no match found");
-    return;
-  };
-
-  const updateProductQuantity = (operation, currentQuantity) => {
-    const maxQuantityPerProduct = 5;
-    const minQuantityPerProduct = 1;
-
-    if (
-      operation === "increment" &&
-      props.individualItemQuantity < maxQuantityPerProduct
-    ) {
-      const newQuantity = props.individualItemQuantity + 1;
-      dispatch(
-        addToCart({
-          id: product.id,
-          size: props.size,
-          color: props.color,
-          newQuantity,
-        })
-      );
-    } else if (
-      operation === "decrement" &&
-      props.individualItemQuantity > minQuantityPerProduct
-    ) {
-      const newQuantity = props.individualItemQuantity - 1;
-      dispatch(
-        addToCart({
-          id: product.id,
-          size: props.size,
-          color: props.color,
-          newQuantity,
-        })
-      );
-    } else return;
-    // console.log(productQuantity);
-  };
 
   return (
     <div className='item-wrapper'>
@@ -70,9 +18,8 @@ export default function ShoppingCartItem(props, { data }) {
         <Link
           to={props.navigationLink}
           onClick={() => {
-            // props.closeBtnOnClick -->> will close the modal from ShoppingCartModal, and navigate to item page
+            // close the modal from ShoppingCartModal, and navigate to item page
             props.closeBtnOnClick();
-            // alert("close modal");
           }}
         >
           <img src={props.imgSrc} alt={props.imgAlt} className='cart-img' />
@@ -89,10 +36,21 @@ export default function ShoppingCartItem(props, { data }) {
           <div className='increment-btn-wrapper'>
             <button
               onClick={() => {
-                updateProductQuantity(
+                let newQuantity = updateProductQuantity(
                   "decrement",
-                  getProduct(props.id, props.size)
+                  props.individualItemQuantity
                 );
+                if (newQuantity) {
+                  // alert(newQuantity);
+                  dispatch(
+                    addToCart({
+                      id: product.id,
+                      size: props.size,
+                      color: props.color,
+                      newQuantity,
+                    })
+                  );
+                }
               }}
             >
               -
@@ -102,10 +60,21 @@ export default function ShoppingCartItem(props, { data }) {
 
             <button
               onClick={() => {
-                updateProductQuantity(
+                let newQuantity = updateProductQuantity(
                   "increment",
-                  getProduct(props.id, props.size)
+                  props.individualItemQuantity
                 );
+                if (newQuantity) {
+                  // alert(newQuantity);
+                  dispatch(
+                    addToCart({
+                      id: product.id,
+                      size: props.size,
+                      color: props.color,
+                      newQuantity,
+                    })
+                  );
+                }
               }}
             >
               +
@@ -125,7 +94,6 @@ export default function ShoppingCartItem(props, { data }) {
             Remove
           </p>
         </div>
-
         <h2 className='item-price'>{`$${props.price} USD`}</h2>
       </div>
     </div>

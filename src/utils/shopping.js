@@ -1,5 +1,24 @@
 // Utility functions for all shopping logic processes
 
+export const updateProductQuantity = (operation, currentQuantity) => {
+  const maxQuantityPerProduct = 5;
+  const minQuantityPerProduct = 1;
+
+  if (operation === "increment" && currentQuantity < maxQuantityPerProduct) {
+    const updatedQuantity = currentQuantity + 1;
+    return updatedQuantity;
+  } else if (
+    operation === "decrement" &&
+    currentQuantity > minQuantityPerProduct
+  ) {
+    const updatedQuantity = currentQuantity - 1;
+    return updatedQuantity;
+  } else return;
+};
+//
+//
+
+//get correct product from cart by matching its id and size
 export const getProductQuantity = (products, id, size) => {
   for (let i = 0; i < products.length; i++) {
     if (id === products[i].id && size === products[i].size) {
