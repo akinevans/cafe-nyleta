@@ -19,7 +19,7 @@ import {
   canBeAddedToCart,
   getNumOfImages,
   cycleImages,
-} from "../utils/shopping";
+} from "../utils/shoppingLogic";
 
 export default function ItemDetail() {
   const [addModalVisible, setAddModalVisible] = useState(false);

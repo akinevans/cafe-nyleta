@@ -6,7 +6,7 @@ import "./ShoppingCartItem.css";
 import useFetch from "../../hooks/useFetch";
 import { useDispatch } from "react-redux";
 import { addToCart, removeItem } from "../../redux/cartReducer";
-import { updateProductQuantity } from "../../utils/shopping";
+import { updateProductQuantity } from "../../utils/shoppingLogic";
 
 export default function ShoppingCartItem(props, { data }) {
   const { product } = useFetch(`/products/${props.id}?populate`);

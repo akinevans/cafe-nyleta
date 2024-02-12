@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import "./HamburgerMenuModal.css";
 
 // utility imports
-import { getCartQuantityAndPrice } from "../../../utils/shopping";
+import { getCartQuantityAndPrice } from "../../../utils/shoppingLogic";
 
 export default function HamburgerMenuModal(props) {
   const products = useSelector((state) => state.cart.products);

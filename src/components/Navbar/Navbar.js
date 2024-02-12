@@ -9,7 +9,7 @@ import ShoppingCartModal from "../Modals/ShoppingCartModal/ShoppingCartModal";
 import HamburgerMenuModal from "../Modals/HamburgerMenuModal/HamburgerMenuModal";
 
 // utility imports
-import { getCartQuantityAndPrice } from "../../utils/shopping";
+import { getCartQuantityAndPrice } from "../../utils/shoppingLogic";
 
 // asset imports
 import exit from "../../assets/icons/exit.svg";

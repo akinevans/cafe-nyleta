@@ -7,7 +7,7 @@ import "./ShoppingCartModal.css";
 
 // utility imports
 import { useSelector } from "react-redux";
-import { getCartQuantityAndPrice } from "../../../utils/shopping";
+import { getCartQuantityAndPrice } from "../../../utils/shoppingLogic";
 
 export default function ShoppingCartModal(props) {
   const products = useSelector((state) => state.cart.products);

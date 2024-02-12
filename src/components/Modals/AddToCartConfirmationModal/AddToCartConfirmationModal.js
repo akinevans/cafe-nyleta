@@ -8,7 +8,7 @@ import Button from "../../Button/Button";
 // utility imports
 import useFetch from "../../../hooks/useFetch";
 import { useSelector } from "react-redux";
-import { getCartQuantityAndPrice } from "../../../utils/shopping";
+import { getCartQuantityAndPrice } from "../../../utils/shoppingLogic";
 
 export default function WaitlistModal(props) {
   const id = useParams().id;
