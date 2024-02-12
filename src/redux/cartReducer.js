@@ -10,71 +10,35 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    //! refactor with guard clauses, this tree runs too deep
+    //addToCart can both increment and decrement item quantities
     addToCart: (state, action) => {
-      // search for item in state cart array, find by id
-      let item = state.products.find((item) => item.id === action.payload.id);
+      const { products } = state;
+      const { id, size, newQuantity, itemQuantity } = action.payload;
       const maxQuantity = 5;
 
-      if (item) {
-        if (state.products.includes(item)) {
-          //loop until a match is found, if no match found by end of array, push to cart
-          for (let i = 0; i < state.products.length; i++) {
-            let isIdMatch = state.products[i].id === action.payload.id;
-            let isSizeMatch = state.products[i].size === action.payload.size;
+      const existingProductIndex = products.findIndex(
+        (item) => item.id === id && item.size === size
+      );
 
-            //check that product ID AND size match
-            if (isIdMatch && isSizeMatch) {
-              // console.log("Match found " + isIdMatch + " " + isSizeMatch);
+      if (existingProductIndex !== -1) {
+        // If product already exists in the cart
+        if (newQuantity) {
+          // Mutate from shoppingCartItem
+          products[existingProductIndex].itemQuantity = newQuantity;
+        } else if (itemQuantity) {
+          // Mutate from itemDetail component
+          const updatedQuantity =
+            products[existingProductIndex].itemQuantity + itemQuantity;
 
-              if (action.payload.newQuantity) {
-                //^ mutate from shoppingCartItem
-                state.products[i].itemQuantity = action.payload.newQuantity;
-                return;
-              }
-
-              if (action.payload.itemQuantity) {
-                //^ mutate from waitlistModal aka addToCart component
-                if (
-                  state.products[i].itemQuantity + action.payload.itemQuantity >
-                  maxQuantity
-                ) {
-                  // alert("Limit 5 per customer, per size");
-                  state.products[i].itemQuantity = maxQuantity;
-                  break;
-                } else {
-                  // alert(
-                  //   "itemQuantity at end of increment : " +
-                  //     action.payload.itemQuantity
-                  // );
-                  // console.log(state.products[i].itemQuantity);
-                  // console.log(action.payload.itemQuantity);
-                  state.products[i].itemQuantity += action.payload.itemQuantity;
-                  break;
-                }
-              }
-            } else {
-              // check if at end of the state array
-              //if true, that means no match was found, push item into array
-              if (i === state.products.length - 1) {
-                // console.log("NO match found " + isIdMatch + " " + isSizeMatch);
-                // alert("failed third check, no matches found");
-                state.products.push(action.payload);
-                // no matches found in array, terminate loop to avoid incorrect incrementing
-                break;
-              } else {
-                continue;
-              }
-            }
-          } // end  loop
-        } else {
-          // alert("failed second check");
-          state.products.push(action.payload);
+          // update the itemsQuantity, maximum of 5 total per size
+          products[existingProductIndex].itemQuantity = Math.min(
+            updatedQuantity,
+            maxQuantity
+          );
         }
       } else {
-        // alert("failed first check");
-        // add item to state products array
-        state.products.push(action.payload);
+        // If product doesn't exist in the cart, push it to the cart
+        products.push(action.payload);
       }
 
       state.value += 1;
@@ -101,6 +65,7 @@ export const cartSlice = createSlice({
         }
       } // end loop
     },
+
     resetCart: (state, action) => {
       //empty the state products array
       state.products = [];
