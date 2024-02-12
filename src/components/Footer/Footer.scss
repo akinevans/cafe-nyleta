@@ -25,6 +25,7 @@
     // @include temporaryOutline(red);
   }
 
+  // 'a' tags and Router Link tags are the same in css
   a {
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
@@ -41,6 +42,10 @@
     &:active {
       opacity: 85%;
     }
+  }
+
+  .privacy {
+    margin-top: 0;
   }
 }
 

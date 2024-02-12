@@ -43,6 +43,9 @@
 .footer-content-wrapper a:active {
   opacity: 85%;
 }
+.footer-content-wrapper .privacy {
+  margin-top: 0;
+}
 
 @media screen and (max-width: 530px) {
   .footer-outer-wrapper {

@@ -20,7 +20,9 @@ export default function Footer() {
         >
           <img src={logo} alt='cafe nyleta logo footer' />
         </Link>
-        <Link to='/privacy-policy'>Privacy Policy</Link>
+        <Link className='privacy' to='/privacy-policy'>
+          Privacy Policy
+        </Link>
         <Link to='/terms-and-conditions'>Terms & Conditions</Link>
         {/* <Link to='/careers'>Careers</Link> */}
         <Link to='/contact'>Contact Us</Link>
