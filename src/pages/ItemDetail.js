@@ -2,28 +2,43 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
-// import { useSelector } from "react-redux";
 
+// component imports
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
 import Button from "../components/Button/Button";
-import WaitlistModal from "../components/WaitlistModal/WaitlistModal";
+import AddToCartConfirmationModal from "../components/Modals/AddToCartConfirmationModal/AddToCartConfirmationModal";
+import ShoppingCartLimitModal from "../components/Modals/ShoppingCartLimitModal/ShoppingCartLimitModal";
 import "../pages/page_styling/ItemDetail/ItemDetail.css";
 
-export default function ItemDetail(props, { item }) {
-  const [visible, setVisible] = useState(false);
+//utility imports
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../src/redux/cartReducer";
+import {
+  getProductQuantity,
+  canBeAddedToCart,
+  getNumOfImages,
+  cycleImages,
+} from "../utils/shoppingLogic";
+
+export default function ItemDetail() {
+  const [addModalVisible, setAddModalVisible] = useState(false);
+  const [limitModalVisible, setLimitModalVisible] = useState(false);
   const [category, setCategory] = useState("");
   const [filterPath, setFilterPath] = useState("");
   const [productSize, setProductSize] = useState("M");
+  const [itemQuantity, setItemQuantity] = useState(1);
   const [currentCycleBox, setCurrentCycleBox] = useState(0);
 
-  // const products = useSelector((state) => state.cart.products);
-
+  const dispatch = useDispatch();
   const apiFilterPath = "&[filters][type][$eq]=";
   const id = useParams().id;
-
   const { product, loading } = useFetch(`/products/${id}?populate=*`);
+  const products = useSelector((state) => state.cart.products);
   // console.log(product);
+  // console.log(products);
+  // console.log(product.id);
+  // console.log(product.attributes?.size);
 
   const productName = product?.attributes?.title,
     productColor = product?.attributes?.color,
@@ -33,33 +48,8 @@ export default function ItemDetail(props, { item }) {
     altDescription = product?.attributes?.alt,
     isOneSize = product?.attributes?.size === "ONESIZE";
 
-  const numOfImages = [];
-  const getNumOfImages = () => {
-    for (let i = 0; i < product?.attributes?.images?.data.length; i++) {
-      numOfImages.push(i);
-    }
-  };
-  getNumOfImages();
-  // console.log(numOfImages);
-
-  const cycleImages = (e) => {
-    const nextImage =
-      product?.attributes?.images?.data[currentCycleBox + 1]?.attributes?.url;
-
-    //check if the next image exists, if true increment, if false reset index to 0
-    if (nextImage) {
-      setCurrentCycleBox((prevCurrentCycleBox) => prevCurrentCycleBox + 1);
-    } else {
-      setCurrentCycleBox(0);
-    }
-
-    //finally, set the new image src
-    e.target.setAttribute(
-      "src",
-      process.env.REACT_APP_UPLOAD_URL +
-        product?.attributes?.images?.data[currentCycleBox]?.attributes?.url
-    );
-  };
+  const maxQuantity = 5;
+  getNumOfImages(product);
 
   // scroll to the top of the page on render
   useEffect(() => {
@@ -98,21 +88,19 @@ export default function ItemDetail(props, { item }) {
                 }
                 alt={altDescription}
                 onClick={(e) => {
-                  cycleImages(e);
+                  cycleImages(e, product, currentCycleBox, setCurrentCycleBox);
                 }}
               />
               <div className='cycle-box-wrapper'>
-                {/* use utility class 'active' to color selected box */}
-                {/* // i represents each iteration of map function*/}
+                {/* use utility class 'active' to color the selected box */}
+                {/* i represents each iteration of map function*/}
                 {product?.attributes?.images?.data.map((element, i) => (
-                  <>
-                    {/* <p>{i}</p> */}
-                    <div
-                      className={`cycle-box ${
-                        currentCycleBox === i ? "active" : ""
-                      }`}
-                    ></div>
-                  </>
+                  <div
+                    className={`cycle-box ${
+                      currentCycleBox === i ? "active" : ""
+                    }`}
+                    key={i}
+                  ></div>
                 ))}
               </div>
             </div>
@@ -133,6 +121,7 @@ export default function ItemDetail(props, { item }) {
               isOneSize={isOneSize}
               sizeOnClick={(size) => {
                 setProductSize(size);
+                // console.log(productSize);
               }}
             />
             <Button
@@ -142,7 +131,37 @@ export default function ItemDetail(props, { item }) {
               title={inStock ? "Add to Cart" : "Out of stock"}
               onClick={() => {
                 if (inStock) {
-                  setVisible(!visible);
+                  if (canBeAddedToCart) {
+                    setAddModalVisible(true);
+                    dispatch(
+                      addToCart({
+                        //redux payload -> 8 keys
+                        id: product.id,
+                        title: product.attributes.title,
+                        description: product.attributes.description,
+                        price: product.attributes.price,
+                        size: productSize,
+                        color: product.attributes.color,
+                        image: product.attributes.images.data[0].attributes.url,
+                        itemQuantity,
+                      })
+                    );
+                    // Only open AddToCartConfirmationModal if the products quantity in the cart is below 5
+                    if (
+                      getProductQuantity(products, product.id, productSize) >=
+                      maxQuantity
+                    ) {
+                      setAddModalVisible(false);
+                      setLimitModalVisible(true);
+                      //& Close waitlist modal after X amount of time
+                      //& Close waitlist modal after X amount of time
+                      //& Close waitlist modal after X amount of time
+                    }
+                  } else {
+                    // alert("error in itemDetail");
+                    // alert("Limit 5 per customer, per size");
+                    return null;
+                  }
                 } else {
                   // alert("Item is currently out of stock");
                   return null;
@@ -153,9 +172,11 @@ export default function ItemDetail(props, { item }) {
           </div>
         </div>
       )}
-      <WaitlistModal
+      <AddToCartConfirmationModal
         //^ modal position is styled in ItemDetail.scss */
-        className={`${visible ? "gray-out" : "hidden"} waitlist-modal-position`}
+        className={`${
+          addModalVisible ? "gray-out" : "hidden"
+        } waitlist-modal-position`}
         src={
           process.env.REACT_APP_UPLOAD_URL +
           product?.attributes?.images?.data[0]?.attributes?.url
@@ -166,7 +187,16 @@ export default function ItemDetail(props, { item }) {
         price={productPrice}
         color={productColor}
         closeBtnOnClick={() => {
-          setVisible(!visible);
+          setAddModalVisible(false);
+        }}
+      />
+      <ShoppingCartLimitModal
+        //^ modal position is styled in ItemDetail.scss */
+        className={`${
+          limitModalVisible ? "gray-out" : "hidden"
+        } limit-modal-position`}
+        closeBtnOnClick={() => {
+          setLimitModalVisible(false);
         }}
       />
     </div>

@@ -1,3 +1,5 @@
+// This component is no longer used.
+
 import React from "react";
 import "./BrandingKit.css";
 import Button from "../Button/Button";

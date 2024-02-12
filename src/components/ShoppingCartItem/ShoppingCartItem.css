@@ -100,44 +100,4 @@
   line-height: 26px;
   letter-spacing: 0.6px;
   text-align: right;
-}
-
-@media screen and (max-width: 715px) {
-  .item-wrapper {
-    justify-content: center;
-    align-items: center;
-  }
-  .item-wrapper .cart-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid orange;
-  }
-  .item-wrapper .cart-left .cart-img {
-    width: 125px;
-    height: 150px;
-    margin: 0;
-  }
-  .item-wrapper .cart-left .cart-detail h2 {
-    text-align: center;
-    color: red;
-    line-height: normal;
-  }
-  .item-wrapper .cart-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 40%;
-    height: 100%;
-    border: 1px solid green;
-  }
-  .item-wrapper .cart-right .increment-and-remove-btn-wrapper {
-    justify-content: center;
-    align-items: center;
-  }
-  .item-wrapper .cart-right .item-price {
-    color: red;
-  }
 }/*# sourceMappingURL=ShoppingCartItem.css.map */

@@ -3,39 +3,29 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+//component imports
 import Button from "../Button/Button";
-import "./Navbar.css";
-import logo from "../../assets/icons/cafe-nyleta-logo.png";
-import ShoppingCartModal from "../ShoppingCartModal/ShoppingCartModal";
-import HamburgerMenuModal from "../HamburgerMenuModal/HamburgerMenuModal";
-import hamburger from "../../assets/icons/hamburger-menu.svg";
-import exit from "../../assets/icons/exit.svg";
+import ShoppingCartModal from "../Modals/ShoppingCartModal/ShoppingCartModal";
+import HamburgerMenuModal from "../Modals/HamburgerMenuModal/HamburgerMenuModal";
 
-export default function Navbar(props) {
+// utility imports
+import { getCartQuantityAndPrice } from "../../utils/shoppingLogic";
+
+// asset imports
+import exit from "../../assets/icons/exit.svg";
+import logo from "../../assets/icons/cafe-nyleta-logo.png";
+import hamburger from "../../assets/icons/hamburger-menu.svg";
+import "./Navbar.css";
+
+export default function Navbar() {
   const [cartVisible, setCartVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
-  //! pull quantity data from cartReducer
   // lock navbar in place, this fix solves the scrolling issue when HamburgerModal is visible
   const [lockNav, setLockNav] = useState(false);
   // true == hamburger icon, false == X icon
   const [menuIcon, setMenuIcon] = useState(true);
-
-  //! write a function that reads data from cartReducer to get total product quantity
-  // iterate over array and += the itemQuantity of each array index
   const products = useSelector((state) => state.cart.products);
   // console.log(products);
-  // console.log(products.length > 0 ? products[0].itemQuantity : "length is < 0");
-
-  //! export to module
-  const getCartQuantityAndPrice = () => {
-    let totalQuantity = 0;
-    let totalPrice = 0;
-
-    for (let i = 0; i < products.length; i++) {
-      totalQuantity += products[i].itemQuantity;
-    }
-    return [totalQuantity, totalPrice];
-  };
 
   //Window width for showing / hiding hamburger menu
   const [windowSize, setWindowSize] = useState([
@@ -80,8 +70,8 @@ export default function Navbar(props) {
               setCartVisible(!cartVisible);
             }}
           >
-            {/* //get the total quantity only from getCart function */}
-            {`Cart (${getCartQuantityAndPrice()[0]})`}
+            {/* //get the total quantity only  */}
+            {`Cart (${getCartQuantityAndPrice(products)[0]})`}
           </button>
           <Link to='/contact'>
             <Button className='btn grey contact' title='Contact Us' />
@@ -105,6 +95,7 @@ export default function Navbar(props) {
           </button>
         </div>
       </div>
+
       {/* //& Shopping Cart modal */}
       <ShoppingCartModal
         className={cartVisible ? "gray-out" : "hidden"}

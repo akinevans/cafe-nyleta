@@ -1,7 +1,7 @@
 import React from "react";
 import "./page_styling/Contact/Contact.css";
 import ContactForm from "../components/ContactForm/ContactForm";
-import ContactModal from "../components/ContactModal/ContactModal";
+import ContactModal from "../components/Modals/ContactModal/ContactModal";
 
 export default function Contact() {
   return (

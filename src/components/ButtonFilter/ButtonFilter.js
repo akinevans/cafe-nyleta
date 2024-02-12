@@ -3,11 +3,10 @@ import "./ButtonFilter.css";
 
 export default function ButtonFilter(props) {
   const [selected, setSelected] = useState("M");
-  // const [oneSizeFitsAll, setOneSizeFitsAll] = useState(false);
 
   return (
     <div className={`button-filter-outer-wrapper ${props.className}`}>
-      {/* select size on click */}
+      {/* select product size on click */}
       {props.isOneSize ? (
         <button
           onClick={(e) => {

@@ -1,0 +1,82 @@
+.confirmation-modal-page-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 1700px;
+  z-index: 999;
+}
+
+.confirmation-wrapper {
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 450px;
+  margin: 0 20px;
+  padding: 20px 30px 0;
+  background-color: var(--Background);
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1));
+}
+.confirmation-wrapper .confirmation-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.confirmation-wrapper h1,
+.confirmation-wrapper h2 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--HN-Light);
+  font-weight: var(--Light-Weight);
+  font-size: var(--Heading-2);
+  color: var(--Black);
+}
+.confirmation-wrapper .confirmation-body-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  border-top: 1px solid var(--Black);
+  border-bottom: 1px solid var(--Black);
+}
+.confirmation-wrapper .confirmation-body-wrapper .confirmation-left .confirmation-img {
+  width: 125px;
+  height: auto;
+}
+.confirmation-wrapper .confirmation-body-wrapper .confirmation-right {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.confirmation-wrapper .confirmation-body-wrapper .confirmation-right .confirmation-detail h2 {
+  margin-bottom: 10px;
+  font-size: var(--Body);
+}
+.confirmation-wrapper .confirmation-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+.gray-out {
+  background-color: rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=AddToCartConfirmationModal.css.map */

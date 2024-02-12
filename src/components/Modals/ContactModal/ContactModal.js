@@ -1,5 +1,7 @@
+// The component is not currently in use
+
 import React from "react";
-import logo from "../../assets/icons/cafe-nyleta-logo.png";
+import logo from "../../../assets/icons/cafe-nyleta-logo.png";
 import "./ContactModal.scss";
 
 export default function ContactModal(props) {

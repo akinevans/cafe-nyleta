@@ -1,54 +1,20 @@
 import React from "react";
 import { useState } from "react";
-import "./Factories.css";
-import world_map from "../../assets/images/home/worldmap.webp";
-import FactoryModal from "../FactoryModal/FactoryModal";
 import { motion } from "framer-motion";
+import world_map from "../../assets/images/home/worldmap.webp";
+import "./Factories.css";
+
+// component imports
+import FactoryModal from "../Modals/FactoryModal/FactoryModal";
+
+// utility data
+import { factoryModalData } from "../../utils/textData";
 
 export default function Factories() {
   const [americaVisible, setAmericaVisible] = useState(false);
   const [turkeyVisible, setTurkeyVisible] = useState(false);
   const [vietnamVisible, setVietnamVisible] = useState(false);
   const [chinaVisible, setChinaVisible] = useState(false);
-
-  const modalData = [
-    {
-      location: "Missouri, United States",
-      title: "Leather",
-      item1: "Large format cutting",
-      item2: "Automated stitching",
-      item3: "De-bossing/embossing",
-      item4: "Surface finishing",
-      item5: "Custom dyeing",
-    },
-    {
-      location: "Istanbul, Turkey",
-      title: "Textiles",
-      item1: "Fabric dyeing",
-      item2: "Printing",
-      item3: "Weaving",
-      item4: "Cutting and sewing",
-      item5: "Quality control",
-    },
-    {
-      location: "Long An, Vietnam",
-      title: "Textiles",
-      item1: "Cut and sew",
-      item2: "Embroidery",
-      item3: "Printing",
-      item4: "Knitting",
-      item5: "Weaving",
-    },
-    {
-      location: "Dongguan, China",
-      title: "Footwear",
-      item1: "Cutting",
-      item2: "Stitching",
-      item3: "Lasting",
-      item4: "Soiling",
-      item5: "Finishing",
-    },
-  ];
 
   //^ Classes for modal visibility are located in Factories.scss
   return (
@@ -163,13 +129,13 @@ export default function Factories() {
             className={`america-modal ${
               americaVisible ? "modal-visible" : "modal-hidden"
             }`}
-            location={modalData[0].location}
-            title={modalData[0].title}
-            item1={modalData[0].item1}
-            item2={modalData[0].item2}
-            item3={modalData[0].item3}
-            item4={modalData[0].item4}
-            item5={modalData[0].item5}
+            location={factoryModalData[0].location}
+            title={factoryModalData[0].title}
+            item1={factoryModalData[0].item1}
+            item2={factoryModalData[0].item2}
+            item3={factoryModalData[0].item3}
+            item4={factoryModalData[0].item4}
+            item5={factoryModalData[0].item5}
           />
 
           {/* Turkey Modal */}
@@ -177,13 +143,13 @@ export default function Factories() {
             className={`turkey-modal ${
               turkeyVisible ? "modal-visible" : "modal-hidden"
             }`}
-            location={modalData[1].location}
-            title={modalData[1].title}
-            item1={modalData[1].item1}
-            item2={modalData[1].item2}
-            item3={modalData[1].item3}
-            item4={modalData[1].item4}
-            item5={modalData[1].item5}
+            location={factoryModalData[1].location}
+            title={factoryModalData[1].title}
+            item1={factoryModalData[1].item1}
+            item2={factoryModalData[1].item2}
+            item3={factoryModalData[1].item3}
+            item4={factoryModalData[1].item4}
+            item5={factoryModalData[1].item5}
           />
 
           {/* Vietnam Modal */}
@@ -191,13 +157,13 @@ export default function Factories() {
             className={`vietnam-modal ${
               vietnamVisible ? "modal-visible" : "modal-hidden"
             }`}
-            location={modalData[2].location}
-            title={modalData[2].title}
-            item1={modalData[2].item1}
-            item2={modalData[2].item2}
-            item3={modalData[2].item3}
-            item4={modalData[2].item4}
-            item5={modalData[2].item5}
+            location={factoryModalData[2].location}
+            title={factoryModalData[2].title}
+            item1={factoryModalData[2].item1}
+            item2={factoryModalData[2].item2}
+            item3={factoryModalData[2].item3}
+            item4={factoryModalData[2].item4}
+            item5={factoryModalData[2].item5}
           />
 
           {/* China Modal */}
@@ -205,13 +171,13 @@ export default function Factories() {
             className={`china-modal ${
               chinaVisible ? "modal-visible" : "modal-hidden"
             }`}
-            location={modalData[3].location}
-            title={modalData[3].title}
-            item1={modalData[3].item1}
-            item2={modalData[3].item2}
-            item3={modalData[3].item3}
-            item4={modalData[3].item4}
-            item5={modalData[3].item5}
+            location={factoryModalData[3].location}
+            title={factoryModalData[3].title}
+            item1={factoryModalData[3].item1}
+            item2={factoryModalData[3].item2}
+            item3={factoryModalData[3].item3}
+            item4={factoryModalData[3].item4}
+            item5={factoryModalData[3].item5}
           />
         </div>
       </div>
