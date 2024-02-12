@@ -3,15 +3,16 @@
 export const updateProductQuantity = (operation, currentQuantity) => {
   const maxQuantityPerProduct = 5;
   const minQuantityPerProduct = 1;
+  let updatedQuantity;
 
   if (operation === "increment" && currentQuantity < maxQuantityPerProduct) {
-    const updatedQuantity = currentQuantity + 1;
+    updatedQuantity = currentQuantity + 1;
     return updatedQuantity;
   } else if (
     operation === "decrement" &&
     currentQuantity > minQuantityPerProduct
   ) {
-    const updatedQuantity = currentQuantity - 1;
+    updatedQuantity = currentQuantity - 1;
     return updatedQuantity;
   } else return;
 };
@@ -21,16 +22,17 @@ export const updateProductQuantity = (operation, currentQuantity) => {
 
 //get correct product from cart by matching its id and size
 export const getProductQuantity = (products, id, size) => {
-  for (let i = 0; i < products.length; i++) {
-    if (id === products[i].id && size === products[i].size) {
-      // alert("match found!!");
-      return products[i].itemQuantity;
-    } else {
-      continue;
-    }
-  }
-  // alert("no match found, adding new item to cart");
-  return true;
+  const foundProduct = products.find(
+    (product) => product.id === id && product.size === size
+  );
+
+  //^ alerts for debugging
+  // foundProduct
+  //   ? alert("Match found!!")
+  //   : alert("No match found, adding new item to cart");
+
+  // if product is found return its quantity, else return null
+  return foundProduct ? foundProduct.itemQuantity : null;
 };
 
 //
