@@ -35,6 +35,7 @@ export const getProductQuantity = (products, id, size) => {
 //
 //
 
+// This function serves 3 purposes. To get total quantity, total price, and individual quantity
 export const getCartQuantityAndPrice = (products) => {
   let totalQuantity = 0;
   let totalPrice = 0;

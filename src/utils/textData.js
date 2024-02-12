@@ -1,3 +1,21 @@
+export const landingPageData = {
+  message:
+    "Cafe Nyleta is a Los Angeles-based fashion consultancy with a team of expert designers providing end-to-end support. We specialize in producing high-quality garments, sourcing premium materials, and developing product lines that capture your brands vision.",
+
+  image: "",
+  //image provided in Landing.js
+
+  alt: "Fashion model standing in the woods",
+
+  landingQuoteText:
+    "“Design is creativity, expertise, and collaboration. It involves attention to detail and a commitment to bringing ideas to life in a way that reflects the brand's vision and values”",
+
+  landingAuthor: "Jack Mahaley, Lead Designer",
+};
+
+//
+//
+
 export const serviceItemData = [
   {
     title: "01. Design",
@@ -36,3 +54,6 @@ export const serviceItemData = [
       "Cafe Nyleta offers end-to-end solutions for your apparel business needs. From design consulting and product development to manufacturing and distribution, we offer comprehensive services to bring your vision to life. With our global network of partners, we provide high-quality and cost-effective solutions for short-run projects and long-term product launches.",
   },
 ];
+
+//
+//
