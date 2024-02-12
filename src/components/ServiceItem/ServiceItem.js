@@ -2,12 +2,14 @@ import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import "./ServiceItem.css";
+//asset imports
 import plus from "../../assets/icons/plus-sign.svg";
 import minus from "../../assets/icons/minus-sign.svg";
+import "./ServiceItem.css";
 
 export default function ServiceItem(props) {
   const [open, setOpen] = useState(false);
+
   return (
     <div className='service-item-outer-wrapper'>
       {/* Click anywhere inside inner wrapper to trigger text display */}

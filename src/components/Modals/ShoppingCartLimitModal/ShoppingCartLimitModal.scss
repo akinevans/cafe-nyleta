@@ -1,20 +1,18 @@
-@import "../../components/styleFunctions/functions";
+@import "../../styleFunctions/functions";
 
 //^This class exists for the purpose graying out the background when the modal is visible. Think of it as an invisible overlay of the entire page. This work in conjunction with the grey-out class at the bottom of this file
-.confirmation-modal-page-wrapper {
+.limit-modal-page-wrapper {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   @include flex(row);
   @include flexPosition(center, center);
   @include widthHeight(100vw, 1700px);
-  //   background-color: red;
   z-index: 999;
 }
 
-.confirmation-wrapper {
+.limit-inner-wrapper {
   z-index: 999;
   @include flex(column);
   @include widthHeight(450px, fit-content);
@@ -25,56 +23,29 @@
   filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.1));
   //   @include temporaryOutline(red);
 
-  .confirmation-title-wrapper {
-    @include flex(row);
-    @include flexPosition(space-between, center);
-  }
-
-  h1,
-  h2 {
-    margin: 0;
+  h1 {
+    margin: 25px 0;
     padding: 0;
     font-family: var(--HN-Light);
     font-weight: var(--Light-Weight);
     font-size: var(--Heading-2);
+    text-align: center;
     color: var(--Black);
   }
 
-  .confirmation-body-wrapper {
+  .limit-body-wrapper {
     @include flex(row);
-    @include flexPosition(space-between, center);
-    margin: 10px 0;
+    @include flexPosition(center, center);
+    margin: 20px 0;
     border-top: 1px solid var(--Black);
     border-bottom: 1px solid var(--Black);
-    .confirmation-left {
-      .confirmation-img {
-        @include widthHeight(125px, auto);
-        // margin: 10px 0;
-      }
-      //   @include temporaryOutline(green);
-    }
-    .confirmation-right {
-      position: relative;
-      @include flex(row);
-      @include flexPosition(center, center);
-      // @include temporaryOutline(green);
-
-      .confirmation-detail {
-        // margin-top: 20px;
-
-        h2 {
-          margin-bottom: 10px;
-          font-size: var(--Body);
-        }
-      }
-      //   @include temporaryOutline(green);
-    } // end waitlist right
     // @include temporaryOutline(blue);
-  } // end waitlist body wrapper
-  .confirmation-btn-wrapper {
+  } // end limit body wrapper
+
+  .limit-btn-wrapper {
     @include flex(row);
-    gap: 8px;
     @include flexPosition(flex-end, center);
+    gap: 8px;
     margin-bottom: 25px;
     // @include temporaryOutline(green);
   }

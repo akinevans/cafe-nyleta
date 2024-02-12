@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { getCartQuantityAndPrice } from "../../utils/shopping";
 import "./HamburgerMenuModal.css";
+
+// utility imports
+import { getCartQuantityAndPrice } from "../../../utils/shopping";
 
 export default function HamburgerMenuModal(props) {
   const products = useSelector((state) => state.cart.products);
+
   return (
     <div className={`burger-menu-outer-wrapper ${props.className}`}>
       <Link

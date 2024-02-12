@@ -7,8 +7,8 @@ import { useParams } from "react-router-dom";
 import ShopHeader from "../components/ShopHeader/ShopHeader";
 import ButtonFilter from "../components/ButtonFilter/ButtonFilter";
 import Button from "../components/Button/Button";
-import AddToCartConfirmationModal from "../components/AddToCartConfirmationModal/AddToCartConfirmationModal";
-import ShoppingCartLimitModal from "../components/ShoppingCartLimitModal/ShoppingCartLimitModal";
+import AddToCartConfirmationModal from "../components/Modals/AddToCartConfirmationModal/AddToCartConfirmationModal";
+import ShoppingCartLimitModal from "../components/Modals/ShoppingCartLimitModal/ShoppingCartLimitModal";
 import "../pages/page_styling/ItemDetail/ItemDetail.css";
 
 //utility imports
@@ -21,7 +21,7 @@ import {
   cycleImages,
 } from "../utils/shopping";
 
-export default function ItemDetail(props, { item }) {
+export default function ItemDetail() {
   const [addModalVisible, setAddModalVisible] = useState(false);
   const [limitModalVisible, setLimitModalVisible] = useState(false);
   const [category, setCategory] = useState("");

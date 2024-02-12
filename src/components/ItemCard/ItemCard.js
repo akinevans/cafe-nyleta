@@ -1,10 +1,9 @@
 import React from "react";
 import "./ItemCard.css";
 
-const ItemCard = ({ item }, props) => {
+const ItemCard = ({ item }) => {
   // console.log(item);
   const firstImage = item?.attributes?.images?.data[0]?.attributes?.url;
-
   // console.log(item?.attributes?.images?.data[0]?.attributes?.url);
 
   return (
@@ -31,5 +30,4 @@ const ItemCard = ({ item }, props) => {
     </div>
   );
 };
-
 export default ItemCard;

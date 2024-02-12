@@ -5,16 +5,17 @@ import { useSelector } from "react-redux";
 
 //component imports
 import Button from "../Button/Button";
-import ShoppingCartModal from "../ShoppingCartModal/ShoppingCartModal";
-import HamburgerMenuModal from "../HamburgerMenuModal/HamburgerMenuModal";
-
-import logo from "../../assets/icons/cafe-nyleta-logo.png";
-import hamburger from "../../assets/icons/hamburger-menu.svg";
-import exit from "../../assets/icons/exit.svg";
-import "./Navbar.css";
+import ShoppingCartModal from "../Modals/ShoppingCartModal/ShoppingCartModal";
+import HamburgerMenuModal from "../Modals/HamburgerMenuModal/HamburgerMenuModal";
 
 // utility imports
 import { getCartQuantityAndPrice } from "../../utils/shopping";
+
+// asset imports
+import exit from "../../assets/icons/exit.svg";
+import logo from "../../assets/icons/cafe-nyleta-logo.png";
+import hamburger from "../../assets/icons/hamburger-menu.svg";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [cartVisible, setCartVisible] = useState(false);

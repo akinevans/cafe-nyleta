@@ -57,3 +57,45 @@ export const serviceItemData = [
 
 //
 //
+
+export const factoryModalData = [
+  {
+    location: "Missouri, United States",
+    title: "Leather",
+    item1: "Large format cutting",
+    item2: "Automated stitching",
+    item3: "De-bossing/embossing",
+    item4: "Surface finishing",
+    item5: "Custom dyeing",
+  },
+  {
+    location: "Istanbul, Turkey",
+    title: "Textiles",
+    item1: "Fabric dyeing",
+    item2: "Printing",
+    item3: "Weaving",
+    item4: "Cutting and sewing",
+    item5: "Quality control",
+  },
+  {
+    location: "Long An, Vietnam",
+    title: "Textiles",
+    item1: "Cut and sew",
+    item2: "Embroidery",
+    item3: "Printing",
+    item4: "Knitting",
+    item5: "Weaving",
+  },
+  {
+    location: "Dongguan, China",
+    title: "Footwear",
+    item1: "Cutting",
+    item2: "Stitching",
+    item3: "Lasting",
+    item4: "Soiling",
+    item5: "Finishing",
+  },
+];
+
+//
+//

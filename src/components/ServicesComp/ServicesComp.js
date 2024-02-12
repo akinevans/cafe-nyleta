@@ -2,7 +2,7 @@ import React from "react";
 import ServiceItem from "../ServiceItem/ServiceItem";
 import "./ServicesComp.css";
 
-//util imports
+//utility imports
 import { serviceItemData } from "../../utils/textData";
 
 export default function ServicesComp() {

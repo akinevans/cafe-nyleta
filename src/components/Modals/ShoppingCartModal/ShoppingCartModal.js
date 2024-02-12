@@ -1,13 +1,13 @@
 import React from "react";
 
 //component imports
-import ShoppingCartItem from "../ShoppingCartItem/ShoppingCartItem";
-import Button from "../Button/Button";
+import ShoppingCartItem from "../../ShoppingCartItem/ShoppingCartItem";
+import Button from "../../Button/Button";
 import "./ShoppingCartModal.css";
 
 // utility imports
 import { useSelector } from "react-redux";
-import { getCartQuantityAndPrice } from "../../utils/shopping";
+import { getCartQuantityAndPrice } from "../../../utils/shopping";
 
 export default function ShoppingCartModal(props) {
   const products = useSelector((state) => state.cart.products);
@@ -18,7 +18,7 @@ export default function ShoppingCartModal(props) {
   return (
     <div
       className={`cart-modal-page-wrapper ${props.className}`}
-      onClick={props.closeBtnOnClick}
+      // onClick={props.closeBtnOnClick}
     >
       <div className='cart-wrapper'>
         <div className='top-cart-title-wrapper'>
