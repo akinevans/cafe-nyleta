@@ -40,6 +40,7 @@ export default function SelectDropdown(props) {
       <button
         // Bold the button text anytime its value is not === 'Service'
         className={`service-button ${label === "Service" ? "" : "bold"}`}
+        type='button'
         id='button'
         onClick={() => {
           setVisible(!visible);
