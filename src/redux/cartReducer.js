@@ -45,25 +45,11 @@ export const cartSlice = createSlice({
     },
 
     removeItem: (state, action) => {
-      //loop until a match is found, then remove item from array
-      for (let i = 0; i < state.products.length; i++) {
-        let isIdMatch = state.products[i].id === action.payload.id;
-        let isSizeMatch = state.products[i].size === action.payload.size;
-
-        if (isIdMatch && isSizeMatch) {
-          // alert("found match in removeItem at index " + i);
-          //remove element i from state array while mutating array
-          state.products.splice(i, 1);
-          break;
-        } else {
-          //if at end of state array stop
-          if (i === state.products.length - 1) {
-            break;
-          } else {
-            continue;
-          }
-        }
-      } // end loop
+      // Use filter to create a new array without the item that needs to be removed
+      state.products = state.products.filter(
+        (item) =>
+          !(item.id === action.payload.id && item.size === action.payload.size)
+      );
     },
 
     resetCart: (state, action) => {
