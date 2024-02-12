@@ -92,17 +92,15 @@ export default function ItemDetail() {
                 }}
               />
               <div className='cycle-box-wrapper'>
-                {/* use utility class 'active' to color selected box */}
-                {/* // i represents each iteration of map function*/}
+                {/* use utility class 'active' to color the selected box */}
+                {/* i represents each iteration of map function*/}
                 {product?.attributes?.images?.data.map((element, i) => (
-                  <>
-                    {/* <p>{i}</p> */}
-                    <div
-                      className={`cycle-box ${
-                        currentCycleBox === i ? "active" : ""
-                      }`}
-                    ></div>
-                  </>
+                  <div
+                    className={`cycle-box ${
+                      currentCycleBox === i ? "active" : ""
+                    }`}
+                    key={i}
+                  ></div>
                 ))}
               </div>
             </div>
