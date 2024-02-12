@@ -1,40 +1,28 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
-import "./ShoppingCartModal.css";
+//component imports
 import ShoppingCartItem from "../ShoppingCartItem/ShoppingCartItem";
 import Button from "../Button/Button";
+import "./ShoppingCartModal.css";
+
+// utility imports
+import { useSelector } from "react-redux";
+import { getCartQuantityAndPrice } from "../../utils/shopping";
 
 export default function ShoppingCartModal(props) {
   const products = useSelector((state) => state.cart.products);
-  // console.log(products);
-
-  //! export to module
-  //* This function serves 3 purposes. To get total quantity, total price, and individual quantity
-  const getCartQuantityAndPrice = () => {
-    let totalQuantity = 0;
-    let totalPrice = 0;
-
-    // calculate total cart quantity and total cost
-    for (let i = 0; i < products.length; i++) {
-      let itemPrice = products[i].price;
-      let itemQuantity = products[i].itemQuantity;
-      let itemCost = itemPrice * itemQuantity;
-
-      totalQuantity += itemQuantity;
-      totalPrice += itemCost;
-    }
-
-    return [totalPrice.toFixed(2), totalQuantity];
-  };
-
-  const cartEmpty = getCartQuantityAndPrice()[0] <= 0;
+  const cartEmpty = getCartQuantityAndPrice(products)[0] <= 0;
+  let cartQuantity = getCartQuantityAndPrice(products)[0];
+  let cartPrice = getCartQuantityAndPrice(products)[1];
 
   return (
-    <div className={`cart-modal-page-wrapper ${props.className}`}>
+    <div
+      className={`cart-modal-page-wrapper ${props.className}`}
+      onClick={props.closeBtnOnClick}
+    >
       <div className='cart-wrapper'>
         <div className='top-cart-title-wrapper'>
-          <h1>{`Cart (${getCartQuantityAndPrice()[1]})`}</h1>
+          <h1>{`Cart (${cartQuantity})`}</h1>
         </div>
         <h1
           className={`cart-empty-message ${cartEmpty ? "visible" : "hidden"}`}
@@ -61,10 +49,8 @@ export default function ShoppingCartModal(props) {
         </div>
         <div className='total-wrapper'>
           <h1 className={`cart-text ${cartEmpty ? "hidden" : ""}`}>
-            {`Total (${getCartQuantityAndPrice()[1]}):`}{" "}
-            <span className='cart-price'>
-              ${getCartQuantityAndPrice()[0]} USD
-            </span>{" "}
+            {`Total (${cartQuantity}):`}{" "}
+            <span className='cart-price'>${cartPrice} USD</span>{" "}
           </h1>
           <div className='cart-btn-wrapper'>
             <Button
