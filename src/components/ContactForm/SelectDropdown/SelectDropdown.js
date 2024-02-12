@@ -1,39 +1,16 @@
 import React from "react";
 import { useState } from "react";
+
+// asset imports
 import "./SelectDropdown.css";
 import arrow from "../../../assets/icons/down-arrow.svg";
+
+// utility imports
+import { contactFormData } from "../../../utils/textData";
 
 export default function SelectDropdown(props) {
   const [visible, setVisible] = useState(false);
   const [label, setLabel] = useState("Service");
-
-  const contactFormData = [
-    {
-      id: "select-design",
-      key: 0,
-      value: "Design",
-    },
-    {
-      id: "select-sourcing",
-      key: 1,
-      value: "Sourcing",
-    },
-    {
-      id: "select-consulting",
-      key: 2,
-      value: "Consulting",
-    },
-    {
-      id: "select-product",
-      key: 3,
-      value: "Product Development",
-    },
-    {
-      id: "select-distribution",
-      key: 4,
-      value: "Distribution",
-    },
-  ];
 
   return (
     <div className='dropdown-outer-wrapper'>

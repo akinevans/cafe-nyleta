@@ -99,3 +99,31 @@ export const factoryModalData = [
 
 //
 //
+
+export const contactFormData = [
+  {
+    id: "select-design",
+    key: 101,
+    value: "Design",
+  },
+  {
+    id: "select-sourcing",
+    key: 202,
+    value: "Sourcing",
+  },
+  {
+    id: "select-consulting",
+    key: 303,
+    value: "Consulting",
+  },
+  {
+    id: "select-product",
+    key: 404,
+    value: "Product Development",
+  },
+  {
+    id: "select-distribution",
+    key: 505,
+    value: "Distribution",
+  },
+];
