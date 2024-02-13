@@ -121,6 +121,8 @@ export default function Navbar() {
           setLockNav(!lockNav);
         }}
         cartOnClick={() => {
+          setMenuIcon(!menuIcon);
+          setMenuVisible(false);
           setCartVisible(true);
         }}
       />
