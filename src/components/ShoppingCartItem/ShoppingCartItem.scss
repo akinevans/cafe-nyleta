@@ -122,41 +122,44 @@
 //! styling for item detail tablet paused until UI team updates the design
 
 //Begin Tablet Media Queries
-// @media screen and (max-width: 715px) {
-//   .item-wrapper {
-//     @include flexPosition(center, center);
+@media screen and (max-width: 834px) {
+  .item-wrapper {
+    @include flexPosition(space-between, center);
 
-//     .cart-left {
-//       @include flex(column);
-//       @include flexPosition(center, center);
-//       border: 1px solid orange;
+    .cart-left {
+      @include flex(row);
+      @include flexPosition(center, center);
+      // border: 1px solid orange;
 
-//       .cart-img {
-//         @include widthHeight(125px, 150px);
-//         margin: 0;
-//         // @include temporaryOutline(green);
-//       }
-//       // @include temporaryOutline(green);
-//       .cart-detail {
-//         h2 {
-//           text-align: center;
-//           color: red;
-//           line-height: normal;
-//         }
-//       }
-//     } // end cart left
-//     .cart-right {
-//       @include flex(column);
-//       @include flexPosition(space-between, center);
-//       @include widthHeight(40%, 100%);
-//       border: 1px solid green;
+      .cart-img {
+        @include widthHeight(125px, 150px);
+        margin: 0;
+        // @include temporaryOutline(green);
+      }
+      // @include temporaryOutline(green);
+      .cart-detail {
+        @include flex(column);
+        @include flexPosition(center, center);
 
-//       .increment-and-remove-btn-wrapper {
-//         @include flexPosition(center, center);
-//       }
-//       .item-price {
-//         color: red;
-//       }
-//     } // end cart right
-//   }
-// } // end tablet media queries
+        width: 170px;
+        h2 {
+          text-align: center;
+          line-height: normal;
+        }
+      }
+    } // end cart left
+    .cart-right {
+      @include flex(row);
+      @include flexPosition(space-between, center);
+      @include widthHeight(40%, 100%);
+      // border: 1px solid green;
+
+      .increment-and-remove-btn-wrapper {
+        @include flexPosition(center, center);
+      }
+      .item-price {
+        margin: 0 0 25px 0;
+      }
+    } // end cart right
+  }
+} // end tablet media queries

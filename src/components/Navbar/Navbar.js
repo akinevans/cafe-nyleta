@@ -98,7 +98,9 @@ export default function Navbar() {
 
       {/* //& Shopping Cart modal */}
       <ShoppingCartModal
-        className={cartVisible ? "gray-out" : "hidden"}
+        className={
+          cartVisible ? (windowSize[0] <= 834 ? "" : "gray-out") : "hidden"
+        }
         headerQuantity={products.length ? products.length : "0"}
         closeBtnOnClick={() => {
           setCartVisible(!cartVisible);
