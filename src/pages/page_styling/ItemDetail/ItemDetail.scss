@@ -245,6 +245,9 @@
         // font-weight: 300;
         font-size: var(--Heading-2);
       }
+      .price {
+        margin-bottom: 18px;
+      }
 
       .product-name {
         margin: 10px 0 10px 0;
@@ -252,9 +255,11 @@
 
       .description {
         width: 78%;
-        margin-bottom: 35px;
+        max-height: 135px;
+        margin-bottom: 25px;
         font-size: var(--Body-Small);
         line-height: 26px;
+        overflow-y: scroll;
       }
 
       .item-detail-btn,

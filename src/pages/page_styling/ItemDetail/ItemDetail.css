@@ -205,14 +205,19 @@
     font-family: var(--HN-Light);
     font-size: var(--Heading-2);
   }
+  .item-detail-page-inner-wrapper .item-detail-right-wrapper .price {
+    margin-bottom: 18px;
+  }
   .item-detail-page-inner-wrapper .item-detail-right-wrapper .product-name {
     margin: 10px 0 10px 0;
   }
   .item-detail-page-inner-wrapper .item-detail-right-wrapper .description {
     width: 78%;
-    margin-bottom: 35px;
+    max-height: 135px;
+    margin-bottom: 25px;
     font-size: var(--Body-Small);
     line-height: 26px;
+    overflow-y: scroll;
   }
   .item-detail-page-inner-wrapper .item-detail-right-wrapper .item-detail-btn,
   .item-detail-page-inner-wrapper .item-detail-right-wrapper .item-detail-filter-btn {
