@@ -137,8 +137,8 @@
       .cart-detail {
         @include flex(column);
         @include flexPosition(center, center);
-
         width: 170px;
+
         h2 {
           text-align: center;
           line-height: normal;
@@ -172,7 +172,7 @@
     .cart-left {
       @include flex(row);
       @include flexPosition(flex-start, center);
-      @include widthHeight(100%, 100%);
+      @include widthHeight(100%, 60%);
       @include maxWidth(340px);
 
       // border: 1px solid orange;
@@ -186,12 +186,17 @@
       .cart-detail {
         @include flex(column);
         @include flexPosition(center, flex-start);
-        width: fit-content;
-        margin-left: 30px;
+        @include widthHeight(fit-content, fit-content);
+        margin-left: 14px;
+        // border: 2px solid red;
         h2 {
+          @include flex(column);
+          @include flexPosition(center, flex-start);
+          height: fit-content;
+          margin: 0;
           font-size: var(--Body-Small);
-          text-align: center;
-          line-height: normal;
+          text-align: left;
+          line-height: 26px;
         }
       }
     } // end cart left
@@ -199,6 +204,7 @@
       @include flex(row);
       @include flexPosition(center, center);
       @include widthHeight(100%, 100%);
+      margin-top: -15px;
       // border: 1px solid pink;
 
       .increment-and-remove-btn-wrapper {
