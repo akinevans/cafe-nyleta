@@ -144,4 +144,59 @@
   .item-wrapper .cart-right .item-price {
     margin: 0 0 25px 0;
   }
+}
+@media screen and (max-width: 450px) {
+  .item-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 340px;
+  }
+  .item-wrapper .cart-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 340px;
+  }
+  .item-wrapper .cart-left .cart-img {
+    width: 102px;
+    height: 127px;
+    margin: 0;
+  }
+  .item-wrapper .cart-left .cart-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 30px;
+  }
+  .item-wrapper .cart-left .cart-detail h2 {
+    font-size: var(--Body-Small);
+    text-align: center;
+    line-height: normal;
+  }
+  .item-wrapper .cart-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .item-wrapper .cart-right .increment-and-remove-btn-wrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .item-wrapper .cart-right .increment-and-remove-btn-wrapper .remove-btn {
+    font-size: var(--Label);
+  }
+  .item-wrapper .cart-right .item-price {
+    margin: 0 0 25px 0;
+  }
 }/*# sourceMappingURL=ShoppingCartItem.css.map */

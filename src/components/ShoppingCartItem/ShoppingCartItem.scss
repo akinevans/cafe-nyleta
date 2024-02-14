@@ -117,10 +117,6 @@
   // @include temporaryOutline(blue);
 } // end item wrapper
 
-//! styling for item detail tablet paused until UI team updates the design
-//! styling for item detail tablet paused until UI team updates the design
-//! styling for item detail tablet paused until UI team updates the design
-
 //Begin Tablet Media Queries
 @media screen and (max-width: 834px) {
   .item-wrapper {
@@ -164,3 +160,57 @@
     } // end cart right
   }
 } // end tablet media queries
+
+//begin mobile media queries
+@media screen and (max-width: 450px) {
+  .item-wrapper {
+    @include flex(column);
+    @include flexPosition(space-between, center);
+    max-width: 340px;
+    // outline: 1px solid green;
+
+    .cart-left {
+      @include flex(row);
+      @include flexPosition(flex-start, center);
+      @include widthHeight(100%, 100%);
+      @include maxWidth(340px);
+
+      // border: 1px solid orange;
+
+      .cart-img {
+        @include widthHeight(102px, 127px);
+        margin: 0;
+        // @include temporaryOutline(green);
+      }
+      // @include temporaryOutline(green);
+      .cart-detail {
+        @include flex(column);
+        @include flexPosition(center, flex-start);
+        width: fit-content;
+        margin-left: 30px;
+        h2 {
+          font-size: var(--Body-Small);
+          text-align: center;
+          line-height: normal;
+        }
+      }
+    } // end cart left
+    .cart-right {
+      @include flex(row);
+      @include flexPosition(center, center);
+      @include widthHeight(100%, 100%);
+      // border: 1px solid pink;
+
+      .increment-and-remove-btn-wrapper {
+        @include flexPosition(center, flex-start);
+
+        .remove-btn {
+          font-size: var(--Label);
+        }
+      }
+      .item-price {
+        margin: 0 0 25px 0;
+      }
+    } // end cart right
+  }
+} // end  mobile media queries

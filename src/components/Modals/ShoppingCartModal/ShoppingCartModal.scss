@@ -224,6 +224,58 @@
   } // end cart wrapper
 }
 
+//begin mobile media queries
+@media screen and (max-width: 450px) {
+  .cart-wrapper {
+    .total-wrapper {
+      position: sticky;
+      bottom: 0;
+      @include flex(column);
+      @include flexPosition(center, center);
+      @include widthHeight(89.5%, fit-content);
+      // @include maxWidth(608px);
+      margin: 0px auto 0;
+      padding-bottom: 38px;
+      border-top: 1px solid var(--Grey-50);
+      background-color: var(--Background);
+      z-index: 1;
+      // border: 2px solid green;
+
+      .cart-text {
+        @include flex(row);
+        @include flexPosition(space-between, center);
+        width: 100%;
+        max-width: 100%;
+        height: fit-content;
+        margin: 28px 0 16px 0;
+        // border: 2px solid red;
+
+        // @include flex(row);
+        .cart-price {
+          margin: 0;
+        }
+      }
+      .cart-text,
+      .cart-price {
+        font-size: var(--Body);
+        color: red;
+      }
+    }
+
+    .cart-btn-wrapper {
+      @include flex(column-reverse);
+      @include flexPosition(center, center);
+      width: 100%;
+      gap: 24px;
+      margin-top: 16px;
+      // @include temporaryOutline(green);
+      button {
+        width: 100%;
+      }
+    }
+  } // end cart wrapper
+}
+
 // Utility classes must be last in the file
 //^ Util class for showing and hiding modal
 .hidden {
