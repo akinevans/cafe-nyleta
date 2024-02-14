@@ -43,6 +43,7 @@
 
     h1 {
       margin: 38px 0 15px 0;
+      user-select: none;
     }
   }
 
@@ -92,6 +93,7 @@
     padding-bottom: 38px;
     border-top: 1px solid var(--Grey-50);
     background-color: var(--Background);
+    user-select: none;
     z-index: 1;
 
     .cart-text,

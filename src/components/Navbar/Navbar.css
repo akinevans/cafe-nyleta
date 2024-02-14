@@ -24,6 +24,9 @@
   width: 90%;
   height: 45px;
   max-width: --Desktop;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .nav-outer-wrapper .nav-inner-wrapper .nav-logo {
   width: 238px;

@@ -21,6 +21,9 @@
   margin: auto 0;
   padding-left: 10px;
   background-color: var(--White);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .footer-content-wrapper img {
   width: 142px;

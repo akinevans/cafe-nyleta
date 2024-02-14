@@ -41,6 +41,9 @@
 }
 .cart-wrapper .top-cart-title-wrapper h1 {
   margin: 38px 0 15px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .cart-wrapper .shopping-cart-item-component-wrapper {
   display: flex;
@@ -87,6 +90,9 @@
   padding-bottom: 38px;
   border-top: 1px solid var(--Grey-50);
   background-color: var(--Background);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   z-index: 1;
 }
 .cart-wrapper .total-wrapper .cart-text,

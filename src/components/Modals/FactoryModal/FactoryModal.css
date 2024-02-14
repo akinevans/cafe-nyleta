@@ -7,6 +7,9 @@
   padding: 12px 15px;
   background-color: var(--White);
   outline: 0.5px solid var(--Black);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .factory-modal-wrapper .location-title,
 .factory-modal-wrapper .sub-title,
