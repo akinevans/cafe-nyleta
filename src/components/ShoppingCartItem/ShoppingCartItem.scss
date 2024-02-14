@@ -125,6 +125,7 @@
 @media screen and (max-width: 834px) {
   .item-wrapper {
     @include flexPosition(space-between, center);
+    // outline: 1px solid green;
 
     .cart-left {
       @include flex(row);
