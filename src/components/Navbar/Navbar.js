@@ -45,7 +45,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`nav-outer-wrapper ${lockNav ? "lock" : ""}`}>
+    <nav
+      className={`nav-outer-wrapper ${
+        windowSize[0] <= 834 && cartVisible ? "lock" : ""
+      }`}
+    >
       <div className='nav-inner-wrapper'>
         <Link to='/'>
           <img

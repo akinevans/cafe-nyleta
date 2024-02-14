@@ -129,7 +129,6 @@
     background-color: var(--Background);
     overflow-y: scroll;
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-    outline: 2px solid red;
   }
   .cart-wrapper .top-cart-title-wrapper {
     position: sticky;
