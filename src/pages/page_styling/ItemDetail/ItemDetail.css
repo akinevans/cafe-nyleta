@@ -183,6 +183,7 @@
   }
   .item-detail-page-inner-wrapper .item-detail-left-wrapper .product {
     max-width: 75%;
+    margin-top: 15px;
   }
   .item-detail-page-inner-wrapper .item-detail-left-wrapper .cycle-box-wrapper {
     bottom: -5%;
