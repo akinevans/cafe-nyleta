@@ -29,9 +29,16 @@
   height: 100%;
 }
 .item-wrapper .cart-left .cart-detail h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   margin-bottom: 6px;
   font-size: var(--Body);
   line-height: 26px;
+}
+.item-wrapper .cart-left .cart-detail .hidden {
+  display: none;
 }
 .item-wrapper .cart-right {
   width: 40%;
@@ -72,12 +79,6 @@
   font-weight: 400;
   cursor: pointer;
 }
-.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper .hidden {
-  display: none;
-}
-.item-wrapper .cart-right .increment-and-remove-btn-wrapper .increment-btn-wrapper .bold {
-  color: var(--Grey-100);
-}
 .item-wrapper .cart-right .increment-and-remove-btn-wrapper .remove-btn {
   margin: 8px 0 0 0;
   font-family: var(--HN-Light);
@@ -89,7 +90,7 @@
 .item-wrapper .cart-right .increment-and-remove-btn-wrapper .remove-btn:active {
   color: var(--Black);
 }
-.item-wrapper .cart-right .item-price {
+.item-wrapper .cart-right .item-price-2 {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 14px;
@@ -124,10 +125,16 @@
     justify-content: center;
     align-items: center;
     width: 170px;
+    margin-left: 20px;
   }
   .item-wrapper .cart-left .cart-detail h2 {
+    height: -moz-fit-content;
+    height: fit-content;
     text-align: center;
     line-height: normal;
+  }
+  .item-wrapper .cart-left .cart-detail .hidden {
+    display: none;
   }
   .item-wrapper .cart-right {
     display: flex;
@@ -141,7 +148,7 @@
     justify-content: center;
     align-items: center;
   }
-  .item-wrapper .cart-right .item-price {
+  .item-wrapper .cart-right .item-price-2 {
     margin: 0 0 25px 0;
   }
 }
@@ -206,7 +213,18 @@
   .item-wrapper .cart-right .increment-and-remove-btn-wrapper .remove-btn {
     font-size: var(--Label);
   }
-  .item-wrapper .cart-right .item-price {
+  .item-wrapper .cart-right .item-price-2 {
     margin: 0 0 25px 0;
   }
+}
+.hidden {
+  display: none;
+}
+
+.bold {
+  color: var(--Grey-100);
+}
+
+.red {
+  color: red;
 }/*# sourceMappingURL=ShoppingCartItem.css.map */

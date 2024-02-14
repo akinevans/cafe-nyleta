@@ -116,7 +116,7 @@ export default function ShoppingCartItem(props, { data }) {
           </p>
         </div>
         <h2
-          className={`item-price ${windowSize[0] >= 450 ? "" : "hidden"}`}
+          className={`item-price-2 ${windowSize[0] <= 450 ? "hidden" : ""}`}
         >{`$${props.price} USD`}</h2>
       </div>
     </div>

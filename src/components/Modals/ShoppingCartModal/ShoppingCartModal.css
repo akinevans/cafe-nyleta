@@ -237,6 +237,12 @@
     overflow-y: scroll;
     margin: 0 auto;
   }
+  .cart-wrapper .shopping-cart-item-component-wrapper .hidden {
+    display: none;
+  }
+  .cart-wrapper .shopping-cart-item-component-wrapper .red {
+    color: red;
+  }
   .cart-wrapper .total-wrapper {
     position: sticky;
     bottom: 0;

@@ -29,9 +29,15 @@
       // margin-left: 25px;
 
       h2 {
+        @include flex(column);
+        @include flexPosition(center, flex-start);
         margin-bottom: 6px;
         font-size: var(--Body);
         line-height: 26px;
+        // color: red;
+      }
+      .hidden {
+        display: none;
       }
     }
     //   @include temporaryOutline(green);
@@ -74,18 +80,9 @@
           // border: 1px solid blue;
         }
 
-        .quantity {
-          // user-select: none;
-        }
-
-        //^ These util classes for showing / hiding number dropdown menu must be inside cart-right class in order to function
-        .hidden {
-          display: none;
-        }
-
-        .bold {
-          color: var(--Grey-100);
-        }
+        // .quantity {
+        //   // user-select: none;
+        // }
       } // end increment btn wrapper
 
       .remove-btn {
@@ -101,7 +98,7 @@
       }
     } // end increment and remove btn wrapper
 
-    .item-price {
+    .item-price-2 {
       width: fit-content;
       margin-top: 14px;
       font-family: var(--HN-Light);
@@ -138,10 +135,15 @@
         @include flex(column);
         @include flexPosition(center, center);
         width: 170px;
+        margin-left: 20px;
 
         h2 {
+          height: fit-content;
           text-align: center;
           line-height: normal;
+        }
+        .hidden {
+          display: none;
         }
       }
     } // end cart left
@@ -154,7 +156,7 @@
       .increment-and-remove-btn-wrapper {
         @include flexPosition(center, center);
       }
-      .item-price {
+      .item-price-2 {
         margin: 0 0 25px 0;
       }
     } // end cart right
@@ -214,9 +216,22 @@
           font-size: var(--Label);
         }
       }
-      .item-price {
+      .item-price-2 {
         margin: 0 0 25px 0;
       }
     } // end cart right
   }
 } // end  mobile media queries
+
+//^ These util classes for showing / hiding number dropdown menu must be inside cart-right class in order to function
+.hidden {
+  display: none;
+}
+
+.bold {
+  color: var(--Grey-100);
+}
+
+.red {
+  color: red;
+}

@@ -257,6 +257,13 @@
       margin: 0 auto;
       // border: 2px solid green;
       // border-bottom: 1px solid var(--Grey-50);
+
+      .hidden {
+        display: none;
+      }
+      .red {
+        color: red;
+      }
     }
 
     .total-wrapper {
