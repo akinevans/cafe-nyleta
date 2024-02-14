@@ -1,8 +1,13 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../pages/page_styling/PrivacyPolicy/PrivacyPolicy.css";
 
 export default function PrivacyPolicy() {
+  // scroll to the top of the page on render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='privacy-policy-page-wrapper'>
       <div className='privacy-policy-inner-wrapper'>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // component imports
@@ -19,6 +20,11 @@ export default function Shop(props) {
 
   const { product, loading } = useFetch(`/products?populate=*
     ${props.filter ? apiFilterPath + props.filter : ""}${sortPath}`);
+
+  // scroll to the top of the page on render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className='shop-page-wrapper'>

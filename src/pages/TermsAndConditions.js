@@ -1,8 +1,13 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../pages/page_styling/TermsAndConditions/TermsAndConditions.css";
 
 export default function TermsAndConditions() {
+  // scroll to the top of the page on render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='terms-conditions-page-wrapper'>
       <div className='terms-inner-wrapper'>
