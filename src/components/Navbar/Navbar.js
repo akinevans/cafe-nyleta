@@ -108,6 +108,7 @@ export default function Navbar() {
         headerQuantity={products.length ? products.length : "0"}
         closeBtnOnClick={() => {
           setCartVisible(!cartVisible);
+          setLockNav(false);
         }}
         checkoutBtnOnClick={() => {
           //navigate to checkout page
