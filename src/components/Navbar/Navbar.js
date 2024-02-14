@@ -33,6 +33,10 @@ export default function Navbar() {
     window.innerHeight,
   ]);
 
+  const shouldNavigationBeLocked = () => {
+    return (windowSize[0] <= 834 && cartVisible) || lockNav ? "lock" : "";
+  };
+
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
@@ -45,11 +49,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`nav-outer-wrapper ${
-        windowSize[0] <= 834 && cartVisible ? "lock" : ""
-      }`}
-    >
+    <nav className={`nav-outer-wrapper ${shouldNavigationBeLocked()} `}>
       <div className='nav-inner-wrapper'>
         <Link to='/'>
           <img
