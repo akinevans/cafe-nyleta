@@ -17,6 +17,8 @@
   margin: auto 0;
   padding-left: 10px;
   background-color: var(--White);
+  user-select: none;
+
   // @include temporaryOutline(green);
 
   img {

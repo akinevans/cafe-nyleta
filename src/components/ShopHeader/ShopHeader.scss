@@ -17,6 +17,8 @@
     @include flexPosition(flex-start, center);
     @include widthHeight(90%, fit-content);
     @include maxWidth(--Desktop);
+    user-select: none;
+
     // @include temporaryOutline(blue);
 
     .shop-header-list {

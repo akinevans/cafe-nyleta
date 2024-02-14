@@ -24,6 +24,9 @@
   width: 90%;
   height: 45px;
   max-width: --Desktop;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .nav-outer-wrapper .nav-inner-wrapper .nav-logo {
   width: 238px;
@@ -81,7 +84,7 @@
 }
 @media screen and (max-width: 530px) {
   .nav-outer-wrapper .nav-inner-wrapper {
-    width: 90%;
+    width: 85%;
     height: 45px;
     justify-content: center;
     align-items: center;
@@ -110,6 +113,12 @@
   .nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .hamburger-menu img {
     width: 30px;
     height: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .nav-outer-wrapper .nav-inner-wrapper .nav-links-wrapper .hamburger-menu img {
+    width: 24px;
+    height: 24px;
   }
 }
 .hide {

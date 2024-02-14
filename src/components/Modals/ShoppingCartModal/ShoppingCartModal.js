@@ -62,7 +62,7 @@ export default function ShoppingCartModal(props) {
               className={`btn grey back-to-shop ${
                 cartEmpty ? " disabled " : ""
               }`}
-              title='Check out'
+              title='Check Out'
               onClick={!cartEmpty ? props.checkoutBtnOnClick : null}
             />
           </div>

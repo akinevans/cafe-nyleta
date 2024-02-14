@@ -20,6 +20,9 @@
   height: -moz-fit-content;
   height: fit-content;
   max-width: --Desktop;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .shop-header-outer-wrapper .shop-header-inner-wrapper .shop-header-list {
   display: flex;

@@ -43,6 +43,7 @@
 
     h1 {
       margin: 38px 0 15px 0;
+      user-select: none;
     }
   }
 
@@ -92,6 +93,7 @@
     padding-bottom: 38px;
     border-top: 1px solid var(--Grey-50);
     background-color: var(--Background);
+    user-select: none;
     z-index: 1;
 
     .cart-text,
@@ -110,6 +112,203 @@
   }
 } // end cart wrapper
 
+// Begin tablet media queries
+@media screen and (max-width: 834px) {
+  .cart-modal-page-wrapper {
+    position: fixed;
+    top: 0;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include flex(row);
+    @include flexPosition(center, center);
+    @include widthHeight(100vw, 1700px);
+    z-index: 999;
+    // border: 4px solid blue;
+  }
+
+  .cart-wrapper {
+    position: relative;
+    top: 56%;
+    align-items: center;
+    @include widthHeight(100%, 100%);
+    @include maxWidth(100%);
+    max-height: fit-content;
+    background-color: var(--Background);
+    overflow-y: scroll;
+    filter: drop-shadow(0px 0px 0px rgb(0 0 0 / 0));
+    // outline: 2px solid red;
+
+    .top-cart-title-wrapper {
+      position: sticky;
+      top: 0;
+      @include flex(row);
+      @include flexPosition(flex-start, center);
+      @include widthHeight(89.5%, fit-content);
+      @include maxWidth(608px);
+      // margin-bottom: 10px;
+
+      background-color: var(--Background);
+      border-bottom: 1px solid var(--Grey-50);
+      // border: 2px solid blue;
+      z-index: 1;
+
+      h1 {
+        margin: 38px 0 15px 0;
+      }
+    }
+
+    .shopping-cart-item-component-wrapper {
+      @include flex(column);
+      @include flexPosition(flex-start, center);
+      @include widthHeight(100%, auto);
+      // @include maxWidth(680px);
+      max-height: 530px;
+      overflow-y: scroll;
+      margin: 0 auto;
+      // border: 2px solid green;
+      // border-bottom: 1px solid var(--Grey-50);
+    }
+
+    h1,
+    h2,
+    .cart-text,
+    .cart-price {
+      margin: 0;
+      padding: 0;
+      font-family: var(--HN-Light);
+      font-weight: var(--Light-Weight);
+      font-size: var(--Heading-2);
+      color: var(--Black);
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    .cart-price {
+      font-weight: bold;
+    }
+
+    .cart-empty-message {
+      text-align: center;
+      margin: 15px 0 5px 0;
+    }
+
+    .total-wrapper {
+      position: sticky;
+      bottom: 0;
+      @include flex(column);
+      @include flexPosition(flex-end, flex-end);
+      @include widthHeight(89.5%, fit-content);
+      // @include maxWidth(608px);
+      margin: 0px auto 0;
+      padding-bottom: 38px;
+      border-top: 1px solid var(--Grey-50);
+      background-color: var(--Background);
+      z-index: 1;
+      // border: 2px solid green;
+
+      .cart-text,
+      .cart-price {
+        margin: 32px 0 16px 0;
+        font-size: var(--Body);
+      }
+    }
+
+    .cart-btn-wrapper {
+      @include flex(row);
+      gap: 8px;
+      @include flexPosition(center, center);
+      margin-top: 16px;
+      // @include temporaryOutline(green);
+    }
+  } // end cart wrapper
+}
+
+//begin mobile media queries
+@media screen and (max-width: 450px) {
+  .cart-modal-page-wrapper {
+    // position: fixed;
+    // top: 0;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // @include flex(row);
+    // @include flexPosition(center, center);
+    // @include widthHeight(100vw, 1700px);
+    // z-index: 999;
+    // border: 4px solid blue;
+  }
+  .cart-wrapper {
+    position: relative;
+    top: 50%;
+    align-items: center;
+    @include widthHeight(100%, 100%);
+    @include maxWidth(100%);
+    max-height: 90%;
+
+    .shopping-cart-item-component-wrapper {
+      @include flex(column);
+      @include flexPosition(flex-start, center);
+      @include widthHeight(100%, auto);
+      // @include maxWidth(680px);
+      max-height: 250px;
+      overflow-y: scroll;
+      margin: 0 auto;
+      // border: 2px solid green;
+      // border-bottom: 1px solid var(--Grey-50);
+    }
+
+    .total-wrapper {
+      position: sticky;
+      bottom: 0;
+      @include flex(column);
+      @include flexPosition(center, center);
+      @include widthHeight(89.5%, fit-content);
+      // @include maxWidth(608px);
+      margin: 0 auto;
+      padding-bottom: 38px;
+      border-top: 1px solid var(--Grey-50);
+      background-color: var(--Background);
+      z-index: 1;
+      // border: 2px solid green;
+
+      .cart-text {
+        @include flex(row);
+        @include flexPosition(space-between, center);
+        width: 100%;
+        max-width: 100%;
+        height: fit-content;
+        margin: 28px 0 16px 0;
+        // border: 2px solid red;
+
+        // @include flex(row);
+        .cart-price {
+          margin: 0;
+        }
+      }
+      .cart-text,
+      .cart-price {
+        font-size: var(--Body);
+        // color: red;
+      }
+    }
+
+    .cart-btn-wrapper {
+      @include flex(column-reverse);
+      @include flexPosition(center, center);
+      width: 100%;
+      gap: 24px;
+      margin-top: 16px;
+      // @include temporaryOutline(green);
+      button {
+        width: 100%;
+      }
+    }
+  } // end cart wrapper
+}
+
+// Utility classes must be last in the file
 //^ Util class for showing and hiding modal
 .hidden {
   display: none;

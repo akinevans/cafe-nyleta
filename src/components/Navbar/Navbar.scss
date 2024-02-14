@@ -20,6 +20,8 @@
     @include widthHeight(90%, 45px);
     // @include maxWidth(1180px);
     @include maxWidth(--Desktop);
+    user-select: none;
+
     // @include temporaryOutline(blue);
 
     .nav-logo {
@@ -87,7 +89,7 @@
 @media screen and (max-width: 530px) {
   .nav-outer-wrapper {
     .nav-inner-wrapper {
-      @include widthHeight(90%, 45px);
+      @include widthHeight(85%, 45px);
 
       @include flexPosition(center, center);
 
@@ -119,6 +121,21 @@
           img {
             width: 30px;
             height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-outer-wrapper {
+    .nav-inner-wrapper {
+      .nav-links-wrapper {
+        .hamburger-menu {
+          img {
+            width: 24px;
+            height: 24px;
           }
         }
       }

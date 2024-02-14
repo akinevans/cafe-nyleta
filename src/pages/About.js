@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import FeatureImage from "../components/FeatureImage/FeatureImage";
 import TextSection from "../components/TextSection/TextSection";
 import Quote from "../components/Quote/Quote";
@@ -25,6 +26,12 @@ export default function About() {
 
     aboutAuthor: "Jack Mahaley, Lead Designer",
   };
+
+  // scroll to the top of the page on render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <FeatureImage

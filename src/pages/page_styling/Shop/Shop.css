@@ -12,6 +12,9 @@
        column-gap: 100px;
   margin-top: 140px;
   margin-bottom: 212px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 // component imports
 import Hero from "../components/Hero/Hero";
@@ -17,6 +18,10 @@ import { landingPageData } from "../utils/textData";
 landingPageData.image = landing_img;
 
 export default function Landing() {
+  // scroll to the top of the page on render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {/* Navbar and Footer are rendered in index.js */}

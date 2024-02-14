@@ -33,6 +33,10 @@ export default function Navbar() {
     window.innerHeight,
   ]);
 
+  const shouldNavigationBeLocked = () => {
+    return (windowSize[0] <= 834 && cartVisible) || lockNav ? "lock" : "";
+  };
+
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
@@ -45,7 +49,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`nav-outer-wrapper ${lockNav ? "lock" : ""}`}>
+    <nav className={`nav-outer-wrapper ${shouldNavigationBeLocked()} `}>
       <div className='nav-inner-wrapper'>
         <Link to='/'>
           <img
@@ -98,10 +102,13 @@ export default function Navbar() {
 
       {/* //& Shopping Cart modal */}
       <ShoppingCartModal
-        className={cartVisible ? "gray-out" : "hidden"}
+        className={
+          cartVisible ? (windowSize[0] <= 834 ? "" : "gray-out") : "hidden"
+        }
         headerQuantity={products.length ? products.length : "0"}
         closeBtnOnClick={() => {
           setCartVisible(!cartVisible);
+          setLockNav(false);
         }}
         checkoutBtnOnClick={() => {
           //navigate to checkout page
@@ -119,6 +126,8 @@ export default function Navbar() {
           setLockNav(!lockNav);
         }}
         cartOnClick={() => {
+          setMenuIcon(!menuIcon);
+          setMenuVisible(false);
           setCartVisible(true);
         }}
       />
