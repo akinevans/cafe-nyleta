@@ -1,0 +1,10 @@
+@import "../../../components/styleFunctions/functions";
+
+h2 {
+  @include flex(row);
+  @include flexPosition(center, center);
+  @include widthHeight(100%, 100%);
+  font-weight: 400;
+  margin: 30px auto;
+  //   border: 2px solid red;
+}
